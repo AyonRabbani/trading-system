@@ -1,0 +1,37 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+
+# Logs
+*.log
+
+# Data files (keep structure, exclude data)
+*.csv
+*.json
+!requirements.json
+!.streamlit/config.toml
+
+# Jupyter
+.ipynb_checkpoints
+*.ipynb
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# OS
+.DS_Store
+
+# Secrets
+.env
+*_secrets.py
+
+# Cache
+.streamlit/secrets.toml

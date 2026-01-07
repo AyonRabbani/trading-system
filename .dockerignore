@@ -1,0 +1,70 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Jupyter Notebook
+.ipynb_checkpoints
+*.ipynb
+
+# Environment
+.env
+.venv
+.env.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+logs/
+*.log
+
+# Data files
+*.csv
+*.json
+scan_results.json
+scan_results_enhanced.json
+
+# Git
+.git/
+.gitignore
+
+# Documentation (keep README_DEPLOYMENT.md)
+README.md
+README_*.md
+!README_DEPLOYMENT.md
+
+# Old files
+old_notebooks/
+*.bak
+
+# Streamlit cache
+.streamlit/secrets.toml
