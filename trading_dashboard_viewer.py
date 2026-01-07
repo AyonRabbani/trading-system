@@ -469,42 +469,9 @@ def main():
         initial_sidebar_state="expanded"
     )
     
-    # Custom CSS
-    st.markdown("""
-        <style>
-        .stMetric {
-            background-color: #1E1E1E;
-            padding: 10px;
-            border-radius: 5px;
-        }
-        .event-card {
-            padding: 10px;
-            margin: 5px 0;
-            border-radius: 5px;
-            border-left: 4px solid #00D9FF;
-            background-color: #1E1E1E;
-        }
-        .event-timestamp {
-            color: #888;
-            font-size: 12px;
-        }
-        .event-source {
-            color: #00D9FF;
-            font-weight: bold;
-        }
-        .pm-thinking {
-            background: linear-gradient(135deg, #1E1E1E 0%, #2D2D2D 100%);
-            padding: 15px;
-            border-radius: 10px;
-            border: 2px solid #00D9FF;
-            margin: 10px 0;
-        }
-        </style>
-    """, unsafe_allow_html=True)
-    
     # Header
     st.title("🤖 Portfolio Manager Live Feed")
-    st.markdown("*Real-time view of every scan, strategy decision, and trade execution*")
+    st.caption("Real-time view of every scan, strategy decision, and trade execution")
     
     # Sidebar
     with st.sidebar:
@@ -522,7 +489,7 @@ def main():
         else:
             event_filter = None
         
-        st.markdown("---")
+        st.divider()
         
         # System status
         st.subheader("📡 System Status")
@@ -536,7 +503,7 @@ def main():
         st.metric("Trading Bot", "🟢 Active" if trading_log else "⚪ Inactive")
         st.metric("Profit Taker", "🟢 Active" if profit_log else "⚪ Inactive")
         
-        st.markdown("---")
+        st.divider()
         
         if st.button("🔄 Refresh Now"):
             st.cache_data.clear()
@@ -558,7 +525,7 @@ def main():
     # ========================================================================
     with tab1:
         st.header("Portfolio Manager Activity Feed")
-        st.markdown("*Live stream of scanning, strategy selection, and execution decisions*")
+        st.caption("Live stream of scanning, strategy selection, and execution decisions")
         
         # Get all events
         all_events = aggregate_all_events(max_events=100)
@@ -567,12 +534,8 @@ def main():
             all_events = [e for e in all_events if e['type'] in event_filter]
         
         if all_events:
-            # Activity timeline
-            fig = create_activity_timeline(all_events[:50])
-            if fig:
-                st.plotly_chart(fig, use_container_width=True)
-            
-            st.markdown("---")
+            # Timeline chart omitted for terminal-style UI
+            st.divider()
             
             # Event feed
             st.subheader(f"📋 Recent Events ({len(all_events)})")
@@ -599,20 +562,16 @@ def main():
                     st.divider()
         else:
             st.info("No recent activity. The PM may be idle or log files are not available on this deployment.")
-            st.markdown("""
-            **Note:** This Streamlit Cloud deployment shows portfolio data in real-time via Alpaca API, 
-            but PM activity logs are only available when running locally.
-            
-            **To see full PM activity feed locally:**
-            1. Clone the repo: `git clone https://github.com/AyonRabbani/trading-system.git`
-            2. Run scanner: `python daily_scanner.py --mode scan`
-            3. Run trading bot: `python trading_automation.py --mode dry-run`
-            4. Run profit taker: `python intraday_profit_taker.py --mode moderate`
-            5. View dashboard: `streamlit run trading_dashboard_viewer.py`
-            """)
+            st.caption("Note: This Streamlit Cloud deployment shows portfolio data in real-time via Alpaca API, but PM activity logs are only available when running locally.")
+            st.write("To see the full PM activity feed locally:")
+            st.code("git clone https://github.com/AyonRabbani/trading-system.git", language="bash")
+            st.code("python daily_scanner.py --mode scan", language="bash")
+            st.code("python trading_automation.py --mode dry-run", language="bash")
+            st.code("python intraday_profit_taker.py --mode moderate", language="bash")
+            st.code("streamlit run trading_dashboard_viewer.py", language="bash")
         
         # PM Decision Summary
-        st.markdown("---")
+        st.divider()
         st.subheader("🧠 PM Decision Summary")
         
         decisions = extract_strategy_decisions()
@@ -620,9 +579,9 @@ def main():
             latest_decision = decisions[-1]
             
             st.subheader("💭 Latest Strategy Selection")
-            st.write(f"**Chosen Strategy:** {latest_decision['strategy']}")
-            st.write(f"**Portfolio NAV:** {latest_decision['nav']}")
-            st.write(f"**Decision Time:** {latest_decision['timestamp']}")
+            st.write(f"Chosen Strategy: {latest_decision['strategy']}")
+            st.write(f"Portfolio NAV: {latest_decision['nav']}")
+            st.write(f"Decision Time: {latest_decision['timestamp']}")
         else:
             st.info("No strategy decisions recorded yet.")
     
@@ -664,15 +623,12 @@ def main():
                 st.metric("Open Positions", num_positions,
                          delta=f"${total_pl:,.2f} total P&L")
         
-        st.markdown("---")
+        st.divider()
         
-        # Portfolio performance chart
+        # Portfolio performance chart omitted for terminal-style UI
         history = get_portfolio_history()
         if history and 'timestamp' in history:
-            fig = create_portfolio_chart(history)
-            if fig:
-                st.plotly_chart(fig, use_container_width=True)
-            
+            # Show key figures without charts
             # Performance metrics
             equity_values = history['equity']
             
@@ -709,20 +665,9 @@ def main():
         positions = get_positions()
         
         if positions:
-            # Charts
-            col1, col2 = st.columns(2)
+            # Charts omitted for terminal-style UI
             
-            with col1:
-                fig = create_positions_chart(positions)
-                if fig:
-                    st.plotly_chart(fig, use_container_width=True)
-            
-            with col2:
-                fig = create_allocation_pie_chart(positions)
-                if fig:
-                    st.plotly_chart(fig, use_container_width=True)
-            
-            st.markdown("---")
+            st.divider()
             
             # Detailed positions table
             st.subheader(f"Position Details ({len(positions)} holdings)")
@@ -743,7 +688,7 @@ def main():
             st.dataframe(positions_df, use_container_width=True)
             
             # Summary stats
-            st.markdown("---")
+            st.divider()
             st.subheader("Position Statistics")
             
             col1, col2, col3, col4 = st.columns(4)
@@ -803,16 +748,14 @@ def main():
                 num_recs = len(scan_results.get('rotation_recommendations', []))
                 st.metric("Rotation Signals", num_recs)
             
-            st.markdown("---")
+            st.divider()
             
             # Top scorers
             st.subheader("Top Market Opportunities")
             
             scores = scan_results.get('top_scorers', [])
             if scores:
-                fig = create_scanner_scores_chart(scores)
-                if fig:
-                    st.plotly_chart(fig, use_container_width=True)
+                # Chart omitted for terminal-style UI
                 
                 # Table
                 scores_df = pd.DataFrame([{
@@ -829,7 +772,7 @@ def main():
                 
                 st.dataframe(scores_df, use_container_width=True, height=400)
             
-            st.markdown("---")
+            st.divider()
             
             # Portfolio comparison
             comparison = scan_results.get('portfolio_comparison', {})
@@ -839,7 +782,7 @@ def main():
                 col1, col2 = st.columns(2)
                 
                 with col1:
-                    st.markdown("**Current Portfolio Metrics**")
+                    st.subheader("Current Portfolio Metrics")
                     current = comparison.get('current', {})
                     
                     metrics_df = pd.DataFrame([
@@ -854,7 +797,7 @@ def main():
                     st.dataframe(metrics_df, use_container_width=True, hide_index=True)
                 
                 with col2:
-                    st.markdown("**Recommended Portfolio Potential**")
+                    st.subheader("Recommended Portfolio Potential")
                     recommended = comparison.get('recommended', {})
                     improvements = comparison.get('improvements', {})
                     
@@ -907,7 +850,7 @@ def main():
                 st.dataframe(orders_df, use_container_width=True, height=500)
                 
                 # Summary stats
-                st.markdown("---")
+                st.divider()
                 st.subheader("Activity Summary")
                 
                 col1, col2, col3, col4 = st.columns(4)
@@ -937,7 +880,7 @@ def main():
             st.info("No recent orders")
     
     # Footer
-    st.markdown("---")
+    st.divider()
     st.caption(f"🤖 Portfolio Manager Live Feed | Auto-refresh: {'ON' if auto_refresh else 'OFF'} | Last update: {datetime.now().strftime('%H:%M:%S')}")
     
     # Auto-refresh logic

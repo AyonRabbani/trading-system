@@ -1,0 +1,57 @@
+feat: Replace corrupted Streamlit dashboard with clean terminal-style viewers
+
+## Changes
+- Created `local_dashboard.py`: Full-featured local monitoring with Alpaca API
+- Created `public_dashboard.py`: Safe public read-only viewer
+- Added `README_DASHBOARDS.md`: Complete documentation
+- Added `dashboard_quickstart.sh`: Quick reference guide
+- Added `DASHBOARD_SUMMARY.md`: Implementation summary
+
+## Features
+
+### Local Dashboard
+- Real-time account data (NAV, positions, P&L)
+- Live position tracking with unrealized gains
+- Market scanner results display
+- Portfolio Manager logs (trading_automation)
+- Profit Taker logs (intraday_profit_taker)
+- Recent order history
+
+### Public Dashboard
+- System status indicators
+- Sanitized activity feed
+- Market scanner results
+- Portfolio decision summary
+- Safe for Streamlit Cloud deployment (no API keys)
+
+## Technical Improvements
+- **Zero syntax errors**: Removed all markdown/HTML/CSS injection
+- **Terminal-style UI**: Bloomberg-inspired simple text interface
+- **Native components only**: st.write, st.metric, st.dataframe, st.caption
+- **No client-side JS errors**: Eliminated plotly charts and complex rendering
+- **Dual logging**: Events go to both WebSocket (real-time) and JSON (cloud sync)
+
+## Architecture
+- Local: Trading scripts → EventBroadcaster → public_events.json
+- Cloud: sync_to_cloud.sh → GitHub → Streamlit Cloud → public_dashboard.py
+- Separation of concerns: Local (full API) vs Public (read-only)
+
+## Validation
+✅ Syntax validated: python -m py_compile (no errors)
+✅ Local dashboard running: http://localhost:8501
+✅ Public dashboard tested: imports successfully
+✅ Zero markdown/HTML usage
+✅ Terminal-style components only
+
+## Usage
+```bash
+# Local monitoring
+streamlit run local_dashboard.py
+
+# Public deployment
+streamlit run public_dashboard.py
+# Deploy to share.streamlit.io (safe - no API keys)
+
+# Auto-sync to cloud
+./sync_to_cloud.sh --watch
+```

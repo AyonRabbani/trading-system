@@ -58,7 +58,7 @@ class Colors:
 # API Keys
 POLYGON_API_KEY = os.getenv('POLYGON_API_KEY')
 ALPACA_API_KEY = os.getenv('ALPACA_API_KEY')
-ALPACA_SECRET_KEY = os.getenv('ALPACA_API_SECRET')
+ALPACA_SECRET_KEY = os.getenv('ALPACA_SECRET_KEY')
 ALPACA_BASE_URL = os.getenv('ALPACA_BASE_URL', 'https://paper-api.alpaca.markets')
 
 # Trading Modes
@@ -588,28 +588,30 @@ class IntraDayProfitTaker:
             hold_duration = pos.get_hold_duration()
             profit_dollars = pos.shares * (price - pos.entry_price)
             
-        self.logger.info(f"Entry:     ${pos.entry_price:.2f}")
-        self.logger.info(f"Peak:      ${pos.peak_price:.2f} (+{((pos.peak_price/pos.entry_price)-1)*100:.2f}%)")
-        self.logger.info(f"Exit:      ${price:.2f}")
-        self.logger.info(f"Gain:      {Colors.BRIGHT_GREEN}+{gain_pct*100:.2f}%{Colors.END}")
-        self.logger.info(f"Profit:    {Colors.BRIGHT_GREEN}${profit_dollars:,.2f}{Colors.END}")
-        self.logger.info(f"Shares:    {pos.shares}")
-        self.logger.info(f"Hold Time: {hold_duration}")
-        self.logger.info(f"Order ID:  {result.get('id', 'N/A')}")
-        
-        # Broadcast profit-taking event
-        broadcaster.broadcast_event(
-            event_type="profit",
-            message=f"💰 PROFIT TAKEN: {ticker} +{gain_pct*100:.1f}% (${profit_dollars:,.2f})",
-            level="INFO",
-            ticker=ticker,
-            entry_price=pos.entry_price,
-            exit_price=price,
-            gain_pct=gain_pct * 100,
-            profit_dollars=profit_dollars,
-            shares=pos.shares,
-            hold_time=hold_duration
-        )            # Update statistics
+            self.logger.info(f"Entry:     ${pos.entry_price:.2f}")
+            self.logger.info(f"Peak:      ${pos.peak_price:.2f} (+{((pos.peak_price/pos.entry_price)-1)*100:.2f}%)")
+            self.logger.info(f"Exit:      ${price:.2f}")
+            self.logger.info(f"Gain:      {Colors.BRIGHT_GREEN}+{gain_pct*100:.2f}%{Colors.END}")
+            self.logger.info(f"Profit:    {Colors.BRIGHT_GREEN}${profit_dollars:,.2f}{Colors.END}")
+            self.logger.info(f"Shares:    {pos.shares}")
+            self.logger.info(f"Hold Time: {hold_duration}")
+            self.logger.info(f"Order ID:  {result.get('id', 'N/A')}")
+            
+            # Broadcast profit-taking event
+            broadcaster.broadcast_event(
+                event_type="profit",
+                message=f"💰 PROFIT TAKEN: {ticker} +{gain_pct*100:.1f}% (${profit_dollars:,.2f})",
+                level="INFO",
+                ticker=ticker,
+                entry_price=pos.entry_price,
+                exit_price=price,
+                gain_pct=gain_pct * 100,
+                profit_dollars=profit_dollars,
+                shares=pos.shares,
+                hold_time=hold_duration
+            )
+            
+            # Update statistics
             self.stats['profits_taken'] += 1
             self.stats['total_profit_pct'] += gain_pct
             self.stats['total_profit_dollars'] += profit_dollars
