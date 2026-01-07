@@ -579,25 +579,24 @@ def main():
             
             for event in all_events[:30]:
                 with st.container():
+                    # Use pure Streamlit components - no HTML/markdown
                     col1, col2 = st.columns([1, 20])
                     
                     with col1:
-                        # Display icon safely
-                        st.markdown(f"<div style='font-size: 24px;'>{event.get('icon', '📊')}</div>", unsafe_allow_html=True)
+                        # Just show the icon as text
+                        st.write(event.get('icon', '📊'))
                     
                     with col2:
-                        # Use simple text display to avoid regex issues
-                        timestamp = str(event.get('timestamp', ''))[:19]  # Trim to datetime only
+                        # Use native Streamlit components only
+                        timestamp = str(event.get('timestamp', ''))[:19]
                         source = str(event.get('source', 'Unknown'))
                         message = str(event.get('message', ''))
                         
-                        # Display with simple styling
-                        st.markdown(f"""
-                        <div class="event-card">
-                            <div class="event-timestamp">{timestamp} | <span class="event-source">{source}</span></div>
-                        </div>
-                        """, unsafe_allow_html=True)
-                        st.text(message)  # Plain text avoids regex issues
+                        # Display with native Streamlit - no markdown parsing
+                        st.caption(f"{timestamp} | {source}")
+                        st.write(message)
+                    
+                    st.divider()
         else:
             st.info("No recent activity. The PM may be idle or log files are not available on this deployment.")
             st.markdown("""
