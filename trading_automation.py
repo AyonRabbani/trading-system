@@ -3,7 +3,7 @@
 Portfolio Manager - Automated Multi-Strategy Trading System
 Based on TradingSystem.ipynb with 4 strategies + Portfolio Manager meta-strategy
 """
-import os, argparse, requests, pandas as pd, numpy as np, json, time, logging
+import os, argparse, requests, pandas as pd, numpy as np, json, time, logging, subprocess, sys
 from datetime import datetime, timedelta
 from typing import Dict, Tuple, List, Optional
 from dotenv import load_dotenv
@@ -167,6 +167,15 @@ class AlpacaClient:
         except Exception as e:
             logging.error(f"Error getting positions: {e}")
             return []
+    
+    def get_clock(self):
+        """Get market clock"""
+        try:
+            res = requests.get(f"{self.base_url}/v2/clock", headers=self.headers, timeout=10)
+            return res.json()
+        except Exception as e:
+            logging.error(f"Error getting clock: {e}")
+            return None
     
     def place_order(self, symbol: str, qty: float, side: str):
         """Place market order"""
@@ -866,6 +875,51 @@ def execute_orders(client: AlpacaClient, deltas: Dict[str, float], dry_run: bool
             if result:
                 logging.info(f"    Order placed: {result.get('id')}")
 
+def start_profit_taker(mode: str = 'moderate'):
+    """
+    Start intraday profit taker to manage live positions
+    Mode options: conservative, moderate, aggressive
+    """
+    try:
+        # Check if profit taker script exists
+        profit_taker_path = 'intraday_profit_taker.py'
+        if not os.path.exists(profit_taker_path):
+            logging.warning(f"Profit taker script not found: {profit_taker_path}")
+            return False
+        
+        # Check if market is open
+        client = AlpacaClient()
+        clock = client.get_clock()
+        if not clock or not clock.get('is_open'):
+            logging.info("  Market is closed, skipping profit taker activation")
+            return False
+        
+        logging.info(f"\n{'='*80}")
+        logging.info(f"🎯 ACTIVATING INTRADAY PROFIT TAKER ({mode.upper()} mode)")
+        logging.info(f"{'='*80}")
+        
+        # Start profit taker in background
+        cmd = [sys.executable, profit_taker_path, '--mode', mode]
+        process = subprocess.Popen(
+            cmd,
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE,
+            text=True
+        )
+        
+        logging.info(f"  ✓ Profit taker started (PID: {process.pid})")
+        logging.info(f"  Mode: {mode.upper()}")
+        logging.info(f"  Monitoring: All active positions")
+        logging.info(f"  Action: Take profits when targets hit")
+        logging.info(f"\n  📊 View real-time activity on dashboard: http://localhost:8501")
+        logging.info(f"  🛑 To stop: kill {process.pid}\n")
+        
+        return True
+        
+    except Exception as e:
+        logging.error(f"Error starting profit taker: {e}")
+        return False
+
 # ============================================================================
 # MAIN EXECUTION FLOW
 # ============================================================================
@@ -1052,12 +1106,24 @@ def main():
                        help='Execution mode (default: dry-run)')
     parser.add_argument('--use-scanner', action='store_true',
                        help='Use dynamic buckets from scanner instead of static')
+    parser.add_argument('--start-profit-taker', action='store_true',
+                       help='Automatically start intraday profit taker after order execution (live mode only)')
+    parser.add_argument('--profit-taker-mode', choices=['conservative', 'moderate', 'aggressive'],
+                       default='moderate', help='Profit taker mode (default: moderate)')
     args = parser.parse_args()
     
     dry_run = (args.mode == 'dry-run')
     
     try:
         execute_portfolio_manager(use_scanner=args.use_scanner, dry_run=dry_run)
+        
+        # Start profit taker if requested and in live mode
+        if args.start_profit_taker and not dry_run:
+            start_profit_taker(mode=args.profit_taker_mode)
+        elif args.start_profit_taker and dry_run:
+            logging.info("\n⚠️  Profit taker not started (dry-run mode)")
+            logging.info("   Use --mode live to activate profit taker\n")
+            
     except Exception as e:
         logging.error(f"Fatal error: {e}", exc_info=True)
 
