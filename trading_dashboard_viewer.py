@@ -608,7 +608,9 @@ def main():
                     st.metric("Buy/Sell Ratio", f"{buy_orders}/{sell_orders}")
                 
                 with col4:
-                    recent_24h = len([o for o in orders if (datetime.now() - datetime.fromisoformat(o['created_at'].replace('Z', '+00:00'))).days == 0])
+                    from datetime import timezone
+                    now = datetime.now(timezone.utc)
+                    recent_24h = len([o for o in orders if (now - datetime.fromisoformat(o['created_at'].replace('Z', '+00:00'))).days == 0])
                     st.metric("Orders (24h)", recent_24h)
             else:
                 st.info("No orders match the selected filters")
