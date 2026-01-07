@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 """
-Trading System Dashboard - VIEW ONLY
+Trading System Dashboard - VIEW ONLY (Enhanced)
 
-Read-only portfolio monitoring dashboard for public sharing.
-No trading controls - displays portfolio performance, positions, and analytics only.
+Read-only portfolio monitoring with real-time PM activity feed.
+Shows scanning, strategy selection, rebalancing, and profit-taking decisions.
 
 Usage:
     streamlit run trading_dashboard_viewer.py
@@ -16,9 +16,12 @@ import json
 import os
 import requests
 import time
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, timezone
 from typing import Dict, List, Optional
 import plotly.graph_objects as go
+from plotly.subplots import make_subplots
+import glob
+import re
 
 # ============================================================================
 # CONFIGURATION
@@ -41,6 +44,137 @@ except:
 
 # File paths
 SCAN_RESULTS_PATH = 'scan_results.json'
+TRADING_LOG_PATTERN = 'trading_automation_*.log'
+PROFIT_TAKER_LOG_PATTERN = 'profit_taker_*.log'
+SCANNER_LOG_PATTERN = 'daily_scanner_*.log'
+
+# ============================================================================
+# LOG PARSING HELPERS
+# ============================================================================
+
+def parse_log_events(log_path: str, max_events: int = 50) -> List[dict]:
+    """Parse log file and extract key events."""
+    if not os.path.exists(log_path):
+        return []
+    
+    events = []
+    
+    try:
+        with open(log_path, 'r') as f:
+            lines = f.readlines()
+        
+        for line in lines[-max_events:]:
+            # Parse timestamp and message
+            match = re.match(r'(\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2})[,\s]+\-\s+(\w+)\s+\-\s+(.*)', line)
+            if match:
+                timestamp_str, level, message = match.groups()
+                
+                # Classify event type
+                event_type = 'info'
+                icon = 'ℹ️'
+                
+                if 'ERROR' in level or 'error' in message.lower():
+                    event_type = 'error'
+                    icon = '❌'
+                elif 'WARNING' in level or 'warning' in message.lower():
+                    event_type = 'warning'
+                    icon = '⚠️'
+                elif 'scan' in message.lower() or 'scanner' in message.lower():
+                    event_type = 'scan'
+                    icon = '🔍'
+                elif 'strategy' in message.lower():
+                    event_type = 'strategy'
+                    icon = '🎯'
+                elif 'order' in message.lower() or 'buy' in message.lower() or 'sell' in message.lower():
+                    event_type = 'order'
+                    icon = '📊'
+                elif 'profit' in message.lower() or 'trailing' in message.lower():
+                    event_type = 'profit'
+                    icon = '💰'
+                elif 'rebalance' in message.lower():
+                    event_type = 'rebalance'
+                    icon = '⚖️'
+                
+                events.append({
+                    'timestamp': timestamp_str,
+                    'level': level,
+                    'type': event_type,
+                    'icon': icon,
+                    'message': message.strip()
+                })
+    
+    except Exception as e:
+        st.error(f"Error parsing log: {e}")
+    
+    return events
+
+def get_latest_log_file(pattern: str) -> Optional[str]:
+    """Get the most recent log file matching pattern."""
+    files = glob.glob(pattern)
+    if not files:
+        return None
+    return max(files, key=os.path.getmtime)
+
+def aggregate_all_events(max_events: int = 100) -> List[dict]:
+    """Aggregate events from all log files."""
+    all_events = []
+    
+    # Get latest log files
+    trading_log = get_latest_log_file(TRADING_LOG_PATTERN)
+    profit_log = get_latest_log_file(PROFIT_TAKER_LOG_PATTERN)
+    scanner_log = get_latest_log_file(SCANNER_LOG_PATTERN)
+    
+    # Parse each log
+    if trading_log:
+        events = parse_log_events(trading_log, max_events)
+        for e in events:
+            e['source'] = 'Trading Automation'
+        all_events.extend(events)
+    
+    if profit_log:
+        events = parse_log_events(profit_log, max_events)
+        for e in events:
+            e['source'] = 'Profit Taker'
+        all_events.extend(events)
+    
+    if scanner_log:
+        events = parse_log_events(scanner_log, max_events)
+        for e in events:
+            e['source'] = 'Market Scanner'
+        all_events.extend(events)
+    
+    # Sort by timestamp descending
+    all_events.sort(key=lambda x: x['timestamp'], reverse=True)
+    
+    return all_events[:max_events]
+
+def extract_strategy_decisions() -> List[dict]:
+    """Extract strategy selection decisions from logs."""
+    trading_log = get_latest_log_file(TRADING_LOG_PATTERN)
+    if not trading_log:
+        return []
+    
+    decisions = []
+    
+    try:
+        with open(trading_log, 'r') as f:
+            content = f.read()
+        
+        # Look for strategy selection patterns
+        pattern = r'Selected strategy: (\w+).*NAV: \$?([\d,\.]+)'
+        matches = re.findall(pattern, content)
+        
+        for strategy, nav in matches:
+            decisions.append({
+                'strategy': strategy,
+                'nav': nav,
+                'timestamp': datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+            })
+    
+    except Exception as e:
+        pass
+    
+    return decisions
 
 # ============================================================================
 # ALPACA API HELPERS
@@ -207,6 +341,63 @@ def create_allocation_pie_chart(positions: List[dict]):
     
     return fig
 
+def create_activity_timeline(events: List[dict]):
+    """Create activity timeline visualization."""
+    if not events:
+        return None
+    
+    # Group by type
+    event_types = {}
+    for event in events:
+        event_type = event['type']
+        if event_type not in event_types:
+            event_types[event_type] = []
+        event_types[event_type].append(event)
+    
+    # Create timeline chart
+    fig = go.Figure()
+    
+    colors = {
+        'scan': '#00D9FF',
+        'strategy': '#FFD700',
+        'order': '#00FF00',
+        'profit': '#FF6B6B',
+        'rebalance': '#FFA07A',
+        'info': '#4ECDC4',
+        'warning': '#FF8C00',
+        'error': '#FF4444'
+    }
+    
+    for event_type, type_events in event_types.items():
+        timestamps = [datetime.strptime(e['timestamp'], '%Y-%m-%d %H:%M:%S') for e in type_events]
+        y_values = [event_type] * len(timestamps)
+        
+        fig.add_trace(go.Scatter(
+            x=timestamps,
+            y=y_values,
+            mode='markers',
+            name=event_type.title(),
+            marker=dict(
+                size=12,
+                color=colors.get(event_type, '#FFFFFF'),
+                symbol='circle'
+            ),
+            text=[e['message'][:50] + '...' if len(e['message']) > 50 else e['message'] for e in type_events],
+            hovertemplate='%{text}<br>%{x}<extra></extra>'
+        ))
+    
+    fig.update_layout(
+        title='Portfolio Manager Activity Timeline',
+        xaxis_title='Time',
+        yaxis_title='Event Type',
+        template='plotly_dark',
+        height=300,
+        showlegend=True,
+        hovermode='closest'
+    )
+    
+    return fig
+
 def create_scanner_scores_chart(scores: List[dict]):
     """Create top scorers bar chart."""
     if not scores:
@@ -247,10 +438,10 @@ def main():
     
     # Page config
     st.set_page_config(
-        page_title="Portfolio Viewer",
-        page_icon="📊",
+        page_title="Portfolio Manager Live Feed",
+        page_icon="🤖",
         layout="wide",
-        initial_sidebar_state="collapsed"
+        initial_sidebar_state="expanded"
     )
     
     # Custom CSS
@@ -261,56 +452,157 @@ def main():
             padding: 10px;
             border-radius: 5px;
         }
-        .big-font {
-            font-size: 20px !important;
+        .event-card {
+            padding: 10px;
+            margin: 5px 0;
+            border-radius: 5px;
+            border-left: 4px solid #00D9FF;
+            background-color: #1E1E1E;
+        }
+        .event-timestamp {
+            color: #888;
+            font-size: 12px;
+        }
+        .event-source {
+            color: #00D9FF;
             font-weight: bold;
+        }
+        .pm-thinking {
+            background: linear-gradient(135deg, #1E1E1E 0%, #2D2D2D 100%);
+            padding: 15px;
+            border-radius: 10px;
+            border: 2px solid #00D9FF;
+            margin: 10px 0;
         }
         </style>
     """, unsafe_allow_html=True)
     
     # Header
-    st.title("📊 Portfolio Viewer")
-    st.markdown("*Real-time portfolio monitoring and analytics*")
+    st.title("🤖 Portfolio Manager Live Feed")
+    st.markdown("*Real-time view of every scan, strategy decision, and trade execution*")
     
-    # Sidebar - Info only
+    # Sidebar
     with st.sidebar:
-        st.header("ℹ️ About")
-        st.info("""
-        **View-Only Dashboard**
+        st.header("🎛️ Dashboard Controls")
         
-        This is a read-only view of the trading portfolio. 
-        All trading operations are managed externally.
+        auto_refresh = st.checkbox("Auto-refresh (30s)", value=True)
+        show_all_events = st.checkbox("Show all event types", value=True)
         
-        Data refreshes automatically every 30 seconds.
-        """)
+        if not show_all_events:
+            event_filter = st.multiselect(
+                "Filter events",
+                options=['scan', 'strategy', 'order', 'profit', 'rebalance', 'info', 'warning', 'error'],
+                default=['scan', 'strategy', 'order', 'profit']
+            )
+        else:
+            event_filter = None
         
         st.markdown("---")
         
-        # Manual refresh button
-        if st.button("🔄 Refresh Data"):
+        # System status
+        st.subheader("📡 System Status")
+        
+        # Check for recent log files
+        trading_log = get_latest_log_file(TRADING_LOG_PATTERN)
+        profit_log = get_latest_log_file(PROFIT_TAKER_LOG_PATTERN)
+        scanner_log = get_latest_log_file(SCANNER_LOG_PATTERN)
+        
+        st.metric("Scanner", "🟢 Active" if scanner_log else "⚪ Inactive")
+        st.metric("Trading Bot", "🟢 Active" if trading_log else "⚪ Inactive")
+        st.metric("Profit Taker", "🟢 Active" if profit_log else "⚪ Inactive")
+        
+        st.markdown("---")
+        
+        if st.button("🔄 Refresh Now"):
             st.cache_data.clear()
             st.rerun()
         
-        st.markdown("---")
-        
-        # Display last update time
-        st.caption(f"Last updated: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
-    
-    # Auto-refresh toggle
-    auto_refresh = st.sidebar.checkbox("Auto-refresh (30s)", value=True)
+        st.caption(f"Last update: {datetime.now().strftime('%H:%M:%S')}")
     
     # Main content tabs
-    tab1, tab2, tab3, tab4 = st.tabs([
+    tab1, tab2, tab3, tab4, tab5 = st.tabs([
+        "🎯 PM Activity Feed",
         "📊 Portfolio Overview",
-        "💼 Positions & Performance",
+        "💼 Positions",
         "🔍 Market Analysis",
-        "📜 Recent Activity"
+        "📜 Recent Orders"
     ])
     
     # ========================================================================
-    # TAB 1: PORTFOLIO OVERVIEW
+    # TAB 1: PM ACTIVITY FEED (NEW!)
     # ========================================================================
     with tab1:
+        st.header("Portfolio Manager Activity Feed")
+        st.markdown("*Live stream of scanning, strategy selection, and execution decisions*")
+        
+        # Get all events
+        all_events = aggregate_all_events(max_events=100)
+        
+        if event_filter:
+            all_events = [e for e in all_events if e['type'] in event_filter]
+        
+        if all_events:
+            # Activity timeline
+            fig = create_activity_timeline(all_events[:50])
+            if fig:
+                st.plotly_chart(fig, use_container_width=True)
+            
+            st.markdown("---")
+            
+            # Event feed
+            st.subheader(f"📋 Recent Events ({len(all_events)})")
+            
+            for event in all_events[:30]:
+                with st.container():
+                    col1, col2 = st.columns([1, 20])
+                    
+                    with col1:
+                        st.markdown(f"<div style='font-size: 24px;'>{event['icon']}</div>", unsafe_allow_html=True)
+                    
+                    with col2:
+                        st.markdown(f"""
+                        <div class="event-card">
+                            <div class="event-timestamp">{event['timestamp']} | <span class="event-source">{event['source']}</span></div>
+                            <div>{event['message']}</div>
+                        </div>
+                        """, unsafe_allow_html=True)
+        else:
+            st.info("No recent activity. The PM may be idle or log files are not available on this deployment.")
+            st.markdown("""
+            **Note:** This Streamlit Cloud deployment shows portfolio data in real-time via Alpaca API, 
+            but PM activity logs are only available when running locally.
+            
+            **To see full PM activity feed locally:**
+            1. Clone the repo: `git clone https://github.com/AyonRabbani/trading-system.git`
+            2. Run scanner: `python daily_scanner.py --mode scan`
+            3. Run trading bot: `python trading_automation.py --mode dry-run`
+            4. Run profit taker: `python intraday_profit_taker.py --mode moderate`
+            5. View dashboard: `streamlit run trading_dashboard_viewer.py`
+            """)
+        
+        # PM Decision Summary
+        st.markdown("---")
+        st.subheader("🧠 PM Decision Summary")
+        
+        decisions = extract_strategy_decisions()
+        if decisions:
+            latest_decision = decisions[-1]
+            
+            st.markdown(f"""
+            <div class="pm-thinking">
+                <h4>💭 Latest Strategy Selection</h4>
+                <p><strong>Chosen Strategy:</strong> {latest_decision['strategy']}</p>
+                <p><strong>Portfolio NAV:</strong> ${latest_decision['nav']}</p>
+                <p><strong>Decision Time:</strong> {latest_decision['timestamp']}</p>
+            </div>
+            """, unsafe_allow_html=True)
+        else:
+            st.info("No strategy decisions recorded yet.")
+    
+    # ========================================================================
+    # TAB 2: PORTFOLIO OVERVIEW
+    # ========================================================================
+    with tab2:
         st.header("Portfolio Overview")
         
         # Fetch account data
@@ -382,9 +674,9 @@ def main():
             st.warning("Portfolio history not available")
     
     # ========================================================================
-    # TAB 2: POSITIONS & PERFORMANCE
+    # TAB 3: POSITIONS
     # ========================================================================
-    with tab2:
+    with tab3:
         st.header("Current Positions")
         
         positions = get_positions()
@@ -451,9 +743,9 @@ def main():
             st.info("No open positions")
     
     # ========================================================================
-    # TAB 3: MARKET ANALYSIS
+    # TAB 4: MARKET ANALYSIS
     # ========================================================================
-    with tab3:
+    with tab4:
         st.header("Market Analysis & Scanner Results")
         
         scan_results = load_scan_results()
@@ -553,9 +845,9 @@ def main():
             st.warning("No market analysis data available")
     
     # ========================================================================
-    # TAB 4: RECENT ACTIVITY
+    # TAB 5: RECENT ORDERS
     # ========================================================================
-    with tab4:
+    with tab5:
         st.header("Recent Trading Activity")
         
         orders = get_orders()
@@ -619,7 +911,7 @@ def main():
     
     # Footer
     st.markdown("---")
-    st.caption(f"🔒 View-Only Dashboard | Data updates every 30 seconds | Last refresh: {datetime.now().strftime('%H:%M:%S')}")
+    st.caption(f"🤖 Portfolio Manager Live Feed | Auto-refresh: {'ON' if auto_refresh else 'OFF'} | Last update: {datetime.now().strftime('%H:%M:%S')}")
     
     # Auto-refresh logic
     if auto_refresh:
