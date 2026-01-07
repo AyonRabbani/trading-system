@@ -619,14 +619,10 @@ def main():
         if decisions:
             latest_decision = decisions[-1]
             
-            st.markdown(f"""
-            <div class="pm-thinking">
-                <h4>💭 Latest Strategy Selection</h4>
-                <p><strong>Chosen Strategy:</strong> {latest_decision['strategy']}</p>
-                <p><strong>Portfolio NAV:</strong> ${latest_decision['nav']}</p>
-                <p><strong>Decision Time:</strong> {latest_decision['timestamp']}</p>
-            </div>
-            """, unsafe_allow_html=True)
+            st.subheader("💭 Latest Strategy Selection")
+            st.write(f"**Chosen Strategy:** {latest_decision['strategy']}")
+            st.write(f"**Portfolio NAV:** {latest_decision['nav']}")
+            st.write(f"**Decision Time:** {latest_decision['timestamp']}")
         else:
             st.info("No strategy decisions recorded yet.")
     
