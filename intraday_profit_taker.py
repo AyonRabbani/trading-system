@@ -10,6 +10,7 @@ Usage:
     python intraday_profit_taker.py --mode conservative --min-profit 3.0
 """
 
+import os
 import argparse
 import logging
 import sys
@@ -24,6 +25,10 @@ import numpy as np
 import pandas as pd
 from massive import WebSocketClient
 from massive.websocket.models import WebSocketMessage, Feed, Market
+from dotenv import load_dotenv
+
+# Load environment variables
+load_dotenv()
 
 # Terminal colors
 class Colors:
@@ -47,10 +52,10 @@ class Colors:
 # ============================================================================
 
 # API Keys
-POLYGON_API_KEY = "ANeN7iKkqpD0bW2RcI_2xWVbNljnDCZ5"
-ALPACA_API_KEY = "PKX23J722MYUK7C2HWYGSMNRJY"
-ALPACA_SECRET_KEY = "FPt7tVxnGjT2GEs3m1yiEYxpbiL22NVG4JnhaCE9wukF"
-ALPACA_BASE_URL = "https://paper-api.alpaca.markets"
+POLYGON_API_KEY = os.getenv('POLYGON_API_KEY')
+ALPACA_API_KEY = os.getenv('ALPACA_API_KEY')
+ALPACA_SECRET_KEY = os.getenv('ALPACA_API_SECRET')
+ALPACA_BASE_URL = os.getenv('ALPACA_BASE_URL', 'https://paper-api.alpaca.markets')
 
 # Trading Modes
 MODES = {

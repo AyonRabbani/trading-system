@@ -11,6 +11,7 @@ Usage:
     python daily_scanner.py --export rotation_report.json
 """
 
+import os
 import argparse
 import requests
 import pandas as pd
@@ -19,13 +20,17 @@ import json
 import logging
 from datetime import datetime, timedelta
 from typing import Dict, List, Tuple, Optional
+from dotenv import load_dotenv
+
+# Load environment variables
+load_dotenv()
 
 # ============================================================================
 # CONFIGURATION
 # ============================================================================
 
 # API Keys
-POLYGON_API_KEY = "ANeN7iKkqpD0bW2RcI_2xWVbNljnDCZ5"
+POLYGON_API_KEY = os.getenv('POLYGON_API_KEY')
 
 # Current Holdings (from trading_automation.py)
 CURRENT_HOLDINGS = {

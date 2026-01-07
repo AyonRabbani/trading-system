@@ -22,16 +22,20 @@ from datetime import datetime, timedelta
 from typing import Dict, List, Optional
 import plotly.graph_objects as go
 from plotly.subplots import make_subplots
+from dotenv import load_dotenv
+
+# Load environment variables
+load_dotenv()
 
 # ============================================================================
 # CONFIGURATION
 # ============================================================================
 
 # API Keys (from scripts)
-ALPACA_API_KEY = "PKX23J722MYUK7C2HWYGSMNRJY"
-ALPACA_SECRET_KEY = "FPt7tVxnGjT2GEs3m1yiEYxpbiL22NVG4JnhaCE9wukF"
-ALPACA_BASE_URL = "https://paper-api.alpaca.markets"
-POLYGON_API_KEY = "ANeN7iKkqpD0bW2RcI_2xWVbNljnDCZ5"
+ALPACA_API_KEY = os.getenv('ALPACA_API_KEY')
+ALPACA_SECRET_KEY = os.getenv('ALPACA_API_SECRET')
+ALPACA_BASE_URL = os.getenv('ALPACA_BASE_URL', 'https://paper-api.alpaca.markets')
+POLYGON_API_KEY = os.getenv('POLYGON_API_KEY')
 
 # File paths
 SCAN_RESULTS_PATH = 'scan_results.json'
