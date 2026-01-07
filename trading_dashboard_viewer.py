@@ -582,20 +582,22 @@ def main():
                     col1, col2 = st.columns([1, 20])
                     
                     with col1:
-                        st.markdown(f"<div style='font-size: 24px;'>{event['icon']}</div>", unsafe_allow_html=True)
+                        # Display icon safely
+                        st.markdown(f"<div style='font-size: 24px;'>{event.get('icon', '📊')}</div>", unsafe_allow_html=True)
                     
                     with col2:
-                        # Escape HTML to prevent regex errors in Streamlit
-                        safe_timestamp = html.escape(str(event.get('timestamp', '')))
-                        safe_source = html.escape(str(event.get('source', '')))
-                        safe_message = html.escape(str(event.get('message', '')))
+                        # Use simple text display to avoid regex issues
+                        timestamp = str(event.get('timestamp', ''))[:19]  # Trim to datetime only
+                        source = str(event.get('source', 'Unknown'))
+                        message = str(event.get('message', ''))
                         
+                        # Display with simple styling
                         st.markdown(f"""
                         <div class="event-card">
-                            <div class="event-timestamp">{safe_timestamp} | <span class="event-source">{safe_source}</span></div>
-                            <div>{safe_message}</div>
+                            <div class="event-timestamp">{timestamp} | <span class="event-source">{source}</span></div>
                         </div>
                         """, unsafe_allow_html=True)
+                        st.text(message)  # Plain text avoids regex issues
         else:
             st.info("No recent activity. The PM may be idle or log files are not available on this deployment.")
             st.markdown("""
