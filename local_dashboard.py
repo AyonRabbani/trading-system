@@ -35,6 +35,26 @@ if ALPACA_API_KEY and ALPACA_SECRET_KEY:
     trading_client = TradingClient(ALPACA_API_KEY, ALPACA_SECRET_KEY, paper=True)
 
 
+def export_dashboard_state():
+    """Export complete dashboard state to JSON for public dashboard sync"""
+    try:
+        state = {
+            'timestamp': datetime.now().isoformat(),
+            'account': get_account_info(),
+            'positions': get_positions(),
+            'orders': get_recent_orders(limit=20),
+            'scan_results': load_scan_results()
+        }
+        
+        with open('dashboard_state.json', 'w') as f:
+            json.dump(state, f, indent=2, default=str)
+        
+        return True
+    except Exception as e:
+        print(f"Error exporting dashboard state: {e}")
+        return False
+
+
 # ============================================================================
 # DATA LOADING FUNCTIONS
 # ============================================================================
@@ -352,6 +372,9 @@ def main():
         
         st.divider()
         st.caption(f"Updated: {datetime.now().strftime('%H:%M:%S')}")
+    
+    # Export dashboard state for public sync
+    export_dashboard_state()
     
     # Render sections
     render_header()

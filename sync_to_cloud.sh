@@ -28,14 +28,14 @@ done
 
 sync_once() {
     # Check if there are changes to public files
-    if git diff --quiet public_events.json scan_results.json 2>/dev/null; then
+    if git diff --quiet public_events.json scan_results.json dashboard_state.json 2>/dev/null; then
         return 0
     fi
     
     echo "📤 Syncing public data to GitHub..."
     
     # Add public files (force-add since *.json is gitignored but these are excepted)
-    git add -f public_events.json scan_results.json 2>/dev/null
+    git add -f public_events.json scan_results.json dashboard_state.json 2>/dev/null
     
     if [[ `git status --porcelain` ]]; then
         # Commit with timestamp
@@ -56,7 +56,7 @@ sync_once() {
 
 if [ "$AUTO_SYNC" = true ]; then
     echo "🔄 Auto-sync enabled - watching for changes every ${INTERVAL} seconds"
-    echo "   Files monitored: public_events.json, scan_results.json"
+    echo "   Files monitored: public_events.json, scan_results.json, dashboard_state.json"
     echo "   Press Ctrl+C to stop"
     echo ""
     

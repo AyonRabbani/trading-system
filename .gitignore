@@ -37,4 +37,4 @@ logs/
 *_secrets.py
 
 # Cache
-.streamlit/secrets.toml
+.streamlit/secrets.toml!dashboard_state.json
