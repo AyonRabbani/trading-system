@@ -174,7 +174,11 @@ def render_scanner_results():
         st.caption(f"Last Scan: {timestamp}")
     
     with col2:
-        regime = scan_data.get('market_regime', {}).get('regime', 'Unknown')
+        market_regime = scan_data.get('market_regime', {})
+        if isinstance(market_regime, dict):
+            regime = market_regime.get('regime', 'Unknown')
+        else:
+            regime = str(market_regime) if market_regime else 'Unknown'
         st.caption(f"Market Regime: {regime}")
     
     with col3:
@@ -188,14 +192,16 @@ def render_scanner_results():
     if scores:
         df = pd.DataFrame([{
             'Rank': i+1,
-            'Ticker': s['ticker'],
-            'Score': f"{s['composite']:.1f}",
-            'Momentum': f"{s['momentum']:.1f}",
-            '30D Return': f"{s['return_30d']:+.1f}%",
-            'Price': f"${s['price']:.2f}"
+            'Ticker': s.get('ticker', 'N/A'),
+            'Score': f"{s.get('composite', 0):.1f}",
+            'Momentum': f"{s.get('momentum', 0):.1f}",
+            '30D Return': f"{s.get('return_30d', 0):+.1f}%",
+            'Price': f"${s.get('price', 0):.2f}"
         } for i, s in enumerate(scores)])
         
         st.dataframe(df, use_container_width=True, hide_index=True, height=350)
+    else:
+        st.info("No top scorers data available.")
     
     st.divider()
 
@@ -204,15 +210,41 @@ def render_portfolio_summary(events: List[Dict]):
     """Extract and display portfolio summary from events"""
     st.subheader("💼 PORTFOLIO SUMMARY")
     
-    # Try to find strategy selection events
-    strategy_events = [e for e in events if e.get('type') == 'strategy']
+    # Extract portfolio metrics from events
+    portfolio_events = [e for e in events if e.get('type') in ['strategy', 'portfolio', 'info']]
     
-    if strategy_events:
-        latest = strategy_events[-1]
-        st.write(f"**Latest Strategy:** {latest.get('message', 'N/A')}")
-        st.caption(f"Selected at: {latest.get('timestamp', 'Unknown')[:19]}")
+    if portfolio_events:
+        # Latest strategy
+        strategy_events = [e for e in portfolio_events if e.get('type') == 'strategy']
+        if strategy_events:
+            latest = strategy_events[-1]
+            st.write(f"**Latest Strategy:** {latest.get('message', 'N/A')}")
+            st.caption(f"Selected at: {latest.get('timestamp', 'Unknown')[:19]}")
+        
+        # Current positions from profit taker events
+        position_events = [e for e in events if 'Monitoring' in e.get('message', '') and 'positions' in e.get('message', '')]
+        if position_events:
+            latest_position = position_events[-1]
+            st.write(f"**Active Positions:** {latest_position.get('message', 'N/A')}")
+            st.caption(f"Updated: {latest_position.get('timestamp', 'Unknown')[:19]}")
+        
+        # Portfolio metrics from events metadata
+        for event in reversed(portfolio_events[-5:]):
+            metadata = event.get('metadata', {})
+            if 'portfolio_value' in metadata or 'total_return' in metadata:
+                col1, col2, col3 = st.columns(3)
+                with col1:
+                    if 'portfolio_value' in metadata:
+                        st.metric("Portfolio Value", f"~${metadata['portfolio_value']}")
+                with col2:
+                    if 'total_return' in metadata:
+                        st.metric("Total Return", f"{metadata['total_return']:.1f}%")
+                with col3:
+                    if 'positions_count' in metadata:
+                        st.metric("Positions", metadata['positions_count'])
+                break
     else:
-        st.info("No recent strategy decisions recorded.")
+        st.info("No recent portfolio activity recorded.")
     
     st.divider()
 

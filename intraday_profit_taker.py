@@ -373,10 +373,16 @@ class IntraDayProfitTaker:
         
         # Broadcast heartbeat event for public dashboard
         position_summary = ", ".join([f"{t} {pos.get_gain_pct()*100:+.1f}%" for t, pos in self.positions.items()])
+        total_value = sum([pos.shares * pos.current_price for pos in self.positions.values()])
+        avg_gain = sum([pos.get_gain_pct() for pos in self.positions.values()]) / len(self.positions) if self.positions else 0
+        
         broadcaster.broadcast_event(
-            event_type="info",
+            event_type="portfolio",
             message=f"👀 Monitoring {len(self.positions)} positions: {position_summary}",
-            level="INFO"
+            level="INFO",
+            portfolio_value=f"{total_value/1000:.0f}K" if total_value < 100000 else f"{total_value/1000:.0f}K",
+            positions_count=len(self.positions),
+            avg_return=round(avg_gain * 100, 1)
         )
         
         for ticker, pos in self.positions.items():

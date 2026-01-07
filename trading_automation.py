@@ -428,13 +428,13 @@ def select_best_strategy(data: Dict[str, pd.DataFrame]) -> Tuple[str, Dict[str, 
     
     logging.info(f"✓ Selected: {strategy_name} (NAV: ${nav:,.2f})")
     
-    # Broadcast strategy selection
+    # Broadcast strategy selection with portfolio metrics
     broadcaster.broadcast_event(
         event_type="strategy",
-        message=f"🎯 Selected strategy: {strategy_name} | NAV: ${nav:,.2f}",
+        message=f"🎯 Selected strategy: {strategy_name}",
         level="INFO",
         strategy_name=strategy_name,
-        nav=nav,
+        portfolio_value=f"{nav/1000:.0f}K",
         positions_count=len(positions)
     )
     
