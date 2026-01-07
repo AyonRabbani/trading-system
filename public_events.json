@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-01-07T15:19:01.542894",
-  "event_count": 78,
+  "last_updated": "2026-01-07T15:19:31.550019",
+  "event_count": 79,
   "events": [
     {
       "timestamp": "2026-01-07T11:57:13",
@@ -870,6 +870,18 @@
       "level": "INFO",
       "source": "Profit Taker",
       "message": "\ud83d\udc40 Monitoring 5 positions: CPER -0.1%, HUT -2.2%, JEF -0.0%, RKLB -0.8%, SLX -0.3%",
+      "metadata": {
+        "portfolio_value": "88K",
+        "positions_count": 5,
+        "avg_return": -0.7
+      }
+    },
+    {
+      "timestamp": "2026-01-07T15:19:03.427495",
+      "type": "portfolio",
+      "level": "INFO",
+      "source": "Profit Taker",
+      "message": "\ud83d\udc40 Monitoring 5 positions: CPER -0.1%, HUT -2.3%, JEF -0.0%, RKLB -0.8%, SLX -0.3%",
       "metadata": {
         "portfolio_value": "88K",
         "positions_count": 5,
