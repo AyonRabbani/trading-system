@@ -16,6 +16,7 @@ import json
 import os
 import requests
 import time
+import html
 from datetime import datetime, timedelta, timezone
 from typing import Dict, List, Optional
 import plotly.graph_objects as go
@@ -584,10 +585,15 @@ def main():
                         st.markdown(f"<div style='font-size: 24px;'>{event['icon']}</div>", unsafe_allow_html=True)
                     
                     with col2:
+                        # Escape HTML to prevent regex errors in Streamlit
+                        safe_timestamp = html.escape(str(event.get('timestamp', '')))
+                        safe_source = html.escape(str(event.get('source', '')))
+                        safe_message = html.escape(str(event.get('message', '')))
+                        
                         st.markdown(f"""
                         <div class="event-card">
-                            <div class="event-timestamp">{event['timestamp']} | <span class="event-source">{event['source']}</span></div>
-                            <div>{event['message']}</div>
+                            <div class="event-timestamp">{safe_timestamp} | <span class="event-source">{safe_source}</span></div>
+                            <div>{safe_message}</div>
                         </div>
                         """, unsafe_allow_html=True)
         else:
