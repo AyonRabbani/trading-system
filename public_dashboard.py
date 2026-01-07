@@ -2,12 +2,13 @@
 """
 Public Trading Dashboard
 Read-only viewer for public deployment (Streamlit Cloud)
-Reads from public_events.json and scan_results.json synced from local
+Matches local dashboard appearance but reads from JSON files only
 No API keys - safe for public sharing
 """
 
 import streamlit as st
 import pandas as pd
+import numpy as np
 import json
 from datetime import datetime
 from pathlib import Path
@@ -44,6 +45,56 @@ def load_scan_results() -> Optional[Dict]:
     return None
 
 
+def extract_account_summary(events: List[Dict]) -> Optional[Dict]:
+    """Extract account summary from events"""
+    for event in reversed(events):
+        metadata = event.get('metadata', {})
+        if 'portfolio_value' in metadata:
+            return {
+                'portfolio_value': metadata.get('portfolio_value', 'N/A'),
+                'positions_count': metadata.get('positions_count', 0),
+                'avg_return': metadata.get('avg_return', 0),
+                'timestamp': event.get('timestamp', 'Unknown')
+            }
+    return None
+
+
+def extract_positions_from_events(events: List[Dict]) -> List[Dict]:
+    """Extract position information from events"""
+    positions = []
+    
+    # Find latest monitoring events with position details
+    for event in reversed(events):
+        if 'Monitoring' in event.get('message', ''):
+            message = event.get('message', '')
+            # Parse format like: "Monitoring 2 positions: QQQ +0.2%, SPY +0.1%"
+            if ':' in message:
+                pos_part = message.split(':', 1)[1].strip()
+                pos_items = pos_part.split(',')
+                
+                for item in pos_items:
+                    item = item.strip()
+                    if ' ' in item:
+                        parts = item.split()
+                        if len(parts) >= 2:
+                            symbol = parts[0]
+                            pnl_str = parts[1]
+                            try:
+                                pnl = float(pnl_str.replace('%', '').replace('+', ''))
+                                positions.append({
+                                    'symbol': symbol,
+                                    'pnl_pct': pnl,
+                                    'timestamp': event.get('timestamp', '')
+                                })
+                            except:
+                                pass
+            
+            if positions:
+                break
+    
+    return positions
+
+
 # ============================================================================
 # UI RENDERING
 # ============================================================================
@@ -55,110 +106,90 @@ def render_header():
     st.divider()
 
 
-def render_system_status(events: List[Dict]):
-    """Render system status based on recent events"""
-    st.subheader("🟢 SYSTEM STATUS")
+def render_account_summary(events: List[Dict]):
+    """Render account metrics from events"""
+    st.subheader("💰 ACCOUNT SUMMARY")
     
-    if not events:
-        st.warning("No events received. System may be offline.")
+    summary = extract_account_summary(events)
+    
+    if not summary:
+        st.warning("No recent portfolio data. System may be offline or syncing.")
         return
     
-    # Count recent events by source
-    now = datetime.now()
-    recent_cutoff = 3600  # 1 hour
-    
-    scanner_active = False
-    trader_active = False
-    profit_taker_active = False
-    
-    for event in events[-50:]:  # Check last 50 events
-        try:
-            event_time = datetime.fromisoformat(event['timestamp'].replace('Z', ''))
-            age_seconds = (now - event_time).total_seconds()
-            
-            if age_seconds < recent_cutoff:
-                source = event.get('source', '').lower()
-                if 'scanner' in source:
-                    scanner_active = True
-                elif 'trading' in source or 'automation' in source:
-                    trader_active = True
-                elif 'profit' in source:
-                    profit_taker_active = True
-        except:
-            continue
-    
-    col1, col2, col3 = st.columns(3)
+    col1, col2, col3, col4 = st.columns(4)
     
     with col1:
-        status = "🟢 Active" if scanner_active else "⚪ Idle"
-        st.metric("Market Scanner", status)
+        st.metric("Portfolio Value", summary['portfolio_value'])
     
     with col2:
-        status = "🟢 Active" if trader_active else "⚪ Idle"
-        st.metric("Trading Bot", status)
+        st.metric("Positions", summary['positions_count'])
     
     with col3:
-        status = "🟢 Active" if profit_taker_active else "⚪ Idle"
-        st.metric("Profit Taker", status)
+        avg_return = summary.get('avg_return', 0)
+        st.metric("Avg Return", f"{avg_return:+.1f}%")
     
+    with col4:
+        # Calculate time since last update
+        timestamp = summary.get('timestamp', '')
+        if timestamp:
+            try:
+                event_time = datetime.fromisoformat(timestamp.replace('Z', ''))
+                age_minutes = (datetime.now() - event_time).total_seconds() / 60
+                if age_minutes < 60:
+                    status = f"🟢 Active ({age_minutes:.0f}m ago)"
+                else:
+                    status = "⚪ Idle"
+            except:
+                status = "Unknown"
+        else:
+            status = "Unknown"
+        st.metric("Status", status)
+    
+    st.caption(f"Last updated: {timestamp[:19] if timestamp else 'Unknown'}")
     st.divider()
 
 
-def render_event_feed(events: List[Dict], event_filter: Optional[List[str]] = None):
-    """Render activity feed"""
-    st.subheader("📡 ACTIVITY FEED")
+def render_positions(events: List[Dict]):
+    """Render current positions from events"""
+    st.subheader("📈 CURRENT POSITIONS")
     
-    if not events:
-        st.info("No activity yet. System is offline or data hasn't synced.")
-        st.caption("This dashboard updates when the local system runs and syncs to GitHub.")
+    positions = extract_positions_from_events(events)
+    
+    if not positions:
+        st.info("No position data available. Positions are updated when profit taker is monitoring.")
         return
     
-    # Filter events
-    if event_filter:
-        filtered = [e for e in events if e.get('type') in event_filter]
-    else:
-        filtered = events
+    # Create DataFrame
+    df = pd.DataFrame([{
+        'Symbol': p['symbol'],
+        'P&L%': f"{p['pnl_pct']:+.2f}%",
+        'Status': '🟢 Monitored' if p['pnl_pct'] > 0 else '🔴 Watching',
+        'Last Update': p['timestamp'][:19] if p['timestamp'] else 'N/A'
+    } for p in positions])
     
-    st.caption(f"Showing {len(filtered)} events (last {len(events)} total)")
+    st.dataframe(df, use_container_width=True, hide_index=True)
     
-    # Display events
-    for event in reversed(filtered[-30:]):  # Show last 30 events, newest first
-        timestamp = event.get('timestamp', 'Unknown')[:19]
-        source = event.get('source', 'Unknown')
-        message = event.get('message', '')
-        event_type = event.get('type', 'info')
-        
-        # Format display
-        icon_map = {
-            'scan': '🔍',
-            'strategy': '🎯',
-            'order': '📝',
-            'profit': '💰',
-            'rebalance': '⚖️',
-            'info': 'ℹ️',
-            'warning': '⚠️',
-            'error': '❌'
-        }
-        icon = icon_map.get(event_type, '📊')
-        
-        with st.container():
-            col1, col2 = st.columns([1, 20])
-            
-            with col1:
-                st.write(icon)
-            
-            with col2:
-                st.caption(f"{timestamp} | {source}")
-                st.write(message)
-            
-            st.divider()
+    # Position stats
+    col1, col2, col3 = st.columns(3)
+    
+    with col1:
+        st.metric("Total Positions", len(positions))
+    
+    with col2:
+        winners = len([p for p in positions if p['pnl_pct'] > 0])
+        st.metric("Winning Positions", f"{winners}/{len(positions)}")
+    
+    with col3:
+        if positions:
+            avg_pnl = np.mean([p['pnl_pct'] for p in positions])
+            st.metric("Avg P&L%", f"{avg_pnl:+.2f}%")
     
     st.divider()
 
 
 def render_scanner_results():
     """Render market scanner results"""
-    st.subheader("🔍 MARKET SCANNER")
+    st.subheader("🔍 MARKET SCANNER RESULTS")
     
     scan_data = load_scan_results()
     
@@ -186,8 +217,8 @@ def render_scanner_results():
         st.caption(f"Hot Sectors: {', '.join(hot_sectors[:3]) if hot_sectors else 'N/A'}")
     
     # Top scorers
-    st.write("**Top 15 Opportunities**")
-    scores = scan_data.get('top_scorers', [])[:15]
+    st.write("**Top 20 Opportunities**")
+    scores = scan_data.get('top_scorers', [])[:20]
     
     if scores:
         df = pd.DataFrame([{
@@ -195,57 +226,85 @@ def render_scanner_results():
             'Ticker': s.get('ticker', 'N/A'),
             'Score': f"{s.get('composite', 0):.1f}",
             'Momentum': f"{s.get('momentum', 0):.1f}",
+            'Volatility': f"{s.get('volatility', 0):.1f}",
+            'Rel Strength': f"{s.get('relative_strength', 0):.1f}",
             '30D Return': f"{s.get('return_30d', 0):+.1f}%",
             'Price': f"${s.get('price', 0):.2f}"
         } for i, s in enumerate(scores)])
         
-        st.dataframe(df, use_container_width=True, hide_index=True, height=350)
+        st.dataframe(df, use_container_width=True, hide_index=True, height=400)
     else:
         st.info("No top scorers data available.")
     
     st.divider()
 
 
-def render_portfolio_summary(events: List[Dict]):
-    """Extract and display portfolio summary from events"""
-    st.subheader("💼 PORTFOLIO SUMMARY")
+def render_trading_logs(events: List[Dict]):
+    """Render Portfolio Manager activity from events"""
+    st.subheader("🤖 PORTFOLIO MANAGER ACTIVITY")
     
-    # Extract portfolio metrics from events
-    portfolio_events = [e for e in events if e.get('type') in ['strategy', 'portfolio', 'info']]
+    # Filter strategy and order events
+    trading_events = [e for e in events if e.get('type') in ['strategy', 'order', 'rebalance']]
     
-    if portfolio_events:
-        # Latest strategy
-        strategy_events = [e for e in portfolio_events if e.get('type') == 'strategy']
-        if strategy_events:
-            latest = strategy_events[-1]
-            st.write(f"**Latest Strategy:** {latest.get('message', 'N/A')}")
-            st.caption(f"Selected at: {latest.get('timestamp', 'Unknown')[:19]}")
-        
-        # Current positions from profit taker events
-        position_events = [e for e in events if 'Monitoring' in e.get('message', '') and 'positions' in e.get('message', '')]
-        if position_events:
-            latest_position = position_events[-1]
-            st.write(f"**Active Positions:** {latest_position.get('message', 'N/A')}")
-            st.caption(f"Updated: {latest_position.get('timestamp', 'Unknown')[:19]}")
-        
-        # Portfolio metrics from events metadata
-        for event in reversed(portfolio_events[-5:]):
-            metadata = event.get('metadata', {})
-            if 'portfolio_value' in metadata or 'total_return' in metadata:
-                col1, col2, col3 = st.columns(3)
-                with col1:
-                    if 'portfolio_value' in metadata:
-                        st.metric("Portfolio Value", f"~${metadata['portfolio_value']}")
-                with col2:
-                    if 'total_return' in metadata:
-                        st.metric("Total Return", f"{metadata['total_return']:.1f}%")
-                with col3:
-                    if 'positions_count' in metadata:
-                        st.metric("Positions", metadata['positions_count'])
-                break
-    else:
-        st.info("No recent portfolio activity recorded.")
+    if not trading_events:
+        st.info("No trading activity recorded yet.")
+        return
     
+    # Display last 10 trading events
+    log_lines = []
+    for event in reversed(trading_events[-10:]):
+        timestamp = event.get('timestamp', 'Unknown')[:19]
+        message = event.get('message', '')
+        log_lines.append(f"{timestamp} - {message}")
+    
+    log_text = '\n'.join(log_lines)
+    st.text_area("Recent Activity", log_text, height=300)
+    
+    st.divider()
+
+
+def render_profit_taker_logs(events: List[Dict]):
+    """Render Profit Taker activity from events"""
+    st.subheader("💎 PROFIT TAKER ACTIVITY")
+    
+    # Filter profit and portfolio monitoring events
+    profit_events = [e for e in events if e.get('type') in ['profit', 'portfolio', 'info']]
+    
+    if not profit_events:
+        st.info("No profit taker activity recorded yet.")
+        return
+    
+    # Display last 10 profit events
+    log_lines = []
+    for event in reversed(profit_events[-10:]):
+        timestamp = event.get('timestamp', 'Unknown')[:19]
+        message = event.get('message', '')
+        log_lines.append(f"{timestamp} - {message}")
+    
+    log_text = '\n'.join(log_lines)
+    st.text_area("Recent Activity", log_text, height=300)
+    
+    st.divider()
+
+
+def render_recent_orders(events: List[Dict]):
+    """Render recent orders from events"""
+    st.subheader("📋 RECENT ORDERS")
+    
+    # Filter order events
+    order_events = [e for e in events if e.get('type') == 'order']
+    
+    if not order_events:
+        st.info("No recent orders")
+        return
+    
+    df = pd.DataFrame([{
+        'Time': e.get('timestamp', 'Unknown')[:16],
+        'Order': e.get('message', 'N/A'),
+        'Source': e.get('source', 'Unknown')
+    } for e in reversed(order_events[-20:])])
+    
+    st.dataframe(df, use_container_width=True, hide_index=True)
     st.divider()
 
 
@@ -263,53 +322,66 @@ def main():
     
     # Sidebar controls
     with st.sidebar:
-        st.header("⚙️ FILTERS")
+        st.header("⚙️ SETTINGS")
         
-        show_all = st.checkbox("Show all events", value=True)
-        
-        if not show_all:
-            event_filter = st.multiselect(
-                "Event types",
-                options=['scan', 'strategy', 'order', 'profit', 'rebalance', 'info', 'warning', 'error'],
-                default=['scan', 'strategy', 'order', 'profit']
-            )
-        else:
-            event_filter = None
+        auto_refresh = st.checkbox("Auto-refresh", value=True)
+        refresh_interval = st.slider("Refresh interval (seconds)", 10, 300, 60)
         
         st.divider()
         
-        auto_refresh = st.checkbox("Auto-refresh (30s)", value=False)
+        st.subheader("Display Sections")
+        show_account = st.checkbox("Account Summary", value=True)
+        show_positions = st.checkbox("Current Positions", value=True)
+        show_scanner = st.checkbox("Scanner Results", value=True)
+        show_trading = st.checkbox("Portfolio Manager", value=True)
+        show_profit = st.checkbox("Profit Taker", value=True)
+        show_orders = st.checkbox("Recent Orders", value=True)
+        
+        st.divider()
         
         if st.button("🔄 Refresh Now"):
             st.rerun()
         
         st.divider()
         st.caption(f"Updated: {datetime.now().strftime('%H:%M:%S')}")
-        
-        st.divider()
-        st.caption("⚠️ Public dashboard")
-        st.caption("Data is sanitized for privacy")
+        st.caption("⚠️ Public read-only view")
+        st.caption("Data synced from local system")
     
     # Load data
     events = load_public_events()
     
     # Render sections
     render_header()
-    render_system_status(events)
-    render_event_feed(events, event_filter)
-    render_scanner_results()
-    render_portfolio_summary(events)
+    
+    if show_account:
+        render_account_summary(events)
+    
+    if show_positions:
+        render_positions(events)
+    
+    if show_scanner:
+        render_scanner_results()
+    
+    if show_trading:
+        render_trading_logs(events)
+    
+    if show_profit:
+        render_profit_taker_logs(events)
+    
+    if show_orders:
+        render_recent_orders(events)
     
     # Footer
     st.divider()
-    st.caption("🌐 Public read-only dashboard | No API keys | Data synced from local system via GitHub")
-    st.caption("To run locally with full features: git clone https://github.com/AyonRabbani/trading-system.git")
+    st.caption(f"Dashboard refreshed: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
+    st.caption("🌐 Public read-only dashboard | No API keys | Data synced via GitHub")
     
     # Auto-refresh
     if auto_refresh:
-        time.sleep(30)
+        time.sleep(refresh_interval)
         st.rerun()
 
 
 if __name__ == '__main__':
     main()
+
