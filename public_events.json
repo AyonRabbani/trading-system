@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-01-07T15:03:46.678744",
-  "event_count": 64,
+  "last_updated": "2026-01-07T15:04:20.725410",
+  "event_count": 66,
   "events": [
     {
       "timestamp": "2026-01-07T11:57:13",
@@ -145,23 +145,11 @@
       }
     },
     {
-      "timestamp": "2026-01-07T14:17:15.862189",
+      "timestamp": "2026-01-07T14:15:50.003246",
       "type": "portfolio",
       "level": "INFO",
       "source": "Profit Taker",
-      "message": "\ud83d\udc40 Monitoring 4 positions: CPER -0.0%, GLD -0.0%, JEF -0.0%, SLX -0.2%",
-      "metadata": {
-        "portfolio_value": "100K",
-        "positions_count": 4,
-        "avg_return": -0.1
-      }
-    },
-    {
-      "timestamp": "2026-01-07T14:18:15.928432",
-      "type": "portfolio",
-      "level": "INFO",
-      "source": "Profit Taker",
-      "message": "\ud83d\udc40 Monitoring 4 positions: CPER -0.0%, GLD +0.0%, JEF -0.0%, SLX -0.2%",
+      "message": "\ud83d\udc40 Monitoring 4 positions: CPER +0.0%, GLD +0.0%, JEF -0.1%, SLX -0.2%",
       "metadata": {
         "portfolio_value": "100K",
         "positions_count": 4,
@@ -169,7 +157,19 @@
       }
     },
     {
-      "timestamp": "2026-01-07T14:19:15.975084",
+      "timestamp": "2026-01-07T14:16:50.067464",
+      "type": "portfolio",
+      "level": "INFO",
+      "source": "Profit Taker",
+      "message": "\ud83d\udc40 Monitoring 4 positions: CPER -0.0%, GLD +0.0%, JEF -0.1%, SLX -0.2%",
+      "metadata": {
+        "portfolio_value": "100K",
+        "positions_count": 4,
+        "avg_return": -0.1
+      }
+    },
+    {
+      "timestamp": "2026-01-07T14:17:50.116198",
       "type": "portfolio",
       "level": "INFO",
       "source": "Profit Taker",
@@ -181,7 +181,7 @@
       }
     },
     {
-      "timestamp": "2026-01-07T14:20:16.021852",
+      "timestamp": "2026-01-07T14:18:50.169916",
       "type": "portfolio",
       "level": "INFO",
       "source": "Profit Taker",
@@ -189,11 +189,71 @@
       "metadata": {
         "portfolio_value": "100K",
         "positions_count": 4,
-        "avg_return": -0.2
+        "avg_return": -0.1
       }
     },
     {
-      "timestamp": "2026-01-07T14:21:16.073687",
+      "timestamp": "2026-01-07T14:19:50.228663",
+      "type": "portfolio",
+      "level": "INFO",
+      "source": "Profit Taker",
+      "message": "\ud83d\udc40 Monitoring 4 positions: CPER -0.2%, GLD -0.1%, JEF -0.2%, SLX -0.2%",
+      "metadata": {
+        "portfolio_value": "100K",
+        "positions_count": 4,
+        "avg_return": -0.1
+      }
+    },
+    {
+      "timestamp": "2026-01-07T14:20:50.282712",
+      "type": "portfolio",
+      "level": "INFO",
+      "source": "Profit Taker",
+      "message": "\ud83d\udc40 Monitoring 4 positions: CPER -0.2%, GLD -0.1%, JEF -0.2%, SLX -0.2%",
+      "metadata": {
+        "portfolio_value": "100K",
+        "positions_count": 4,
+        "avg_return": -0.1
+      }
+    },
+    {
+      "timestamp": "2026-01-07T14:21:50.336047",
+      "type": "portfolio",
+      "level": "INFO",
+      "source": "Profit Taker",
+      "message": "\ud83d\udc40 Monitoring 4 positions: CPER -0.2%, GLD -0.1%, JEF -0.2%, SLX -0.2%",
+      "metadata": {
+        "portfolio_value": "100K",
+        "positions_count": 4,
+        "avg_return": -0.1
+      }
+    },
+    {
+      "timestamp": "2026-01-07T14:22:50.388110",
+      "type": "portfolio",
+      "level": "INFO",
+      "source": "Profit Taker",
+      "message": "\ud83d\udc40 Monitoring 4 positions: CPER -0.2%, GLD -0.1%, JEF -0.1%, SLX -0.2%",
+      "metadata": {
+        "portfolio_value": "100K",
+        "positions_count": 4,
+        "avg_return": -0.1
+      }
+    },
+    {
+      "timestamp": "2026-01-07T14:23:50.446285",
+      "type": "portfolio",
+      "level": "INFO",
+      "source": "Profit Taker",
+      "message": "\ud83d\udc40 Monitoring 4 positions: CPER -0.2%, GLD -0.1%, JEF -0.1%, SLX -0.2%",
+      "metadata": {
+        "portfolio_value": "100K",
+        "positions_count": 4,
+        "avg_return": -0.1
+      }
+    },
+    {
+      "timestamp": "2026-01-07T14:24:50.508303",
       "type": "portfolio",
       "level": "INFO",
       "source": "Profit Taker",
@@ -205,47 +265,11 @@
       }
     },
     {
-      "timestamp": "2026-01-07T14:22:16.120143",
+      "timestamp": "2026-01-07T14:25:50.577494",
       "type": "portfolio",
       "level": "INFO",
       "source": "Profit Taker",
-      "message": "\ud83d\udc40 Monitoring 4 positions: CPER -0.2%, GLD -0.1%, JEF -0.1%, SLX -0.2%",
-      "metadata": {
-        "portfolio_value": "100K",
-        "positions_count": 4,
-        "avg_return": -0.1
-      }
-    },
-    {
-      "timestamp": "2026-01-07T14:23:16.166804",
-      "type": "portfolio",
-      "level": "INFO",
-      "source": "Profit Taker",
-      "message": "\ud83d\udc40 Monitoring 4 positions: CPER -0.2%, GLD -0.1%, JEF -0.1%, SLX -0.2%",
-      "metadata": {
-        "portfolio_value": "100K",
-        "positions_count": 4,
-        "avg_return": -0.1
-      }
-    },
-    {
-      "timestamp": "2026-01-07T14:24:16.201415",
-      "type": "portfolio",
-      "level": "INFO",
-      "source": "Profit Taker",
-      "message": "\ud83d\udc40 Monitoring 4 positions: CPER -0.2%, GLD -0.1%, JEF -0.1%, SLX -0.2%",
-      "metadata": {
-        "portfolio_value": "100K",
-        "positions_count": 4,
-        "avg_return": -0.1
-      }
-    },
-    {
-      "timestamp": "2026-01-07T14:25:16.244634",
-      "type": "portfolio",
-      "level": "INFO",
-      "source": "Profit Taker",
-      "message": "\ud83d\udc40 Monitoring 4 positions: CPER -0.3%, GLD -0.1%, JEF -0.2%, SLX -0.2%",
+      "message": "\ud83d\udc40 Monitoring 4 positions: CPER -0.3%, GLD -0.1%, JEF -0.1%, SLX -0.2%",
       "metadata": {
         "portfolio_value": "100K",
         "positions_count": 4,
@@ -253,7 +277,7 @@
       }
     },
     {
-      "timestamp": "2026-01-07T14:26:16.309491",
+      "timestamp": "2026-01-07T14:26:50.618465",
       "type": "portfolio",
       "level": "INFO",
       "source": "Profit Taker",
@@ -265,7 +289,7 @@
       }
     },
     {
-      "timestamp": "2026-01-07T14:27:16.367696",
+      "timestamp": "2026-01-07T14:27:50.678111",
       "type": "portfolio",
       "level": "INFO",
       "source": "Profit Taker",
@@ -277,7 +301,7 @@
       }
     },
     {
-      "timestamp": "2026-01-07T14:28:16.425525",
+      "timestamp": "2026-01-07T14:28:50.752640",
       "type": "portfolio",
       "level": "INFO",
       "source": "Profit Taker",
@@ -289,11 +313,11 @@
       }
     },
     {
-      "timestamp": "2026-01-07T14:29:16.473726",
+      "timestamp": "2026-01-07T14:29:50.802889",
       "type": "portfolio",
       "level": "INFO",
       "source": "Profit Taker",
-      "message": "\ud83d\udc40 Monitoring 4 positions: CPER -0.2%, GLD -0.1%, JEF -0.0%, SLX -0.2%",
+      "message": "\ud83d\udc40 Monitoring 4 positions: CPER -0.2%, GLD -0.0%, JEF -0.0%, SLX -0.2%",
       "metadata": {
         "portfolio_value": "100K",
         "positions_count": 4,
@@ -301,19 +325,7 @@
       }
     },
     {
-      "timestamp": "2026-01-07T14:30:16.523940",
-      "type": "portfolio",
-      "level": "INFO",
-      "source": "Profit Taker",
-      "message": "\ud83d\udc40 Monitoring 4 positions: CPER -0.2%, GLD -0.0%, JEF +0.0%, SLX -0.2%",
-      "metadata": {
-        "portfolio_value": "100K",
-        "positions_count": 4,
-        "avg_return": -0.1
-      }
-    },
-    {
-      "timestamp": "2026-01-07T14:31:16.575681",
+      "timestamp": "2026-01-07T14:30:50.854918",
       "type": "portfolio",
       "level": "INFO",
       "source": "Profit Taker",
@@ -325,7 +337,7 @@
       }
     },
     {
-      "timestamp": "2026-01-07T14:32:16.665762",
+      "timestamp": "2026-01-07T14:31:50.939557",
       "type": "portfolio",
       "level": "INFO",
       "source": "Profit Taker",
@@ -337,7 +349,7 @@
       }
     },
     {
-      "timestamp": "2026-01-07T14:33:16.708141",
+      "timestamp": "2026-01-07T14:32:50.995664",
       "type": "portfolio",
       "level": "INFO",
       "source": "Profit Taker",
@@ -349,7 +361,7 @@
       }
     },
     {
-      "timestamp": "2026-01-07T14:34:16.746341",
+      "timestamp": "2026-01-07T14:33:51.044704",
       "type": "portfolio",
       "level": "INFO",
       "source": "Profit Taker",
@@ -361,7 +373,7 @@
       }
     },
     {
-      "timestamp": "2026-01-07T14:35:16.786397",
+      "timestamp": "2026-01-07T14:34:51.093577",
       "type": "portfolio",
       "level": "INFO",
       "source": "Profit Taker",
@@ -373,7 +385,7 @@
       }
     },
     {
-      "timestamp": "2026-01-07T14:36:16.860500",
+      "timestamp": "2026-01-07T14:35:51.147840",
       "type": "portfolio",
       "level": "INFO",
       "source": "Profit Taker",
@@ -385,7 +397,7 @@
       }
     },
     {
-      "timestamp": "2026-01-07T14:37:16.914169",
+      "timestamp": "2026-01-07T14:36:51.212897",
       "type": "portfolio",
       "level": "INFO",
       "source": "Profit Taker",
@@ -397,7 +409,7 @@
       }
     },
     {
-      "timestamp": "2026-01-07T14:38:16.964287",
+      "timestamp": "2026-01-07T14:37:51.264588",
       "type": "portfolio",
       "level": "INFO",
       "source": "Profit Taker",
@@ -409,7 +421,7 @@
       }
     },
     {
-      "timestamp": "2026-01-07T14:39:17.025106",
+      "timestamp": "2026-01-07T14:38:51.318413",
       "type": "portfolio",
       "level": "INFO",
       "source": "Profit Taker",
@@ -421,7 +433,7 @@
       }
     },
     {
-      "timestamp": "2026-01-07T14:40:17.076346",
+      "timestamp": "2026-01-07T14:39:51.374769",
       "type": "portfolio",
       "level": "INFO",
       "source": "Profit Taker",
@@ -433,7 +445,7 @@
       }
     },
     {
-      "timestamp": "2026-01-07T14:41:17.136688",
+      "timestamp": "2026-01-07T14:40:51.429351",
       "type": "portfolio",
       "level": "INFO",
       "source": "Profit Taker",
@@ -445,7 +457,7 @@
       }
     },
     {
-      "timestamp": "2026-01-07T14:42:17.193300",
+      "timestamp": "2026-01-07T14:41:51.478095",
       "type": "portfolio",
       "level": "INFO",
       "source": "Profit Taker",
@@ -457,7 +469,7 @@
       }
     },
     {
-      "timestamp": "2026-01-07T14:43:17.245658",
+      "timestamp": "2026-01-07T14:42:51.532463",
       "type": "portfolio",
       "level": "INFO",
       "source": "Profit Taker",
@@ -469,7 +481,7 @@
       }
     },
     {
-      "timestamp": "2026-01-07T14:44:17.302560",
+      "timestamp": "2026-01-07T14:43:51.595048",
       "type": "portfolio",
       "level": "INFO",
       "source": "Profit Taker",
@@ -481,7 +493,7 @@
       }
     },
     {
-      "timestamp": "2026-01-07T14:45:17.353989",
+      "timestamp": "2026-01-07T14:44:51.645610",
       "type": "portfolio",
       "level": "INFO",
       "source": "Profit Taker",
@@ -493,7 +505,7 @@
       }
     },
     {
-      "timestamp": "2026-01-07T14:46:17.412525",
+      "timestamp": "2026-01-07T14:45:51.696218",
       "type": "portfolio",
       "level": "INFO",
       "source": "Profit Taker",
@@ -505,7 +517,7 @@
       }
     },
     {
-      "timestamp": "2026-01-07T14:47:17.481060",
+      "timestamp": "2026-01-07T14:46:51.739977",
       "type": "portfolio",
       "level": "INFO",
       "source": "Profit Taker",
@@ -517,7 +529,7 @@
       }
     },
     {
-      "timestamp": "2026-01-07T14:48:17.541463",
+      "timestamp": "2026-01-07T14:47:51.803266",
       "type": "portfolio",
       "level": "INFO",
       "source": "Profit Taker",
@@ -529,7 +541,7 @@
       }
     },
     {
-      "timestamp": "2026-01-07T14:49:17.595316",
+      "timestamp": "2026-01-07T14:48:51.855708",
       "type": "portfolio",
       "level": "INFO",
       "source": "Profit Taker",
@@ -541,7 +553,7 @@
       }
     },
     {
-      "timestamp": "2026-01-07T14:50:17.638590",
+      "timestamp": "2026-01-07T14:49:51.908579",
       "type": "portfolio",
       "level": "INFO",
       "source": "Profit Taker",
@@ -553,7 +565,7 @@
       }
     },
     {
-      "timestamp": "2026-01-07T14:51:17.681129",
+      "timestamp": "2026-01-07T14:50:51.961324",
       "type": "portfolio",
       "level": "INFO",
       "source": "Profit Taker",
@@ -565,7 +577,7 @@
       }
     },
     {
-      "timestamp": "2026-01-07T14:52:17.727476",
+      "timestamp": "2026-01-07T14:51:52.012792",
       "type": "portfolio",
       "level": "INFO",
       "source": "Profit Taker",
@@ -577,7 +589,7 @@
       }
     },
     {
-      "timestamp": "2026-01-07T14:53:17.774606",
+      "timestamp": "2026-01-07T14:52:52.061963",
       "type": "portfolio",
       "level": "INFO",
       "source": "Profit Taker",
@@ -589,7 +601,7 @@
       }
     },
     {
-      "timestamp": "2026-01-07T14:54:17.830369",
+      "timestamp": "2026-01-07T14:53:52.110991",
       "type": "portfolio",
       "level": "INFO",
       "source": "Profit Taker",
@@ -601,7 +613,7 @@
       }
     },
     {
-      "timestamp": "2026-01-07T14:55:17.881976",
+      "timestamp": "2026-01-07T14:54:52.166014",
       "type": "portfolio",
       "level": "INFO",
       "source": "Profit Taker",
@@ -613,7 +625,7 @@
       }
     },
     {
-      "timestamp": "2026-01-07T14:56:17.925286",
+      "timestamp": "2026-01-07T14:55:52.217133",
       "type": "portfolio",
       "level": "INFO",
       "source": "Profit Taker",
@@ -625,7 +637,7 @@
       }
     },
     {
-      "timestamp": "2026-01-07T14:57:17.986391",
+      "timestamp": "2026-01-07T14:56:52.258947",
       "type": "portfolio",
       "level": "INFO",
       "source": "Profit Taker",
@@ -637,7 +649,7 @@
       }
     },
     {
-      "timestamp": "2026-01-07T14:58:18.044184",
+      "timestamp": "2026-01-07T14:57:52.317396",
       "type": "portfolio",
       "level": "INFO",
       "source": "Profit Taker",
@@ -649,7 +661,7 @@
       }
     },
     {
-      "timestamp": "2026-01-07T14:59:18.091981",
+      "timestamp": "2026-01-07T14:58:52.361463",
       "type": "portfolio",
       "level": "INFO",
       "source": "Profit Taker",
@@ -661,7 +673,7 @@
       }
     },
     {
-      "timestamp": "2026-01-07T15:00:18.134391",
+      "timestamp": "2026-01-07T14:59:52.421955",
       "type": "portfolio",
       "level": "INFO",
       "source": "Profit Taker",
@@ -673,7 +685,7 @@
       }
     },
     {
-      "timestamp": "2026-01-07T15:01:18.179383",
+      "timestamp": "2026-01-07T15:00:52.478023",
       "type": "portfolio",
       "level": "INFO",
       "source": "Profit Taker",
@@ -685,7 +697,7 @@
       }
     },
     {
-      "timestamp": "2026-01-07T15:02:18.233227",
+      "timestamp": "2026-01-07T15:01:52.573689",
       "type": "portfolio",
       "level": "INFO",
       "source": "Profit Taker",
@@ -697,7 +709,19 @@
       }
     },
     {
-      "timestamp": "2026-01-07T15:03:18.289697",
+      "timestamp": "2026-01-07T15:02:52.636193",
+      "type": "portfolio",
+      "level": "INFO",
+      "source": "Profit Taker",
+      "message": "\ud83d\udc40 Monitoring 4 positions: CPER -0.2%, GLD -0.0%, JEF +0.0%, SLX -0.2%",
+      "metadata": {
+        "portfolio_value": "100K",
+        "positions_count": 4,
+        "avg_return": -0.1
+      }
+    },
+    {
+      "timestamp": "2026-01-07T15:03:52.690427",
       "type": "portfolio",
       "level": "INFO",
       "source": "Profit Taker",
