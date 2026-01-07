@@ -1,0 +1,47 @@
+{
+  "last_updated": "2026-01-07T12:17:29.201338",
+  "events": [
+    {
+      "timestamp": "2026-01-07T11:57:13",
+      "source": "Daily Scanner",
+      "type": "scan",
+      "message": "\ud83d\udd0d Market scan completed: 110 tickers analyzed, RISK_ON regime detected"
+    },
+    {
+      "timestamp": "2026-01-07T11:57:15",
+      "source": "Daily Scanner",
+      "type": "scan",
+      "message": "\ud83c\udfaf Top opportunities: RKLB (82.6), HUT (81.9), AA (81.3), MU (81.2), SLV (80.4)"
+    },
+    {
+      "timestamp": "2026-01-07T12:01:30",
+      "source": "Trading Automation",
+      "type": "strategy",
+      "message": "\ud83d\udca1 Strategy selected: BUY_HOLD (NAV: $100,000.00)"
+    },
+    {
+      "timestamp": "2026-01-07T12:01:45",
+      "source": "Trading Automation",
+      "type": "order",
+      "message": "\ud83d\udcdd Order placed: SELL 5 GLD"
+    },
+    {
+      "timestamp": "2026-01-07T12:01:46",
+      "source": "Trading Automation",
+      "type": "order",
+      "message": "\ud83d\udcdd Order placed: BUY 46 SPY"
+    },
+    {
+      "timestamp": "2026-01-07T12:01:47",
+      "source": "Trading Automation",
+      "type": "order",
+      "message": "\ud83d\udcdd Order placed: BUY 56 QQQ"
+    },
+    {
+      "timestamp": "2026-01-07T12:05:00",
+      "source": "Profit Taker",
+      "type": "info",
+      "message": "\ud83d\udc40 Monitoring 2 positions: SPY, QQQ (MODERATE mode)"
+    }
+  ]
+}
