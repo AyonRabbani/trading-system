@@ -1,0 +1,892 @@
+{
+  "timestamp": "2026-01-07T15:13:41.497661",
+  "account": {
+    "equity": 99242.57,
+    "cash": -160.77,
+    "buying_power": 99081.8,
+    "portfolio_value": 99242.57,
+    "last_equity": 101125.69,
+    "status": "ACTIVE",
+    "pattern_day_trader": false
+  },
+  "positions": [
+    {
+      "symbol": "AA",
+      "qty": 639.588772293,
+      "avg_entry_price": 62.599881,
+      "current_price": 62.26,
+      "market_value": 39820.796963,
+      "unrealized_pl": -217.384295,
+      "unrealized_plpc": -0.0054294248182556,
+      "unrealized_intraday_pl": -217.384071,
+      "unrealized_intraday_plpc": -0.0054294192539716
+    },
+    {
+      "symbol": "HUT",
+      "qty": 146.759374024,
+      "avg_entry_price": 59.1,
+      "current_price": 57.81,
+      "market_value": 8484.159412,
+      "unrealized_pl": -189.319593,
+      "unrealized_plpc": -0.0218274112257449,
+      "unrealized_intraday_pl": -189.319593,
+      "unrealized_intraday_plpc": -0.0218274112257449
+    },
+    {
+      "symbol": "RKLB",
+      "qty": 171.249226688,
+      "avg_entry_price": 85.469504,
+      "current_price": 83.7136,
+      "market_value": 14335.889263,
+      "unrealized_pl": -300.697158,
+      "unrealized_plpc": -0.0205442136131258,
+      "unrealized_intraday_pl": -300.697202,
+      "unrealized_intraday_plpc": -0.0205442165575319
+    },
+    {
+      "symbol": "SLV",
+      "qty": 518.07427369,
+      "avg_entry_price": 70.7,
+      "current_price": 70.9599,
+      "market_value": 36762.498654,
+      "unrealized_pl": 134.647504,
+      "unrealized_plpc": 0.0036760961883509,
+      "unrealized_intraday_pl": 134.647504,
+      "unrealized_intraday_plpc": 0.0036760961883509
+    }
+  ],
+  "orders": [
+    {
+      "id": "d96e36b4-6813-4806-9efd-6a2d8e62558f",
+      "symbol": "JEF",
+      "side": "sell",
+      "qty": 445.534661586,
+      "type": "market",
+      "status": "filled",
+      "filled_qty": 445.534661586,
+      "filled_avg_price": 65.087262,
+      "created_at": "2026-01-07T19:30:00.259797+00:00",
+      "updated_at": "2026-01-07T19:30:01.713382+00:00"
+    },
+    {
+      "id": "6873d8d5-f5ac-44be-ac03-8e11924390bf",
+      "symbol": "CPER",
+      "side": "sell",
+      "qty": 590.03765142,
+      "type": "market",
+      "status": "filled",
+      "filled_qty": 590.03765142,
+      "filled_avg_price": 35.9,
+      "created_at": "2026-01-07T19:30:00.221052+00:00",
+      "updated_at": "2026-01-07T19:30:01.176755+00:00"
+    },
+    {
+      "id": "8d6021f0-f889-4533-910c-dfb77abf6222",
+      "symbol": "SLX",
+      "side": "sell",
+      "qty": 272.722994398,
+      "type": "market",
+      "status": "filled",
+      "filled_qty": 272.722994398,
+      "filled_avg_price": 88.37,
+      "created_at": "2026-01-07T19:30:00.174103+00:00",
+      "updated_at": "2026-01-07T19:30:02.243058+00:00"
+    },
+    {
+      "id": "91fb55a0-0963-4c88-b681-19f5117eb4eb",
+      "symbol": "SLV",
+      "side": "buy",
+      "qty": 518.07427369,
+      "type": "market",
+      "status": "filled",
+      "filled_qty": 518.07427369,
+      "filled_avg_price": 70.7,
+      "created_at": "2026-01-07T19:30:00.058966+00:00",
+      "updated_at": "2026-01-07T19:30:03.209190+00:00"
+    },
+    {
+      "id": "ce0ae101-6b1e-4979-a687-c9817b6ea739",
+      "symbol": "AA",
+      "side": "buy",
+      "qty": 639.588772293,
+      "type": "market",
+      "status": "filled",
+      "filled_qty": 639.588772293,
+      "filled_avg_price": 62.599882,
+      "created_at": "2026-01-07T19:30:00.012448+00:00",
+      "updated_at": "2026-01-07T19:30:05.328923+00:00"
+    },
+    {
+      "id": "c1c251e6-29d6-4693-8d28-fbe6388f59ed",
+      "symbol": "GLD",
+      "side": "sell",
+      "qty": 62.090400807,
+      "type": "market",
+      "status": "filled",
+      "filled_qty": 62.090400807,
+      "filled_avg_price": 409.15,
+      "created_at": "2026-01-07T19:29:59.974156+00:00",
+      "updated_at": "2026-01-07T19:30:00.116129+00:00"
+    },
+    {
+      "id": "d14d2ef9-5e30-4a6a-81d0-442bfec97fa2",
+      "symbol": "RKLB",
+      "side": "buy",
+      "qty": 171.249226688,
+      "type": "market",
+      "status": "filled",
+      "filled_qty": 171.249226688,
+      "filled_avg_price": 85.469504,
+      "created_at": "2026-01-07T19:29:59.929960+00:00",
+      "updated_at": "2026-01-07T19:30:03.224002+00:00"
+    },
+    {
+      "id": "102b64d8-9d39-43fc-92c3-2feb7e361d5b",
+      "symbol": "HUT",
+      "side": "buy",
+      "qty": 146.759374024,
+      "type": "market",
+      "status": "filled",
+      "filled_qty": 146.759374024,
+      "filled_avg_price": 59.1,
+      "created_at": "2026-01-07T19:29:59.893102+00:00",
+      "updated_at": "2026-01-07T19:30:02.022401+00:00"
+    },
+    {
+      "id": "ca29b9d8-6377-4620-b16b-f67151a1d056",
+      "symbol": "SLX",
+      "side": "sell",
+      "qty": 0.605626847,
+      "type": "market",
+      "status": "filled",
+      "filled_qty": 0.605626847,
+      "filled_avg_price": 88.516,
+      "created_at": "2026-01-07T19:18:49.839891+00:00",
+      "updated_at": "2026-01-07T19:18:49.847545+00:00"
+    },
+    {
+      "id": "69fd67ca-e9d4-4f54-8a58-f14eeb4dc3fa",
+      "symbol": "CPER",
+      "side": "sell",
+      "qty": 0.390720548,
+      "type": "market",
+      "status": "filled",
+      "filled_qty": 0.390720548,
+      "filled_avg_price": 35.912,
+      "created_at": "2026-01-07T19:18:49.797651+00:00",
+      "updated_at": "2026-01-07T19:18:49.801665+00:00"
+    },
+    {
+      "id": "8d2ac3a0-8c14-414b-9115-7891758c6f6f",
+      "symbol": "JEF",
+      "side": "buy",
+      "qty": 0.128877019,
+      "type": "market",
+      "status": "filled",
+      "filled_qty": 0.128877019,
+      "filled_avg_price": 64.98,
+      "created_at": "2026-01-07T19:18:49.754728+00:00",
+      "updated_at": "2026-01-07T19:18:49.760209+00:00"
+    },
+    {
+      "id": "b5bafdcb-3eb6-4a5d-895c-76566791c4ff",
+      "symbol": "CPER",
+      "side": "sell",
+      "qty": 1.255105856,
+      "type": "market",
+      "status": "filled",
+      "filled_qty": 1.255105856,
+      "filled_avg_price": 35.93,
+      "created_at": "2026-01-07T19:16:15.041585+00:00",
+      "updated_at": "2026-01-07T19:16:15.956722+00:00"
+    },
+    {
+      "id": "f157ece9-08b3-4022-b194-f2f386900d8a",
+      "symbol": "JEF",
+      "side": "buy",
+      "qty": 0.90467924,
+      "type": "market",
+      "status": "filled",
+      "filled_qty": 0.90467924,
+      "filled_avg_price": 65.002,
+      "created_at": "2026-01-07T19:16:14.998455+00:00",
+      "updated_at": "2026-01-07T19:16:15.003507+00:00"
+    },
+    {
+      "id": "e9857aa8-ac27-416e-9908-27d0b57bc2d3",
+      "symbol": "GLD",
+      "side": "sell",
+      "qty": 0.188869882,
+      "type": "market",
+      "status": "filled",
+      "filled_qty": 0.188869882,
+      "filled_avg_price": 408.854,
+      "created_at": "2026-01-07T19:16:14.954406+00:00",
+      "updated_at": "2026-01-07T19:16:14.958536+00:00"
+    },
+    {
+      "id": "10d8d13b-b2af-48ac-a858-48f972161dc7",
+      "symbol": "SLX",
+      "side": "buy",
+      "qty": 0.161741384,
+      "type": "market",
+      "status": "filled",
+      "filled_qty": 0.161741384,
+      "filled_avg_price": 88.714,
+      "created_at": "2026-01-07T19:16:14.915173+00:00",
+      "updated_at": "2026-01-07T19:16:14.921142+00:00"
+    },
+    {
+      "id": "9f951dfa-1c17-4402-9010-eec26a3d8cfd",
+      "symbol": "JEF",
+      "side": "buy",
+      "qty": 5.276372766,
+      "type": "market",
+      "status": "filled",
+      "filled_qty": 5.276372766,
+      "filled_avg_price": 65.06,
+      "created_at": "2026-01-07T19:14:27.881211+00:00",
+      "updated_at": "2026-01-07T19:14:28.576552+00:00"
+    },
+    {
+      "id": "bc2a0b7a-1107-4ce4-9ace-376626e1002d",
+      "symbol": "GLD",
+      "side": "sell",
+      "qty": 0.50551294,
+      "type": "market",
+      "status": "filled",
+      "filled_qty": 0.50551294,
+      "filled_avg_price": 409.072,
+      "created_at": "2026-01-07T19:14:27.834282+00:00",
+      "updated_at": "2026-01-07T19:14:27.842889+00:00"
+    },
+    {
+      "id": "e010f75b-9e84-4fe0-9131-0222480e2093",
+      "symbol": "CPER",
+      "side": "sell",
+      "qty": 0.734238572,
+      "type": "market",
+      "status": "filled",
+      "filled_qty": 0.734238572,
+      "filled_avg_price": 35.954,
+      "created_at": "2026-01-07T19:14:27.796424+00:00",
+      "updated_at": "2026-01-07T19:14:27.800868+00:00"
+    },
+    {
+      "id": "2887cf5a-0de3-47bb-8f41-add4fc98473d",
+      "symbol": "SLX",
+      "side": "sell",
+      "qty": 2.446639315,
+      "type": "market",
+      "status": "filled",
+      "filled_qty": 2.446639315,
+      "filled_avg_price": 88.45,
+      "created_at": "2026-01-07T19:14:27.749484+00:00",
+      "updated_at": "2026-01-07T19:14:28.490772+00:00"
+    },
+    {
+      "id": "aeb496b8-7a79-48a9-b78c-249109179658",
+      "symbol": "JEF",
+      "side": "sell",
+      "qty": 0.248920576,
+      "type": "market",
+      "status": "filled",
+      "filled_qty": 0.248920576,
+      "filled_avg_price": 65.038,
+      "created_at": "2026-01-07T19:01:56.115939+00:00",
+      "updated_at": "2026-01-07T19:01:56.120248+00:00"
+    }
+  ],
+  "scan_results": {
+    "timestamp": "2026-01-07T14:25:03.101188",
+    "market_regime": "RISK_ON",
+    "hot_sectors": [
+      "Materials",
+      "Financials",
+      "Industrials"
+    ],
+    "cold_sectors": [
+      "Consumer Staples",
+      "Real Estate",
+      "Utilities"
+    ],
+    "sector_ranks": [
+      [
+        "Materials",
+        8.040915395284332
+      ],
+      [
+        "Financials",
+        7.467720177298132
+      ],
+      [
+        "Industrials",
+        7.273333333333332
+      ],
+      [
+        "Consumer Discretionary",
+        6.446107391361444
+      ],
+      [
+        "Technology",
+        5.201816166744133
+      ],
+      [
+        "Healthcare",
+        2.505474687620768
+      ],
+      [
+        "Energy",
+        1.727038241561063
+      ],
+      [
+        "Consumer Staples",
+        -0.16233766233766378
+      ],
+      [
+        "Real Estate",
+        -1.342773437500011
+      ],
+      [
+        "Utilities",
+        -5.967470555243981
+      ]
+    ],
+    "top_scorers": [
+      {
+        "ticker": "RKLB",
+        "momentum": 100,
+        "volatility": 35.8,
+        "relative_strength": 100,
+        "breakout": 97.5,
+        "volume": 38.12,
+        "composite": 83.81,
+        "price": 84.96,
+        "return_30d": 100.13
+      },
+      {
+        "ticker": "AA",
+        "momentum": 100,
+        "volatility": 15.66,
+        "relative_strength": 100,
+        "breakout": 97.67,
+        "volume": 57.97,
+        "composite": 82.8,
+        "price": 62.82,
+        "return_30d": 62.24
+      },
+      {
+        "ticker": "HUT",
+        "momentum": 97.69,
+        "volatility": 39.69,
+        "relative_strength": 100,
+        "breakout": 100,
+        "volume": 22.48,
+        "composite": 82.39,
+        "price": 58.79,
+        "return_30d": 49.76
+      },
+      {
+        "ticker": "SLV",
+        "momentum": 100,
+        "volatility": 15.13,
+        "relative_strength": 100,
+        "breakout": 92.53,
+        "volume": 60.36,
+        "composite": 82.18,
+        "price": 70.96,
+        "return_30d": 52.17
+      },
+      {
+        "ticker": "MU",
+        "momentum": 100,
+        "volatility": 20.16,
+        "relative_strength": 100,
+        "breakout": 97.47,
+        "volume": 43.26,
+        "composite": 81.97,
+        "price": 339.09,
+        "return_30d": 51.43
+      },
+      {
+        "ticker": "PPLT",
+        "momentum": 100,
+        "volatility": 15.08,
+        "relative_strength": 100,
+        "breakout": 89.52,
+        "volume": 52.27,
+        "composite": 80.92,
+        "price": 208.9,
+        "return_30d": 48.48
+      },
+      {
+        "ticker": "LRCX",
+        "momentum": 100,
+        "volatility": 15.34,
+        "relative_strength": 100,
+        "breakout": 95.73,
+        "volume": 36.34,
+        "composite": 80.29,
+        "price": 202.54,
+        "return_30d": 34.69
+      },
+      {
+        "ticker": "FCX",
+        "momentum": 100,
+        "volatility": 11.79,
+        "relative_strength": 100,
+        "breakout": 96.69,
+        "volume": 38.29,
+        "composite": 80.1,
+        "price": 55.22,
+        "return_30d": 35.38
+      },
+      {
+        "ticker": "COPX",
+        "momentum": 100,
+        "volatility": 9.88,
+        "relative_strength": 96.22,
+        "breakout": 94.75,
+        "volume": 50.95,
+        "composite": 79.84,
+        "price": 76.02,
+        "return_30d": 26.68
+      },
+      {
+        "ticker": "RIVN",
+        "momentum": 100,
+        "volatility": 32.0,
+        "relative_strength": 100,
+        "breakout": 77.59,
+        "volume": 32.63,
+        "composite": 79.7,
+        "price": 19.93,
+        "return_30d": 31.41
+      },
+      {
+        "ticker": "PICK",
+        "momentum": 100,
+        "volatility": 6.73,
+        "relative_strength": 81.19,
+        "breakout": 97.15,
+        "volume": 85.28,
+        "composite": 79.41,
+        "price": 54.38,
+        "return_30d": 19.17
+      },
+      {
+        "ticker": "RKT",
+        "momentum": 100,
+        "volatility": 16.45,
+        "relative_strength": 81.44,
+        "breakout": 100,
+        "volume": 63.79,
+        "composite": 79.21,
+        "price": 21.62,
+        "return_30d": 19.29
+      },
+      {
+        "ticker": "XME",
+        "momentum": 100,
+        "volatility": 11.8,
+        "relative_strength": 91.93,
+        "breakout": 97.97,
+        "volume": 47.29,
+        "composite": 79.18,
+        "price": 113.85,
+        "return_30d": 24.54
+      },
+      {
+        "ticker": "RDDT",
+        "momentum": 100,
+        "volatility": 19.65,
+        "relative_strength": 100,
+        "breakout": 90.91,
+        "volume": 22.63,
+        "composite": 78.85,
+        "price": 258.41,
+        "return_30d": 32.52
+      },
+      {
+        "ticker": "CVNA",
+        "momentum": 100,
+        "volatility": 20.08,
+        "relative_strength": 100,
+        "breakout": 91.28,
+        "volume": 15.4,
+        "composite": 78.24,
+        "price": 452.12,
+        "return_30d": 36.63
+      },
+      {
+        "ticker": "AMAT",
+        "momentum": 100,
+        "volatility": 12.13,
+        "relative_strength": 96.17,
+        "breakout": 97.6,
+        "volume": 24.08,
+        "composite": 77.91,
+        "price": 292.46,
+        "return_30d": 26.66
+      },
+      {
+        "ticker": "C",
+        "momentum": 100,
+        "volatility": 9.85,
+        "relative_strength": 86.55,
+        "breakout": 97.02,
+        "volume": 23.06,
+        "composite": 74.97,
+        "price": 121.46,
+        "return_30d": 21.84
+      },
+      {
+        "ticker": "GS",
+        "momentum": 100,
+        "volatility": 10.71,
+        "relative_strength": 81.69,
+        "breakout": 97.65,
+        "volume": 32.13,
+        "composite": 74.89,
+        "price": 944.23,
+        "return_30d": 19.42
+      },
+      {
+        "ticker": "UWM",
+        "momentum": 91.86,
+        "volatility": 12.46,
+        "relative_strength": 68.28,
+        "breakout": 95.89,
+        "volume": 69.85,
+        "composite": 72.46,
+        "price": 50.54,
+        "return_30d": 12.71
+      },
+      {
+        "ticker": "ALLY",
+        "momentum": 100,
+        "volatility": 9.67,
+        "relative_strength": 76.41,
+        "breakout": 96.73,
+        "volume": 20.6,
+        "composite": 72.12,
+        "price": 46.29,
+        "return_30d": 16.78
+      }
+    ],
+    "current_holdings": {
+      "CORE": [
+        "GLD",
+        "SLX",
+        "JEF",
+        "CPER"
+      ],
+      "SPECULATIVE": [
+        "NVDA",
+        "PLTR",
+        "TSLA",
+        "MSFT"
+      ],
+      "ASYMMETRIC": [
+        "OKLO",
+        "RMBS",
+        "QBTS",
+        "IREN",
+        "AFRM",
+        "SOFI"
+      ],
+      "BENCHMARKS": [
+        "SPY",
+        "QQQ"
+      ]
+    },
+    "recommended_groups": {
+      "CORE": [
+        "RKLB",
+        "AA",
+        "HUT",
+        "SLV"
+      ],
+      "SPECULATIVE": [
+        "MU",
+        "PPLT",
+        "LRCX",
+        "FCX"
+      ],
+      "ASYMMETRIC": [
+        "INTC",
+        "JPM",
+        "NUE",
+        "NU"
+      ],
+      "BENCHMARKS": [
+        "SPY",
+        "QQQ"
+      ]
+    },
+    "dynamic_buckets": {
+      "CORE": [
+        "RKLB",
+        "AA",
+        "HUT",
+        "SLV"
+      ],
+      "SPECULATIVE": [
+        "MU",
+        "PPLT",
+        "LRCX",
+        "FCX"
+      ],
+      "ASYMMETRIC": [
+        "INTC",
+        "JPM",
+        "NUE",
+        "NU"
+      ],
+      "BENCHMARKS": [
+        "SPY",
+        "QQQ"
+      ]
+    },
+    "rotation_recommendations": [
+      {
+        "group": "SPECULATIVE",
+        "action": "ROTATE",
+        "ticker_out": "MSFT",
+        "ticker_in": "MU",
+        "score_out": 37.08,
+        "score_in": 81.97,
+        "score_delta": 44.89,
+        "reason": "Score improvement of 44.9 points"
+      },
+      {
+        "group": "SPECULATIVE",
+        "action": "ROTATE",
+        "ticker_out": "NVDA",
+        "ticker_in": "PPLT",
+        "score_out": 42.28,
+        "score_in": 80.92,
+        "score_delta": 38.64,
+        "reason": "Score improvement of 38.6 points"
+      },
+      {
+        "group": "SPECULATIVE",
+        "action": "ROTATE",
+        "ticker_out": "TSLA",
+        "ticker_in": "LRCX",
+        "score_out": 48.92,
+        "score_in": 80.29,
+        "score_delta": 31.37,
+        "reason": "Score improvement of 31.4 points"
+      },
+      {
+        "group": "ASYMMETRIC",
+        "action": "ROTATE",
+        "ticker_out": "IREN",
+        "ticker_in": "INTC",
+        "score_out": 17.49,
+        "score_in": 69.0,
+        "score_delta": 51.51,
+        "reason": "Score improvement of 51.5 points"
+      },
+      {
+        "group": "ASYMMETRIC",
+        "action": "ROTATE",
+        "ticker_out": "OKLO",
+        "ticker_in": "JPM",
+        "score_out": 26.59,
+        "score_in": 58.26,
+        "score_delta": 31.67,
+        "reason": "Score improvement of 31.7 points"
+      },
+      {
+        "group": "ASYMMETRIC",
+        "action": "ROTATE",
+        "ticker_out": "RMBS",
+        "ticker_in": "NUE",
+        "score_out": 30.28,
+        "score_in": 57.99,
+        "score_delta": 27.71,
+        "reason": "Score improvement of 27.7 points"
+      },
+      {
+        "group": "ASYMMETRIC",
+        "action": "ROTATE",
+        "ticker_out": "SOFI",
+        "ticker_in": "NU",
+        "score_out": 31.97,
+        "score_in": 56.21,
+        "score_delta": 24.24,
+        "reason": "Score improvement of 24.2 points"
+      }
+    ],
+    "portfolio_size_tests": [
+      {
+        "size": 5,
+        "tickers": [
+          "RKLB",
+          "AA",
+          "HUT",
+          "SLV",
+          "MU"
+        ],
+        "sharpe": 2.339,
+        "annual_return": 117.47,
+        "annual_volatility": 50.23,
+        "max_drawdown": -38.52,
+        "calmar_ratio": 3.05,
+        "win_rate": 57.6
+      },
+      {
+        "size": 10,
+        "tickers": [
+          "RKLB",
+          "AA",
+          "HUT",
+          "SLV",
+          "MU",
+          "PPLT",
+          "LRCX",
+          "FCX",
+          "COPX",
+          "RIVN"
+        ],
+        "sharpe": 2.604,
+        "annual_return": 98.81,
+        "annual_volatility": 37.94,
+        "max_drawdown": -27.55,
+        "calmar_ratio": 3.587,
+        "win_rate": 58.4
+      },
+      {
+        "size": 15,
+        "tickers": [
+          "RKLB",
+          "AA",
+          "HUT",
+          "SLV",
+          "MU",
+          "PPLT",
+          "LRCX",
+          "FCX",
+          "COPX",
+          "RIVN",
+          "PICK",
+          "RKT",
+          "XME",
+          "RDDT",
+          "CVNA"
+        ],
+        "sharpe": 2.131,
+        "annual_return": 87.46,
+        "annual_volatility": 41.05,
+        "max_drawdown": -35.1,
+        "calmar_ratio": 2.492,
+        "win_rate": 63.2
+      },
+      {
+        "size": 20,
+        "tickers": [
+          "RKLB",
+          "AA",
+          "HUT",
+          "SLV",
+          "MU",
+          "PPLT",
+          "LRCX",
+          "FCX",
+          "COPX",
+          "RIVN",
+          "PICK",
+          "RKT",
+          "XME",
+          "RDDT",
+          "CVNA",
+          "AMAT",
+          "C",
+          "GS",
+          "UWM",
+          "ALLY"
+        ],
+        "sharpe": 2.041,
+        "annual_return": 70.77,
+        "annual_volatility": 34.68,
+        "max_drawdown": -32.02,
+        "calmar_ratio": 2.21,
+        "win_rate": 60.8
+      },
+      {
+        "size": 30,
+        "tickers": [
+          "RKLB",
+          "AA",
+          "HUT",
+          "SLV",
+          "MU",
+          "PPLT",
+          "LRCX",
+          "FCX",
+          "COPX",
+          "RIVN",
+          "PICK",
+          "RKT",
+          "XME",
+          "RDDT",
+          "CVNA",
+          "AMAT",
+          "C",
+          "GS",
+          "UWM",
+          "ALLY",
+          "PALL",
+          "AFRM",
+          "DASH",
+          "GM",
+          "CPER",
+          "SCHW",
+          "JEF",
+          "SLX",
+          "ABNB",
+          "MS"
+        ],
+        "sharpe": 1.909,
+        "annual_return": 60.16,
+        "annual_volatility": 31.52,
+        "max_drawdown": -30.1,
+        "calmar_ratio": 1.999,
+        "win_rate": 60.4
+      }
+    ],
+    "portfolio_comparison": {
+      "current": {
+        "sharpe": 1.276,
+        "annual_return": 38.59,
+        "annual_volatility": 30.24,
+        "max_drawdown": -25.56,
+        "calmar_ratio": 1.51,
+        "win_rate": 57.6,
+        "avg_drawdown": -3.66,
+        "num_drawdowns": 19,
+        "recovery_time_avg": 6.2
+      },
+      "recommended": {
+        "sharpe": 2.463,
+        "annual_return": 74.68,
+        "annual_volatility": 30.33,
+        "max_drawdown": -26.77,
+        "calmar_ratio": 2.79,
+        "win_rate": 54.8,
+        "avg_drawdown": -4.21,
+        "num_drawdowns": 20,
+        "recovery_time_avg": 7.0
+      },
+      "improvements": {
+        "sharpe": 1.187,
+        "return": 36.09,
+        "volatility": 0.09,
+        "max_drawdown": 1.21
+      }
+    },
+    "total_tickers_scored": 110
+  }
+}
