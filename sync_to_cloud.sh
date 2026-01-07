@@ -6,9 +6,9 @@ cd "$(dirname "$0")"
 
 echo "🔄 Syncing trading data to GitHub..."
 
-# Add scan results (safe to commit)
+# Add scan results (force-add since *.json is gitignored but scan_results.json is excepted)
 if [ -f "scan_results.json" ]; then
-  git add scan_results.json
+  git add -f scan_results.json
   echo "✅ Added scan_results.json"
 fi
 
