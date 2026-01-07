@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-01-07T15:13:41.497661",
+  "timestamp": "2026-01-07T15:19:32.901804",
   "account": {
-    "equity": 99242.57,
+    "equity": 99438.91,
     "cash": -160.77,
-    "buying_power": 99081.8,
-    "portfolio_value": 99242.57,
+    "buying_power": 99278.14,
+    "portfolio_value": 99438.91,
     "last_equity": 101125.69,
     "status": "ACTIVE",
     "pattern_day_trader": false
@@ -14,45 +14,45 @@
       "symbol": "AA",
       "qty": 639.588772293,
       "avg_entry_price": 62.599881,
-      "current_price": 62.26,
-      "market_value": 39820.796963,
-      "unrealized_pl": -217.384295,
-      "unrealized_plpc": -0.0054294248182556,
-      "unrealized_intraday_pl": -217.384071,
-      "unrealized_intraday_plpc": -0.0054294192539716
+      "current_price": 62.17,
+      "market_value": 39763.233973,
+      "unrealized_pl": -274.947285,
+      "unrealized_plpc": -0.006867127236082,
+      "unrealized_intraday_pl": -274.947061,
+      "unrealized_intraday_plpc": -0.0068671216798415
     },
     {
       "symbol": "HUT",
       "qty": 146.759374024,
       "avg_entry_price": 59.1,
-      "current_price": 57.81,
-      "market_value": 8484.159412,
-      "unrealized_pl": -189.319593,
-      "unrealized_plpc": -0.0218274112257449,
-      "unrealized_intraday_pl": -189.319593,
-      "unrealized_intraday_plpc": -0.0218274112257449
+      "current_price": 57.8,
+      "market_value": 8482.691819,
+      "unrealized_pl": -190.787186,
+      "unrealized_plpc": -0.0219966158781288,
+      "unrealized_intraday_pl": -190.787186,
+      "unrealized_intraday_plpc": -0.0219966158781288
     },
     {
       "symbol": "RKLB",
       "qty": 171.249226688,
       "avg_entry_price": 85.469504,
-      "current_price": 83.7136,
-      "market_value": 14335.889263,
-      "unrealized_pl": -300.697158,
-      "unrealized_plpc": -0.0205442136131258,
-      "unrealized_intraday_pl": -300.697202,
-      "unrealized_intraday_plpc": -0.0205442165575319
+      "current_price": 84.64,
+      "market_value": 14494.534547,
+      "unrealized_pl": -142.051874,
+      "unrealized_plpc": -0.009705259813599,
+      "unrealized_intraday_pl": -142.051918,
+      "unrealized_intraday_plpc": -0.0097052627905888
     },
     {
       "symbol": "SLV",
       "qty": 518.07427369,
       "avg_entry_price": 70.7,
-      "current_price": 70.9599,
-      "market_value": 36762.498654,
-      "unrealized_pl": 134.647504,
-      "unrealized_plpc": 0.0036760961883509,
-      "unrealized_intraday_pl": 134.647504,
-      "unrealized_intraday_plpc": 0.0036760961883509
+      "current_price": 71.1301,
+      "market_value": 36850.674895,
+      "unrealized_pl": 222.823745,
+      "unrealized_plpc": 0.0060834511991294,
+      "unrealized_intraday_pl": 222.823745,
+      "unrealized_intraday_plpc": 0.0060834511991294
     }
   ],
   "orders": [
