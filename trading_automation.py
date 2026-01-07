@@ -793,8 +793,13 @@ def check_drawdown(account_value: float, state: Dict) -> Tuple[bool, Dict]:
             logging.info(f"  In cooldown until {state['cooldown_until']}")
             return True, state
     
-    # Update peak
-    current_peak = state.get('absolute_peak', account_value)
+    # Update peak (initialize if None)
+    current_peak = state.get('absolute_peak')
+    if current_peak is None:
+        current_peak = account_value
+        state['absolute_peak'] = account_value
+        state['peak_date'] = datetime.now().strftime('%Y-%m-%d')
+    
     if account_value > current_peak:
         state['absolute_peak'] = account_value
         state['peak_date'] = datetime.now().strftime('%Y-%m-%d')
@@ -855,22 +860,11 @@ def execute_orders(client: AlpacaClient, deltas: Dict[str, float], dry_run: bool
         
         if dry_run:
             logging.info(f"  [DRY-RUN] {side.upper()} {qty:.2f} shares of {ticker}")
-            broadcaster.send_event('order_preview', {
-                'ticker': ticker,
-                'side': side,
-                'qty': qty,
-                'dry_run': True
-            })
         else:
             logging.info(f"  Placing order: {side.upper()} {qty:.2f} shares of {ticker}")
             result = client.place_order(ticker, qty, side)
             if result:
-                broadcaster.send_event('order_executed', {
-                    'ticker': ticker,
-                    'side': side,
-                    'qty': qty,
-                    'order_id': result.get('id')
-                })
+                logging.info(f"    Order placed: {result.get('id')}")
 
 # ============================================================================
 # MAIN EXECUTION FLOW
@@ -986,11 +980,6 @@ def execute_portfolio_manager(use_scanner: bool = False, dry_run: bool = True):
         logging.warning("  🚨 Drawdown threshold exceeded - liquidating all positions")
         if not dry_run:
             client.liquidate_all_positions()
-            broadcaster.send_event('liquidation', {
-                'reason': 'drawdown',
-                'threshold': DRAWDOWN_THRESHOLD,
-                'peak': state['absolute_peak']
-            })
         save_state(state)
         return
     
@@ -1053,13 +1042,6 @@ def execute_portfolio_manager(use_scanner: bool = False, dry_run: bool = True):
     # Execute orders
     execute_orders(client, deltas, dry_run=dry_run)
     
-    broadcaster.send_event('pm_execution_complete', {
-        'strategy': selected_strategy,
-        'account_value': account_value,
-        'orders': len(deltas),
-        'dry_run': dry_run
-    })
-    
     logging.info("\n" + "="*80)
     logging.info("Portfolio Manager execution complete")
     logging.info("="*80)
@@ -1078,7 +1060,6 @@ def main():
         execute_portfolio_manager(use_scanner=args.use_scanner, dry_run=dry_run)
     except Exception as e:
         logging.error(f"Fatal error: {e}", exc_info=True)
-        broadcaster.send_event('pm_error', {'error': str(e)})
 
 if __name__ == '__main__':
     main()
