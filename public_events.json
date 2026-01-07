@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-01-07T12:37:25.176753",
-  "event_count": 16,
+  "last_updated": "2026-01-07T12:37:55.184327",
+  "event_count": 17,
   "events": [
     {
       "timestamp": "2026-01-07T11:57:13",
@@ -126,6 +126,18 @@
       "level": "INFO",
       "source": "Profit Taker",
       "message": "\ud83d\udc40 Monitoring 2 positions: QQQ +0.2%, SPY +0.1%",
+      "metadata": {
+        "portfolio_value": "100K",
+        "positions_count": 2,
+        "avg_return": 0.2
+      }
+    },
+    {
+      "timestamp": "2026-01-07T12:37:25.372671",
+      "type": "portfolio",
+      "level": "INFO",
+      "source": "Profit Taker",
+      "message": "\ud83d\udc40 Monitoring 2 positions: QQQ +0.3%, SPY +0.1%",
       "metadata": {
         "portfolio_value": "100K",
         "positions_count": 2,
