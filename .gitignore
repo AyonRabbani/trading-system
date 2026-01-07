@@ -15,6 +15,7 @@ ENV/
 *.csv
 *.json
 !requirements.json
+!scan_results.json
 !.streamlit/config.toml
 
 # Jupyter
