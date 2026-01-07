@@ -120,32 +120,52 @@ def get_latest_log_file(pattern: str) -> Optional[str]:
     return max(files, key=os.path.getmtime)
 
 def aggregate_all_events(max_events: int = 100) -> List[dict]:
-    """Aggregate events from all log files."""
+    """
+    Aggregate events from all sources:
+    1. Public events JSON (for cloud/GitHub sync)
+    2. Local log files (when running locally)
+    """
     all_events = []
     
-    # Get latest log files
-    trading_log = get_latest_log_file(TRADING_LOG_PATTERN)
-    profit_log = get_latest_log_file(PROFIT_TAKER_LOG_PATTERN)
-    scanner_log = get_latest_log_file(SCANNER_LOG_PATTERN)
+    # PRIORITY 1: Load from public_events.json (works on cloud + local)
+    try:
+        if os.path.exists('public_events.json'):
+            with open('public_events.json', 'r') as f:
+                data = json.load(f)
+                public_events = data.get('events', [])
+                # Normalize format
+                for e in public_events:
+                    if 'event_type' not in e and 'type' in e:
+                        e['event_type'] = e['type']
+                all_events.extend(public_events)
+    except Exception as e:
+        st.warning(f"Could not load public events: {e}")
     
-    # Parse each log
-    if trading_log:
-        events = parse_log_events(trading_log, max_events)
-        for e in events:
-            e['source'] = 'Trading Automation'
-        all_events.extend(events)
-    
-    if profit_log:
-        events = parse_log_events(profit_log, max_events)
-        for e in events:
-            e['source'] = 'Profit Taker'
-        all_events.extend(events)
-    
-    if scanner_log:
-        events = parse_log_events(scanner_log, max_events)
-        for e in events:
-            e['source'] = 'Market Scanner'
-        all_events.extend(events)
+    # PRIORITY 2: Load from log files (only works locally)
+    if not all_events:  # Only parse logs if no public events
+        # Get latest log files
+        trading_log = get_latest_log_file(TRADING_LOG_PATTERN)
+        profit_log = get_latest_log_file(PROFIT_TAKER_LOG_PATTERN)
+        scanner_log = get_latest_log_file(SCANNER_LOG_PATTERN)
+        
+        # Parse each log
+        if trading_log:
+            events = parse_log_events(trading_log, max_events)
+            for e in events:
+                e['source'] = 'Trading Automation'
+            all_events.extend(events)
+        
+        if profit_log:
+            events = parse_log_events(profit_log, max_events)
+            for e in events:
+                e['source'] = 'Profit Taker'
+            all_events.extend(events)
+        
+        if scanner_log:
+            events = parse_log_events(scanner_log, max_events)
+            for e in events:
+                e['source'] = 'Market Scanner'
+            all_events.extend(events)
     
     # Sort by timestamp descending
     all_events.sort(key=lambda x: x['timestamp'], reverse=True)

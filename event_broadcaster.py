@@ -1,6 +1,7 @@
 """
 WebSocket Event Broadcaster
-Helper module for sending events to the log broadcast server
+Helper module for sending events to the log broadcast server AND public JSON
+Dual-logs to both WebSocket (local real-time) and JSON file (public cloud sync)
 """
 
 import asyncio
@@ -23,6 +24,16 @@ class EventBroadcaster:
         self.connected = False
         self._loop = None
         self._connect_task = None
+        
+        # Initialize public exporter for cloud sync
+        try:
+            from public_event_exporter import get_exporter
+            self.public_exporter = get_exporter()
+            self.export_public = True
+            logger.info("Public event exporter initialized")
+        except Exception as e:
+            logger.warning(f"Public exporter not available: {e}")
+            self.export_public = False
     
     def start(self):
         """Start the broadcaster in the background"""
@@ -58,7 +69,9 @@ class EventBroadcaster:
     
     def broadcast_event(self, event_type: str, message: str, level: str = "INFO", **kwargs):
         """
-        Broadcast an event to the server (non-blocking)
+        Broadcast an event to BOTH WebSocket server AND public JSON file.
+        WebSocket = real-time local viewing
+        JSON = cloud sync for public viewer
         
         Args:
             event_type: Type of event (scan, strategy, order, profit, info, warning, error)
@@ -66,6 +79,20 @@ class EventBroadcaster:
             level: Log level
             **kwargs: Additional event data
         """
+        # ALWAYS log to public JSON (sanitized, for cloud sync)
+        if self.export_public:
+            try:
+                self.public_exporter.add_event(
+                    event_type=event_type,
+                    message=message,
+                    source=self.source,
+                    metadata=kwargs,
+                    level=level
+                )
+            except Exception as e:
+                logger.error(f"Error logging to public exporter: {e}")
+        
+        # TRY to send to WebSocket (local only, best effort)
         if not self.connected or not self._loop:
             return
         
@@ -110,7 +137,16 @@ class EventBroadcaster:
         )
     
     def close(self):
-        """Close the connection"""
+        """Close the connection and save public events"""
+        # Save public events before closing
+        if self.export_public:
+            try:
+                self.public_exporter.force_save()
+                logger.info("Public events saved on close")
+            except Exception as e:
+                logger.error(f"Error saving public events: {e}")
+        
+        # Close WebSocket
         if self._loop and self.websocket:
             asyncio.run_coroutine_threadsafe(self.websocket.close(), self._loop)
             self._loop.stop()

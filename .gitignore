@@ -17,6 +17,7 @@ logs/
 *.json
 !requirements.json
 !scan_results.json
+!public_events.json
 !.streamlit/config.toml
 
 # Jupyter
