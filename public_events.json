@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-01-07T14:18:20.029998",
-  "event_count": 20,
+  "last_updated": "2026-01-07T14:29:50.168839",
+  "event_count": 31,
   "events": [
     {
       "timestamp": "2026-01-07T11:57:13",
@@ -178,6 +178,138 @@
         "portfolio_value": "100K",
         "positions_count": 4,
         "avg_return": -0.2
+      }
+    },
+    {
+      "timestamp": "2026-01-07T14:18:50.169916",
+      "type": "portfolio",
+      "level": "INFO",
+      "source": "Profit Taker",
+      "message": "\ud83d\udc40 Monitoring 4 positions: CPER -0.2%, GLD -0.1%, JEF -0.2%, SLX -0.2%",
+      "metadata": {
+        "portfolio_value": "100K",
+        "positions_count": 4,
+        "avg_return": -0.1
+      }
+    },
+    {
+      "timestamp": "2026-01-07T14:19:50.228663",
+      "type": "portfolio",
+      "level": "INFO",
+      "source": "Profit Taker",
+      "message": "\ud83d\udc40 Monitoring 4 positions: CPER -0.2%, GLD -0.1%, JEF -0.2%, SLX -0.2%",
+      "metadata": {
+        "portfolio_value": "100K",
+        "positions_count": 4,
+        "avg_return": -0.1
+      }
+    },
+    {
+      "timestamp": "2026-01-07T14:20:50.282712",
+      "type": "portfolio",
+      "level": "INFO",
+      "source": "Profit Taker",
+      "message": "\ud83d\udc40 Monitoring 4 positions: CPER -0.2%, GLD -0.1%, JEF -0.2%, SLX -0.2%",
+      "metadata": {
+        "portfolio_value": "100K",
+        "positions_count": 4,
+        "avg_return": -0.1
+      }
+    },
+    {
+      "timestamp": "2026-01-07T14:21:50.336047",
+      "type": "portfolio",
+      "level": "INFO",
+      "source": "Profit Taker",
+      "message": "\ud83d\udc40 Monitoring 4 positions: CPER -0.2%, GLD -0.1%, JEF -0.2%, SLX -0.2%",
+      "metadata": {
+        "portfolio_value": "100K",
+        "positions_count": 4,
+        "avg_return": -0.1
+      }
+    },
+    {
+      "timestamp": "2026-01-07T14:22:50.388110",
+      "type": "portfolio",
+      "level": "INFO",
+      "source": "Profit Taker",
+      "message": "\ud83d\udc40 Monitoring 4 positions: CPER -0.2%, GLD -0.1%, JEF -0.1%, SLX -0.2%",
+      "metadata": {
+        "portfolio_value": "100K",
+        "positions_count": 4,
+        "avg_return": -0.1
+      }
+    },
+    {
+      "timestamp": "2026-01-07T14:23:50.446285",
+      "type": "portfolio",
+      "level": "INFO",
+      "source": "Profit Taker",
+      "message": "\ud83d\udc40 Monitoring 4 positions: CPER -0.2%, GLD -0.1%, JEF -0.1%, SLX -0.2%",
+      "metadata": {
+        "portfolio_value": "100K",
+        "positions_count": 4,
+        "avg_return": -0.1
+      }
+    },
+    {
+      "timestamp": "2026-01-07T14:24:50.508303",
+      "type": "portfolio",
+      "level": "INFO",
+      "source": "Profit Taker",
+      "message": "\ud83d\udc40 Monitoring 4 positions: CPER -0.3%, GLD -0.1%, JEF -0.2%, SLX -0.2%",
+      "metadata": {
+        "portfolio_value": "100K",
+        "positions_count": 4,
+        "avg_return": -0.2
+      }
+    },
+    {
+      "timestamp": "2026-01-07T14:25:50.577494",
+      "type": "portfolio",
+      "level": "INFO",
+      "source": "Profit Taker",
+      "message": "\ud83d\udc40 Monitoring 4 positions: CPER -0.3%, GLD -0.1%, JEF -0.1%, SLX -0.2%",
+      "metadata": {
+        "portfolio_value": "100K",
+        "positions_count": 4,
+        "avg_return": -0.2
+      }
+    },
+    {
+      "timestamp": "2026-01-07T14:26:50.618465",
+      "type": "portfolio",
+      "level": "INFO",
+      "source": "Profit Taker",
+      "message": "\ud83d\udc40 Monitoring 4 positions: CPER -0.2%, GLD -0.1%, JEF -0.2%, SLX -0.2%",
+      "metadata": {
+        "portfolio_value": "100K",
+        "positions_count": 4,
+        "avg_return": -0.2
+      }
+    },
+    {
+      "timestamp": "2026-01-07T14:27:50.678111",
+      "type": "portfolio",
+      "level": "INFO",
+      "source": "Profit Taker",
+      "message": "\ud83d\udc40 Monitoring 4 positions: CPER -0.2%, GLD -0.1%, JEF -0.1%, SLX -0.2%",
+      "metadata": {
+        "portfolio_value": "100K",
+        "positions_count": 4,
+        "avg_return": -0.1
+      }
+    },
+    {
+      "timestamp": "2026-01-07T14:28:50.752640",
+      "type": "portfolio",
+      "level": "INFO",
+      "source": "Profit Taker",
+      "message": "\ud83d\udc40 Monitoring 4 positions: CPER -0.2%, GLD -0.1%, JEF -0.0%, SLX -0.2%",
+      "metadata": {
+        "portfolio_value": "100K",
+        "positions_count": 4,
+        "avg_return": -0.1
       }
     }
   ]

@@ -42,33 +42,25 @@ logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(
 # BUCKET LOADING - Scanner Integration
 # ============================================================================
 
-def get_static_buckets():
-    """Fallback static buckets if scanner not used"""
-    return {
-        'BENCHMARKS': ["SPY", "QQQ"],
-        'TICKERS': ["GLD", "SLX", "JEF", "CPER"],
-        'SPECULATIVE': ["NVDA", "PLTR", "TSLA", "MSFT"],
-        'ASYMMETRIC': ["OKLO", "RMBS", "QBTS", "IREN", "AFRM", "SOFI"]
-    }
-
 def load_dynamic_buckets_from_scanner():
-    """Load dynamic buckets from scanner output"""
+    """Load dynamic buckets from scanner output - REQUIRED"""
     try:
         with open(SCAN_RESULTS_FILE, 'r') as f:
             scan_data = json.load(f)
         
-        if 'dynamic_buckets' in scan_data:
-            buckets = scan_data['dynamic_buckets']
-            logging.info(f"✓ Loaded dynamic buckets from scanner")
-            for bucket, tickers in buckets.items():
-                logging.info(f"  {bucket}: {len(tickers)} tickers")
-            return buckets
-        else:
-            logging.warning("No dynamic_buckets in scan results, using static")
-            return get_static_buckets()
+        if 'dynamic_buckets' not in scan_data:
+            raise ValueError("Scanner output missing 'dynamic_buckets' - run daily_scanner.py first")
+        
+        buckets = scan_data['dynamic_buckets']
+        logging.info(f"✓ Loaded dynamic buckets from scanner")
+        for bucket, tickers in buckets.items():
+            logging.info(f"  {bucket}: {len(tickers)} tickers")
+        return buckets
+    
+    except FileNotFoundError:
+        raise FileNotFoundError(f"Scanner results not found at {SCAN_RESULTS_FILE}. Run daily_scanner.py first.")
     except Exception as e:
-        logging.warning(f"Could not load scanner results: {e}, using static buckets")
-        return get_static_buckets()
+        raise Exception(f"Failed to load scanner results: {e}")
 
 # ============================================================================
 # DATA FETCHING - Polygon API
@@ -924,12 +916,12 @@ def start_profit_taker(mode: str = 'moderate'):
 # MAIN EXECUTION FLOW
 # ============================================================================
 
-def execute_portfolio_manager(use_scanner: bool = False, dry_run: bool = True):
+def execute_portfolio_manager(dry_run: bool = True):
     """
     Main Portfolio Manager execution flow
     
     Phases:
-    1. Load buckets (scanner or static)
+    1. Load buckets from scanner (REQUIRED - run daily_scanner.py first)
     2. Load 180 days of historical data
     3. Get Alpaca account status
     4. Check cooldown state
@@ -943,16 +935,12 @@ def execute_portfolio_manager(use_scanner: bool = False, dry_run: bool = True):
     logging.info("PORTFOLIO MANAGER - MULTI-STRATEGY AUTOMATED TRADING")
     logging.info("="*80)
     
-    # Phase 1: Load buckets
-    logging.info("\n[Phase 1/8] Loading ticker buckets...")
-    if use_scanner:
-        buckets = load_dynamic_buckets_from_scanner()
-    else:
-        buckets = get_static_buckets()
-        logging.info("Using static buckets")
+    # Phase 1: Load buckets from scanner (REQUIRED)
+    logging.info("\n[Phase 1/8] Loading ticker buckets from scanner...")
+    buckets = load_dynamic_buckets_from_scanner()
     
     benchmarks = buckets['BENCHMARKS']
-    tickers = buckets['TICKERS']
+    tickers = buckets.get('CORE', buckets.get('TICKERS', []))  # Handle both naming conventions
     speculative = buckets['SPECULATIVE']
     asymmetric = buckets['ASYMMETRIC']
     
@@ -1104,8 +1092,6 @@ def main():
     parser = argparse.ArgumentParser(description='Portfolio Manager - Multi-Strategy Automated Trading')
     parser.add_argument('--mode', choices=['live', 'dry-run'], default='dry-run',
                        help='Execution mode (default: dry-run)')
-    parser.add_argument('--use-scanner', action='store_true',
-                       help='Use dynamic buckets from scanner instead of static')
     parser.add_argument('--start-profit-taker', action='store_true',
                        help='Automatically start intraday profit taker after order execution (live mode only)')
     parser.add_argument('--profit-taker-mode', choices=['conservative', 'moderate', 'aggressive'],
@@ -1115,7 +1101,7 @@ def main():
     dry_run = (args.mode == 'dry-run')
     
     try:
-        execute_portfolio_manager(use_scanner=args.use_scanner, dry_run=dry_run)
+        execute_portfolio_manager(dry_run=dry_run)
         
         # Start profit taker if requested and in live mode
         if args.start_profit_taker and not dry_run:

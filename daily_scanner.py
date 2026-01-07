@@ -1007,6 +1007,7 @@ def daily_scan(export_path: Optional[str] = None) -> dict:
             'top_scorers': scores[:20],  # Top 20 tickers
             'current_holdings': CURRENT_HOLDINGS,
             'recommended_groups': new_groups,
+            'dynamic_buckets': new_groups,  # For Portfolio Manager compatibility
             'rotation_recommendations': recommendations,
             'portfolio_size_tests': size_tests,
             'portfolio_comparison': portfolio_comparison,

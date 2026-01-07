@@ -124,22 +124,13 @@ case ${mode_choice,,} in
         ;;
 esac
 
-# Ask about scanner usage
-if [ -f "scan_results.json" ]; then
-    echo -n "   Use scanner results? [Y/n]: "
-    read -t 10 scanner_choice || scanner_choice="y"
-    
-    case ${scanner_choice,,} in
-        n|no)
-            USE_SCANNER=""
-            ;;
-        *)
-            USE_SCANNER="--use-scanner"
-            ;;
-    esac
-else
-    USE_SCANNER=""
+# Verify scanner results exist
+if [ ! -f "scan_results.json" ]; then
+    echo -e "   ${RED}✗${NC} ERROR: scan_results.json not found!"
+    echo "   Run: python daily_scanner.py --export scan_results.json"
+    exit 1
 fi
+echo -e "   ${GREEN}✓${NC} Scanner results found"
 
 # Ask about profit taker (only if live mode)
 if [ "$MODE" == "live" ]; then
@@ -174,10 +165,10 @@ else
 fi
 
 echo ""
-echo "   Executing: python trading_automation.py --mode $MODE $USE_SCANNER $START_PT"
+echo "   Executing: python trading_automation.py --mode $MODE $START_PT"
 echo ""
 
-python trading_automation.py --mode $MODE $USE_SCANNER $START_PT 2>&1 | tee logs/pm_execution_$(date +%Y%m%d_%H%M%S).log
+python trading_automation.py --mode $MODE $START_PT 2>&1 | tee logs/pm_execution_$(date +%Y%m%d_%H%M%S).log
 
 if [ $? -eq 0 ]; then
     echo -e "   ${GREEN}✓${NC} Portfolio Manager execution completed"
