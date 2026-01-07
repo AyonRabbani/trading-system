@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-01-07T12:27:09.477902",
-  "event_count": 7,
+  "last_updated": "2026-01-07T12:28:09.486520",
+  "event_count": 8,
   "events": [
     {
       "timestamp": "2026-01-07T11:57:13",
@@ -43,6 +43,14 @@
       "source": "Profit Taker",
       "type": "info",
       "message": "\ud83d\udc40 Monitoring 2 positions: SPY, QQQ (MODERATE mode)"
+    },
+    {
+      "timestamp": "2026-01-07T12:27:39.481656",
+      "type": "info",
+      "level": "INFO",
+      "source": "Profit Taker",
+      "message": "\ud83d\udc40 Monitoring 2 positions: QQQ +0.2%, SPY +0.1%",
+      "metadata": {}
     }
   ]
 }

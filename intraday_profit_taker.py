@@ -371,6 +371,14 @@ class IntraDayProfitTaker:
         self.logger.info(f"{Colors.BOLD}⏱️  HEARTBEAT UPDATE - {datetime.now().strftime('%I:%M:%S %p')}{Colors.END}")
         self.logger.info(f"{Colors.CYAN}{'='*80}{Colors.END}")
         
+        # Broadcast heartbeat event for public dashboard
+        position_summary = ", ".join([f"{t} {pos.get_gain_pct()*100:+.1f}%" for t, pos in self.positions.items()])
+        broadcaster.broadcast_event(
+            event_type="info",
+            message=f"👀 Monitoring {len(self.positions)} positions: {position_summary}",
+            level="INFO"
+        )
+        
         for ticker, pos in self.positions.items():
             gain_pct = pos.get_gain_pct()
             status = f"{Colors.BRIGHT_GREEN}TRAILING{Colors.END}" if pos.trailing_active else f"{Colors.GRAY}WATCHING{Colors.END}"
