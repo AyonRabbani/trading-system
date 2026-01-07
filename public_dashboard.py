@@ -359,14 +359,13 @@ def main():
         initial_sidebar_state="expanded"
     )
     
+    # Load data first
+    events = load_public_events()
+    scan_results = load_scan_results()
+    
     # Sidebar controls
     with st.sidebar:
         st.header("⚙️ SETTINGS")
-        
-        auto_refresh = st.checkbox("Auto-refresh", value=True)
-        refresh_interval = st.slider("Refresh interval (seconds)", 10, 300, 60)
-        
-        st.divider()
         
         st.subheader("Display Sections")
         show_account = st.checkbox("Account Summary", value=True)
@@ -378,8 +377,9 @@ def main():
         
         st.divider()
         
-        # Auto-refresh toggle
-        auto_refresh = st.checkbox("🔄 Auto-refresh (30s)", value=True)
+        # Auto-refresh controls
+        auto_refresh = st.checkbox("🔄 Auto-refresh", value=True)
+        refresh_interval = st.slider("Refresh interval (sec)", 15, 120, 30)
         
         if st.button("🔄 Refresh Now"):
             st.cache_data.clear()
@@ -387,19 +387,16 @@ def main():
         
         st.divider()
         st.caption(f"Updated: {datetime.now().strftime('%H:%M:%S')}")
+        st.caption(f"Events loaded: {len(events)}")
+        st.caption(f"📡 Source: GitHub ({GITHUB_REPO})")
         st.caption("⚠️ Public read-only view")
-        st.caption(f"📡 Data source: GitHub ({GITHUB_REPO})")
-        st.caption("🔄 Auto-syncs every 30 seconds")
     
-    # Auto-refresh logic
-    if 'auto_refresh' in locals() and auto_refresh:
-        time.sleep(30)
-        st.rerun()
-    # Load data
-    events = load_public_events()
-    
-    # Render sections
+    # Render main content
     render_header()
+    
+    if len(events) == 0:
+        st.warning("⚠️ No events loaded. Please check data source.")
+        st.info("Trying to fetch from GitHub...")
     
     if show_account:
         render_account_summary(events)
@@ -422,9 +419,9 @@ def main():
     # Footer
     st.divider()
     st.caption(f"Dashboard refreshed: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
-    st.caption("🌐 Public read-only dashboard | No API keys | Data synced via GitHub")
+    st.caption("🌐 Data synced via GitHub every 30 seconds")
     
-    # Auto-refresh
+    # Auto-refresh at the very end
     if auto_refresh:
         time.sleep(refresh_interval)
         st.rerun()
@@ -432,4 +429,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-
