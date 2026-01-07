@@ -2,7 +2,7 @@
 """
 Public Trading Dashboard
 Read-only viewer for public deployment (Streamlit Cloud)
-Matches local dashboard appearance but reads from JSON files only
+Matches local dashboard appearance but reads from GitHub for live updates
 No API keys - safe for public sharing
 """
 
@@ -14,14 +14,41 @@ from datetime import datetime
 from pathlib import Path
 from typing import Dict, List, Optional
 import time
+import requests
+import os
+
+
+# ============================================================================
+# CONFIGURATION
+# ============================================================================
+
+# GitHub raw file URLs for Streamlit Cloud deployment
+GITHUB_REPO = "AyonRabbani/trading-system"
+GITHUB_BRANCH = "main"
+EVENTS_URL = f"https://raw.githubusercontent.com/{GITHUB_REPO}/{GITHUB_BRANCH}/public_events.json"
+SCAN_URL = f"https://raw.githubusercontent.com/{GITHUB_REPO}/{GITHUB_BRANCH}/scan_results.json"
+
+# Cache duration (seconds)
+CACHE_TTL = 30  # Refresh every 30 seconds
 
 
 # ============================================================================
 # DATA LOADING FUNCTIONS
 # ============================================================================
 
+@st.cache_data(ttl=CACHE_TTL)
 def load_public_events() -> List[Dict]:
-    """Load sanitized public events"""
+    """Load events from GitHub or local file"""
+    # Try GitHub first (for Streamlit Cloud deployment)
+    try:
+        response = requests.get(EVENTS_URL, timeout=10)
+        if response.status_code == 200:
+            data = response.json()
+            return data.get('events', [])
+    except Exception as e:
+        st.warning(f"Could not fetch from GitHub: {e}")
+    
+    # Fallback to local file (for local development)
     events_file = Path('public_events.json')
     if events_file.exists():
         try:
@@ -29,19 +56,31 @@ def load_public_events() -> List[Dict]:
                 data = json.load(f)
                 return data.get('events', [])
         except Exception as e:
-            st.error(f"Error loading events: {e}")
+            st.error(f"Error loading local events: {e}")
+    
     return []
 
 
+@st.cache_data(ttl=CACHE_TTL)
 def load_scan_results() -> Optional[Dict]:
-    """Load latest scanner results"""
+    """Load scanner results from GitHub or local file"""
+    # Try GitHub first (for Streamlit Cloud deployment)
+    try:
+        response = requests.get(SCAN_URL, timeout=10)
+        if response.status_code == 200:
+            return response.json()
+    except Exception as e:
+        st.warning(f"Could not fetch scan results from GitHub: {e}")
+    
+    # Fallback to local file (for local development)
     scan_file = Path('scan_results.json')
     if scan_file.exists():
         try:
             with open(scan_file, 'r') as f:
                 return json.load(f)
         except Exception as e:
-            st.error(f"Error loading scan results: {e}")
+            st.error(f"Error loading local scan results: {e}")
+    
     return None
 
 
@@ -339,14 +378,23 @@ def main():
         
         st.divider()
         
+        # Auto-refresh toggle
+        auto_refresh = st.checkbox("🔄 Auto-refresh (30s)", value=True)
+        
         if st.button("🔄 Refresh Now"):
+            st.cache_data.clear()
             st.rerun()
         
         st.divider()
         st.caption(f"Updated: {datetime.now().strftime('%H:%M:%S')}")
         st.caption("⚠️ Public read-only view")
-        st.caption("Data synced from local system")
+        st.caption(f"📡 Data source: GitHub ({GITHUB_REPO})")
+        st.caption("🔄 Auto-syncs every 30 seconds")
     
+    # Auto-refresh logic
+    if 'auto_refresh' in locals() and auto_refresh:
+        time.sleep(30)
+        st.rerun()
     # Load data
     events = load_public_events()
     
