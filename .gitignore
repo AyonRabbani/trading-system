@@ -10,6 +10,7 @@ ENV/
 
 # Logs
 *.log
+logs/
 
 # Data files (keep structure, exclude data)
 *.csv

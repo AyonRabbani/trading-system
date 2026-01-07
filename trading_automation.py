@@ -20,9 +20,13 @@ import logging
 from datetime import datetime
 from typing import Dict, Tuple, List
 from dotenv import load_dotenv
+from event_broadcaster import get_broadcaster
 
 # Load environment variables
 load_dotenv()
+
+# Initialize event broadcaster
+broadcaster = get_broadcaster(source="Trading Automation")
 
 # ============================================================================
 # CONFIGURATION
@@ -424,6 +428,16 @@ def select_best_strategy(data: Dict[str, pd.DataFrame]) -> Tuple[str, Dict[str, 
     
     logging.info(f"✓ Selected: {strategy_name} (NAV: ${nav:,.2f})")
     
+    # Broadcast strategy selection
+    broadcaster.broadcast_event(
+        event_type="strategy",
+        message=f"🎯 Selected strategy: {strategy_name} | NAV: ${nav:,.2f}",
+        level="INFO",
+        strategy_name=strategy_name,
+        nav=nav,
+        positions_count=len(positions)
+    )
+    
     return strategy_name, positions, nav
 
 
@@ -581,6 +595,17 @@ def place_orders(alpaca: AlpacaClient,
                     order = alpaca.place_order(ticker, qty, 'sell', time_in_force=time_in_force)
                     logging.info(f"  ✓ SELL {qty} {ticker} - Order ID: {order['id']}")
                     results['sell_orders'].append({'ticker': ticker, 'qty': qty, 'order_id': order['id']})
+                    
+                    # Broadcast order placement
+                    broadcaster.broadcast_event(
+                        event_type="order",
+                        message=f"📊 SELL {qty} {ticker} ({order_label})",
+                        level="INFO",
+                        action="SELL",
+                        ticker=ticker,
+                        quantity=qty,
+                        order_type=order_label
+                    )
                 except Exception as e:
                     logging.error(f"  ✗ Error selling {ticker}: {e}")
                     results['errors'].append(f"SELL {ticker} failed: {e}")
@@ -601,6 +626,17 @@ def place_orders(alpaca: AlpacaClient,
                     order = alpaca.place_order(ticker, qty, 'buy', time_in_force=time_in_force)
                     logging.info(f"  ✓ BUY {qty} {ticker} - Order ID: {order['id']}")
                     results['buy_orders'].append({'ticker': ticker, 'qty': qty, 'order_id': order['id']})
+                    
+                    # Broadcast order placement
+                    broadcaster.broadcast_event(
+                        event_type="order",
+                        message=f"📊 BUY {qty} {ticker} ({order_label})",
+                        level="INFO",
+                        action="BUY",
+                        ticker=ticker,
+                        quantity=qty,
+                        order_type=order_label
+                    )
                 except Exception as e:
                     logging.error(f"  ✗ Error buying {ticker}: {e}")
                     results['errors'].append(f"BUY {ticker} failed: {e}")

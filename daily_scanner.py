@@ -21,9 +21,13 @@ import logging
 from datetime import datetime, timedelta
 from typing import Dict, List, Tuple, Optional
 from dotenv import load_dotenv
+from event_broadcaster import get_broadcaster
 
 # Load environment variables
 load_dotenv()
+
+# Initialize event broadcaster
+broadcaster = get_broadcaster(source="Market Scanner")
 
 # ============================================================================
 # CONFIGURATION
@@ -203,6 +207,11 @@ def load_universe_data(universe: Dict[str, List[str]]) -> Dict[str, pd.DataFrame
             data[ticker] = df
     
     logging.info(f"✓ Loaded data for {len(data)}/{len(all_tickers)} tickers")
+    broadcaster.broadcast_event(
+        "scan",
+        f"✓ Data loaded for {len(data)}/{len(all_tickers)} tickers",
+        level="INFO"
+    )
     return data
 
 
@@ -852,11 +861,32 @@ def daily_scan(export_path: Optional[str] = None) -> dict:
     logging.info(f"DAILY MARKET SCAN - {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
     logging.info("="*80)
     
+    # Broadcast scan start
+    broadcaster.broadcast_event(
+        event_type="scan",
+        message="🔍 Daily Market Scan Started",
+        level="INFO",
+        phase="start"
+    )
+    
+    # Broadcast scan start
+    broadcaster.broadcast_event(
+        "scan",
+        f"🔍 Daily market scan initiated - analyzing {sum(len(v) for v in SCREENING_UNIVERSE.values())} tickers",
+        level="INFO"
+    )
+    
     try:
         # 1. Load universe data
         logging.info("\n" + "="*80)
         logging.info("PHASE 1: LOADING UNIVERSE DATA")
         logging.info("="*80)
+        broadcaster.broadcast_event(
+            event_type="scan",
+            message="📊 Loading universe data (110+ tickers)",
+            level="INFO",
+            phase="loading"
+        )
         data = load_universe_data(SCREENING_UNIVERSE)
         
         if not data:
@@ -876,11 +906,29 @@ def daily_scan(export_path: Optional[str] = None) -> dict:
                         f"(M:{score['momentum']:.1f} V:{score['volatility']:.1f} "
                         f"RS:{score['relative_strength']:.1f})")
         
+        # Broadcast top opportunities
+        top_5 = [f"{s['ticker']} ({s['composite']:.0f})" for s in scores[:5]]
+        broadcaster.broadcast_event(
+            "scan",
+            f"🎯 Scoring complete - Top 5: {', '.join(top_5)}",
+            level="INFO"
+        )
+        
         # 3. Detect sector rotation
         logging.info("\n" + "="*80)
         logging.info("PHASE 3: SECTOR ROTATION ANALYSIS")
         logging.info("="*80)
         rotation_info = detect_sector_rotation(data)
+        
+        # Broadcast market regime
+        regime = rotation_info.get('market_regime', 'UNKNOWN')
+        regime_icon = "🟢" if regime == "RISK_ON" else "🔴" if regime == "RISK_OFF" else "🟡"
+        hot_sectors = ", ".join(rotation_info.get('hot_sectors', [])[:3])
+        broadcaster.broadcast_event(
+            "scan",
+            f"{regime_icon} Market Regime: {regime} | Hot Sectors: {hot_sectors}",
+            level="INFO"
+        )
         
         # 4. Assign to groups
         logging.info("\n" + "="*80)
@@ -909,6 +957,20 @@ def daily_scan(export_path: Optional[str] = None) -> dict:
             new_groups,
             scores
         )
+        
+        # Broadcast rotation count
+        if recommendations:
+            broadcaster.broadcast_event(
+                "scan",
+                f"🔄 {len(recommendations)} rotation opportunities identified - avg score improvement: {np.mean([r['score_delta'] for r in recommendations]):.1f} points",
+                level="INFO"
+            )
+        else:
+            broadcaster.broadcast_event(
+                "scan",
+                "✓ No rotations needed - current portfolio is optimal",
+                level="INFO"
+            )
         
         # Display portfolio summary
         logging.info("\n" + "="*80)
