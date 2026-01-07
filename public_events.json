@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-01-07T16:03:57.421979",
-  "event_count": 119,
+  "last_updated": "2026-01-07T16:04:57.437314",
+  "event_count": 120,
   "events": [
     {
       "timestamp": "2026-01-07T11:57:13",
@@ -1366,6 +1366,18 @@
         "portfolio_value": "100K",
         "positions_count": 4,
         "avg_return": -0.7
+      }
+    },
+    {
+      "timestamp": "2026-01-07T16:04:29.076593",
+      "type": "portfolio",
+      "level": "INFO",
+      "source": "Profit Taker",
+      "message": "\ud83d\udc40 Monitoring 4 positions: AA -0.3%, HUT -1.8%, RKLB -1.4%, SLV +0.5%",
+      "metadata": {
+        "portfolio_value": "100K",
+        "positions_count": 4,
+        "avg_return": -0.8
       }
     }
   ]
