@@ -890,6 +890,16 @@ def start_profit_taker(mode: str = 'moderate'):
         logging.info(f"🎯 ACTIVATING INTRADAY PROFIT TAKER ({mode.upper()} mode)")
         logging.info(f"{'='*80}")
         
+        # Kill any existing profit taker instances first
+        logging.info("  🧹 Cleaning up old profit taker instances...")
+        try:
+            subprocess.run(['pkill', '-f', 'intraday_profit_taker.py'], 
+                         stderr=subprocess.DEVNULL, check=False)
+            time.sleep(2)  # Give processes time to terminate
+            logging.info("  ✓ Old instances terminated")
+        except Exception as e:
+            logging.warning(f"  Could not cleanup old instances: {e}")
+        
         # Start profit taker in background
         cmd = [sys.executable, profit_taker_path, '--mode', mode]
         process = subprocess.Popen(
