@@ -22,20 +22,25 @@ from datetime import datetime, timedelta
 from typing import Dict, List, Optional
 import plotly.graph_objects as go
 from plotly.subplots import make_subplots
-from dotenv import load_dotenv
-
-# Load environment variables
-load_dotenv()
 
 # ============================================================================
 # CONFIGURATION
 # ============================================================================
 
-# API Keys (from scripts)
-ALPACA_API_KEY = os.getenv('ALPACA_API_KEY')
-ALPACA_SECRET_KEY = os.getenv('ALPACA_API_SECRET')
-ALPACA_BASE_URL = os.getenv('ALPACA_BASE_URL', 'https://paper-api.alpaca.markets')
-POLYGON_API_KEY = os.getenv('POLYGON_API_KEY')
+# Try Streamlit secrets first, fallback to environment variables
+try:
+    ALPACA_API_KEY = st.secrets["ALPACA_API_KEY"]
+    ALPACA_SECRET_KEY = st.secrets["ALPACA_SECRET_KEY"]
+    POLYGON_API_KEY = st.secrets["POLYGON_API_KEY"]
+    ALPACA_BASE_URL = st.secrets.get("ALPACA_BASE_URL", "https://paper-api.alpaca.markets")
+except:
+    # Fallback to environment variables (for local development)
+    from dotenv import load_dotenv
+    load_dotenv()
+    ALPACA_API_KEY = os.getenv('ALPACA_API_KEY')
+    ALPACA_SECRET_KEY = os.getenv('ALPACA_API_SECRET')
+    ALPACA_BASE_URL = os.getenv('ALPACA_BASE_URL', 'https://paper-api.alpaca.markets')
+    POLYGON_API_KEY = os.getenv('POLYGON_API_KEY')
 
 # File paths
 SCAN_RESULTS_PATH = 'scan_results.json'
