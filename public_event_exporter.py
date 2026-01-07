@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """
 Public Event Exporter
-Exports sanitized trading events to JSON for public GitHub/cloud sharing.
-Removes sensitive data (exact amounts, quantities) while preserving insights.
+Exports full trading events to JSON for team monitoring via GitHub/cloud sharing.
+NO SANITIZATION - Full data visibility for friends and team.
 """
 
 import json
@@ -64,70 +64,19 @@ class PublicEventExporter:
                 'type': event_type,
                 'level': level,
                 'source': source,
-                'message': self._sanitize_message(message),
-                'metadata': self._sanitize_metadata(metadata or {})
+                'message': message,  # Full message - no sanitization
+                'metadata': metadata or {}  # Full metadata - no sanitization
             }
             
             self.events.append(event)
     
     def _sanitize_message(self, message: str) -> str:
-        """Remove sensitive information from messages"""
-        # Replace specific dollar amounts with ranges
-        def replace_amount(match):
-            try:
-                amount = float(match.group(1).replace(',', ''))
-                if amount < 1000:
-                    return "$<1K"
-                elif amount < 10000:
-                    return "$1K-10K"
-                elif amount < 100000:
-                    return "$10K-100K"
-                else:
-                    return "$100K+"
-            except:
-                return "$XX"
-        
-        message = re.sub(r'\$([0-9,]+\.?\d*)', replace_amount, message)
-        
-        # Replace share counts with XX
-        message = re.sub(r'\b(\d+)\s+(shares?)\b', 'XX shares', message, flags=re.IGNORECASE)
-        
-        # Replace BUY/SELL quantities
-        message = re.sub(r'\b(BUY|SELL)\s+(\d+)\b', r'\1 XX', message, flags=re.IGNORECASE)
-        
+        """Keep full message - no sanitization for team monitoring"""
         return message
     
     def _sanitize_metadata(self, metadata: Dict) -> Dict:
-        """Remove sensitive fields from metadata"""
-        sensitive_fields = {
-            'api_key', 'secret', 'password', 'token',
-            'qty', 'quantity', 'shares', 
-            'nav', 'profit_dollars', 'account_value',
-            'order_id', 'position_id'
-        }
-        
-        sanitized = {}
-        for key, value in metadata.items():
-            # Skip sensitive fields
-            if key.lower() in sensitive_fields:
-                continue
-            
-            # Sanitize nested dicts
-            if isinstance(value, dict):
-                sanitized[key] = self._sanitize_metadata(value)
-            # Keep safe values
-            elif isinstance(value, (str, bool)):
-                sanitized[key] = value
-            # Round percentages and scores
-            elif isinstance(value, (int, float)):
-                if 'pct' in key.lower() or 'percent' in key.lower():
-                    sanitized[key] = round(value, 1)
-                elif 'score' in key.lower():
-                    sanitized[key] = round(value, 1)
-                else:
-                    sanitized[key] = value
-        
-        return sanitized
+        """Keep all metadata - no sanitization for team monitoring"""
+        return metadata
     
     def _save_events(self):
         """Save events to JSON file"""

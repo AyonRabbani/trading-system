@@ -178,30 +178,22 @@ fi
 echo ""
 
 # ============================================================================
-# STEP 5: Start Cloud Sync (Optional)
+# STEP 5: Start Cloud Sync (Auto-enabled for team monitoring)
 # ============================================================================
-echo -e "${BLUE}[5/5]${NC} Cloud Sync..."
-echo -n "   Start cloud sync? [y/N]: "
-read -t 10 sync_choice || sync_choice="n"
+echo -e "${BLUE}[5/5]${NC} Cloud Sync for Team Monitoring..."
+echo "   Starting cloud sync in watch mode (auto-enabled)..."
+./sync_to_cloud.sh --watch --interval 30 > logs/cloud_sync.log 2>&1 &
+SYNC_PID=$!
+echo "$SYNC_PID" >> "$PIDS_FILE"
+sleep 2
 
-case ${sync_choice,,} in
-    y|yes)
-        echo "   Starting cloud sync in watch mode..."
-        ./sync_to_cloud.sh --watch > logs/cloud_sync.log 2>&1 &
-        SYNC_PID=$!
-        echo "$SYNC_PID" >> "$PIDS_FILE"
-        sleep 2
-        
-        if ps -p $SYNC_PID > /dev/null; then
-            echo -e "   ${GREEN}✓${NC} Cloud sync started (PID: $SYNC_PID)"
-        else
-            echo -e "   ${YELLOW}⚠${NC} Cloud sync failed to start"
-        fi
-        ;;
-    *)
-        echo -e "   ${YELLOW}⏸${NC}  Skipping cloud sync"
-        ;;
-esac
+if ps -p $SYNC_PID > /dev/null; then
+    echo -e "   ${GREEN}✓${NC} Cloud sync started (PID: $SYNC_PID)"
+    echo "   📤 Syncing every 30 seconds to GitHub"
+    echo "   📊 Team can monitor via public dashboard"
+else
+    echo -e "   ${YELLOW}⚠${NC} Cloud sync failed to start"
+fi
 echo ""
 
 # ============================================================================

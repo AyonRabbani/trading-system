@@ -3,6 +3,7 @@
 WebSocket Broadcast Server for Trading System Live Monitoring
 Receives log events from scanner, trading automation, and profit taker
 Broadcasts to connected clients (trading_dashboard_viewer.py)
+Exports all events to public_events.json for team monitoring
 """
 
 import asyncio
@@ -12,6 +13,8 @@ import logging
 from datetime import datetime
 from typing import Set
 import argparse
+import os
+from collections import deque
 
 # Configure logging
 logging.basicConfig(
@@ -26,6 +29,44 @@ CLIENTS: Set[websockets.WebSocketServerProtocol] = set()
 # Store recent events for new clients (last 100 events)
 EVENT_HISTORY = []
 MAX_HISTORY = 100
+
+# Public events file for team monitoring
+PUBLIC_EVENTS_FILE = "public_events.json"
+PUBLIC_EVENTS = deque(maxlen=200)  # Keep last 200 events
+
+# Load existing public events
+def load_public_events():
+    """Load existing public events from file"""
+    global PUBLIC_EVENTS
+    if os.path.exists(PUBLIC_EVENTS_FILE):
+        try:
+            with open(PUBLIC_EVENTS_FILE, 'r') as f:
+                data = json.load(f)
+                events = data.get('events', [])
+                PUBLIC_EVENTS = deque(events, maxlen=200)
+                logger.info(f"Loaded {len(events)} existing public events")
+        except Exception as e:
+            logger.warning(f"Could not load existing events: {e}")
+
+def save_public_events():
+    """Save events to public_events.json for team monitoring"""
+    try:
+        data = {
+            'last_updated': datetime.now().isoformat(),
+            'event_count': len(PUBLIC_EVENTS),
+            'events': list(PUBLIC_EVENTS)
+        }
+        with open(PUBLIC_EVENTS_FILE, 'w') as f:
+            json.dump(data, f, indent=2)
+    except Exception as e:
+        logger.error(f"Failed to save public events: {e}")
+
+def export_to_public(event_data: dict):
+    """Export event to public_events.json"""
+    # Only export actual trading events, not system status
+    if event_data.get('type') in ['event', 'heartbeat'] and event_data.get('event_type'):
+        PUBLIC_EVENTS.append(event_data)
+        save_public_events()
 
 
 async def register_client(websocket):
@@ -54,7 +95,10 @@ async def unregister_client(websocket):
 
 
 async def broadcast_event(event_data: dict):
-    """Broadcast event to all connected clients"""
+    """Broadcast event to all connected clients and export to public file"""
+    # Export to public_events.json for team monitoring
+    export_to_public(event_data)
+    
     if not CLIENTS:
         return
     
@@ -139,6 +183,9 @@ async def periodic_status_broadcast():
 async def main(host: str = "localhost", port: int = 8765):
     """Start the WebSocket server"""
     logger.info(f"Starting WebSocket broadcast server on {host}:{port}")
+    
+    # Load existing public events
+    load_public_events()
     
     # Start periodic status broadcasts
     asyncio.create_task(periodic_status_broadcast())
