@@ -203,10 +203,11 @@ def render_performance_charts():
         # Show metrics
         col_a, col_b, col_c = st.columns(3)
         with col_a:
-            port_return = portfolio_returns[-1] if portfolio_returns else 0
+            # Get last non-None value
+            port_return = next((r for r in reversed(portfolio_returns) if r is not None), 0)
             st.metric("Portfolio YTD", f"{port_return:+.2f}%")
         with col_b:
-            spy_return = spy_returns[-1] if spy_returns else 0
+            spy_return = next((r for r in reversed(spy_returns) if r is not None), 0)
             st.metric("SPY YTD", f"{spy_return:+.2f}%")
         with col_c:
             alpha = port_return - spy_return
