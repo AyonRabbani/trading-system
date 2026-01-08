@@ -194,11 +194,12 @@ def render_performance_charts():
         now = datetime.now()
         start_of_month = datetime(now.year, now.month, 1)
         
-        # Get portfolio history from Alpaca API (intraday updates)
+        # Get portfolio history from Alpaca API (hourly updates)
+        # Using date_start to ensure period is less than 30 days
         portfolio_history = trading_client.get_portfolio_history(
             GetPortfolioHistoryRequest(
-                period="1M",  # Last month
-                timeframe="15Min"  # 15-minute intervals for intraday updates
+                date_start=start_of_month.date(),  # MTD to ensure < 30 days
+                timeframe="1H"  # Hourly intervals for intraday updates
             )
         )
         
