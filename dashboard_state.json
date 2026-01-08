@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-01-08T13:37:02.259479",
+  "timestamp": "2026-01-08T13:37:09.199726",
   "account": {
-    "equity": 96888.68,
+    "equity": 96899.57,
     "cash": 404.64,
     "buying_power": 163737.04,
-    "portfolio_value": 96888.68,
+    "portfolio_value": 96899.57,
     "last_equity": 99622.02758314137,
     "daytrade_count": 27,
     "status": "ACTIVE",
@@ -15,37 +15,37 @@
       "symbol": "COPX",
       "qty": 134.979132345,
       "avg_entry_price": 74.74,
-      "current_price": 74.8399,
-      "market_value": 10101.824767,
+      "current_price": 74.86,
+      "market_value": 10104.537847,
       "cost_basis": 10088.340351,
-      "unrealized_pl": 13.484416,
-      "unrealized_plpc": 0.0013366337307071,
-      "unrealized_intraday_pl": 13.484416,
-      "unrealized_intraday_plpc": 0.0013366337307071
+      "unrealized_pl": 16.197496,
+      "unrealized_plpc": 0.0016055659738318,
+      "unrealized_intraday_pl": 16.197496,
+      "unrealized_intraday_plpc": 0.0016055659738318
     },
     {
       "symbol": "GDX",
       "qty": 104.721954275,
       "avg_entry_price": 89.81,
-      "current_price": 90.16,
-      "market_value": 9441.731397,
+      "current_price": 90.17,
+      "market_value": 9442.778617,
       "cost_basis": 9405.078713,
-      "unrealized_pl": 36.652684,
-      "unrealized_plpc": 0.0038971161346409,
-      "unrealized_intraday_pl": 36.652684,
-      "unrealized_intraday_plpc": 0.0038971161346409
+      "unrealized_pl": 37.699904,
+      "unrealized_plpc": 0.0040084623585223,
+      "unrealized_intraday_pl": 37.699904,
+      "unrealized_intraday_plpc": 0.0040084623585223
     },
     {
       "symbol": "GDXJ",
       "qty": 82.148810169,
       "avg_entry_price": 118.78,
-      "current_price": 119.05,
-      "market_value": 9779.815851,
+      "current_price": 119.08,
+      "market_value": 9782.280315,
       "cost_basis": 9757.635672,
-      "unrealized_pl": 22.180179,
-      "unrealized_plpc": 0.0022731099772097,
-      "unrealized_intraday_pl": 22.180179,
-      "unrealized_intraday_plpc": 0.0022731099772097
+      "unrealized_pl": 24.644643,
+      "unrealized_plpc": 0.0025256777182939,
+      "unrealized_intraday_pl": 24.644643,
+      "unrealized_intraday_plpc": 0.0025256777182939
     },
     {
       "symbol": "KOLD",
@@ -111,25 +111,25 @@
       "symbol": "SLV",
       "qty": 196.535544773,
       "avg_entry_price": 68.4,
-      "current_price": 68.42,
-      "market_value": 13446.961973,
+      "current_price": 68.4401,
+      "market_value": 13450.912338,
       "cost_basis": 13443.031262,
-      "unrealized_pl": 3.930711,
-      "unrealized_plpc": 0.0002923976686055,
-      "unrealized_intraday_pl": 3.930711,
-      "unrealized_intraday_plpc": 0.0002923976686055
+      "unrealized_pl": 7.881076,
+      "unrealized_plpc": 0.0005862573586567,
+      "unrealized_intraday_pl": 7.881076,
+      "unrealized_intraday_plpc": 0.0005862573586567
     },
     {
       "symbol": "XME",
       "qty": 71.170368367,
       "avg_entry_price": 112.44,
-      "current_price": 113.04,
-      "market_value": 8045.09844,
+      "current_price": 113.05,
+      "market_value": 8045.810144,
       "cost_basis": 8002.396219,
-      "unrealized_pl": 42.702221,
-      "unrealized_plpc": 0.0053361792932238,
-      "unrealized_intraday_pl": 42.702221,
-      "unrealized_intraday_plpc": 0.0053361792932238
+      "unrealized_pl": 43.413925,
+      "unrealized_plpc": 0.005425115654349,
+      "unrealized_intraday_pl": 43.413925,
+      "unrealized_intraday_plpc": 0.005425115654349
     }
   ],
   "scanner": {
