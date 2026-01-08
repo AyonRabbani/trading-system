@@ -1,13 +1,7 @@
 {
-  "last_updated": "2026-01-08T06:48:52.976716",
+  "last_updated": "2026-01-08T16:00:07.997263",
   "event_count": 200,
   "events": [
-    {
-      "timestamp": "2026-01-07T12:01:47",
-      "source": "Trading Automation",
-      "type": "order",
-      "message": "\ud83d\udcdd Order placed: BUY 56 QQQ"
-    },
     {
       "timestamp": "2026-01-07T12:05:00",
       "source": "Profit Taker",
@@ -2369,6 +2363,17 @@
         "positions_count": 4,
         "avg_return": -2.7
       }
+    },
+    {
+      "type": "event",
+      "source": "Profit Taker",
+      "event_type": "portfolio",
+      "level": "INFO",
+      "message": "\ud83d\udc40 Monitoring 1 positions: QQQ +0.2%",
+      "timestamp": "2026-01-08T16:00:07.987305",
+      "portfolio_value": "2K",
+      "positions_count": 1,
+      "avg_return": 0.2
     }
   ]
 }
