@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-01-08T11:47:12.812613",
+  "timestamp": "2026-01-08T11:47:26.371361",
   "account": {
-    "equity": 97132.95,
+    "equity": 97125.41,
     "cash": 404.64,
     "buying_power": 163737.04,
-    "portfolio_value": 97132.95,
+    "portfolio_value": 97125.41,
     "daytrade_count": 27,
     "status": "ACTIVE"
   },
@@ -12,11 +12,11 @@
     {
       "symbol": "COPX",
       "qty": 134.979132345,
-      "market_value": 10098.463786,
+      "market_value": 10095.089308,
       "cost_basis": 10088.340351,
-      "unrealized_pl": 10.123435,
-      "unrealized_plpc": 0.0010034787336449,
-      "current_price": 74.815
+      "unrealized_pl": 6.748957,
+      "unrealized_plpc": 0.0006689858554714,
+      "current_price": 74.79
     },
     {
       "symbol": "GDX",
@@ -30,20 +30,20 @@
     {
       "symbol": "GDXJ",
       "qty": 82.148810169,
-      "market_value": 9792.95966,
+      "market_value": 9794.602636,
       "cost_basis": 9757.635672,
-      "unrealized_pl": 35.323988,
-      "unrealized_plpc": 0.0036201380321428,
-      "current_price": 119.21
+      "unrealized_pl": 36.966964,
+      "unrealized_plpc": 0.0037885165261989,
+      "current_price": 119.23
     },
     {
       "symbol": "KOLD",
       "qty": 145.951812979,
-      "market_value": 6284.641281,
+      "market_value": 6284.685067,
       "cost_basis": 6214.628197,
-      "unrealized_pl": 70.013084,
-      "unrealized_plpc": 0.0112658524018859,
-      "current_price": 43.0597
+      "unrealized_pl": 70.05687,
+      "unrealized_plpc": 0.0112728980365742,
+      "current_price": 43.06
     },
     {
       "symbol": "PICK",
@@ -57,11 +57,11 @@
     {
       "symbol": "PPLT",
       "qty": 48.744472599,
-      "market_value": 9957.520863,
+      "market_value": 9951.671526,
       "cost_basis": 9954.596194,
-      "unrealized_pl": 2.924669,
-      "unrealized_plpc": 0.0002938008677602,
-      "current_price": 204.28
+      "unrealized_pl": -2.924668,
+      "unrealized_plpc": -0.0002938007673041,
+      "current_price": 204.16
     },
     {
       "symbol": "REMX",
