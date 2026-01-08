@@ -86,7 +86,8 @@ def render_account_summary(state: Dict):
     with col4:
         daily_pl = account['equity'] - account['last_equity']
         daily_pl_pct = (daily_pl / account['last_equity'] * 100) if account['last_equity'] > 0 else 0
-        st.metric("Today's P/L", f"${daily_pl:,.2f}", f"{daily_pl_pct:+.2f}%")
+        daily_pl_str = f"-${abs(daily_pl):,.2f}" if daily_pl < 0 else f"${daily_pl:,.2f}"
+        st.metric("Today's P/L", daily_pl_str, f"{daily_pl_pct:+.2f}%")
     
     st.caption(f"Last updated: {state.get('timestamp', 'Unknown')[:19]}")
     st.divider()
@@ -109,9 +110,9 @@ def render_positions(state: Dict):
         'Entry': f"${p['avg_entry_price']:.2f}",
         'Current': f"${p['current_price']:.2f}",
         'Value': f"${p['market_value']:,.2f}",
-        'P&L $': f"${p['unrealized_pl']:,.2f}",
+        'P&L $': f"-${abs(p['unrealized_pl']):,.2f}" if p['unrealized_pl'] < 0 else f"${p['unrealized_pl']:,.2f}",
         'P&L %': f"{p['unrealized_plpc'] * 100:+.2f}%",
-        'Today $': f"${p['unrealized_intraday_pl']:,.2f}",
+        'Today $': f"-${abs(p['unrealized_intraday_pl']):,.2f}" if p['unrealized_intraday_pl'] < 0 else f"${p['unrealized_intraday_pl']:,.2f}",
         'Today %': f"${p['unrealized_intraday_plpc'] * 100:+.2f}%"
     } for p in positions])
     
@@ -129,7 +130,8 @@ def render_positions(state: Dict):
     
     with col3:
         total_pl = sum(p['unrealized_pl'] for p in positions)
-        st.metric("Total P&L", f"${total_pl:,.2f}")
+        total_pl_str = f"-${abs(total_pl):,.2f}" if total_pl < 0 else f"${total_pl:,.2f}"
+        st.metric("Total P&L", total_pl_str)
     
     with col4:
         winners = len([p for p in positions if p['unrealized_plpc'] > 0])

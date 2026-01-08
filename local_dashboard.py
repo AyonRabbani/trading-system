@@ -197,7 +197,8 @@ def render_account_summary():
         st.metric("Buying Power", f"${account['buying_power']:,.2f}")
     
     with col4:
-        st.metric("Today P&L", f"${daily_pnl:,.2f}", delta=f"{daily_pnl_pct:+.2f}%")
+        daily_pnl_str = f"-${abs(daily_pnl):,.2f}" if daily_pnl < 0 else f"${daily_pnl:,.2f}"
+        st.metric("Today P&L", daily_pnl_str, delta=f"{daily_pnl_pct:+.2f}%")
     
     st.divider()
 
@@ -219,9 +220,9 @@ def render_positions():
         'Entry': f"${p['avg_entry_price']:.2f}",
         'Current': f"${p['current_price']:.2f}",
         'Value': f"${p['market_value']:,.2f}",
-        'P&L': f"${p['unrealized_pl']:,.2f}",
+        'P&L': f"-${abs(p['unrealized_pl']):,.2f}" if p['unrealized_pl'] < 0 else f"${p['unrealized_pl']:,.2f}",
         'P&L%': f"{p['unrealized_plpc']*100:+.2f}%",
-        'Today P&L': f"${p['unrealized_intraday_pl']:,.2f}",
+        'Today P&L': f"-${abs(p['unrealized_intraday_pl']):,.2f}" if p['unrealized_intraday_pl'] < 0 else f"${p['unrealized_intraday_pl']:,.2f}",
         'Today%': f"{p['unrealized_intraday_plpc']*100:+.2f}%"
     } for p in positions])
     
@@ -237,7 +238,8 @@ def render_positions():
     with col2:
         total_pl = sum(p['unrealized_pl'] for p in positions)
         winners = len([p for p in positions if p['unrealized_pl'] > 0])
-        st.metric("Total P&L", f"${total_pl:,.2f}", delta=f"{winners}/{len(positions)} winners")
+        total_pl_str = f"-${abs(total_pl):,.2f}" if total_pl < 0 else f"${total_pl:,.2f}"
+        st.metric("Total P&L", total_pl_str, delta=f"{winners}/{len(positions)} winners")
     
     with col3:
         avg_pl_pct = np.mean([p['unrealized_plpc'] * 100 for p in positions])
