@@ -18,6 +18,7 @@ pkill -f "streamlit.*local_dashboard" 2>/dev/null || true
 pkill -f "sync_to_cloud" 2>/dev/null || true
 pkill -f "intraday_profit_taker" 2>/dev/null || true
 pkill -f "log_broadcast_server" 2>/dev/null || true
+pkill -f "pm_scheduler" 2>/dev/null || true
 sleep 2
 echo "✅ All services stopped"
 echo ""
@@ -61,12 +62,21 @@ UPDATER_PID=$!
 sleep 1
 echo "✅ Dashboard updater started (PID: $UPDATER_PID)"
 
+# 8. Start Portfolio Manager scheduler (runs PM 4x per day)
+echo "⏰ Starting Portfolio Manager scheduler..."
+nohup ./pm_scheduler.sh > logs/pm_scheduler.log 2>&1 &
+SCHEDULER_PID=$!
+sleep 1
+echo "✅ PM scheduler started (PID: $SCHEDULER_PID)"
+echo "   Schedule: 10:00 AM, 12:00 PM, 2:00 PM, 3:30 PM ET"
+
 # Save PIDs
 echo "$BROADCAST_PID" > .trading_pids
 echo "$DASHBOARD_PID" >> .trading_pids
 echo "$SYNC_PID" >> .trading_pids
 echo "$PROFIT_PID" >> .trading_pids
 echo "$UPDATER_PID" >> .trading_pids
+echo "$SCHEDULER_PID" >> .trading_pids
 
 echo ""
 echo "=================================="
@@ -78,8 +88,9 @@ echo "📡 WebSocket: ws://localhost:8765"
 echo "🔄 GitHub Sync: Every 30 seconds"
 echo "🔄 Dashboard Updater: Every 60 seconds"
 echo "🎯 Profit Taker: Aggressive mode"
+echo "⏰ PM Scheduler: 4x daily (10:00, 12:00, 14:00, 15:30 ET)"
 echo ""
 echo "PIDs saved to .trading_pids"
 echo ""
-echo "To stop all: pkill -f 'streamlit.*local_dashboard|sync_to_cloud|intraday_profit_taker|log_broadcast_server|update_dashboard_state'"
+echo "To stop all: pkill -f 'streamlit.*local_dashboard|sync_to_cloud|intraday_profit_taker|log_broadcast_server|update_dashboard_state|pm_scheduler'"
 echo ""
