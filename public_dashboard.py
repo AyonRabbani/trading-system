@@ -95,11 +95,12 @@ def render_account_summary(state: Dict):
 
 
 def render_performance_charts():
-    """Render MTD performance comparison with hypothetical SPY benchmark"""
+    """Render MTD performance comparison with real SPY data"""
     st.header("📈 PERFORMANCE")
     
     try:
         import os
+        import requests
         from dotenv import load_dotenv
         from alpaca.trading.client import TradingClient
         from alpaca.trading.requests import GetPortfolioHistoryRequest
@@ -107,7 +108,8 @@ def render_performance_charts():
         load_dotenv()
         
         # Initialize data client with environment variables
-        api_key = os.getenv('POLYGON_API_KEY') or os.getenv('ALPACA_API_KEY')
+        polygon_key = os.getenv('POLYGON_API_KEY')
+        api_key = polygon_key or os.getenv('ALPACA_API_KEY')
         api_secret = os.getenv('ALPACA_SECRET_KEY')
         
         if not api_key or not api_secret:
@@ -156,25 +158,55 @@ def render_performance_charts():
             portfolio_dates = [now]
             portfolio_returns = [0.0]
         
-        # Create hypothetical SPY comparison (assume SPY YTD 2026: ~1.5%)
-        spy_ytd_return = 1.5  # Approximate
-        days_ytd = (now - datetime(now.year, 1, 1)).days
-        daily_spy_return = (spy_ytd_return / 100) / days_ytd if days_ytd > 0 else 0
-        
-        # Calculate hypothetical SPY performance over same period
+        # Fetch real SPY data from Polygon API
         spy_returns = []
-        for date in portfolio_dates:
-            days_elapsed = (date - start_of_month).days
-            spy_return_pct = daily_spy_return * days_elapsed * 100
-            spy_returns.append(spy_return_pct)
+        spy_dates = []
+        
+        if polygon_key:
+            try:
+                start_date = start_of_month.strftime('%Y-%m-%d')
+                end_date = now.strftime('%Y-%m-%d')
+                
+                url = f"https://api.polygon.io/v2/aggs/ticker/SPY/range/1/day/{start_date}/{end_date}?adjusted=true&sort=asc&apiKey={polygon_key}"
+                response = requests.get(url, timeout=10)
+                
+                if response.status_code == 200:
+                    data = response.json()
+                    if data.get('results'):
+                        spy_prices = [bar['c'] for bar in data['results']]
+                        spy_timestamps = [bar['t'] / 1000 for bar in data['results']]
+                        
+                        if spy_prices:
+                            spy_start = spy_prices[0]
+                            spy_dates = [datetime.fromtimestamp(ts) for ts in spy_timestamps]
+                            spy_returns = [(price / spy_start - 1) * 100 for price in spy_prices]
+            except Exception as e:
+                st.warning(f"Could not fetch SPY data: {e}")
+        
+        # Fallback to hypothetical if SPY data unavailable
+        if not spy_returns:
+            spy_ytd_return = 1.5
+            days_ytd = (now - datetime(now.year, 1, 1)).days
+            daily_spy_return = (spy_ytd_return / 100) / days_ytd if days_ytd > 0 else 0
+            
+            spy_returns = []
+            for date in portfolio_dates:
+                days_elapsed = (date - start_of_month).days
+                spy_return_pct = daily_spy_return * days_elapsed * 100
+                spy_returns.append(spy_return_pct)
+            spy_dates = portfolio_dates
         
         # Create chart
         st.subheader("MTD Performance Comparison")
         
+        # Align data by date
+        max_len = max(len(portfolio_returns), len(spy_returns))
+        chart_dates = spy_dates if len(spy_dates) == len(spy_returns) else portfolio_dates
+        
         chart_data = pd.DataFrame({
-            'Date': portfolio_dates,
-            'Portfolio': portfolio_returns,
-            'SPY (Est)': spy_returns
+            'Date': chart_dates[:max_len],
+            'Portfolio': portfolio_returns[:max_len] if len(portfolio_returns) >= max_len else portfolio_returns + [None] * (max_len - len(portfolio_returns)),
+            'SPY': spy_returns[:max_len] if len(spy_returns) >= max_len else spy_returns + [None] * (max_len - len(spy_returns))
         }).set_index('Date')
         
         st.line_chart(chart_data, use_container_width=True, height=400)
@@ -186,7 +218,7 @@ def render_performance_charts():
             st.metric("Portfolio MTD", f"{port_return:+.2f}%")
         with col_b:
             spy_return = spy_returns[-1] if spy_returns else 0
-            st.metric("SPY MTD (Est)", f"{spy_return:+.2f}%")
+            st.metric("SPY MTD", f"{spy_return:+.2f}%")
         with col_c:
             alpha = port_return - spy_return
             st.metric("Alpha vs SPY", f"{alpha:+.2f}%")
