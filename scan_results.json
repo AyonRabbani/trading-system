@@ -1,9 +1,9 @@
 {
-  "timestamp": "2026-01-08T09:38:41.467860",
+  "timestamp": "2026-01-08T09:56:31.127154",
   "market_regime": "RISK_ON",
   "hot_sectors": [
     "Materials",
-    "Financials",
+    "Consumer Discretionary",
     "Industrials"
   ],
   "cold_sectors": [
@@ -17,32 +17,32 @@
       7.905686546463242
     ],
     [
-      "Financials",
-      7.169011370206202
+      "Consumer Discretionary",
+      5.815938033346479
     ],
     [
       "Industrials",
-      5.9800000000000075
+      5.753027909426023
     ],
     [
-      "Consumer Discretionary",
-      5.815938033346479
+      "Financials",
+      5.538637228778076
     ],
     [
       "Technology",
       4.772800400414723
     ],
     [
-      "Healthcare",
-      2.833955944866684
+      "Energy",
+      2.922920663581996
     ],
     [
-      "Energy",
-      1.2223842099360782
+      "Healthcare",
+      0.8502865780688929
     ],
     [
       "Consumer Staples",
-      -0.49350649350649034
+      -1.9344094286446345
     ],
     [
       "Real Estate",
@@ -55,14 +55,690 @@
   ],
   "top_scorers": [
     {
-      "ticker": "DRUG",
+      "ticker": "CAMP",
       "momentum": 100,
-      "volatility": 50.69,
+      "volatility": 53.49,
+      "relative_strength": 100,
+      "breakout": 71.99,
+      "volume": 0.2,
+      "rsi": 29.01,
+      "composite": 90.67,
+      "price": 6.13,
+      "return_30d": 81.41,
+      "is_overbought": 0,
+      "is_oversold": 1
+    },
+    {
+      "ticker": "BWEN",
+      "momentum": 100,
+      "volatility": 34.67,
       "relative_strength": 100,
       "breakout": 100,
       "volume": 100,
-      "rsi": 51.7,
-      "composite": 92.6,
-      "price": 95.98,
-      "return_30d": 58.73,
-      "is_overbought": 
+      "rsi": 62.71,
+      "composite": 90.2,
+      "price": 3.66,
+      "return_30d": 45.24,
+      "is_overbought": 0,
+      "is_oversold": 0
+    },
+    {
+      "ticker": "ASTI",
+      "momentum": 100,
+      "volatility": 100,
+      "relative_strength": 100,
+      "breakout": 49.34,
+      "volume": 62.51,
+      "rsi": 50.34,
+      "composite": 88.65,
+      "price": 3.95,
+      "return_30d": 163.33,
+      "is_overbought": 0,
+      "is_oversold": 0
+    },
+    {
+      "ticker": "ALMS",
+      "momentum": 100,
+      "volatility": 30.26,
+      "relative_strength": 100,
+      "breakout": 100,
+      "volume": 100,
+      "rsi": 72.24,
+      "composite": 87.54,
+      "price": 17.92,
+      "return_30d": 145.48,
+      "is_overbought": 1,
+      "is_oversold": 0
+    },
+    {
+      "ticker": "DJCO",
+      "momentum": 100,
+      "volatility": 21.53,
+      "relative_strength": 100,
+      "breakout": 100,
+      "volume": 91.38,
+      "rsi": 66.33,
+      "composite": 87.37,
+      "price": 573.17,
+      "return_30d": 27.93,
+      "is_overbought": 0,
+      "is_oversold": 0
+    },
+    {
+      "ticker": "ORMP",
+      "momentum": 96.09,
+      "volatility": 24.32,
+      "relative_strength": 98.39,
+      "breakout": 100,
+      "volume": 100,
+      "rsi": 57.98,
+      "composite": 86.88,
+      "price": 3.27,
+      "return_30d": 26.25,
+      "is_overbought": 0,
+      "is_oversold": 0
+    },
+    {
+      "ticker": "LIND",
+      "momentum": 100,
+      "volatility": 15.12,
+      "relative_strength": 100,
+      "breakout": 99.73,
+      "volume": 100,
+      "rsi": 70.79,
+      "composite": 86.54,
+      "price": 14.98,
+      "return_30d": 27.71,
+      "is_overbought": 1,
+      "is_oversold": 0
+    },
+    {
+      "ticker": "SHMDW",
+      "momentum": 100,
+      "volatility": 64.62,
+      "relative_strength": 100,
+      "breakout": 92.31,
+      "volume": 100,
+      "rsi": 77.64,
+      "composite": 86.39,
+      "price": 2.25,
+      "return_30d": 257.14,
+      "is_overbought": 1,
+      "is_oversold": 0
+    },
+    {
+      "ticker": "YCBD",
+      "momentum": 100,
+      "volatility": 100,
+      "relative_strength": 100,
+      "breakout": 0,
+      "volume": 0.09,
+      "rsi": 20.44,
+      "composite": 86.26,
+      "price": 1.08,
+      "return_30d": 95.34,
+      "is_overbought": 0,
+      "is_oversold": 1
+    },
+    {
+      "ticker": "COPP",
+      "momentum": 100,
+      "volatility": 12.96,
+      "relative_strength": 100,
+      "breakout": 95.17,
+      "volume": 100,
+      "rsi": 69.25,
+      "composite": 86.22,
+      "price": 36.96,
+      "return_30d": 29.21,
+      "is_overbought": 0,
+      "is_oversold": 0
+    },
+    {
+      "ticker": "MSB",
+      "momentum": 98.87,
+      "volatility": 23.97,
+      "relative_strength": 93.27,
+      "breakout": 95.04,
+      "volume": 100,
+      "rsi": 68.08,
+      "composite": 85.77,
+      "price": 39.73,
+      "return_30d": 23.69,
+      "is_overbought": 0,
+      "is_oversold": 0
+    },
+    {
+      "ticker": "DRUG",
+      "momentum": 100,
+      "volatility": 52.73,
+      "relative_strength": 100,
+      "breakout": 91.84,
+      "volume": 40.79,
+      "rsi": 53.52,
+      "composite": 85.76,
+      "price": 92.07,
+      "return_30d": 40.5,
+      "is_overbought": 0,
+      "is_oversold": 0
+    },
+    {
+      "ticker": "CMPS",
+      "momentum": 100,
+      "volatility": 26.99,
+      "relative_strength": 100,
+      "breakout": 100,
+      "volume": 100,
+      "rsi": 74.24,
+      "composite": 85.28,
+      "price": 7.82,
+      "return_30d": 50.97,
+      "is_overbought": 1,
+      "is_oversold": 0
+    },
+    {
+      "ticker": "PL.WS",
+      "momentum": 100,
+      "volatility": 43.02,
+      "relative_strength": 100,
+      "breakout": 100,
+      "volume": 64.75,
+      "rsi": 73.03,
+      "composite": 85.27,
+      "price": 11.19,
+      "return_30d": 253.66,
+      "is_overbought": 1,
+      "is_oversold": 0
+    },
+    {
+      "ticker": "SMX",
+      "momentum": 100,
+      "volatility": 100,
+      "relative_strength": 100,
+      "breakout": 0,
+      "volume": 100,
+      "rsi": 33.17,
+      "composite": 85.0,
+      "price": 33.96,
+      "return_30d": 565.88,
+      "is_overbought": 0,
+      "is_oversold": 0
+    },
+    {
+      "ticker": "HROW",
+      "momentum": 100,
+      "volatility": 24.91,
+      "relative_strength": 100,
+      "breakout": 86.13,
+      "volume": 81.62,
+      "rsi": 66.65,
+      "composite": 84.82,
+      "price": 51.0,
+      "return_30d": 30.77,
+      "is_overbought": 0,
+      "is_oversold": 0
+    },
+    {
+      "ticker": "NEWP",
+      "momentum": 100,
+      "volatility": 34.76,
+      "relative_strength": 100,
+      "breakout": 90.65,
+      "volume": 56.53,
+      "rsi": 50.0,
+      "composite": 84.46,
+      "price": 3.67,
+      "return_30d": 58.19,
+      "is_overbought": 0,
+      "is_oversold": 0
+    },
+    {
+      "ticker": "DRTS",
+      "momentum": 100,
+      "volatility": 28.08,
+      "relative_strength": 100,
+      "breakout": 100,
+      "volume": 51.98,
+      "rsi": 68.45,
+      "composite": 84.41,
+      "price": 5.9,
+      "return_30d": 61.64,
+      "is_overbought": 0,
+      "is_oversold": 0
+    },
+    {
+      "ticker": "AG",
+      "momentum": 100,
+      "volatility": 29.26,
+      "relative_strength": 100,
+      "breakout": 91.67,
+      "volume": 58.25,
+      "rsi": 60.41,
+      "composite": 83.96,
+      "price": 17.94,
+      "return_30d": 48.76,
+      "is_overbought": 0,
+      "is_oversold": 0
+    },
+    {
+      "ticker": "PKE",
+      "momentum": 100,
+      "volatility": 17.79,
+      "relative_strength": 85.1,
+      "breakout": 100,
+      "volume": 100,
+      "rsi": 68.3,
+      "composite": 83.94,
+      "price": 22.69,
+      "return_30d": 19.61,
+      "is_overbought": 0,
+      "is_oversold": 0
+    }
+  ],
+  "current_holdings": {
+    "CORE": [
+      "GLD",
+      "SLV",
+      "PPLT",
+      "CPER",
+      "SLX",
+      "XLF",
+      "XLB",
+      "XLY",
+      "XLI",
+      "XLK"
+    ],
+    "SPECULATIVE": [
+      "RKLB",
+      "AA",
+      "MU",
+      "LRCX",
+      "FCX",
+      "HUT",
+      "RIVN",
+      "MSFT",
+      "NVDA",
+      "TSLA"
+    ],
+    "ASYMMETRIC": [
+      "STLD",
+      "NET",
+      "W",
+      "PANW",
+      "RMBS",
+      "SOFI",
+      "CEG",
+      "OKLO",
+      "QBTS",
+      "IREN"
+    ],
+    "BENCHMARKS": [
+      "SPY",
+      "QQQ"
+    ]
+  },
+  "recommended_groups": {
+    "CORE": [
+      "COPX",
+      "PPLT",
+      "KOLD",
+      "SLV",
+      "SILJ",
+      "VGK",
+      "GDXJ",
+      "XME",
+      "XLB",
+      "VEA"
+    ],
+    "SPECULATIVE": [
+      "CAMP",
+      "BWEN",
+      "ASTI",
+      "ALMS",
+      "DJCO",
+      "ORMP",
+      "LIND",
+      "SHMDW",
+      "YCBD",
+      "COPP"
+    ],
+    "ASYMMETRIC": [
+      "TOKE",
+      "ACIU",
+      "AXSM",
+      "KROS",
+      "MYNZ",
+      "ALCY",
+      "MOB",
+      "AXL",
+      "ELME",
+      "HDMV"
+    ],
+    "BENCHMARKS": [
+      "SPY",
+      "QQQ"
+    ]
+  },
+  "dynamic_buckets": {
+    "CORE": [
+      "COPX",
+      "PPLT",
+      "KOLD",
+      "SLV",
+      "SILJ",
+      "VGK",
+      "GDXJ",
+      "XME",
+      "XLB",
+      "VEA"
+    ],
+    "SPECULATIVE": [
+      "CAMP",
+      "BWEN",
+      "ASTI",
+      "ALMS",
+      "DJCO",
+      "ORMP",
+      "LIND",
+      "SHMDW",
+      "YCBD",
+      "COPP"
+    ],
+    "ASYMMETRIC": [
+      "TOKE",
+      "ACIU",
+      "AXSM",
+      "KROS",
+      "MYNZ",
+      "ALCY",
+      "MOB",
+      "AXL",
+      "ELME",
+      "HDMV"
+    ],
+    "BENCHMARKS": [
+      "SPY",
+      "QQQ"
+    ]
+  },
+  "rotation_recommendations": [
+    {
+      "group": "CORE",
+      "action": "ROTATE",
+      "ticker_out": "SLX",
+      "ticker_in": "COPX",
+      "score_out": 0,
+      "score_in": 83.05,
+      "score_delta": 83.05,
+      "reason": "Score improvement of 83.0 points"
+    },
+    {
+      "group": "SPECULATIVE",
+      "action": "ROTATE",
+      "ticker_out": "NVDA",
+      "ticker_in": "CAMP",
+      "score_out": 32.23,
+      "score_in": 90.67,
+      "score_delta": 58.44,
+      "reason": "Score improvement of 58.4 points"
+    },
+    {
+      "group": "SPECULATIVE",
+      "action": "ROTATE",
+      "ticker_out": "TSLA",
+      "ticker_in": "BWEN",
+      "score_out": 35.3,
+      "score_in": 90.2,
+      "score_delta": 54.9,
+      "reason": "Score improvement of 54.9 points"
+    },
+    {
+      "group": "SPECULATIVE",
+      "action": "ROTATE",
+      "ticker_out": "MSFT",
+      "ticker_in": "ASTI",
+      "score_out": 37.55,
+      "score_in": 88.65,
+      "score_delta": 51.1,
+      "reason": "Score improvement of 51.1 points"
+    },
+    {
+      "group": "SPECULATIVE",
+      "action": "ROTATE",
+      "ticker_out": "MU",
+      "ticker_in": "ALMS",
+      "score_out": 65.15,
+      "score_in": 87.54,
+      "score_delta": 22.39,
+      "reason": "Score improvement of 22.4 points"
+    },
+    {
+      "group": "ASYMMETRIC",
+      "action": "ROTATE",
+      "ticker_out": "IREN",
+      "ticker_in": "TOKE",
+      "score_out": 14.41,
+      "score_in": 60.33,
+      "score_delta": 45.92,
+      "reason": "Score improvement of 45.9 points"
+    },
+    {
+      "group": "ASYMMETRIC",
+      "action": "ROTATE",
+      "ticker_out": "SOFI",
+      "ticker_in": "ACIU",
+      "score_out": 22.0,
+      "score_in": 59.0,
+      "score_delta": 37.0,
+      "reason": "Score improvement of 37.0 points"
+    },
+    {
+      "group": "ASYMMETRIC",
+      "action": "ROTATE",
+      "ticker_out": "CEG",
+      "ticker_in": "AXSM",
+      "score_out": 22.5,
+      "score_in": 56.84,
+      "score_delta": 34.34,
+      "reason": "Score improvement of 34.3 points"
+    },
+    {
+      "group": "ASYMMETRIC",
+      "action": "ROTATE",
+      "ticker_out": "RMBS",
+      "ticker_in": "KROS",
+      "score_out": 23.31,
+      "score_in": 56.36,
+      "score_delta": 33.05,
+      "reason": "Score improvement of 33.0 points"
+    },
+    {
+      "group": "ASYMMETRIC",
+      "action": "ROTATE",
+      "ticker_out": "OKLO",
+      "ticker_in": "MYNZ",
+      "score_out": 24.06,
+      "score_in": 56.09,
+      "score_delta": 32.03,
+      "reason": "Score improvement of 32.0 points"
+    },
+    {
+      "group": "ASYMMETRIC",
+      "action": "ROTATE",
+      "ticker_out": "PANW",
+      "ticker_in": "ALCY",
+      "score_out": 31.18,
+      "score_in": 55.89,
+      "score_delta": 24.71,
+      "reason": "Score improvement of 24.7 points"
+    }
+  ],
+  "portfolio_size_tests": [
+    {
+      "size": 5,
+      "tickers": [
+        "CAMP",
+        "BWEN",
+        "ASTI",
+        "ALMS",
+        "DJCO"
+      ],
+      "sharpe": 0.503,
+      "annual_return": 24.3,
+      "annual_volatility": 48.27,
+      "max_drawdown": -30.69,
+      "calmar_ratio": 0.792,
+      "win_rate": 53.63
+    },
+    {
+      "size": 10,
+      "tickers": [
+        "CAMP",
+        "BWEN",
+        "ASTI",
+        "ALMS",
+        "DJCO",
+        "ORMP",
+        "LIND",
+        "SHMDW",
+        "YCBD",
+        "COPP"
+      ],
+      "sharpe": 1.388,
+      "annual_return": 67.19,
+      "annual_volatility": 48.4,
+      "max_drawdown": -20.32,
+      "calmar_ratio": 3.307,
+      "win_rate": 56.36
+    },
+    {
+      "size": 15,
+      "tickers": [
+        "CAMP",
+        "BWEN",
+        "ASTI",
+        "ALMS",
+        "DJCO",
+        "ORMP",
+        "LIND",
+        "SHMDW",
+        "YCBD",
+        "COPP",
+        "MSB",
+        "DRUG",
+        "CMPS",
+        "PL.WS",
+        "SMX"
+      ],
+      "sharpe": -1.642,
+      "annual_return": -221.47,
+      "annual_volatility": 134.85,
+      "max_drawdown": -91.28,
+      "calmar_ratio": -2.426,
+      "win_rate": 38.79
+    },
+    {
+      "size": 20,
+      "tickers": [
+        "CAMP",
+        "BWEN",
+        "ASTI",
+        "ALMS",
+        "DJCO",
+        "ORMP",
+        "LIND",
+        "SHMDW",
+        "YCBD",
+        "COPP",
+        "MSB",
+        "DRUG",
+        "CMPS",
+        "PL.WS",
+        "SMX",
+        "HROW",
+        "NEWP",
+        "DRTS",
+        "AG",
+        "PKE"
+      ],
+      "sharpe": -1.646,
+      "annual_return": -212.52,
+      "annual_volatility": 129.1,
+      "max_drawdown": -90.19,
+      "calmar_ratio": -2.356,
+      "win_rate": 39.39
+    },
+    {
+      "size": 30,
+      "tickers": [
+        "CAMP",
+        "BWEN",
+        "ASTI",
+        "ALMS",
+        "DJCO",
+        "ORMP",
+        "LIND",
+        "SHMDW",
+        "YCBD",
+        "COPP",
+        "MSB",
+        "DRUG",
+        "CMPS",
+        "PL.WS",
+        "SMX",
+        "HROW",
+        "NEWP",
+        "DRTS",
+        "AG",
+        "PKE",
+        "PRAX",
+        "NUGT",
+        "FLYT",
+        "EAF",
+        "VELO",
+        "RVNL",
+        "RKLX",
+        "IE",
+        "JNUG",
+        "COPX"
+      ],
+      "sharpe": 1.782,
+      "annual_return": 107.42,
+      "annual_volatility": 60.29,
+      "max_drawdown": -21.12,
+      "calmar_ratio": 5.086,
+      "win_rate": 54.35
+    }
+  ],
+  "portfolio_comparison": {
+    "current": {
+      "sharpe": 1.605,
+      "annual_return": 46.28,
+      "annual_volatility": 28.84,
+      "max_drawdown": -26.58,
+      "calmar_ratio": 1.741,
+      "win_rate": 59.27,
+      "avg_drawdown": -4.73,
+      "num_drawdowns": 16,
+      "recovery_time_avg": 8.9
+    },
+    "recommended": {
+      "sharpe": 4.633,
+      "annual_return": 150.2,
+      "annual_volatility": 32.42,
+      "max_drawdown": -5.71,
+      "calmar_ratio": 26.309,
+      "win_rate": 68.52,
+      "avg_drawdown": -4.46,
+      "num_drawdowns": 4,
+      "recovery_time_avg": 6.0
+    },
+    "improvements": {
+      "sharpe": 3.028,
+      "return": 103.92,
+      "volatility": 3.58,
+      "max_drawdown": -20.87
+    }
+  },
+  "total_tickers_scored": 5255
+}
