@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-01-08T06:42:12.895157",
+  "timestamp": "2026-01-08T06:43:12.349619",
   "market_regime": "RISK_ON",
   "hot_sectors": [
     "Materials",
@@ -558,8 +558,8 @@
         "JEF",
         "PALL",
         "CPER",
-        "GM",
         "AFRM",
+        "GM",
         "WFC",
         "DASH",
         "SCHW",
