@@ -37,7 +37,7 @@ from typing import Dict, List, Tuple
 from dotenv import load_dotenv
 
 # Import existing modules
-from daily_scanner import load_ticker_universe, score_ticker
+from daily_scanner import load_ticker_universe
 from trading_automation import (
     AlpacaClient, fetch_price_history, calculate_indicators,
     calculate_sharpe_weighted_allocation, load_dynamic_buckets_from_scanner
@@ -460,7 +460,7 @@ def run_scheduler_daemon():
 def main():
     parser = argparse.ArgumentParser(description='Pre-Market Preparation System')
     parser.add_argument('--mode', choices=['prepare', 'validate', 'validate-and-execute'],
-                       required=True, help='Execution mode')
+                       help='Execution mode')
     parser.add_argument('--dry-run', action='store_true',
                        help='Validate only, do not execute orders')
     parser.add_argument('--daemon', action='store_true',
@@ -469,6 +469,8 @@ def main():
     
     if args.daemon:
         run_scheduler_daemon()
+    elif not args.mode:
+        parser.error("--mode is required when not using --daemon")
     elif args.mode == 'prepare':
         prepare_next_day_trades()
     elif args.mode == 'validate':
