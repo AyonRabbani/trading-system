@@ -73,9 +73,9 @@ echo "   - ASYM: 3-tier risk-weighted allocation"
 echo ""
 
 if [ "$DRY_RUN" = true ]; then
-    python trading_automation.py --dry-run 2>&1 | tee logs/trading_workflow_$(date +%Y%m%d_%H%M%S).log
+    python trading_automation.py --mode dry-run 2>&1 | tee logs/trading_workflow_$(date +%Y%m%d_%H%M%S).log
 else
-    python trading_automation.py 2>&1 | tee logs/trading_workflow_$(date +%Y%m%d_%H%M%S).log
+    python trading_automation.py --mode live 2>&1 | tee logs/trading_workflow_$(date +%Y%m%d_%H%M%S).log
 fi
 
 PM_EXIT_CODE=$?
