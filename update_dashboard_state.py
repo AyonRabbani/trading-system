@@ -48,18 +48,23 @@ def update_dashboard_state():
             'cash': float(account.cash),
             'buying_power': float(account.buying_power),
             'portfolio_value': float(account.portfolio_value),
+            'last_equity': float(account.last_equity),
             'daytrade_count': int(account.daytrade_count),
-            'status': account.status
+            'status': account.status,
+            'pattern_day_trader': account.pattern_day_trader
         },
         'positions': [
             {
                 'symbol': p.symbol,
                 'qty': float(p.qty),
+                'avg_entry_price': float(p.avg_entry_price),
+                'current_price': float(p.current_price),
                 'market_value': float(p.market_value),
                 'cost_basis': float(p.cost_basis),
                 'unrealized_pl': float(p.unrealized_pl),
                 'unrealized_plpc': float(p.unrealized_plpc),
-                'current_price': float(p.current_price)
+                'unrealized_intraday_pl': float(p.unrealized_intraday_pl),
+                'unrealized_intraday_plpc': float(p.unrealized_intraday_plpc)
             }
             for p in positions
         ],
