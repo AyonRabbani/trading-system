@@ -204,10 +204,10 @@ def render_performance_charts():
         col_a, col_b, col_c = st.columns(3)
         with col_a:
             port_return = portfolio_returns[-1] if portfolio_returns else 0
-            st.metric("Portfolio MTD", f"{port_return:+.2f}%")
+            st.metric("Portfolio YTD", f"{port_return:+.2f}%")
         with col_b:
             spy_return = spy_returns[-1] if spy_returns else 0
-            st.metric("SPY MTD", f"{spy_return:+.2f}%")
+            st.metric("SPY YTD", f"{spy_return:+.2f}%")
         with col_c:
             alpha = port_return - spy_return
             st.metric("Alpha vs SPY", f"{alpha:+.2f}%")
