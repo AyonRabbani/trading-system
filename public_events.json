@@ -1,13 +1,7 @@
 {
-  "last_updated": "2026-01-08T06:44:22.874567",
+  "last_updated": "2026-01-08T06:44:52.884908",
   "event_count": 200,
   "events": [
-    {
-      "timestamp": "2026-01-07T11:57:13",
-      "source": "Daily Scanner",
-      "type": "scan",
-      "message": "\ud83d\udd0d Market scan completed: 110 tickers analyzed, RISK_ON regime detected"
-    },
     {
       "timestamp": "2026-01-07T11:57:15",
       "source": "Daily Scanner",
@@ -2330,6 +2324,18 @@
     },
     {
       "timestamp": "2026-01-08T06:43:28.506127",
+      "type": "portfolio",
+      "level": "INFO",
+      "source": "Profit Taker",
+      "message": "\ud83d\udc40 Monitoring 4 positions: AA -3.2%, HUT -2.5%, RKLB -1.7%, SLV -2.9%",
+      "metadata": {
+        "portfolio_value": "97K",
+        "positions_count": 4,
+        "avg_return": -2.6
+      }
+    },
+    {
+      "timestamp": "2026-01-08T06:44:28.557963",
       "type": "portfolio",
       "level": "INFO",
       "source": "Profit Taker",
