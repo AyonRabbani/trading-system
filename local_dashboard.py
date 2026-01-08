@@ -17,7 +17,7 @@ import time
 
 # Alpaca imports
 from alpaca.trading.client import TradingClient
-from alpaca.trading.requests import GetAssetsRequest
+from alpaca.trading.requests import GetAssetsRequest, GetPortfolioHistoryRequest
 from alpaca.data.historical import StockHistoricalDataClient
 from alpaca.data.requests import StockBarsRequest
 from alpaca.data.timeframe import TimeFrame
