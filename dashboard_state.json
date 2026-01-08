@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-01-08T11:44:23.292165",
+  "timestamp": "2026-01-08T11:45:11.085681",
   "account": {
-    "equity": 97205.84,
+    "equity": 97197.98,
     "cash": 404.64,
     "buying_power": 163737.04,
-    "portfolio_value": 97205.84,
+    "portfolio_value": 97197.98,
     "daytrade_count": 27,
     "status": "ACTIVE"
   },
@@ -12,38 +12,38 @@
     {
       "symbol": "COPX",
       "qty": 134.979132345,
-      "market_value": 10100.488473,
+      "market_value": 10098.666255,
       "cost_basis": 10088.340351,
-      "unrealized_pl": 12.148122,
-      "unrealized_plpc": 0.0012041744803739,
-      "current_price": 74.83
+      "unrealized_pl": 10.325904,
+      "unrealized_plpc": 0.0010235483380551,
+      "current_price": 74.8165
     },
     {
       "symbol": "GDX",
       "qty": 104.721954275,
-      "market_value": 9444.873056,
+      "market_value": 9446.967495,
       "cost_basis": 9405.078713,
-      "unrealized_pl": 39.794343,
-      "unrealized_plpc": 0.0042311546999596,
-      "current_price": 90.19
+      "unrealized_pl": 41.888782,
+      "unrealized_plpc": 0.0044538470413969,
+      "current_price": 90.21
     },
     {
       "symbol": "GDXJ",
       "qty": 82.148810169,
-      "market_value": 9803.639006,
+      "market_value": 9804.04975,
       "cost_basis": 9757.635672,
-      "unrealized_pl": 46.003334,
-      "unrealized_plpc": 0.0047145984484755,
-      "current_price": 119.34
+      "unrealized_pl": 46.414078,
+      "unrealized_plpc": 0.0047566930719895,
+      "current_price": 119.345
     },
     {
       "symbol": "KOLD",
       "qty": 145.951812979,
-      "market_value": 6273.008922,
+      "market_value": 6275.927958,
       "cost_basis": 6214.628197,
-      "unrealized_pl": 58.380725,
-      "unrealized_plpc": 0.0093940816971452,
-      "current_price": 42.98
+      "unrealized_pl": 61.299761,
+      "unrealized_plpc": 0.0098637857417748,
+      "current_price": 43.0
     },
     {
       "symbol": "PICK",
@@ -57,47 +57,47 @@
     {
       "symbol": "PPLT",
       "qty": 48.744472599,
-      "market_value": 9982.867988,
+      "market_value": 9976.531207,
       "cost_basis": 9954.596194,
-      "unrealized_pl": 28.271794,
-      "unrealized_plpc": 0.0028400744187936,
-      "current_price": 204.8
+      "unrealized_pl": 21.935013,
+      "unrealized_plpc": 0.0022035060561493,
+      "current_price": 204.67
     },
     {
       "symbol": "REMX",
       "qty": 118.227107568,
-      "market_value": 9813.606582,
+      "market_value": 9819.352419,
       "cost_basis": 9819.943555,
-      "unrealized_pl": -6.336973,
-      "unrealized_plpc": -0.0006453166420466,
-      "current_price": 83.0064
+      "unrealized_pl": -0.591136,
+      "unrealized_plpc": -6.01974946892e-05,
+      "current_price": 83.055
     },
     {
       "symbol": "SILJ",
       "qty": 309.547353473,
-      "market_value": 9092.17964,
+      "market_value": 9094.501245,
       "cost_basis": 9032.591774,
-      "unrealized_pl": 59.587866,
-      "unrealized_plpc": 0.0065969842865612,
-      "current_price": 29.3725
+      "unrealized_pl": 61.909471,
+      "unrealized_plpc": 0.0068540096296839,
+      "current_price": 29.38
     },
     {
       "symbol": "SLV",
       "qty": 196.535544773,
-      "market_value": 13575.692755,
+      "market_value": 13563.920276,
       "cost_basis": 13443.031262,
-      "unrealized_pl": 132.661493,
-      "unrealized_plpc": 0.0098684210736755,
-      "current_price": 69.075
+      "unrealized_pl": 120.889014,
+      "unrealized_plpc": 0.0089926900893047,
+      "current_price": 69.0151
     },
     {
       "symbol": "XME",
       "qty": 71.170368367,
-      "market_value": 8070.008069,
+      "market_value": 8068.584662,
       "cost_basis": 8002.396219,
-      "unrealized_pl": 67.61185,
-      "unrealized_plpc": 0.0084489505580179,
-      "current_price": 113.39
+      "unrealized_pl": 66.188443,
+      "unrealized_plpc": 0.00827107796073,
+      "current_price": 113.37
     }
   ],
   "scanner": {
