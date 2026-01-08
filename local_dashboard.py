@@ -394,13 +394,42 @@ def render_trading_logs():
     """Render Portfolio Manager logs"""
     st.subheader("🤖 PORTFOLIO MANAGER LOGS")
     
-    logs = load_log_file('trading_automation_*.log', max_lines=30)
+    # Add tabs for different log views
+    tab1, tab2 = st.tabs(["Automation Logs", "Scheduler Logs (Live)"])
     
-    if logs:
-        log_text = ''.join(logs)
-        st.text_area("Recent Activity", log_text, height=300)
-    else:
-        st.info("No trading logs yet. Run: python trading_automation.py --mode dry-run")
+    with tab1:
+        logs = load_log_file('trading_automation_*.log', max_lines=30)
+        
+        if logs:
+            log_text = ''.join(logs)
+            st.text_area("Recent Activity", log_text, height=300, key="pm_logs")
+        else:
+            st.info("No trading logs yet. Run: python trading_automation.py --mode dry-run")
+    
+    with tab2:
+        # Show live PM scheduler logs
+        scheduler_logs = load_log_file('pm_scheduler.log', max_lines=50)
+        
+        if scheduler_logs:
+            log_text = ''.join(scheduler_logs)
+            st.text_area("Live PM Scheduler", log_text, height=300, key="scheduler_logs")
+            
+            # Show PM state
+            try:
+                with open('pm_state.json', 'r') as f:
+                    state = json.load(f)
+                    col1, col2, col3 = st.columns(3)
+                    with col1:
+                        st.metric("Current Strategy", state.get('last_strategy', 'N/A'))
+                    with col2:
+                        st.metric("Last Run", state.get('last_run', 'N/A')[:16] if state.get('last_run') else 'N/A')
+                    with col3:
+                        cooldown = state.get('cooldown_until', 'None')
+                        st.metric("Cooldown Until", cooldown[:16] if cooldown and cooldown != 'None' else 'None')
+            except:
+                pass
+        else:
+            st.info("No scheduler logs. PM scheduler may not be running.")
     
     st.divider()
 
