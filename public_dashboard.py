@@ -84,8 +84,9 @@ def render_account_summary(state: Dict):
         st.metric("Buying Power", f"${account['buying_power']:,.2f}")
     
     with col4:
-        daily_pl = account['equity'] - account['last_equity']
-        daily_pl_pct = (daily_pl / account['last_equity'] * 100) if account['last_equity'] > 0 else 0
+        last_equity = account.get('last_equity', account.get('equity', 0))
+        daily_pl = account['equity'] - last_equity
+        daily_pl_pct = (daily_pl / last_equity * 100) if last_equity > 0 else 0
         daily_pl_str = f"-${abs(daily_pl):,.2f}" if daily_pl < 0 else f"${daily_pl:,.2f}"
         st.metric("Today's P/L", daily_pl_str, f"{daily_pl_pct:+.2f}%")
     
