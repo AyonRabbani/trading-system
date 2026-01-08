@@ -223,8 +223,11 @@ def render_performance_charts():
         )
         bars = data_client.get_stock_bars(request)
         
+        # Convert BarSet to dict
+        bars_dict = dict(bars)
+        
         # Process SPY data
-        spy_bars = bars.get("SPY", [])
+        spy_bars = bars_dict.get("SPY", [])
         spy_prices = [bar.close for bar in spy_bars]
         spy_dates = [bar.timestamp for bar in spy_bars]
         
@@ -236,7 +239,7 @@ def render_performance_charts():
             spy_dates = []
         
         # Process VIX data
-        vix_bars = bars.get("VIX", [])
+        vix_bars = bars_dict.get("VIX", [])
         vix_values = [bar.close for bar in vix_bars]
         vix_dates = [bar.timestamp for bar in vix_bars]
         
