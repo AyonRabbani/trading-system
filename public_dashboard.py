@@ -139,8 +139,9 @@ def render_performance_charts():
         
         if portfolio_values and portfolio_timestamps:
             start_value = portfolio_values[0]
-            portfolio_dates = [datetime.fromtimestamp(ts) for ts in portfolio_timestamps]
-            portfolio_returns = [(val / start_value - 1) * 100 for val in portfolio_values]
+            if start_value > 0:  # Only calculate returns if start value is non-zero
+                portfolio_dates = [datetime.fromtimestamp(ts) for ts in portfolio_timestamps]
+                portfolio_returns = [(val / start_value - 1) * 100 for val in portfolio_values]
         
         if not portfolio_returns:
             portfolio_dates = [now]
