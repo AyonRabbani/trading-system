@@ -125,7 +125,7 @@ async def broadcast_event(event_data: dict):
         await unregister_client(client)
 
 
-async def handle_client(websocket, path):
+async def handle_client(websocket):
     """Handle incoming client connections and messages"""
     await register_client(websocket)
     
