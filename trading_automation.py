@@ -32,6 +32,9 @@ ASYM_CORE_MIN = 0.50            # Min 50% in core
 ASYM_SPEC_MAX = 0.40            # Max 40% in speculative
 ASYM_ASYM_MAX = 0.30            # Max 30% in asymmetric
 
+# Position Risk Management (NEW)
+POSITION_STOP_LOSS = -0.05      # -5% stop loss per individual position
+
 # File paths
 SCAN_RESULTS_FILE = 'scan_results.json'
 STATE_FILE = 'pm_state.json'
@@ -921,6 +924,43 @@ def start_profit_taker(mode: str = 'moderate'):
         return False
 
 # ============================================================================
+# POSITION RISK MANAGEMENT
+# ============================================================================
+
+def check_position_stops(client: AlpacaClient) -> List[str]:
+    """
+    Check all positions against stop loss threshold
+    Returns list of symbols that hit stop loss and should be liquidated
+    """
+    positions = client.get_positions()
+    to_liquidate = []
+    
+    if not positions:
+        return to_liquidate
+    
+    logging.info("\n  📊 Position Risk Check:")
+    
+    for position in positions:
+        symbol = position['symbol']
+        entry_price = float(position['avg_entry_price'])
+        current_price = float(position['current_price'])
+        pnl_pct = (current_price / entry_price) - 1
+        unrealized_pl = float(position['unrealized_pl'])
+        
+        # Check against stop loss threshold
+        if pnl_pct <= POSITION_STOP_LOSS:
+            to_liquidate.append(symbol)
+            logging.warning(f"  🛑 {symbol} STOP LOSS HIT: {pnl_pct*100:.2f}% (${unrealized_pl:,.2f}) - Entry: ${entry_price:.2f}, Current: ${current_price:.2f}")
+        else:
+            # Show status of positions approaching stop
+            if pnl_pct < 0:
+                logging.info(f"  ⚠️  {symbol}: {pnl_pct*100:.2f}% (${unrealized_pl:,.2f}) - {abs(pnl_pct/POSITION_STOP_LOSS)*100:.0f}% to stop")
+            else:
+                logging.info(f"  ✅ {symbol}: +{pnl_pct*100:.2f}% (${unrealized_pl:,.2f})")
+    
+    return to_liquidate
+
+# ============================================================================
 # MAIN EXECUTION FLOW
 # ============================================================================
 
@@ -932,11 +972,11 @@ def execute_portfolio_manager(dry_run: bool = True):
     1. Load buckets from scanner (REQUIRED - run daily_scanner.py first)
     2. Load 180 days of historical data
     3. Get Alpaca account status
-    4. Check cooldown state
-    5. Run all 4 strategy backtests
-    6. Check drawdown (liquidate if triggered)
-    7. Portfolio Manager selects best strategy
-    8. Calculate and execute orders
+    4. Check individual position stop losses (-5% per position)
+    5. Check cooldown state
+    6. Run all 4 strategy backtests
+    7. Check drawdown (liquidate if triggered)
+    8. Portfolio Manager selects best strategy and executes orders
     """
     
     logging.info("="*80)
@@ -993,8 +1033,29 @@ def execute_portfolio_manager(dry_run: bool = True):
     current_positions = {p['symbol']: float(p['qty']) for p in positions}
     logging.info(f"  Current Positions: {len(current_positions)}")
     
-    # Phase 4: Check state and cooldown
-    logging.info("\n[Phase 4/8] Checking cooldown state...")
+    # Phase 4: Check position stop losses
+    logging.info("\n[Phase 4/8] Checking individual position stop losses...")
+    symbols_to_liquidate = check_position_stops(client)
+    
+    if symbols_to_liquidate:
+        logging.warning(f"  🛑 {len(symbols_to_liquidate)} position(s) hit stop loss")
+        if not dry_run:
+            for symbol in symbols_to_liquidate:
+                logging.info(f"  Liquidating {symbol}...")
+                # Close position via market order
+                position_qty = current_positions.get(symbol, 0)
+                if position_qty > 0:
+                    client.place_order(symbol, position_qty, 'sell')
+                elif position_qty < 0:
+                    client.place_order(symbol, abs(position_qty), 'buy')
+            logging.info("  ✓ Stop loss orders executed")
+        else:
+            logging.info(f"  ⚠️  DRY RUN: Would liquidate {symbols_to_liquidate}")
+    else:
+        logging.info("  ✓ No positions hit stop loss threshold")
+    
+    # Phase 5: Check state and cooldown
+    logging.info("\n[Phase 5/8] Checking cooldown state...")
     state = load_state()
     should_liquidate, state = check_drawdown(account_value, state)
     
@@ -1009,8 +1070,8 @@ def execute_portfolio_manager(dry_run: bool = True):
             state['cooldown_until'] = None
             state['absolute_peak'] = account_value
     
-    # Phase 5: Run all 4 strategy backtests
-    logging.info("\n[Phase 5/8] Running strategy backtests...")
+    # Phase 6: Run all 4 strategy backtests
+    logging.info("\n[Phase 6/8] Running strategy backtests...")
     
     bh_history, bh_nav = run_buy_hold_backtest(data, common_dates, benchmarks)
     tactical_history, tactical_nav = run_tactical_backtest(data, common_dates, benchmarks, tickers)
@@ -1024,8 +1085,8 @@ def execute_portfolio_manager(dry_run: bool = True):
         'ASYM': asym_history
     }
     
-    # Phase 6: Check for drawdown (liquidation trigger)
-    logging.info("\n[Phase 6/8] Risk management check...")
+    # Phase 7: Check for drawdown (liquidation trigger)
+    logging.info("\n[Phase 7/8] Risk management check...")
     if should_liquidate:
         logging.warning("  🚨 Drawdown threshold exceeded - liquidating all positions")
         if not dry_run:
@@ -1033,8 +1094,8 @@ def execute_portfolio_manager(dry_run: bool = True):
         save_state(state)
         return
     
-    # Phase 7: Portfolio Manager selection
-    logging.info("\n[Phase 7/8] Portfolio Manager strategy selection...")
+    # Phase 8: Portfolio Manager selection
+    logging.info("\n[Phase 8/8] Portfolio Manager strategy selection...")
     selected_strategy = select_best_strategy(strategy_histories, common_dates, len(common_dates) - 1)
     
     logging.info(f"  ✓ Selected Strategy: {selected_strategy}")

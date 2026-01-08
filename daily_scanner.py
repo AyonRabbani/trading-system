@@ -268,7 +268,45 @@ def load_universe_data(universe: Dict[str, List[str]]) -> Dict[str, pd.DataFrame
 # SCORING SYSTEM
 # ============================================================================
 
-def score_opportunity(ticker: str, df: pd.DataFrame, spy_data: Optional[pd.DataFrame] = None) -> dict:
+def load_current_positions() -> Dict[str, dict]:
+    """
+    Load current positions with P&L from dashboard_state.json
+    Returns dict of {symbol: {'pnl_pct': float, 'unrealized_pl': float}}
+    """
+    try:
+        state_path = os.path.join(os.path.dirname(__file__), 'dashboard_state.json')
+        if not os.path.exists(state_path):
+            logging.debug("No dashboard_state.json found - no position penalties will be applied")
+            return {}
+        
+        with open(state_path, 'r') as f:
+            state = json.load(f)
+        
+        positions = {}
+        if 'positions' in state:
+            for pos in state['positions']:
+                symbol = pos['symbol']
+                avg_entry = float(pos.get('avg_entry_price', 0))
+                current_price = float(pos.get('current_price', 0))
+                
+                if avg_entry > 0:
+                    pnl_pct = (current_price / avg_entry) - 1
+                    positions[symbol] = {
+                        'pnl_pct': pnl_pct,
+                        'unrealized_pl': float(pos.get('unrealized_pl', 0))
+                    }
+        
+        if positions:
+            logging.info(f"  Loaded {len(positions)} current positions for loss penalty check")
+        
+        return positions
+    
+    except Exception as e:
+        logging.debug(f"Could not load positions: {e}")
+        return {}
+
+def score_opportunity(ticker: str, df: pd.DataFrame, spy_data: Optional[pd.DataFrame] = None,
+                     current_positions: Optional[Dict[str, dict]] = None) -> dict:
     """
     Score ticker across multiple factors.
     
@@ -276,6 +314,7 @@ def score_opportunity(ticker: str, df: pd.DataFrame, spy_data: Optional[pd.DataF
         ticker: Stock ticker symbol
         df: Price data for ticker
         spy_data: SPY price data for relative strength calculation
+        current_positions: Dict of current positions with P&L (for loss penalty)
     
     Returns:
         Dict with individual and composite scores
@@ -360,6 +399,16 @@ def score_opportunity(ticker: str, df: pd.DataFrame, spy_data: Optional[pd.DataF
         
         composite = base_composite * rsi_multiplier
         
+        # 7. LOSS PENALTY - Penalize positions already showing losses
+        # Prevents system from continuing to hold or rotating back into losers
+        has_loss_penalty = 0
+        if current_positions and ticker in current_positions:
+            position_pnl = current_positions[ticker]['pnl_pct']
+            if position_pnl < -0.03:  # Down 3% or more
+                composite *= 0.5  # 50% score reduction
+                has_loss_penalty = 1
+                logging.info(f"  ⚠️ {ticker} loss penalty applied (position down {position_pnl*100:.1f}%)")
+        
         return {
             'ticker': ticker,
             'momentum': round(momentum_score, 2),
@@ -372,7 +421,8 @@ def score_opportunity(ticker: str, df: pd.DataFrame, spy_data: Optional[pd.DataF
             'price': round(df['c'].iloc[-1], 2),
             'return_30d': round(ticker_return_30d * 100, 2),
             'is_overbought': int(rsi_value > 70),
-            'is_oversold': int(rsi_value < 30)
+            'is_oversold': int(rsi_value < 30),
+            'has_loss_penalty': has_loss_penalty
         }
         
     except Exception as e:
@@ -381,7 +431,8 @@ def score_opportunity(ticker: str, df: pd.DataFrame, spy_data: Optional[pd.DataF
             'ticker': ticker,
             'momentum': 0, 'volatility': 0, 'relative_strength': 0,
             'breakout': 0, 'volume': 0, 'rsi': 50, 'composite': 0,
-            'price': 0, 'return_30d': 0, 'is_overbought': 0, 'is_oversold': 0
+            'price': 0, 'return_30d': 0, 'is_overbought': 0, 'is_oversold': 0,
+            'has_loss_penalty': 0
         }
 
 
@@ -400,10 +451,13 @@ def score_all_tickers(data: Dict[str, pd.DataFrame]) -> List[dict]:
     # Get SPY data for relative strength calculations
     spy_data = data.get('SPY')
     
+    # Load current positions for loss penalty
+    current_positions = load_current_positions()
+    
     scores = []
     for ticker, df in data.items():
         if len(df) >= 50:  # Need minimum data for scoring
-            score = score_opportunity(ticker, df, spy_data)
+            score = score_opportunity(ticker, df, spy_data, current_positions)
             scores.append(score)
     
     # Sort by composite score
