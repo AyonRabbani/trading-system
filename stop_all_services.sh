@@ -26,6 +26,7 @@ pkill -f "sync_to_cloud.sh" 2>/dev/null
 pkill -f "intraday_profit_taker.py" 2>/dev/null
 pkill -f "update_dashboard_state.py" 2>/dev/null
 pkill -f "pm_scheduler.sh" 2>/dev/null
+pkill -f "pre_market_prep.py" 2>/dev/null
 
 sleep 2
 
