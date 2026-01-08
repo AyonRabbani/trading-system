@@ -244,13 +244,10 @@ def render_performance_charts():
         vix_dates = [bar.timestamp for bar in vix_bars]
         
         # Get portfolio history from Alpaca API
-        from alpaca.trading.requests import GetPortfolioHistoryRequest
-        from alpaca.trading.enums import TimeFrame as PortfolioTimeFrame
-        
         portfolio_history = trading_client.get_portfolio_history(
             GetPortfolioHistoryRequest(
                 period="1M",  # Last month
-                timeframe=PortfolioTimeFrame.ONE_DAY
+                timeframe="1D"  # Daily timeframe
             )
         )
         

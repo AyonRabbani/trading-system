@@ -106,7 +106,6 @@ def render_performance_charts():
         from alpaca.data.timeframe import TimeFrame
         from alpaca.trading.client import TradingClient
         from alpaca.trading.requests import GetPortfolioHistoryRequest
-        from alpaca.trading.enums import TimeFrame as PortfolioTimeFrame
         
         load_dotenv()
         
@@ -157,7 +156,7 @@ def render_performance_charts():
         portfolio_history = trading_client.get_portfolio_history(
             GetPortfolioHistoryRequest(
                 period="1M",  # Last month
-                timeframe=PortfolioTimeFrame.ONE_DAY
+                timeframe="1D"  # Daily timeframe
             )
         )
         
