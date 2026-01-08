@@ -214,11 +214,11 @@ def render_performance_charts():
         now = datetime.now()
         start_of_month = datetime(now.year, now.month, 1)
         
-        # Get portfolio history from Alpaca API
+        # Get portfolio history from Alpaca API (hourly updates)
         portfolio_history = trading_client.get_portfolio_history(
             GetPortfolioHistoryRequest(
                 period="1M",  # Last month
-                timeframe="1D"  # Daily timeframe
+                timeframe="1H"  # Hourly timeframe for intraday updates
             )
         )
         
@@ -261,8 +261,8 @@ def render_performance_charts():
                 start_date = start_of_month.strftime('%Y-%m-%d')
                 end_date = now.strftime('%Y-%m-%d')
                 
-                # Fetch SPY data from Polygon (via Massive ticker downloader format)
-                url = f"https://api.polygon.io/v2/aggs/ticker/SPY/range/1/day/{start_date}/{end_date}?adjusted=true&sort=asc&apiKey={POLYGON_API_KEY}"
+                # Fetch SPY hourly data from Polygon
+                url = f"https://api.polygon.io/v2/aggs/ticker/SPY/range/1/hour/{start_date}/{end_date}?adjusted=true&sort=asc&apiKey={POLYGON_API_KEY}"
                 response = requests.get(url, timeout=10)
                 
                 if response.status_code == 200:
@@ -499,9 +499,6 @@ def main():
         
         st.divider()
         st.caption(f"Updated: {datetime.now().strftime('%H:%M:%S')}")
-    
-    # Export dashboard state for public sync
-    export_dashboard_state()
     
     # Render sections
     render_header()
