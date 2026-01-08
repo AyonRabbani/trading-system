@@ -201,8 +201,8 @@ class AlpacaClient:
 def calculate_sharpe_weighted_allocation(tickers: List[str], data: Dict[str, pd.DataFrame], 
                                         date: pd.Timestamp) -> Dict[str, float]:
     """
-    Calculate Sharpe-weighted allocation with floor
-    Rule: max(sharpe_weight, min(5%, 1/N))
+    Calculate pure Sharpe-weighted allocation (no floor)
+    Allocation ranges from ~100% (best) to ~1% (worst) based on relative Sharpe ratios
     """
     sharpe_scores = {}
     for ticker in tickers:
@@ -213,21 +213,16 @@ def calculate_sharpe_weighted_allocation(tickers: List[str], data: Dict[str, pd.
             else:
                 sharpe_scores[ticker] = 0.01  # Small positive value
     
-    # Normalize to weights
+    # Pure Sharpe-weighted allocation (no minimum floor)
     total_sharpe = sum(sharpe_scores.values())
     if total_sharpe > 0:
-        sharpe_weights = {t: s / total_sharpe for t, s in sharpe_scores.items()}
+        allocations = {t: s / total_sharpe for t, s in sharpe_scores.items()}
     else:
-        sharpe_weights = {t: 1/len(tickers) for t in tickers}
+        # Equal weight only if all Sharpes are zero/invalid
+        allocations = {t: 1/len(tickers) for t in tickers}
     
-    # Apply floor: max(sharpe_weight, min(5%, 1/N))
-    min_allocation = min(0.05, 1/len(tickers))
-    allocations = {}
-    for ticker in tickers:
-        allocations[ticker] = max(sharpe_weights[ticker], min_allocation)
-    
-    # Normalize to sum to 1
-    total_alloc = sum(allocations.values())
+    # No floor applied - pure Sharpe weighting
+    return allocations
     allocations = {t: a / total_alloc for t, a in allocations.items()}
     
     return allocations
@@ -650,28 +645,31 @@ def run_asym_backtest(data: Dict[str, pd.DataFrame], common_dates: List[pd.Times
                     raw_spec_pct = avg_spec_sharpe / total_sharpe
                     raw_asym_pct = avg_asym_sharpe / total_sharpe
                     
-                    # Asymmetric qualification: avg_asym_sharpe > (avg_core + avg_spec)/2 AND > 0.5
-                    asym_threshold = (avg_core_sharpe + avg_spec_sharpe) / 2
+                    # === LOOSENED SPEC QUALIFICATION ===
+                    # OLD: Complex condition based on core
+                    # NEW: avg_spec_sharpe > 0.3 (much more permissive)
+                    if avg_spec_sharpe > 0.3 and spec_sharpes:
+                        spec_pct = min(raw_spec_pct * 1.5, SPEC_MAX_ALLOCATION)  # Scale up, max 40%
+                    else:
+                        spec_pct = 0
                     
-                    if avg_asym_sharpe > asym_threshold and avg_asym_sharpe > 0.5:
-                        asym_pct = min(raw_asym_pct * 2, ASYM_ASYM_MAX)  # Scale up to 30% max
+                    # === LOOSENED ASYM QUALIFICATION ===
+                    # OLD: avg_asym_sharpe > (avg_core + avg_spec)/2 AND > 0.5
+                    # NEW: avg_asym_sharpe > 0.25 (much more permissive)
+                    if avg_asym_sharpe > 0.25 and asym_sharpes:
+                        asym_pct = min(raw_asym_pct * 1.5, ASYM_ASYM_MAX)  # Scale up, max 30%
                     else:
                         asym_pct = 0
                     
-                    # Allocate remaining between core and spec
-                    remaining = 1.0 - asym_pct
-                    spec_pct = min(raw_spec_pct / (raw_core_pct + raw_spec_pct) * remaining, ASYM_SPEC_MAX)
-                    core_pct = remaining - spec_pct
+                    # CORE gets remainder (minimum 50%)
+                    core_pct = max(1.0 - spec_pct - asym_pct, ASYM_CORE_MIN)
                     
-                    # Ensure core minimum
-                    if core_pct < ASYM_CORE_MIN:
-                        shortfall = ASYM_CORE_MIN - core_pct
-                        core_pct = ASYM_CORE_MIN
-                        if spec_pct >= shortfall:
-                            spec_pct -= shortfall
-                        else:
-                            asym_pct -= (shortfall - spec_pct)
-                            spec_pct = 0
+                    # Normalize if over-allocated
+                    total_pct = core_pct + spec_pct + asym_pct
+                    if total_pct > 1.0:
+                        core_pct /= total_pct
+                        spec_pct /= total_pct
+                        asym_pct /= total_pct
                 else:
                     core_pct = 1.0
                     spec_pct = 0

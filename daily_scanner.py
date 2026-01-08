@@ -422,24 +422,41 @@ def detect_sector_rotation(data: Dict[str, pd.DataFrame]) -> dict:
 # GROUP ASSIGNMENT
 # ============================================================================
 
-def assign_to_groups(scores: List[dict], num_per_group: int = 4) -> dict:
+def assign_to_groups(scores: List[dict], num_per_group: int = 10) -> dict:
     """
     Dynamically assign top-scoring tickers to appropriate groups.
     
-    Strategy:
-    - CORE: High momentum + Lower volatility (stable performers)
-    - SPECULATIVE: High momentum + Medium volatility (growth)
-    - ASYMMETRIC: High volatility + Breakout potential (lottery tickets)
+    NEW STRATEGY:
+    - CORE: ETFs ONLY (high momentum, lower volatility)
+    - SPECULATIVE: Individual stocks with good momentum (loosened criteria)
+    - ASYMMETRIC: High volatility stocks or breakout potential (loosened criteria)
     - BENCHMARKS: Always SPY/QQQ (static)
     
     Args:
         scores: List of ticker scores
-        num_per_group: Target number of tickers per group
+        num_per_group: Target number of tickers per group (default 10)
     
     Returns:
         Dict with group assignments
     """
     logging.info("Assigning tickers to groups...")
+    
+    # Common ETF tickers (comprehensive list)
+    ETF_TICKERS = {
+        # Broad Market ETFs
+        'SPY', 'QQQ', 'DIA', 'IWM', 'VTI', 'VOO', 'VEA', 'VWO', 'AGG', 'BND',
+        # Sector ETFs
+        'XLE', 'XLF', 'XLK', 'XLV', 'XLI', 'XLP', 'XLY', 'XLB', 'XLU', 'XLRE', 'XLC',
+        # International ETFs
+        'VNQ', 'EFA', 'EEM', 'IEMG', 'VGK', 'VPL', 'INDA', 'FXI', 'EWJ', 'EWZ',
+        # Commodity & Metals ETFs
+        'GLD', 'SLV', 'USO', 'UNG', 'BOIL', 'KOLD', 'DBC', 'DBA',
+        'GDX', 'GDXJ', 'SLX', 'CPER', 'PPLT', 'DBB', 'COPX', 'XME', 'PICK',
+        # Bond ETFs
+        'TLT', 'IEF', 'SHY', 'LQD', 'HYG', 'EMB', 'JNK', 'MUB', 'BNDX',
+        # Thematic & Other ETFs
+        'XBI', 'IBB', 'ITB', 'XHB', 'GDXJ', 'SILJ', 'URA', 'REMX', 'LIT'
+    }
     
     groups = {
         'CORE': [],
@@ -448,65 +465,67 @@ def assign_to_groups(scores: List[dict], num_per_group: int = 4) -> dict:
         'BENCHMARKS': ['SPY', 'QQQ']
     }
     
-    # Filter out benchmarks from assignment
-    scores = [s for s in scores if s['ticker'] not in ['SPY', 'QQQ']]
+    # Separate ETFs and stocks
+    etf_scores = [s for s in scores if s['ticker'] in ETF_TICKERS and s['ticker'] not in ['SPY', 'QQQ']]
+    stock_scores = [s for s in scores if s['ticker'] not in ETF_TICKERS and s['ticker'] not in ['SPY', 'QQQ']]
     
-    for score in scores:
+    # === CORE: ETFs ONLY ===
+    # Take top ETFs by composite score
+    for score in sorted(etf_scores, key=lambda x: x['composite'], reverse=True):
+        if len(groups['CORE']) >= num_per_group:
+            break
         ticker = score['ticker']
-        
-        # Skip if already assigned
-        if any(ticker in g for g in groups.values()):
+        groups['CORE'].append(ticker)
+        logging.info(f"  {ticker} → CORE (ETF, score={score['composite']:.1f})")
+    
+    # === SPECULATIVE: Stocks with momentum > 50 (LOOSENED from 60) ===
+    spec_candidates = [s for s in stock_scores if s['momentum'] > 50]
+    for score in sorted(spec_candidates, key=lambda x: x['composite'], reverse=True):
+        if len(groups['SPECULATIVE']) >= num_per_group:
+            break
+        ticker = score['ticker']
+        groups['SPECULATIVE'].append(ticker)
+        logging.info(f"  {ticker} → SPECULATIVE (momentum={score['momentum']:.1f}, vol={score['volatility']:.1f})")
+    
+    # === ASYMMETRIC: High volatility (>40, LOOSENED from 60) OR breakout (>60, LOOSENED from 70) ===
+    asym_candidates = [s for s in stock_scores 
+                       if s not in spec_candidates and 
+                       (s['volatility'] > 40 or s['breakout'] > 60)]
+    for score in sorted(asym_candidates, key=lambda x: x['composite'], reverse=True):
+        if len(groups['ASYMMETRIC']) >= num_per_group:
+            break
+        ticker = score['ticker']
+        groups['ASYMMETRIC'].append(ticker)
+        logging.info(f"  {ticker} → ASYMMETRIC (vol={score['volatility']:.1f}, breakout={score['breakout']:.1f})")
+    
+    # === BACKFILL: Fill remaining slots with best available ===
+    remaining_etfs = [s for s in etf_scores if s['ticker'] not in groups['CORE']]
+    remaining_stocks = [s for s in stock_scores 
+                       if s['ticker'] not in groups['SPECULATIVE'] 
+                       and s['ticker'] not in groups['ASYMMETRIC']]
+    
+    # Fill CORE with remaining ETFs
+    for score in sorted(remaining_etfs, key=lambda x: x['composite'], reverse=True):
+        if len(groups['CORE']) >= num_per_group:
+            break
+        groups['CORE'].append(score['ticker'])
+        logging.info(f"  {score['ticker']} → CORE (backfill ETF, score={score['composite']:.1f})")
+    
+    # Fill SPECULATIVE with remaining stocks
+    for score in sorted(remaining_stocks, key=lambda x: x['composite'], reverse=True):
+        if len(groups['SPECULATIVE']) >= num_per_group:
+            break
+        groups['SPECULATIVE'].append(score['ticker'])
+        logging.info(f"  {score['ticker']} → SPECULATIVE (backfill, score={score['composite']:.1f})")
+    
+    # Fill ASYMMETRIC with remaining stocks
+    for score in sorted(remaining_stocks, key=lambda x: x['composite'], reverse=True):
+        if score['ticker'] in groups['SPECULATIVE']:
             continue
-        
-        # Classification logic
-        if score['momentum'] > 70 and score['volatility'] < 40:
-            # High momentum, low volatility = CORE
-            if len(groups['CORE']) < num_per_group:
-                groups['CORE'].append(ticker)
-                logging.info(f"  {ticker} → CORE (momentum={score['momentum']:.1f}, vol={score['volatility']:.1f})")
-        
-        elif score['momentum'] > 60 and 40 <= score['volatility'] < 60:
-            # Good momentum, medium volatility = SPECULATIVE
-            if len(groups['SPECULATIVE']) < num_per_group:
-                groups['SPECULATIVE'].append(ticker)
-                logging.info(f"  {ticker} → SPECULATIVE (momentum={score['momentum']:.1f}, vol={score['volatility']:.1f})")
-        
-        elif score['volatility'] >= 60 or score['breakout'] > 70:
-            # High volatility or breakout = ASYMMETRIC
-            if len(groups['ASYMMETRIC']) < num_per_group:
-                groups['ASYMMETRIC'].append(ticker)
-                logging.info(f"  {ticker} → ASYMMETRIC (vol={score['volatility']:.1f}, breakout={score['breakout']:.1f})")
-        
-        # Stop if all groups filled
-        if (len(groups['CORE']) >= num_per_group and
-            len(groups['SPECULATIVE']) >= num_per_group and
-            len(groups['ASYMMETRIC']) >= num_per_group):
+        if len(groups['ASYMMETRIC']) >= num_per_group:
             break
-    
-    # Fill remaining slots with best available tickers (relaxed criteria)
-    remaining_scores = [s for s in scores if s['ticker'] not in sum(groups.values(), [])]
-    
-    for score in remaining_scores:
-        ticker = score['ticker']
-        
-        # Fill CORE first
-        if len(groups['CORE']) < num_per_group:
-            groups['CORE'].append(ticker)
-            logging.info(f"  {ticker} → CORE (backfill, score={score['composite']:.1f})")
-        # Then SPECULATIVE
-        elif len(groups['SPECULATIVE']) < num_per_group:
-            groups['SPECULATIVE'].append(ticker)
-            logging.info(f"  {ticker} → SPECULATIVE (backfill, score={score['composite']:.1f})")
-        # Finally ASYMMETRIC
-        elif len(groups['ASYMMETRIC']) < num_per_group:
-            groups['ASYMMETRIC'].append(ticker)
-            logging.info(f"  {ticker} → ASYMMETRIC (backfill, score={score['composite']:.1f})")
-        
-        # Stop if all groups filled
-        if (len(groups['CORE']) >= num_per_group and
-            len(groups['SPECULATIVE']) >= num_per_group and
-            len(groups['ASYMMETRIC']) >= num_per_group):
-            break
+        groups['ASYMMETRIC'].append(score['ticker'])
+        logging.info(f"  {score['ticker']} → ASYMMETRIC (backfill, score={score['composite']:.1f})")
     
     return groups
 
@@ -934,7 +953,7 @@ def daily_scan(export_path: Optional[str] = None) -> dict:
         logging.info("\n" + "="*80)
         logging.info("PHASE 4: GROUP ASSIGNMENT")
         logging.info("="*80)
-        new_groups = assign_to_groups(scores, num_per_group=4)
+        new_groups = assign_to_groups(scores, num_per_group=10)
         
         # 4A. Test portfolio sizes
         logging.info("\n" + "="*80)
