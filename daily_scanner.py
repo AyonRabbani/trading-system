@@ -371,8 +371,8 @@ def score_opportunity(ticker: str, df: pd.DataFrame, spy_data: Optional[pd.DataF
             'composite': round(composite, 2),
             'price': round(df['c'].iloc[-1], 2),
             'return_30d': round(ticker_return_30d * 100, 2),
-            'is_overbought': rsi_value > 70,
-            'is_oversold': rsi_value < 30
+            'is_overbought': int(rsi_value > 70),
+            'is_oversold': int(rsi_value < 30)
         }
         
     except Exception as e:
@@ -381,7 +381,7 @@ def score_opportunity(ticker: str, df: pd.DataFrame, spy_data: Optional[pd.DataF
             'ticker': ticker,
             'momentum': 0, 'volatility': 0, 'relative_strength': 0,
             'breakout': 0, 'volume': 0, 'rsi': 50, 'composite': 0,
-            'price': 0, 'return_30d': 0, 'is_overbought': False, 'is_oversold': False
+            'price': 0, 'return_30d': 0, 'is_overbought': 0, 'is_oversold': 0
         }
 
 
