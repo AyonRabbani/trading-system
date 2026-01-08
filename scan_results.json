@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-01-08T08:09:00.203019",
+  "timestamp": "2026-01-08T08:21:58.907559",
   "market_regime": "RISK_ON",
   "hot_sectors": [
     "Materials",
@@ -324,11 +324,11 @@
       "COPX",
       "SILJ",
       "PPLT",
-      "XME",
       "PICK",
       "GDXJ",
       "KOLD",
-      "LIT"
+      "LIT",
+      "GDX"
     ],
     "SPECULATIVE": [
       "SHMDW",
@@ -366,11 +366,11 @@
       "COPX",
       "SILJ",
       "PPLT",
-      "XME",
       "PICK",
       "GDXJ",
       "KOLD",
-      "LIT"
+      "LIT",
+      "GDX"
     ],
     "SPECULATIVE": [
       "SHMDW",
@@ -637,8 +637,8 @@
         "VELO",
         "BIOA",
         "ASTI",
-        "LPTH",
         "GLSI",
+        "LPTH",
         "MRAM",
         "BWAY"
       ],
@@ -663,22 +663,22 @@
       "recovery_time_avg": 8.5
     },
     "recommended": {
-      "sharpe": 3.49,
-      "annual_return": 106.9,
-      "annual_volatility": 30.63,
-      "max_drawdown": -18.18,
-      "calmar_ratio": 5.881,
+      "sharpe": 3.513,
+      "annual_return": 107.01,
+      "annual_volatility": 30.46,
+      "max_drawdown": -17.58,
+      "calmar_ratio": 6.086,
       "win_rate": 62.5,
-      "avg_drawdown": -5.06,
-      "num_drawdowns": 11,
-      "recovery_time_avg": 8.0
+      "avg_drawdown": -4.7,
+      "num_drawdowns": 12,
+      "recovery_time_avg": 7.3
     },
     "improvements": {
-      "sharpe": 1.845,
-      "return": 59.51,
-      "volatility": 1.83,
-      "max_drawdown": -8.4
+      "sharpe": 1.868,
+      "return": 59.62,
+      "volatility": 1.66,
+      "max_drawdown": -9.0
     }
   },
-  "total_tickers_scored": 5261
+  "total_tickers_scored": 5260
 }
