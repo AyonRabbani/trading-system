@@ -54,11 +54,19 @@ PROFIT_PID=$!
 sleep 1
 echo "✅ Profit taker started (PID: $PROFIT_PID)"
 
+# 7. Start dashboard state updater (updates public dashboard data every 60s)
+echo "🔄 Starting dashboard state updater..."
+nohup bash -c 'while true; do python update_dashboard_state.py > /dev/null 2>&1; sleep 60; done' > logs/dashboard_updater.log 2>&1 &
+UPDATER_PID=$!
+sleep 1
+echo "✅ Dashboard updater started (PID: $UPDATER_PID)"
+
 # Save PIDs
 echo "$BROADCAST_PID" > .trading_pids
 echo "$DASHBOARD_PID" >> .trading_pids
 echo "$SYNC_PID" >> .trading_pids
 echo "$PROFIT_PID" >> .trading_pids
+echo "$UPDATER_PID" >> .trading_pids
 
 echo ""
 echo "=================================="
@@ -68,9 +76,10 @@ echo ""
 echo "📊 Local Dashboard: http://localhost:8501"
 echo "📡 WebSocket: ws://localhost:8765"
 echo "🔄 GitHub Sync: Every 30 seconds"
+echo "🔄 Dashboard Updater: Every 60 seconds"
 echo "🎯 Profit Taker: Aggressive mode"
 echo ""
 echo "PIDs saved to .trading_pids"
 echo ""
-echo "To stop all: pkill -f 'streamlit.*local_dashboard|sync_to_cloud|intraday_profit_taker|log_broadcast_server'"
+echo "To stop all: pkill -f 'streamlit.*local_dashboard|sync_to_cloud|intraday_profit_taker|log_broadcast_server|update_dashboard_state'"
 echo ""
