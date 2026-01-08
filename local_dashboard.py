@@ -215,9 +215,9 @@ def render_performance_charts():
         now = datetime.now()
         start_of_month = datetime(now.year, now.month, 1)
         
-        # Fetch SPY and VIX data for MTD
+        # Fetch SPY and VIXY data for MTD
         request = StockBarsRequest(
-            symbol_or_symbols=["SPY", "VIX"],
+            symbol_or_symbols=["SPY", "VIXY"],  # VIXY is VIX ETF (stock data available)
             start=start_of_month,
             timeframe=TimeFrame.Day
         )
@@ -238,8 +238,8 @@ def render_performance_charts():
             spy_returns = []
             spy_dates = []
         
-        # Process VIX data
-        vix_bars = bars_dict.get("VIX", [])
+        # Process VIXY data (VIX ETF)
+        vix_bars = bars_dict.get("VIXY", [])
         vix_values = [bar.close for bar in vix_bars]
         vix_dates = [bar.timestamp for bar in vix_bars]
         
@@ -310,7 +310,7 @@ def render_performance_charts():
                 st.metric("Alpha vs SPY", f"{alpha:+.2f}%")
         
         with col2:
-            st.subheader("VIX")
+            st.subheader("VIX (VIXY ETF)")
             
             if vix_values:
                 vix_df = pd.DataFrame({
@@ -322,7 +322,7 @@ def render_performance_charts():
                 
                 current_vix = vix_values[-1]
                 avg_vix = np.mean(vix_values)
-                st.metric("Current VIX", f"{current_vix:.2f}")
+                st.metric("Current VIXY", f"{current_vix:.2f}")
                 st.metric("MTD Avg", f"{avg_vix:.2f}")
             else:
                 st.info("VIX data unavailable")
