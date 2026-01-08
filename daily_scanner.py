@@ -399,15 +399,19 @@ def score_opportunity(ticker: str, df: pd.DataFrame, spy_data: Optional[pd.DataF
         
         composite = base_composite * rsi_multiplier
         
-        # 7. LOSS PENALTY - Penalize positions already showing losses
+        # 7. LOSS PENALTY - Gradual penalty for positions showing losses
         # Prevents system from continuing to hold or rotating back into losers
+        # Penalty scales from -1% (10% reduction) to -5%+ (50% reduction cap)
         has_loss_penalty = 0
+        loss_penalty_pct = 0
         if current_positions and ticker in current_positions:
             position_pnl = current_positions[ticker]['pnl_pct']
-            if position_pnl < -0.03:  # Down 3% or more
-                composite *= 0.5  # 50% score reduction
+            if position_pnl < -0.01:  # Any loss greater than 1%
+                # Gradual scaling: -1% = 10% penalty, -5% = 50% penalty (capped)
+                loss_penalty_pct = min(abs(position_pnl) * 10, 0.5)
+                composite *= (1 - loss_penalty_pct)
                 has_loss_penalty = 1
-                logging.info(f"  ⚠️ {ticker} loss penalty applied (position down {position_pnl*100:.1f}%)")
+                logging.info(f"  ⚠️ {ticker} loss penalty: {position_pnl*100:.1f}% P&L → {loss_penalty_pct*100:.0f}% score reduction")
         
         return {
             'ticker': ticker,
