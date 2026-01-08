@@ -38,3 +38,4 @@ logs/
 
 # Cache
 .streamlit/secrets.toml!dashboard_state.json
+!ticker_universe.json
