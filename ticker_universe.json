@@ -1,0 +1,346 @@
+{
+  "description": "Comprehensive ticker universe for 2026 market opportunities",
+  "total_tickers": 1000,
+  "last_updated": "2026-01-08",
+  "categories": {
+    "ai_infrastructure": {
+      "description": "AI chips, data centers, computing infrastructure",
+      "tickers": [
+        "NVDA", "AMD", "AVGO", "MRVL", "QCOM", "INTC", "TSM", "ASML", "AMAT", "KLAC",
+        "LRCX", "ENTG", "TER", "ACLS", "COHR", "MKSI", "ONTO", "UCTT", "FORM", "AEIS",
+        "SMCI", "DELL", "HPE", "NTAP", "PSTG", "WDC", "STX", "IONQ", "RGTI", "QUBT",
+        "ARQQ", "ARM", "MPWR", "MU", "NXPI", "MCHP", "ADI", "TXN", "ON", "WOLF",
+        "SLAB", "CRUS", "SITM", "ALGM", "PLAB", "MTSI", "VICR", "AMBA", "SWKS", "QRVO"
+      ]
+    },
+    "ai_services": {
+      "description": "AI software, applications, cloud AI services",
+      "tickers": [
+        "MSFT", "GOOGL", "GOOG", "AMZN", "META", "ORCL", "CRM", "ADBE", "NOW", "SNOW",
+        "PLTR", "AI", "PATH", "BBAI", "SOUN", "BDTX", "CWAN", "BIGC", "ALKT", "AIDX",
+        "BKSY", "SPIR", "GFAI", "EZFL", "VERI", "MARA", "RIOT", "CLSK", "BTBT", "APLD",
+        "WULF", "IREN", "CIFR", "CORZ", "HIVE", "HUT", "BITF", "ARBK", "MGTI", "EBON",
+        "SOS", "NCTY", "HPCO", "BTCS", "OSAT", "MIGI", "INVU", "FRZT", "IMMR", "BYFC"
+      ]
+    },
+    "ai_robotics_automation": {
+      "description": "Robotics, automation, autonomous systems",
+      "tickers": [
+        "TSLA", "TER", "ROK", "EMR", "HON", "ITW", "FANUY", "ABB", "ABBNY", "FANUF",
+        "IRBT", "MKSI", "NOVT", "ZBRA", "TDY", "KEYS", "FTV", "GNRC", "ROP", "AME",
+        "AZTA", "KRNT", "BLDE", "RVLV", "PTC", "ANSS", "ADSK", "SSYS", "DDD", "NNDM",
+        "VELO", "MTLS", "XONE", "PRLB", "FARO", "CGNX", "ISRG", "ABMD", "ALGN", "DXCM",
+        "ILMN", "TMO", "DHR", "A", "MTD", "WAT", "IQV", "RGEN", "TECH", "PKI"
+      ]
+    },
+    "semiconductors": {
+      "description": "Chip manufacturers and designers",
+      "tickers": [
+        "NVDA", "AMD", "INTC", "TSM", "QCOM", "AVGO", "TXN", "ADI", "NXPI", "MCHP",
+        "MU", "AMAT", "LRCX", "KLAC", "ASML", "ON", "SWKS", "QRVO", "SLAB", "MPWR",
+        "MRVL", "CRUS", "ALGM", "SITM", "PLAB", "MTSI", "VICR", "AMBA", "WOLF", "DIOD",
+        "INDI", "AOSL", "HIMX", "VSH", "MXL", "RMBS", "CEVA", "SIMO", "SMTC", "QLYS",
+        "NVMI", "UCTT", "FORM", "COHU", "ACLS", "ENTG", "AEIS", "MKSI", "ONTO", "ICHR"
+      ]
+    },
+    "cloud_computing": {
+      "description": "Cloud infrastructure and services",
+      "tickers": [
+        "AMZN", "MSFT", "GOOGL", "ORCL", "CRM", "SNOW", "NET", "DDOG", "MDB", "CFLT",
+        "ESTC", "DT", "DBX", "BOX", "ZM", "DOCN", "FSLY", "AKAM", "LLNW", "VNET",
+        "EQIX", "DLR", "CCI", "AMT", "SBAC", "CONE", "UNIT", "SAFE", "QTS", "LAMR",
+        "JBHT", "CHRW", "EXPD", "LSTR", "ODFL", "SAIA", "XPO", "ARCB", "HTLD", "WERN",
+        "CVLT", "GDDY", "WIX", "SHOP", "BIGC", "ETSY", "MELI", "CPNG", "SE", "BABA"
+      ]
+    },
+    "oil_energy_majors": {
+      "description": "Major integrated oil and gas companies",
+      "tickers": [
+        "XOM", "CVX", "COP", "EOG", "SLB", "PXD", "MPC", "PSX", "VLO", "HES",
+        "OXY", "DVN", "FANG", "HAL", "BKR", "NOV", "HP", "CHK", "MRO", "APA",
+        "OVV", "CTRA", "EQT", "AR", "RRC", "SM", "MGY", "PR", "MTDR", "VNOM",
+        "CNX", "CLR", "CHRD", "GPOR", "TPL", "TALO", "CRK", "CRGY", "RIG", "VAL",
+        "TDW", "FTI", "WHD", "PTEN", "LBRT", "PUMP", "WTTR", "NINE", "NBR", "HLX"
+      ]
+    },
+    "oil_energy_midstream": {
+      "description": "Pipelines, storage, transportation",
+      "tickers": [
+        "EPD", "ET", "WMB", "KMI", "OKE", "LNG", "TRGP", "MPLX", "PAA", "WES",
+        "AM", "ENLC", "DKL", "HESM", "PAGP", "CQP", "CEQP", "USAC", "NBLX", "SUN",
+        "GEL", "NS", "ETRN", "ENBL", "EPM", "NGL", "DCP", "SHLX", "CAPL", "GLP",
+        "WLKP", "PBFX", "EE", "EPR", "CLMT", "SPH", "VGR", "CPK", "ALDW", "GLOP",
+        "TNK", "STNG", "FRO", "DHT", "TRMD", "EURN", "INSW", "SB", "BWLP", "NVGS"
+      ]
+    },
+    "oil_energy_services": {
+      "description": "Oilfield services and equipment",
+      "tickers": [
+        "SLB", "HAL", "BKR", "NOV", "FTI", "HP", "RIG", "VAL", "TDW", "WHD",
+        "PTEN", "LBRT", "PUMP", "WTTR", "NBR", "HLX", "CHX", "NINE", "WFRD", "ACDC",
+        "CLB", "NR", "PFIE", "USWS", "TUSK", "BORR", "SDRL", "NE", "ESI", "LBRT",
+        "FWRD", "WTTR", "PUMP", "PTEN", "NINE", "HLX", "NBR", "WHD", "FTI", "HP",
+        "CLB", "NR", "PFIE", "USWS", "TUSK", "BORR", "SDRL", "NE", "ESI", "WTTR"
+      ]
+    },
+    "renewable_energy": {
+      "description": "Solar, wind, clean energy",
+      "tickers": [
+        "NEE", "ENPH", "SEDG", "FSLR", "RUN", "NOVA", "CSIQ", "JKS", "DQ", "SOL",
+        "ARRY", "MAXN", "SHLS", "PLUG", "BE", "BLDP", "FCEL", "CLNE", "CHPT", "BLNK",
+        "EVGO", "WBX", "STEM", "FLNC", "FREYR", "QS", "SES", "ENVX", "SLDP", "ABML",
+        "CBAT", "SPI", "PECK", "WATT", "REGI", "GEVO", "AMTX", "REX", "BIOF", "RNWWW",
+        "NEP", "CWEN", "BEP", "AY", "HASI", "RNW", "NYMT", "GPRE", "VWDRY", "ORSTED"
+      ]
+    },
+    "consumer_finance": {
+      "description": "Consumer lending, fintech, payments",
+      "tickers": [
+        "V", "MA", "PYPL", "SQ", "AFRM", "SOFI", "UPST", "LC", "LPRO", "NU",
+        "AXP", "DFS", "COF", "SYF", "ALLY", "WFC", "JPM", "BAC", "C", "USB",
+        "PNC", "TFC", "FITB", "KEY", "RF", "CFG", "HBAN", "ZION", "CMA", "WTFC",
+        "HOOD", "COIN", "MSTR", "MARA", "RIOT", "CLSK", "HUT", "BITF", "CIFR", "WULF",
+        "DAVE", "NAVI", "ENVA", "CACC", "QFIN", "FINV", "VIRT", "IBKR", "MKTX", "NDAQ"
+      ]
+    },
+    "consumer_services": {
+      "description": "Restaurants, hospitality, entertainment",
+      "tickers": [
+        "MCD", "SBUX", "YUM", "CMG", "QSR", "DPZ", "DRI", "EAT", "TXRH", "BLMN",
+        "CAKE", "DENN", "SHAK", "WING", "PZZA", "BJRI", "DINE", "RUTH", "FWRG", "CBRL",
+        "DIS", "NFLX", "PARA", "WBD", "CMCSA", "FOXA", "SONY", "LYV", "MSGS", "MSG",
+        "WYNN", "LVS", "MGM", "CZR", "PENN", "BALY", "RSI", "CHDN", "DKNG", "FLUT",
+        "BKNG", "EXPE", "ABNB", "TCOM", "TRIP", "MMYT", "DESP", "YELP", "GTIM", "TZOO"
+      ]
+    },
+    "consumer_goods": {
+      "description": "Retail, e-commerce, consumer products",
+      "tickers": [
+        "AMZN", "WMT", "COST", "TGT", "HD", "LOW", "TJX", "ROST", "DG", "DLTR",
+        "BBY", "ULTA", "GPS", "ANF", "AEO", "URBN", "LULU", "NKE", "CROX", "DECK",
+        "PG", "KO", "PEP", "CL", "KMB", "CHD", "CLX", "EL", "COTY", "TPR",
+        "ETSY", "EBAY", "MELI", "SE", "CPNG", "BABA", "JD", "PDD", "TCOM", "VIPS",
+        "CHWY", "CVNA", "W", "APRN", "PTON", "FIGS", "BIRK", "ONON", "HOKA", "VUZI"
+      ]
+    },
+    "luxury_consumer": {
+      "description": "Premium brands and luxury goods",
+      "tickers": [
+        "LVMUY", "MC", "RMS", "KER", "CFR", "ROG", "BURBY", "PRDSY", "IDEXY", "HENKY",
+        "RL", "CPRI", "TPR", "COH", "KATE", "FOSL", "GIII", "VERA", "EL", "COTY",
+        "TSLA", "RACE", "STLA", "POAHY", "VWAGY", "BMWYY", "DDAIF", "NSANY", "TM", "HMC",
+        "PTON", "LULU", "NKE", "DECK", "CROX", "ONON", "HOKA", "BIRK", "FL", "DKS"
+      ]
+    },
+    "crypto_blockchain": {
+      "description": "Cryptocurrency and blockchain technology",
+      "tickers": [
+        "COIN", "MSTR", "MARA", "RIOT", "CLSK", "HUT", "BITF", "CIFR", "WULF", "IREN",
+        "CORZ", "HIVE", "ARBK", "BTBT", "APLD", "CAN", "SOS", "EBON", "NCTY", "MGTI",
+        "BTCS", "HPCO", "OSAT", "MIGI", "INVU", "FRZT", "IMMR", "BYFC", "ANY", "PHUN",
+        "SQ", "PYPL", "HOOD", "NU", "AFRM", "SOFI", "UPST", "LC", "LPRO", "DAVE",
+        "GBTC", "BITO", "BTF", "BITI", "WGMI", "CRPT", "BLOK", "LEGR", "BLCN", "KOIN"
+      ]
+    },
+    "blockchain_infrastructure": {
+      "description": "Blockchain platforms and infrastructure",
+      "tickers": [
+        "IBM", "ORCL", "SAP", "CSCO", "AVGO", "VMW", "NOW", "SNOW", "MDB", "NET",
+        "NVDA", "AMD", "INTC", "QCOM", "MRVL", "SMCI", "DELL", "HPE", "NTAP", "PSTG",
+        "IONQ", "RGTI", "QUBT", "ARQQ", "IonQ", "RGTI", "D-Wave", "IONQ", "QUBT", "ARQQ",
+        "MARA", "RIOT", "CLSK", "HUT", "BITF", "CIFR", "WULF", "IREN", "CORZ", "HIVE",
+        "GLBE", "GPN", "FIS", "FISV", "V", "MA", "AXP", "PYPL", "SQ", "COIN"
+      ]
+    },
+    "electric_vehicles": {
+      "description": "EV manufacturers and suppliers",
+      "tickers": [
+        "TSLA", "RIVN", "LCID", "NIO", "XPEV", "LI", "PSNY", "FSR", "ARVL", "GOEV",
+        "RIDE", "WKHS", "HYLN", "NKLA", "BLNK", "CHPT", "EVGO", "WBX", "STEM", "QS",
+        "SES", "ENVX", "SLDP", "ABML", "CBAT", "FREYR", "AMPS", "AMPX", "MVST", "PTRA",
+        "F", "GM", "STLA", "TM", "HMC", "NSANY", "VWAGY", "BMWYY", "POAHY", "RACE",
+        "APTV", "LEA", "BWA", "DLPH", "VC", "ALV", "THRM", "LAZR", "VLDR", "OUST"
+      ]
+    },
+    "autonomous_vehicles": {
+      "description": "Self-driving technology and sensors",
+      "tickers": [
+        "TSLA", "GOOGL", "NVDA", "MBLY", "LAZR", "VLDR", "OUST", "LIDR", "INVZ", "AEVA",
+        "INDI", "AMBA", "ON", "MCHP", "QCOM", "INTC", "AMD", "TER", "APTV", "LEA",
+        "RIVN", "LCID", "NIO", "XPEV", "LI", "GM", "F", "STLA", "TM", "HMC",
+        "UBER", "LYFT", "GRAB", "DIDI", "CPRT", "CVNA", "ANET", "CRWD", "PANW", "ZS",
+        "WOLF", "SITM", "SWKS", "QRVO", "CRUS", "CEVA", "RMBS", "SMTC", "FORM", "UCTT"
+      ]
+    },
+    "space_aerospace": {
+      "description": "Space exploration and aerospace",
+      "tickers": [
+        "RKLB", "ASTS", "SPCE", "BKSY", "SPIR", "PL", "MAXR", "SATS", "GILT", "RDW",
+        "LMT", "BA", "NOC", "GD", "RTX", "LHX", "HII", "TXT", "HWM", "KTOS",
+        "AVAV", "CW", "AJRD", "ESLT", "NPK", "AIR", "SPR", "TGI", "MOG.A", "LDOS",
+        "SAIC", "CACI", "BWXT", "ATI", "HURN", "AL", "ARW", "AVT", "KEYS", "TDY",
+        "TRMB", "GRMN", "TDG", "HON", "GE", "CARR", "AOS", "ITT", "FLS", "ROP"
+      ]
+    },
+    "cybersecurity": {
+      "description": "Security software and services",
+      "tickers": [
+        "CRWD", "PANW", "ZS", "S", "FTNT", "CHKP", "CYBR", "OKTA", "TENB", "RPD",
+        "VRNS", "QLYS", "SAIL", "FSLY", "NET", "AKAM", "PFPT", "FEYE", "BAH", "LDOS",
+        "SAIC", "CACI", "VRNT", "AVGO", "CSCO", "IBM", "MSFT", "GOOGL", "ORCL", "VMW",
+        "SPLK", "NOW", "DDOG", "ESTC", "SUMO", "PLTR", "AI", "PATH", "SNOW", "MDB",
+        "PING", "BL", "YOU", "BOX", "DBX", "ZM", "DOCN", "GTLB", "MNDY", "TEAM"
+      ]
+    },
+    "quantum_computing": {
+      "description": "Quantum computing and research",
+      "tickers": [
+        "IONQ", "RGTI", "QUBT", "ARQQ", "IBM", "GOOGL", "MSFT", "AMZN", "INTC", "NVDA",
+        "HON", "LMT", "BA", "NOC", "RTX", "GD", "TXT", "HII", "LDOS", "SAIC",
+        "CACI", "BAH", "BWXT", "CW", "KTOS", "AVAV", "HWM", "AIR", "SPR", "TGI",
+        "AMD", "QCOM", "MRVL", "AVGO", "TXN", "ADI", "NXPI", "ON", "MPWR", "MCHP",
+        "TSM", "ASML", "AMAT", "LRCX", "KLAC", "ENTG", "TER", "COHU", "FORM", "UCTT"
+      ]
+    },
+    "biotechnology": {
+      "description": "Biotech and pharmaceuticals",
+      "tickers": [
+        "GILD", "AMGN", "VRTX", "REGN", "BIIB", "ILMN", "MRNA", "BNTX", "SGEN", "ALNY",
+        "INCY", "BMRN", "TECH", "EXAS", "IONS", "UTHR", "NBIX", "ACAD", "HALO", "RGNX",
+        "RARE", "FOLD", "BLUE", "NTLA", "CRSP", "EDIT", "BEAM", "VERV", "PRME", "CGEM",
+        "ARWR", "APLS", "MGNX", "SAGE", "VCYT", "FATE", "KRYS", "AGIO", "GERN", "MYOV",
+        "SRPT", "EXEL", "VCEL", "NTRA", "IMCR", "IOVA", "IMGN", "EPZM", "KYMR", "LEGN"
+      ]
+    },
+    "healthcare_tech": {
+      "description": "Digital health and medical devices",
+      "tickers": [
+        "ISRG", "ALGN", "DXCM", "PODD", "HOLX", "IDXX", "ABMD", "EW", "SYK", "BSX",
+        "MDT", "TMO", "DHR", "ABT", "BAX", "BDX", "ZBH", "RMD", "VEEV", "TDOC",
+        "HIMS", "DOCS", "LFST", "AMWL", "ACCD", "PHR", "SDGR", "OMCL", "ICUI", "ATRC",
+        "NVST", "NARI", "NVCR", "ONEM", "TNDM", "AXNX", "IRTC", "NTRA", "VRTV", "SILK",
+        "QDEL", "ILMN", "EXAS", "TMO", "DHR", "A", "MTD", "WAT", "IQV", "PKI", "TECH"
+      ]
+    },
+    "genomics": {
+      "description": "Gene editing and sequencing",
+      "tickers": [
+        "ILMN", "PACB", "EXAS", "NVTA", "CDNA", "TMO", "DHR", "A", "MTD", "BIO",
+        "CRSP", "EDIT", "NTLA", "BEAM", "VERV", "PRME", "CGEM", "ABCL", "BLUE", "FATE",
+        "RXRX", "SDGR", "TWST", "CARB", "DNA", "RGNX", "FOLD", "RVMD", "IONS", "ARWR",
+        "ACAD", "AGIO", "APLS", "ARVN", "ASMB", "AVRO", "BEAM", "BPMC", "BTAI", "CGON",
+        "CGEN", "CLVS", "CRIS", "CRNX", "CTMX", "DBVT", "DRMA", "DTIL", "ETNB", "EVGN"
+      ]
+    },
+    "etfs_sector": {
+      "description": "Sector-specific ETFs",
+      "tickers": [
+        "XLE", "XLF", "XLK", "XLV", "XLI", "XLP", "XLY", "XLB", "XLU", "XLRE",
+        "XLC", "XBI", "IBB", "ITB", "XHB", "XME", "XOP", "OIH", "IYR", "VNQ",
+        "GDXJ", "GDX", "SLX", "COPX", "REMX", "LIT", "TAN", "ICLN", "QCLN", "PBW",
+        "ARKK", "ARKQ", "ARKW", "ARKG", "ARKF", "BOTZ", "ROBO", "IRBO", "DTEC", "HACK",
+        "FINX", "SOXX", "SMH", "PSI", "IGV", "SKYY", "CLOU", "WFH", "AWAY", "JETS"
+      ]
+    },
+    "etfs_commodity": {
+      "description": "Commodity and materials ETFs",
+      "tickers": [
+        "GLD", "SLV", "GDX", "GDXJ", "SLX", "PPLT", "PALL", "CPER", "JJC", "DBB",
+        "DBA", "DBC", "WEAT", "CORN", "SOYB", "UNG", "USO", "BNO", "OIL", "USL",
+        "XOP", "OIH", "IEO", "IEZ", "AMLP", "MLPA", "AMJ", "IGE", "IYE", "VDE",
+        "XME", "PICK", "COPX", "REMX", "LIT", "BATT", "DRIV", "LITHF", "URA", "URNM",
+        "MOO", "VEGI", "WOOD", "CUT", "GUNR", "CANE", "NIB", "FUD", "FTXG", "FTXN"
+      ]
+    },
+    "etfs_international": {
+      "description": "International and emerging market ETFs",
+      "tickers": [
+        "EFA", "EEM", "IEMG", "VEA", "VWO", "INDA", "FXI", "EWJ", "EWZ", "EWT",
+        "EWY", "EWH", "EWG", "EWU", "EWC", "EWA", "EWS", "EWW", "EWP", "EWI",
+        "VGK", "VPL", "EIDO", "EPHE", "EPOL", "EZA", "THD", "TUR", "RSX", "ENZL",
+        "EWZS", "NORW", "GAF", "GXG", "EWQ", "EDEN", "EWD", "EWL", "EWN", "EWO",
+        "DBEF", "DLS", "DEM", "DFAE", "DFEM", "DFIC", "DINT", "DOL", "DWX", "EFAA"
+      ]
+    },
+    "etfs_thematic": {
+      "description": "Thematic and specialty ETFs",
+      "tickers": [
+        "ARKK", "ARKQ", "ARKW", "ARKG", "ARKF", "BOTZ", "ROBO", "IRBO", "DTEC", "HACK",
+        "FINX", "SOXX", "SMH", "PSI", "IGV", "SKYY", "CLOU", "WFH", "AWAY", "JETS",
+        "BITQ", "BLOK", "BLCN", "KOIN", "CRPT", "GBTC", "BITO", "BTF", "BITI", "WGMI",
+        "TAN", "ICLN", "QCLN", "PBW", "ACES", "CTEC", "GRID", "SOLR", "SUNW", "RAYS",
+        "ESPO", "HERO", "NERD", "GAMR", "BJK", "BETZ", "DKNG", "VICE", "MSOS", "YOLO"
+      ]
+    },
+    "defense_aerospace": {
+      "description": "Defense contractors and military",
+      "tickers": [
+        "LMT", "BA", "NOC", "GD", "RTX", "LHX", "HII", "TXT", "HWM", "KTOS",
+        "AVAV", "CW", "AJRD", "ESLT", "NPK", "AIR", "SPR", "TGI", "MOG.A", "LDOS",
+        "SAIC", "CACI", "BWXT", "ATI", "HURN", "AL", "ARW", "AVT", "KEYS", "TDY",
+        "TRMB", "GRMN", "TDG", "HON", "GE", "CARR", "AOS", "ITT", "FLS", "ROP",
+        "PLTR", "ASTS", "RKLB", "SPCE", "BKSY", "SPIR", "PL", "MAXR", "SATS", "GILT"
+      ]
+    },
+    "infrastructure": {
+      "description": "Construction, materials, infrastructure",
+      "tickers": [
+        "CAT", "DE", "CMI", "EMR", "ITW", "ROK", "PH", "ETN", "AME", "DOV",
+        "IR", "XYL", "FLS", "ITT", "ROP", "TDY", "VMC", "MLM", "NUE", "STLD",
+        "X", "CLF", "RS", "MT", "TX", "AA", "CENX", "KALU", "HAYN", "ACH",
+        "URI", "PWR", "EME", "MEC", "MTZ", "PRIM", "FIX", "WCC", "GVA", "DY",
+        "BLD", "BLDR", "BECN", "HD", "LOW", "SHW", "PPG", "RPM", "VAL", "NX"
+      ]
+    },
+    "materials_chemicals": {
+      "description": "Chemicals and specialty materials",
+      "tickers": [
+        "LIN", "APD", "ECL", "SHW", "PPG", "DD", "DOW", "LYB", "EMN", "ALB",
+        "CE", "FMC", "IFF", "RPM", "NEU", "OLN", "CC", "HUN", "CBT", "POL",
+        "OMN", "SXT", "KWR", "MTX", "IOSP", "ESI", "NGVT", "SLP", "WLK", "MEOH",
+        "PCT", "TSE", "AXTA", "TRS", "TROX", "HWKN", "GEF", "SLGN", "ASH", "KOP",
+        "ANDE", "LTHM", "SQM", "LAC", "MP", "LITM", "PGRE", "PGRX", "PGRU", "PLL"
+      ]
+    },
+    "telecommunications": {
+      "description": "Telecom and network infrastructure",
+      "tickers": [
+        "T", "VZ", "TMUS", "CSCO", "ANET", "JNPR", "FFIV", "CIEN", "LITE", "INFN",
+        "FNSR", "AAOI", "SMTC", "OESX", "ADTN", "CALX", "VIAV", "COMM", "EXTR", "NTCT",
+        "AMT", "CCI", "SBAC", "EQIX", "DLR", "CONE", "UNIT", "SAFE", "QTS", "LAMR",
+        "ATUS", "CABO", "LUMN", "SHEN", "FTR", "GOGO", "VSAT", "GILT", "SATS", "IRDM",
+        "TIGO", "GSAT", "ASTS", "LUNR", "SPIR", "BKSY", "RKLB", "PL", "MAXR", "RDW"
+      ]
+    },
+    "real_estate": {
+      "description": "REITs and real estate",
+      "tickers": [
+        "PLD", "AMT", "CCI", "EQIX", "PSA", "WELL", "DLR", "O", "SBAC", "AVB",
+        "EQR", "VTR", "ARE", "INVH", "MAA", "ESS", "UDR", "CPT", "ELS", "CUBE",
+        "SPG", "REG", "KIM", "BXP", "VNO", "SLG", "HIW", "DEI", "PDM", "JBGS",
+        "IRM", "STAG", "REXR", "EGP", "FR", "TRNO", "NSA", "LSI", "SAFE", "QTS",
+        "CONE", "UNIT", "CIO", "DRH", "RHP", "SHO", "PK", "RLJ", "INN", "APLE"
+      ]
+    },
+    "insurance_financial": {
+      "description": "Insurance and diversified financials",
+      "tickers": [
+        "BRK.B", "BRK.A", "PGR", "TRV", "ALL", "CB", "AIG", "MET", "PRU", "AFL",
+        "AMP", "LNC", "GL", "FNF", "FAF", "ORI", "KMPR", "RNR", "RE", "AXS",
+        "GS", "MS", "SCHW", "BLK", "BX", "KKR", "APO", "CG", "ARES", "OAK",
+        "TPG", "HLNE", "VCTR", "STEP", "PJT", "LAZ", "EVR", "MC", "PIPR", "SF",
+        "NTRS", "STT", "BK", "TROW", "BEN", "IVZ", "AMG", "APAM", "VRTS", "SEIC"
+      ]
+    },
+    "agriculture_food": {
+      "description": "Agriculture and food production",
+      "tickers": [
+        "ADM", "BG", "TSN", "HRL", "CAG", "GIS", "K", "CPB", "MKC", "SJM",
+        "DE", "AGCO", "CNHI", "TITN", "ANDE", "SAFM", "LMNR", "JBSS", "PPC", "SMG",
+        "FMC", "IFF", "NTR", "MOS", "CF", "UAN", "ICL", "SQM", "VALE", "NEM",
+        "FCX", "SCCO", "TECK", "HBM", "FM", "CMCL", "CSTM", "CMP", "IPI", "CEL",
+        "CVGW", "DOLE", "FDP", "INGR", "LANC", "MDLZ", "NOMD", "POST", "SENEA", "THS"
+      ]
+    }
+  }
+}

@@ -36,66 +36,94 @@ broadcaster = get_broadcaster(source="Market Scanner")
 # API Keys
 POLYGON_API_KEY = os.getenv('POLYGON_API_KEY')
 
+# Load ticker universe from external file
+def load_ticker_universe(filepath='ticker_universe.json'):
+    """Load comprehensive ticker universe from JSON file"""
+    try:
+        with open(filepath, 'r') as f:
+            universe = json.load(f)
+        
+        # Flatten all tickers from categories
+        all_tickers = set()
+        for category, data in universe.get('categories', {}).items():
+            tickers = data.get('tickers', [])
+            all_tickers.update(tickers)
+        
+        logging.info(f"Loaded {len(all_tickers)} unique tickers from {filepath}")
+        return sorted(list(all_tickers))
+    except Exception as e:
+        logging.warning(f"Could not load ticker universe: {e}")
+        logging.info("Falling back to default universe")
+        return None
+
+# Load expanded ticker universe
+TICKER_UNIVERSE = load_ticker_universe()
+
 # Current Holdings (from trading_automation.py)
 CURRENT_HOLDINGS = {
-    'CORE': ["GLD", "SLX", "JEF", "CPER"],
-    'SPECULATIVE': ["NVDA", "PLTR", "TSLA", "MSFT"],
-    'ASYMMETRIC': ["OKLO", "RMBS", "QBTS", "IREN", "AFRM", "SOFI"],
+    'CORE': ["GLD", "SLV", "PPLT", "CPER", "SLX", "XLF", "XLB", "XLY", "XLI", "XLK"],
+    'SPECULATIVE': ["RKLB", "AA", "MU", "LRCX", "FCX", "HUT", "RIVN", "MSFT", "NVDA", "TSLA"],
+    'ASYMMETRIC': ["STLD", "NET", "W", "PANW", "RMBS", "SOFI", "CEG", "OKLO", "QBTS", "IREN"],
     'BENCHMARKS': ["SPY", "QQQ"]
 }
 
-# Expanded Screening Universe
-SCREENING_UNIVERSE = {
-    'core': [
-        # Commodities
-        'GLD', 'SLV', 'PALL', 'PPLT', 'CPER', 'DBA', 'DBC', 'UNG', 'USO',
-        # Materials/Mining
-        'SLX', 'XME', 'PICK', 'COPX', 'FCX', 'AA', 'NUE', 'STLD',
-        # Financials
-        'JEF', 'GS', 'MS', 'SCHW', 'SF', 'BAC', 'JPM', 'C', 'WFC'
-    ],
-    
-    'speculative': [
-        # Semiconductors
-        'NVDA', 'AMD', 'AVGO', 'TSM', 'INTC', 'QCOM', 'MU', 'AMAT', 'LRCX',
-        # Enterprise SaaS
-        'PLTR', 'SNOW', 'NET', 'DDOG', 'CRWD', 'ZS', 'PANW', 'S', 'BILL',
-        # EVs & Auto Tech
-        'TSLA', 'RIVN', 'LCID', 'NIO', 'XPEV', 'F', 'GM',
-        # Mega-cap Tech
-        'MSFT', 'GOOGL', 'META', 'AMZN', 'AAPL', 'NFLX', 'CRM', 'ORCL', 'ADBE'
-    ],
-    
-    'asymmetric': [
-        # Nuclear/Energy
-        'OKLO', 'SMR', 'VST', 'CEG', 'NRG', 'WTRG',
-        # Mortgage/Real Estate
-        'RMBS', 'UWM', 'RKT', 'PFSI', 'COOP',
-        # Quantum Computing
-        'QBTS', 'IONQ', 'RGTI', 'ARQQ',
-        # Bitcoin Mining & Crypto
-        'IREN', 'CLSK', 'RIOT', 'MARA', 'BTBT', 'HUT', 'BITF', 'COIN', 'MSTR',
-        # Fintech
-        'AFRM', 'UPST', 'SOFI', 'NU', 'HOOD', 'SQ', 'PYPL', 'ALLY',
-        # Other Asymmetric
-        'RKLB', 'SPCE', 'RDDT', 'ABNB', 'DASH', 'CVNA', 'W'
-    ],
-    
-    'sector_etfs': [
-        'XLE',   # Energy
-        'XLF',   # Financials
-        'XLK',   # Technology
-        'XLV',   # Healthcare
-        'XLI',   # Industrials
-        'XLB',   # Materials
-        'XLP',   # Consumer Staples
-        'XLY',   # Consumer Discretionary
-        'XLRE',  # Real Estate
-        'XLU',   # Utilities
-        'SPY',   # S&P 500
-        'QQQ'    # Nasdaq
-    ]
-}
+# Screening Universe - Use loaded universe or fallback to default
+if TICKER_UNIVERSE:
+    # Use comprehensive universe from file
+    SCREENING_UNIVERSE = {'all_tickers': TICKER_UNIVERSE}
+else:
+    # Fallback to original expanded universe
+    SCREENING_UNIVERSE = {
+        'core': [
+            # Commodities
+            'GLD', 'SLV', 'PALL', 'PPLT', 'CPER', 'DBA', 'DBC', 'UNG', 'USO',
+            # Materials/Mining
+            'SLX', 'XME', 'PICK', 'COPX', 'FCX', 'AA', 'NUE', 'STLD',
+            # Financials
+            'JEF', 'GS', 'MS', 'SCHW', 'SF', 'BAC', 'JPM', 'C', 'WFC'
+        ],
+        
+        'speculative': [
+            # Semiconductors
+            'NVDA', 'AMD', 'AVGO', 'TSM', 'INTC', 'QCOM', 'MU', 'AMAT', 'LRCX',
+            # Enterprise SaaS
+            'PLTR', 'SNOW', 'NET', 'DDOG', 'CRWD', 'ZS', 'PANW', 'S', 'BILL',
+            # EVs & Auto Tech
+            'TSLA', 'RIVN', 'LCID', 'NIO', 'XPEV', 'F', 'GM',
+            # Mega-cap Tech
+            'MSFT', 'GOOGL', 'META', 'AMZN', 'AAPL', 'NFLX', 'CRM', 'ORCL', 'ADBE'
+        ],
+        
+        'asymmetric': [
+            # Nuclear/Energy
+            'OKLO', 'SMR', 'VST', 'CEG', 'NRG', 'WTRG',
+            # Mortgage/Real Estate
+            'RMBS', 'UWM', 'RKT', 'PFSI', 'COOP',
+            # Quantum Computing
+            'QBTS', 'IONQ', 'RGTI', 'ARQQ',
+            # Bitcoin Mining & Crypto
+            'IREN', 'CLSK', 'RIOT', 'MARA', 'BTBT', 'HUT', 'BITF', 'COIN', 'MSTR',
+            # Fintech
+            'AFRM', 'UPST', 'SOFI', 'NU', 'HOOD', 'SQ', 'PYPL', 'ALLY',
+            # Other Asymmetric
+            'RKLB', 'SPCE', 'RDDT', 'ABNB', 'DASH', 'CVNA', 'W'
+        ],
+        
+        'sector_etfs': [
+            'XLE',   # Energy
+            'XLF',   # Financials
+            'XLK',   # Technology
+            'XLV',   # Healthcare
+            'XLI',   # Industrials
+            'XLB',   # Materials
+            'XLP',   # Consumer Staples
+            'XLY',   # Consumer Discretionary
+            'XLRE',  # Real Estate
+            'XLU',   # Utilities
+            'SPY',   # S&P 500
+            'QQQ'    # Nasdaq
+        ]
+    }
 
 # Scoring Parameters
 SCORE_WEIGHTS = {
@@ -889,9 +917,10 @@ def daily_scan(export_path: Optional[str] = None) -> dict:
     )
     
     # Broadcast scan start
+    ticker_count = len(TICKER_UNIVERSE) if TICKER_UNIVERSE else sum(len(v) for v in SCREENING_UNIVERSE.values())
     broadcaster.broadcast_event(
         "scan",
-        f"🔍 Daily market scan initiated - analyzing {sum(len(v) for v in SCREENING_UNIVERSE.values())} tickers",
+        f"🔍 Daily market scan initiated - analyzing {ticker_count} tickers",
         level="INFO"
     )
     
@@ -902,7 +931,7 @@ def daily_scan(export_path: Optional[str] = None) -> dict:
         logging.info("="*80)
         broadcaster.broadcast_event(
             event_type="scan",
-            message="📊 Loading universe data (110+ tickers)",
+            message=f"📊 Loading universe data ({ticker_count} tickers)",
             level="INFO",
             phase="loading"
         )
