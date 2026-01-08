@@ -1,13 +1,7 @@
 {
-  "last_updated": "2026-01-08T06:46:22.916824",
+  "last_updated": "2026-01-08T06:46:52.927566",
   "event_count": 200,
   "events": [
-    {
-      "timestamp": "2026-01-07T12:01:30",
-      "source": "Trading Automation",
-      "type": "strategy",
-      "message": "\ud83d\udca1 Strategy selected: BUY_HOLD (NAV: $100,000.00)"
-    },
     {
       "timestamp": "2026-01-07T12:01:45",
       "source": "Trading Automation",
@@ -2346,6 +2340,18 @@
       "level": "INFO",
       "source": "Profit Taker",
       "message": "\ud83d\udc40 Monitoring 4 positions: AA -3.2%, HUT -2.5%, RKLB -1.7%, SLV -2.9%",
+      "metadata": {
+        "portfolio_value": "97K",
+        "positions_count": 4,
+        "avg_return": -2.6
+      }
+    },
+    {
+      "timestamp": "2026-01-08T06:46:28.656403",
+      "type": "portfolio",
+      "level": "INFO",
+      "source": "Profit Taker",
+      "message": "\ud83d\udc40 Monitoring 4 positions: AA -3.4%, HUT -2.5%, RKLB -1.7%, SLV -2.9%",
       "metadata": {
         "portfolio_value": "97K",
         "positions_count": 4,
