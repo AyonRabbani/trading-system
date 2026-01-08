@@ -188,6 +188,15 @@ class AlpacaClient:
             logging.error(f"Error placing order for {symbol}: {e}")
             return None
     
+    def get_order(self, order_id: str):
+        """Get order status by ID"""
+        try:
+            res = requests.get(f"{self.base_url}/v2/orders/{order_id}", headers=self.headers, timeout=10)
+            return res.json()
+        except Exception as e:
+            logging.error(f"Error getting order {order_id}: {e}")
+            return None
+    
     def liquidate_all_positions(self):
         """Liquidate all positions"""
         try:
@@ -851,22 +860,81 @@ def calculate_position_deltas(target_allocations: Dict[str, float], account_valu
     return deltas
 
 def execute_orders(client: AlpacaClient, deltas: Dict[str, float], dry_run: bool = True):
-    """Execute buy/sell orders"""
+    """Execute buy/sell orders - sells first, then buys after sells complete"""
     if not deltas:
         logging.info("  No orders to execute")
         return
     
-    for ticker, delta in deltas.items():
-        side = 'buy' if delta > 0 else 'sell'
-        qty = abs(delta)
+    # Separate sell and buy orders
+    sell_orders = {ticker: delta for ticker, delta in deltas.items() if delta < 0}
+    buy_orders = {ticker: delta for ticker, delta in deltas.items() if delta > 0}
+    
+    logging.info(f"  Orders breakdown: {len(sell_orders)} sells, {len(buy_orders)} buys")
+    
+    # Phase 1: Execute all sell orders first
+    if sell_orders:
+        logging.info("\n  [Phase 1/2] Executing SELL orders...")
+        order_ids = []
         
-        if dry_run:
-            logging.info(f"  [DRY-RUN] {side.upper()} {qty:.2f} shares of {ticker}")
-        else:
-            logging.info(f"  Placing order: {side.upper()} {qty:.2f} shares of {ticker}")
-            result = client.place_order(ticker, qty, side)
-            if result:
-                logging.info(f"    Order placed: {result.get('id')}")
+        for ticker, delta in sell_orders.items():
+            qty = abs(delta)
+            
+            if dry_run:
+                logging.info(f"    [DRY-RUN] SELL {qty:.2f} shares of {ticker}")
+            else:
+                logging.info(f"    Placing order: SELL {qty:.2f} shares of {ticker}")
+                result = client.place_order(ticker, qty, 'sell')
+                if result:
+                    order_ids.append(result.get('id'))
+                    logging.info(f"      Order placed: {result.get('id')}")
+        
+        # Wait for sell orders to complete (only in live mode)
+        if not dry_run and order_ids:
+            logging.info(f"\n  ⏳ Waiting for {len(order_ids)} sell orders to complete...")
+            time.sleep(5)  # Initial wait for order submission
+            
+            max_wait = 30  # Maximum 30 seconds
+            wait_time = 0
+            all_filled = False
+            
+            while wait_time < max_wait and not all_filled:
+                filled_count = 0
+                for order_id in order_ids:
+                    order = client.get_order(order_id)
+                    if order and order.get('status') in ['filled', 'partially_filled']:
+                        filled_count += 1
+                
+                if filled_count == len(order_ids):
+                    all_filled = True
+                    logging.info(f"  ✅ All sell orders filled")
+                else:
+                    logging.info(f"    {filled_count}/{len(order_ids)} orders filled, waiting...")
+                    time.sleep(2)
+                    wait_time += 2
+            
+            if not all_filled:
+                logging.warning(f"  ⚠️  Not all sell orders filled after {max_wait}s, proceeding with caution")
+    
+    # Phase 2: Execute buy orders (after sells complete)
+    if buy_orders:
+        logging.info("\n  [Phase 2/2] Executing BUY orders...")
+        
+        # Get updated account info after sells
+        if not dry_run:
+            account = client.get_account()
+            available_cash = float(account['cash']) if account else 0
+            logging.info(f"    Available cash after sells: ${available_cash:,.2f}")
+        
+        for ticker, delta in buy_orders.items():
+            qty = abs(delta)
+            
+            if dry_run:
+                logging.info(f"    [DRY-RUN] BUY {qty:.2f} shares of {ticker}")
+            else:
+                logging.info(f"    Placing order: BUY {qty:.2f} shares of {ticker}")
+                result = client.place_order(ticker, qty, 'buy')
+                if result:
+                    logging.info(f"      Order placed: {result.get('id')}")
 
 def start_profit_taker(mode: str = 'moderate'):
     """
