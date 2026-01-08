@@ -208,10 +208,6 @@ def render_performance_charts():
     st.header("📈 PERFORMANCE")
     
     try:
-        # Get account data
-        account = trading_client.get_account()
-        equity = float(account.equity)
-        
         # Initialize data client
         data_client = StockHistoricalDataClient(ALPACA_API_KEY, ALPACA_SECRET_KEY)
         
@@ -228,7 +224,7 @@ def render_performance_charts():
         bars = data_client.get_stock_bars(request)
         
         # Process SPY data
-        spy_bars = bars["SPY"]
+        spy_bars = bars.get("SPY", [])
         spy_prices = [bar.close for bar in spy_bars]
         spy_dates = [bar.timestamp for bar in spy_bars]
         
@@ -241,31 +237,48 @@ def render_performance_charts():
         
         # Process VIX data
         vix_bars = bars.get("VIX", [])
-        vix_values = [bar.close for bar in vix_bars] if vix_bars else []
-        vix_dates = [bar.timestamp for bar in vix_bars] if vix_bars else []
+        vix_values = [bar.close for bar in vix_bars]
+        vix_dates = [bar.timestamp for bar in vix_bars]
         
-        # Get portfolio history from pm_state.json
-        portfolio_returns = []
+        # Get portfolio history from Alpaca API
+        from alpaca.trading.requests import GetPortfolioHistoryRequest
+        from alpaca.trading.enums import TimeFrame as PortfolioTimeFrame
+        
+        portfolio_history = trading_client.get_portfolio_history(
+            GetPortfolioHistoryRequest(
+                period="1M",  # Last month
+                timeframe=PortfolioTimeFrame.ONE_DAY
+            )
+        )
+        
+        # Process portfolio data
+        portfolio_values = portfolio_history.equity
+        portfolio_timestamps = portfolio_history.timestamp
+        
+        # Convert timestamps to datetime and filter to MTD
         portfolio_dates = []
+        portfolio_returns = []
         
-        if os.path.exists('pm_state.json'):
-            with open('pm_state.json', 'r') as f:
-                pm_state = json.load(f)
-                if 'equity_history' in pm_state:
-                    history = pm_state['equity_history']
-                    # Filter to MTD only
-                    mtd_history = {k: v for k, v in history.items() if datetime.fromisoformat(k) >= start_of_month}
-                    
-                    if mtd_history:
-                        start_equity = list(mtd_history.values())[0]
-                        for date_str, eq in mtd_history.items():
-                            portfolio_dates.append(datetime.fromisoformat(date_str))
-                            portfolio_returns.append((eq / start_equity - 1) * 100)
+        if portfolio_values and portfolio_timestamps:
+            # Filter to MTD
+            mtd_values = []
+            mtd_dates = []
+            for i, ts in enumerate(portfolio_timestamps):
+                dt = datetime.fromtimestamp(ts)
+                if dt >= start_of_month:
+                    mtd_dates.append(dt)
+                    mtd_values.append(portfolio_values[i])
+            
+            # Calculate returns from first MTD value
+            if mtd_values:
+                start_value = mtd_values[0]
+                portfolio_dates = mtd_dates
+                portfolio_returns = [(val / start_value - 1) * 100 for val in mtd_values]
         
-        # If no history, use current equity as single point
+        # If no portfolio history, show current equity as zero return
         if not portfolio_returns:
             portfolio_dates = [now]
-            portfolio_returns = [0.0]  # No gain/loss if no history
+            portfolio_returns = [0.0]
         
         # Create two columns for charts
         col1, col2 = st.columns([3, 1])
@@ -273,7 +286,7 @@ def render_performance_charts():
         with col1:
             st.subheader("MTD Performance Comparison")
             
-            # Create DataFrame for plotting
+            # Align data by filling shorter series
             max_len = max(len(spy_returns), len(portfolio_returns))
             
             chart_data = pd.DataFrame({
@@ -316,6 +329,8 @@ def render_performance_charts():
     
     except Exception as e:
         st.error(f"Error loading performance charts: {e}")
+        import traceback
+        st.code(traceback.format_exc())
     
     st.divider()
 
