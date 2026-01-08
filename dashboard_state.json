@@ -1,12 +1,11 @@
 {
-  "timestamp": "2026-01-08T12:28:11.761049",
+  "timestamp": "2026-01-08T12:28:47.355544",
   "account": {
-    "equity": 97062.1,
+    "equity": 97075.37,
     "cash": 404.64,
     "buying_power": 163737.04,
-    "portfolio_value": 97062.1,
+    "portfolio_value": 97075.37,
     "last_equity": 99622.02758314137,
-    "daytrade_count": 27,
     "status": "ACTIVE",
     "pattern_day_trader": true
   },
@@ -15,37 +14,34 @@
       "symbol": "COPX",
       "qty": 134.979132345,
       "avg_entry_price": 74.74,
-      "current_price": 74.7999,
-      "market_value": 10096.425601,
-      "cost_basis": 10088.340351,
-      "unrealized_pl": 8.08525,
-      "unrealized_plpc": 0.0008014450066803,
-      "unrealized_intraday_pl": 8.08525,
-      "unrealized_intraday_plpc": 0.0008014450066803
+      "current_price": 74.78,
+      "market_value": 10093.739517,
+      "unrealized_pl": 5.399166,
+      "unrealized_plpc": 0.0005351887240268,
+      "unrealized_intraday_pl": 5.399166,
+      "unrealized_intraday_plpc": 0.0005351887240268
     },
     {
       "symbol": "GDX",
       "qty": 104.721954275,
       "avg_entry_price": 89.81,
-      "current_price": 90.1723,
-      "market_value": 9443.019477,
-      "cost_basis": 9405.078713,
-      "unrealized_pl": 37.940764,
-      "unrealized_plpc": 0.0040340719262197,
-      "unrealized_intraday_pl": 37.940764,
-      "unrealized_intraday_plpc": 0.0040340719262197
+      "current_price": 90.18,
+      "market_value": 9443.825837,
+      "unrealized_pl": 38.747124,
+      "unrealized_plpc": 0.0041198085824037,
+      "unrealized_intraday_pl": 38.747124,
+      "unrealized_intraday_plpc": 0.0041198085824037
     },
     {
       "symbol": "GDXJ",
       "qty": 82.148810169,
       "avg_entry_price": 118.78,
-      "current_price": 119.285,
-      "market_value": 9799.120821,
-      "cost_basis": 9757.635672,
-      "unrealized_pl": 41.485149,
-      "unrealized_plpc": 0.0042515574873372,
-      "unrealized_intraday_pl": 41.485149,
-      "unrealized_intraday_plpc": 0.0042515574873372
+      "current_price": 119.27,
+      "market_value": 9797.888589,
+      "unrealized_pl": 40.252917,
+      "unrealized_plpc": 0.0041252736167951,
+      "unrealized_intraday_pl": 40.252917,
+      "unrealized_intraday_plpc": 0.0041252736167951
     },
     {
       "symbol": "KOLD",
@@ -53,7 +49,6 @@
       "avg_entry_price": 42.58,
       "current_price": 43.18,
       "market_value": 6302.199284,
-      "cost_basis": 6214.628197,
       "unrealized_pl": 87.571087,
       "unrealized_plpc": 0.0140911224652624,
       "unrealized_intraday_pl": 87.571087,
@@ -63,78 +58,366 @@
       "symbol": "PICK",
       "qty": 199.304133342,
       "avg_entry_price": 53.43,
-      "current_price": 53.45,
-      "market_value": 10652.805927,
-      "cost_basis": 10648.819844,
-      "unrealized_pl": 3.986083,
-      "unrealized_plpc": 0.0003743215735071,
-      "unrealized_intraday_pl": 3.986083,
-      "unrealized_intraday_plpc": 0.0003743215735071
+      "current_price": 53.44,
+      "market_value": 10650.812886,
+      "unrealized_pl": 1.993042,
+      "unrealized_plpc": 0.0001871608337071,
+      "unrealized_intraday_pl": 1.993042,
+      "unrealized_intraday_plpc": 0.0001871608337071
     },
     {
       "symbol": "PPLT",
       "qty": 48.744472599,
       "avg_entry_price": 204.22,
-      "current_price": 203.855,
-      "market_value": 9936.804462,
-      "cost_basis": 9954.596194,
-      "unrealized_pl": -17.791732,
-      "unrealized_plpc": -0.001787288168527,
-      "unrealized_intraday_pl": -17.791732,
-      "unrealized_intraday_plpc": -0.001787288168527
+      "current_price": 203.93,
+      "market_value": 9940.460297,
+      "unrealized_pl": -14.135897,
+      "unrealized_plpc": -0.0014200372093968,
+      "unrealized_intraday_pl": -14.135897,
+      "unrealized_intraday_plpc": -0.0014200372093968
     },
     {
       "symbol": "REMX",
       "qty": 118.227107568,
       "avg_entry_price": 83.06,
-      "current_price": 82.7,
-      "market_value": 9777.381796,
-      "cost_basis": 9819.943555,
-      "unrealized_pl": -42.561759,
-      "unrealized_plpc": -0.0043342162571117,
-      "unrealized_intraday_pl": -42.561759,
-      "unrealized_intraday_plpc": -0.0043342162571117
+      "current_price": 82.781,
+      "market_value": 9786.958192,
+      "unrealized_pl": -32.985363,
+      "unrealized_plpc": -0.003359017576349,
+      "unrealized_intraday_pl": -32.985363,
+      "unrealized_intraday_plpc": -0.003359017576349
     },
     {
       "symbol": "SILJ",
       "qty": 309.547353473,
       "avg_entry_price": 29.18,
-      "current_price": 29.315,
-      "market_value": 9074.380667,
-      "cost_basis": 9032.591774,
-      "unrealized_pl": 41.788893,
-      "unrealized_plpc": 0.0046264565083399,
-      "unrealized_intraday_pl": 41.788893,
-      "unrealized_intraday_plpc": 0.0046264565083399
+      "current_price": 29.325,
+      "market_value": 9077.476141,
+      "unrealized_pl": 44.884367,
+      "unrealized_plpc": 0.0049691570396437,
+      "unrealized_intraday_pl": 44.884367,
+      "unrealized_intraday_plpc": 0.0049691570396437
     },
     {
       "symbol": "SLV",
       "qty": 196.535544773,
       "avg_entry_price": 68.4,
-      "current_price": 68.84,
-      "market_value": 13529.506902,
-      "cost_basis": 13443.031262,
-      "unrealized_pl": 86.47564,
-      "unrealized_plpc": 0.0064327485605456,
-      "unrealized_intraday_pl": 86.47564,
-      "unrealized_intraday_plpc": 0.0064327485605456
+      "current_price": 68.845,
+      "market_value": 13530.48958,
+      "unrealized_pl": 87.458318,
+      "unrealized_plpc": 0.006505847996294,
+      "unrealized_intraday_pl": 87.458318,
+      "unrealized_intraday_plpc": 0.006505847996294
     },
     {
       "symbol": "XME",
       "qty": 71.170368367,
       "avg_entry_price": 112.44,
-      "current_price": 113.05,
-      "market_value": 8045.810144,
-      "cost_basis": 8002.396219,
-      "unrealized_pl": 43.413925,
-      "unrealized_plpc": 0.005425115654349,
-      "unrealized_intraday_pl": 43.413925,
-      "unrealized_intraday_plpc": 0.005425115654349
+      "current_price": 113.065,
+      "market_value": 8046.877699,
+      "unrealized_pl": 44.48148,
+      "unrealized_plpc": 0.0055585200710742,
+      "unrealized_intraday_pl": 44.48148,
+      "unrealized_intraday_plpc": 0.0055585200710742
     }
   ],
-  "scanner": {
+  "orders": [
+    {
+      "id": "fe65011a-2405-444c-9e6e-b9df7be46ca4",
+      "symbol": "COPX",
+      "side": "buy",
+      "qty": 134.979132345,
+      "type": "market",
+      "status": "filled",
+      "filled_qty": 134.979132345,
+      "filled_avg_price": 74.74,
+      "created_at": "2026-01-08T16:15:12.372470+00:00",
+      "updated_at": "2026-01-08T16:15:13.511429+00:00"
+    },
+    {
+      "id": "86224056-7dc8-445d-8cb4-e2f09b4ebf2b",
+      "symbol": "SLV",
+      "side": "buy",
+      "qty": 196.535544773,
+      "type": "market",
+      "status": "filled",
+      "filled_qty": 196.535544773,
+      "filled_avg_price": 68.4,
+      "created_at": "2026-01-08T16:15:12.330397+00:00",
+      "updated_at": "2026-01-08T16:15:12.890280+00:00"
+    },
+    {
+      "id": "40fa23ab-ee4d-4356-ab1d-82450834a744",
+      "symbol": "GDX",
+      "side": "buy",
+      "qty": 104.721954275,
+      "type": "market",
+      "status": "filled",
+      "filled_qty": 104.721954275,
+      "filled_avg_price": 89.81,
+      "created_at": "2026-01-08T16:15:12.287862+00:00",
+      "updated_at": "2026-01-08T16:15:13.859852+00:00"
+    },
+    {
+      "id": "625bd2fc-5798-4883-8e4b-8c71832b10d7",
+      "symbol": "SPY",
+      "side": "sell",
+      "qty": 138.158117314,
+      "type": "market",
+      "status": "filled",
+      "filled_qty": 138.158117314,
+      "filled_avg_price": 688.987711,
+      "created_at": "2026-01-08T16:15:12.246496+00:00",
+      "updated_at": "2026-01-08T16:15:13.993437+00:00"
+    },
+    {
+      "id": "b957924b-cabb-4e9b-9494-1f7f3434cc1e",
+      "symbol": "PICK",
+      "side": "buy",
+      "qty": 199.304133342,
+      "type": "market",
+      "status": "filled",
+      "filled_qty": 199.304133342,
+      "filled_avg_price": 53.43,
+      "created_at": "2026-01-08T16:15:12.204054+00:00",
+      "updated_at": "2026-01-08T16:15:13.531274+00:00"
+    },
+    {
+      "id": "8702979c-e9c4-4165-8539-bbfae7150e49",
+      "symbol": "KOLD",
+      "side": "buy",
+      "qty": 145.951812979,
+      "type": "market",
+      "status": "filled",
+      "filled_qty": 145.951812979,
+      "filled_avg_price": 42.58,
+      "created_at": "2026-01-08T16:15:12.159738+00:00",
+      "updated_at": "2026-01-08T16:15:12.733622+00:00"
+    },
+    {
+      "id": "f05f1529-8bd8-49bd-87ea-943548d6b38d",
+      "symbol": "XME",
+      "side": "buy",
+      "qty": 71.170368367,
+      "type": "market",
+      "status": "filled",
+      "filled_qty": 71.170368367,
+      "filled_avg_price": 112.44,
+      "created_at": "2026-01-08T16:15:12.117066+00:00",
+      "updated_at": "2026-01-08T16:15:12.647979+00:00"
+    },
+    {
+      "id": "4c25781c-67da-4041-9c4f-ee8a14954158",
+      "symbol": "QQQ",
+      "side": "sell",
+      "qty": 2.606607901,
+      "type": "market",
+      "status": "filled",
+      "filled_qty": 2.606607901,
+      "filled_avg_price": 619.402327,
+      "created_at": "2026-01-08T16:15:12.072325+00:00",
+      "updated_at": "2026-01-08T16:15:12.706294+00:00"
+    },
+    {
+      "id": "b0284925-0303-4a07-ac53-02f2ff18a584",
+      "symbol": "REMX",
+      "side": "buy",
+      "qty": 118.227107568,
+      "type": "market",
+      "status": "filled",
+      "filled_qty": 118.227107568,
+      "filled_avg_price": 83.06,
+      "created_at": "2026-01-08T16:15:12.021252+00:00",
+      "updated_at": "2026-01-08T16:15:13.541035+00:00"
+    },
+    {
+      "id": "490a1f5e-629f-4fe3-bcd0-b004404cc33c",
+      "symbol": "GDXJ",
+      "side": "buy",
+      "qty": 82.148810169,
+      "type": "market",
+      "status": "filled",
+      "filled_qty": 82.148810169,
+      "filled_avg_price": 118.78,
+      "created_at": "2026-01-08T16:15:11.977738+00:00",
+      "updated_at": "2026-01-08T16:15:12.774784+00:00"
+    },
+    {
+      "id": "8e94055e-ab2d-4bfe-b9a6-fa862ea77da7",
+      "symbol": "SILJ",
+      "side": "buy",
+      "qty": 309.547353473,
+      "type": "market",
+      "status": "filled",
+      "filled_qty": 309.547353473,
+      "filled_avg_price": 29.18,
+      "created_at": "2026-01-08T16:15:11.938840+00:00",
+      "updated_at": "2026-01-08T16:15:12.303770+00:00"
+    },
+    {
+      "id": "edc01b9d-a8cd-4b3e-aadc-5b0337e01501",
+      "symbol": "PPLT",
+      "side": "buy",
+      "qty": 48.744472599,
+      "type": "market",
+      "status": "filled",
+      "filled_qty": 48.744472599,
+      "filled_avg_price": 204.22,
+      "created_at": "2026-01-08T16:15:11.894924+00:00",
+      "updated_at": "2026-01-08T16:15:13.587139+00:00"
+    },
+    {
+      "id": "1cfcc386-2402-41f9-bcf0-6bda2ac96de7",
+      "symbol": "VGK",
+      "side": "sell",
+      "qty": 99.203130743,
+      "type": "market",
+      "status": "filled",
+      "filled_qty": 99.203130743,
+      "filled_avg_price": 85.14,
+      "created_at": "2026-01-08T15:17:58.383926+00:00",
+      "updated_at": "2026-01-08T15:17:59.384965+00:00"
+    },
+    {
+      "id": "c5e93f43-4cdc-4b18-ba85-2d096aea1614",
+      "symbol": "VEA",
+      "side": "sell",
+      "qty": 104.776991761,
+      "type": "market",
+      "status": "filled",
+      "filled_qty": 104.776991761,
+      "filled_avg_price": 63.89,
+      "created_at": "2026-01-08T15:17:58.343839+00:00",
+      "updated_at": "2026-01-08T15:17:58.543466+00:00"
+    },
+    {
+      "id": "ea8521d8-5c8f-40fe-8ce1-93d392a08563",
+      "symbol": "COPX",
+      "side": "sell",
+      "qty": 138.418324662,
+      "type": "market",
+      "status": "filled",
+      "filled_qty": 138.418324662,
+      "filled_avg_price": 74.63,
+      "created_at": "2026-01-08T15:17:58.303630+00:00",
+      "updated_at": "2026-01-08T15:17:59.105759+00:00"
+    },
+    {
+      "id": "d7b11db9-f19d-4e71-90ea-6d8aa678e765",
+      "symbol": "SILJ",
+      "side": "sell",
+      "qty": 325.584556712,
+      "type": "market",
+      "status": "filled",
+      "filled_qty": 325.584556712,
+      "filled_avg_price": 29.29,
+      "created_at": "2026-01-08T15:17:58.263478+00:00",
+      "updated_at": "2026-01-08T15:17:58.578384+00:00"
+    },
+    {
+      "id": "c592d1ce-d2d6-416f-b548-ded821b7848a",
+      "symbol": "GDXJ",
+      "side": "sell",
+      "qty": 86.546857665,
+      "type": "market",
+      "status": "filled",
+      "filled_qty": 86.546857665,
+      "filled_avg_price": 119.26313,
+      "created_at": "2026-01-08T15:17:58.221554+00:00",
+      "updated_at": "2026-01-08T15:18:00.075588+00:00"
+    },
+    {
+      "id": "7a7e4382-266d-4934-b65b-e843e1f8d8a2",
+      "symbol": "XME",
+      "side": "sell",
+      "qty": 74.38340088,
+      "type": "market",
+      "status": "filled",
+      "filled_qty": 74.38340088,
+      "filled_avg_price": 113.21,
+      "created_at": "2026-01-08T15:17:58.183188+00:00",
+      "updated_at": "2026-01-08T15:17:59.745178+00:00"
+    },
+    {
+      "id": "e90aec66-b4cf-4f67-915a-dcc000016ab9",
+      "symbol": "QQQ",
+      "side": "buy",
+      "qty": 2.606607901,
+      "type": "market",
+      "status": "filled",
+      "filled_qty": 2.606607901,
+      "filled_avg_price": 620.333836,
+      "created_at": "2026-01-08T15:17:58.136602+00:00",
+      "updated_at": "2026-01-08T15:17:58.994869+00:00"
+    },
+    {
+      "id": "3c5ac408-cc17-42a1-88ff-537986975712",
+      "symbol": "XLB",
+      "side": "sell",
+      "qty": 199.609893734,
+      "type": "market",
+      "status": "filled",
+      "filled_qty": 199.609893734,
+      "filled_avg_price": 47.04,
+      "created_at": "2026-01-08T15:17:58.097028+00:00",
+      "updated_at": "2026-01-08T15:17:59.353483+00:00"
+    }
+  ],
+  "scan_results": {
     "timestamp": "2026-01-08T12:09:23.532245",
     "market_regime": "RISK_ON",
+    "hot_sectors": [
+      "Materials",
+      "Financials",
+      "Industrials"
+    ],
+    "cold_sectors": [
+      "Healthcare",
+      "Real Estate",
+      "Utilities"
+    ],
+    "sector_ranks": [
+      [
+        "Materials",
+        7.664275139505761
+      ],
+      [
+        "Financials",
+        6.842405786067762
+      ],
+      [
+        "Industrials",
+        5.618088467614557
+      ],
+      [
+        "Consumer Discretionary",
+        5.034275921165388
+      ],
+      [
+        "Energy",
+        3.498476469924383
+      ],
+      [
+        "Technology",
+        2.7312272694858475
+      ],
+      [
+        "Consumer Staples",
+        0.42275172943888606
+      ],
+      [
+        "Healthcare",
+        0.4093972412924307
+      ],
+      [
+        "Real Estate",
+        -1.852748849600394
+      ],
+      [
+        "Utilities",
+        -5.066996959801829
+      ]
+    ],
     "top_scorers": [
       {
         "ticker": "DRUG",
@@ -285,8 +568,573 @@
         "is_overbought": 0,
         "is_oversold": 0,
         "has_loss_penalty": 0
+      },
+      {
+        "ticker": "ASTI",
+        "momentum": 100,
+        "volatility": 100,
+        "relative_strength": 100,
+        "breakout": 46.69,
+        "volume": 24.3,
+        "rsi": 54.35,
+        "composite": 84.43,
+        "price": 3.88,
+        "return_30d": 153.59,
+        "is_overbought": 0,
+        "is_oversold": 0,
+        "has_loss_penalty": 0
+      },
+      {
+        "ticker": "TENX",
+        "momentum": 100,
+        "volatility": 42.61,
+        "relative_strength": 100,
+        "breakout": 92.17,
+        "volume": 39.72,
+        "rsi": 56.08,
+        "composite": 84.19,
+        "price": 12.75,
+        "return_30d": 35.64,
+        "is_overbought": 0,
+        "is_oversold": 0,
+        "has_loss_penalty": 0
+      },
+      {
+        "ticker": "RENT",
+        "momentum": 100,
+        "volatility": 51.89,
+        "relative_strength": 100,
+        "breakout": 93.05,
+        "volume": 21.21,
+        "rsi": 46.21,
+        "composite": 83.86,
+        "price": 8.48,
+        "return_30d": 74.38,
+        "is_overbought": 0,
+        "is_oversold": 0,
+        "has_loss_penalty": 0
+      },
+      {
+        "ticker": "ASTS",
+        "momentum": 100,
+        "volatility": 45.73,
+        "relative_strength": 100,
+        "breakout": 88.57,
+        "volume": 32.63,
+        "rsi": 67.14,
+        "composite": 83.41,
+        "price": 91.92,
+        "return_30d": 65.59,
+        "is_overbought": 0,
+        "is_oversold": 0,
+        "has_loss_penalty": 0
+      },
+      {
+        "ticker": "NRGV",
+        "momentum": 100,
+        "volatility": 48.71,
+        "relative_strength": 100,
+        "breakout": 94.02,
+        "volume": 19.95,
+        "rsi": 61.58,
+        "composite": 83.4,
+        "price": 5.52,
+        "return_30d": 70.9,
+        "is_overbought": 0,
+        "is_oversold": 0,
+        "has_loss_penalty": 0
+      },
+      {
+        "ticker": "CLYM",
+        "momentum": 100,
+        "volatility": 66.25,
+        "relative_strength": 100,
+        "breakout": 77.69,
+        "volume": 17.5,
+        "rsi": 51.75,
+        "composite": 83.34,
+        "price": 4.38,
+        "return_30d": 143.33,
+        "is_overbought": 0,
+        "is_oversold": 0,
+        "has_loss_penalty": 0
+      },
+      {
+        "ticker": "IZM",
+        "momentum": 100,
+        "volatility": 58.09,
+        "relative_strength": 100,
+        "breakout": 63.6,
+        "volume": 65.87,
+        "rsi": 72.28,
+        "composite": 82.91,
+        "price": 2.22,
+        "return_30d": 127.04,
+        "is_overbought": 1,
+        "is_oversold": 0,
+        "has_loss_penalty": 0
+      },
+      {
+        "ticker": "GLSI",
+        "momentum": 100,
+        "volatility": 68.39,
+        "relative_strength": 100,
+        "breakout": 83.35,
+        "volume": 10.81,
+        "rsi": 71.48,
+        "composite": 82.6,
+        "price": 22.9,
+        "return_30d": 172.62,
+        "is_overbought": 1,
+        "is_oversold": 0,
+        "has_loss_penalty": 0
+      },
+      {
+        "ticker": "ASTX",
+        "momentum": 100,
+        "volatility": 84.95,
+        "relative_strength": 100,
+        "breakout": 31.68,
+        "volume": 48.66,
+        "rsi": 63.9,
+        "composite": 82.36,
+        "price": 61.89,
+        "return_30d": 120.56,
+        "is_overbought": 0,
+        "is_oversold": 0,
+        "has_loss_penalty": 0
+      },
+      {
+        "ticker": "RERE",
+        "momentum": 100,
+        "volatility": 19.91,
+        "relative_strength": 100,
+        "breakout": 100,
+        "volume": 42.75,
+        "rsi": 67.92,
+        "composite": 82.26,
+        "price": 6.06,
+        "return_30d": 43.3,
+        "is_overbought": 0,
+        "is_oversold": 0,
+        "has_loss_penalty": 0
       }
     ],
+    "current_holdings": {
+      "CORE": [
+        "GLD",
+        "SLV",
+        "PPLT",
+        "CPER",
+        "SLX",
+        "XLF",
+        "XLB",
+        "XLY",
+        "XLI",
+        "XLK"
+      ],
+      "SPECULATIVE": [
+        "RKLB",
+        "AA",
+        "MU",
+        "LRCX",
+        "FCX",
+        "HUT",
+        "RIVN",
+        "MSFT",
+        "NVDA",
+        "TSLA"
+      ],
+      "ASYMMETRIC": [
+        "STLD",
+        "NET",
+        "W",
+        "PANW",
+        "RMBS",
+        "SOFI",
+        "CEG",
+        "OKLO",
+        "QBTS",
+        "IREN"
+      ],
+      "BENCHMARKS": [
+        "SPY",
+        "QQQ"
+      ]
+    },
+    "recommended_groups": {
+      "CORE": [
+        "KOLD",
+        "SLV",
+        "SILJ",
+        "PPLT",
+        "COPX",
+        "GDXJ",
+        "XME",
+        "PICK",
+        "REMX",
+        "GDX"
+      ],
+      "SPECULATIVE": [
+        "DRUG",
+        "FLYT",
+        "RKLX",
+        "RVMDW",
+        "OLPX",
+        "YCBD",
+        "OSS",
+        "PROF",
+        "VELO",
+        "ARWR"
+      ],
+      "ASYMMETRIC": [
+        "TOKE",
+        "BW",
+        "SKYX",
+        "DTI",
+        "INTW",
+        "OCS",
+        "CRON",
+        "APLX",
+        "STOK",
+        "OGI"
+      ],
+      "BENCHMARKS": [
+        "SPY",
+        "QQQ"
+      ]
+    },
+    "dynamic_buckets": {
+      "CORE": [
+        "KOLD",
+        "SLV",
+        "SILJ",
+        "PPLT",
+        "COPX",
+        "GDXJ",
+        "XME",
+        "PICK",
+        "REMX",
+        "GDX"
+      ],
+      "SPECULATIVE": [
+        "DRUG",
+        "FLYT",
+        "RKLX",
+        "RVMDW",
+        "OLPX",
+        "YCBD",
+        "OSS",
+        "PROF",
+        "VELO",
+        "ARWR"
+      ],
+      "ASYMMETRIC": [
+        "TOKE",
+        "BW",
+        "SKYX",
+        "DTI",
+        "INTW",
+        "OCS",
+        "CRON",
+        "APLX",
+        "STOK",
+        "OGI"
+      ],
+      "BENCHMARKS": [
+        "SPY",
+        "QQQ"
+      ]
+    },
+    "rotation_recommendations": [
+      {
+        "group": "CORE",
+        "action": "ROTATE",
+        "ticker_out": "SLX",
+        "ticker_in": "KOLD",
+        "score_out": 0,
+        "score_in": 79.32,
+        "score_delta": 79.32,
+        "reason": "Score improvement of 79.3 points"
+      },
+      {
+        "group": "CORE",
+        "action": "ROTATE",
+        "ticker_out": "XLK",
+        "ticker_in": "SILJ",
+        "score_out": 42.23,
+        "score_in": 78.54,
+        "score_delta": 36.31,
+        "reason": "Score improvement of 36.3 points"
+      },
+      {
+        "group": "SPECULATIVE",
+        "action": "ROTATE",
+        "ticker_out": "MSFT",
+        "ticker_in": "DRUG",
+        "score_out": 27.16,
+        "score_in": 91.33,
+        "score_delta": 64.17,
+        "reason": "Score improvement of 64.2 points"
+      },
+      {
+        "group": "SPECULATIVE",
+        "action": "ROTATE",
+        "ticker_out": "NVDA",
+        "ticker_in": "FLYT",
+        "score_out": 32.34,
+        "score_in": 88.5,
+        "score_delta": 56.16,
+        "reason": "Score improvement of 56.2 points"
+      },
+      {
+        "group": "SPECULATIVE",
+        "action": "ROTATE",
+        "ticker_out": "TSLA",
+        "ticker_in": "RKLX",
+        "score_out": 40.04,
+        "score_in": 88.37,
+        "score_delta": 48.33,
+        "reason": "Score improvement of 48.3 points"
+      },
+      {
+        "group": "ASYMMETRIC",
+        "action": "ROTATE",
+        "ticker_out": "IREN",
+        "ticker_in": "TOKE",
+        "score_out": 21.92,
+        "score_in": 60.15,
+        "score_delta": 38.23,
+        "reason": "Score improvement of 38.2 points"
+      },
+      {
+        "group": "ASYMMETRIC",
+        "action": "ROTATE",
+        "ticker_out": "NET",
+        "ticker_in": "BW",
+        "score_out": 22.58,
+        "score_in": 58.02,
+        "score_delta": 35.44,
+        "reason": "Score improvement of 35.4 points"
+      },
+      {
+        "group": "ASYMMETRIC",
+        "action": "ROTATE",
+        "ticker_out": "RMBS",
+        "ticker_in": "SKYX",
+        "score_out": 24.77,
+        "score_in": 57.82,
+        "score_delta": 33.05,
+        "reason": "Score improvement of 33.0 points"
+      },
+      {
+        "group": "ASYMMETRIC",
+        "action": "ROTATE",
+        "ticker_out": "SOFI",
+        "ticker_in": "DTI",
+        "score_out": 25.0,
+        "score_in": 57.66,
+        "score_delta": 32.66,
+        "reason": "Score improvement of 32.7 points"
+      },
+      {
+        "group": "ASYMMETRIC",
+        "action": "ROTATE",
+        "ticker_out": "CEG",
+        "ticker_in": "INTW",
+        "score_out": 25.02,
+        "score_in": 57.14,
+        "score_delta": 32.12,
+        "reason": "Score improvement of 32.1 points"
+      },
+      {
+        "group": "ASYMMETRIC",
+        "action": "ROTATE",
+        "ticker_out": "OKLO",
+        "ticker_in": "OCS",
+        "score_out": 26.89,
+        "score_in": 57.11,
+        "score_delta": 30.22,
+        "reason": "Score improvement of 30.2 points"
+      },
+      {
+        "group": "ASYMMETRIC",
+        "action": "ROTATE",
+        "ticker_out": "PANW",
+        "ticker_in": "CRON",
+        "score_out": 31.66,
+        "score_in": 54.43,
+        "score_delta": 22.77,
+        "reason": "Score improvement of 22.8 points"
+      }
+    ],
+    "portfolio_size_tests": [
+      {
+        "size": 5,
+        "tickers": [
+          "DRUG",
+          "FLYT",
+          "RKLX",
+          "RVMDW",
+          "OLPX"
+        ],
+        "sharpe": 2.385,
+        "annual_return": 190.67,
+        "annual_volatility": 79.95,
+        "max_drawdown": -40.12,
+        "calmar_ratio": 4.752,
+        "win_rate": 57.58
+      },
+      {
+        "size": 10,
+        "tickers": [
+          "DRUG",
+          "FLYT",
+          "RKLX",
+          "RVMDW",
+          "OLPX",
+          "YCBD",
+          "OSS",
+          "PROF",
+          "VELO",
+          "ARWR"
+        ],
+        "sharpe": 3.976,
+        "annual_return": 264.52,
+        "annual_volatility": 66.53,
+        "max_drawdown": -30.1,
+        "calmar_ratio": 8.788,
+        "win_rate": 62.24
+      },
+      {
+        "size": 15,
+        "tickers": [
+          "DRUG",
+          "FLYT",
+          "RKLX",
+          "RVMDW",
+          "OLPX",
+          "YCBD",
+          "OSS",
+          "PROF",
+          "VELO",
+          "ARWR",
+          "ASTI",
+          "TENX",
+          "RENT",
+          "ASTS",
+          "NRGV"
+        ],
+        "sharpe": 3.709,
+        "annual_return": 245.04,
+        "annual_volatility": 66.07,
+        "max_drawdown": -34.35,
+        "calmar_ratio": 7.133,
+        "win_rate": 64.29
+      },
+      {
+        "size": 20,
+        "tickers": [
+          "DRUG",
+          "FLYT",
+          "RKLX",
+          "RVMDW",
+          "OLPX",
+          "YCBD",
+          "OSS",
+          "PROF",
+          "VELO",
+          "ARWR",
+          "ASTI",
+          "TENX",
+          "RENT",
+          "ASTS",
+          "NRGV",
+          "CLYM",
+          "IZM",
+          "GLSI",
+          "ASTX",
+          "RERE"
+        ],
+        "sharpe": 3.164,
+        "annual_return": 249.17,
+        "annual_volatility": 78.75,
+        "max_drawdown": -42.95,
+        "calmar_ratio": 5.801,
+        "win_rate": 64.29
+      },
+      {
+        "size": 30,
+        "tickers": [
+          "DRUG",
+          "FLYT",
+          "RKLX",
+          "RVMDW",
+          "OLPX",
+          "YCBD",
+          "OSS",
+          "PROF",
+          "VELO",
+          "ARWR",
+          "ASTI",
+          "TENX",
+          "RENT",
+          "ASTS",
+          "NRGV",
+          "CLYM",
+          "IZM",
+          "GLSI",
+          "ASTX",
+          "RERE",
+          "ALMS",
+          "ERAS",
+          "GDXU",
+          "SGML",
+          "KDEF",
+          "CAMP",
+          "NUGT",
+          "BEAT",
+          "UMAC",
+          "ZURA"
+        ],
+        "sharpe": 3.605,
+        "annual_return": 253.63,
+        "annual_volatility": 70.35,
+        "max_drawdown": -35.19,
+        "calmar_ratio": 7.207,
+        "win_rate": 64.29
+      }
+    ],
+    "portfolio_comparison": {
+      "current": {
+        "sharpe": 1.599,
+        "annual_return": 46.01,
+        "annual_volatility": 28.78,
+        "max_drawdown": -26.58,
+        "calmar_ratio": 1.731,
+        "win_rate": 59.2,
+        "avg_drawdown": -4.52,
+        "num_drawdowns": 17,
+        "recovery_time_avg": 8.5
+      },
+      "recommended": {
+        "sharpe": 3.925,
+        "annual_return": 159.19,
+        "annual_volatility": 40.56,
+        "max_drawdown": -23.11,
+        "calmar_ratio": 6.887,
+        "win_rate": 66.67,
+        "avg_drawdown": -9.42,
+        "num_drawdowns": 4,
+        "recovery_time_avg": 12.5
+      },
+      "improvements": {
+        "sharpe": 2.326,
+        "return": 113.18,
+        "volatility": 11.78,
+        "max_drawdown": -3.47
+      }
+    },
     "total_tickers_scored": 5266
   }
 }
