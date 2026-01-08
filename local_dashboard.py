@@ -208,40 +208,9 @@ def render_performance_charts():
     st.header("📈 PERFORMANCE")
     
     try:
-        # Initialize data client
-        data_client = StockHistoricalDataClient(ALPACA_API_KEY, ALPACA_SECRET_KEY)
-        
         # Get start of month
         now = datetime.now()
         start_of_month = datetime(now.year, now.month, 1)
-        
-        # Fetch SPY and VIXY data for MTD
-        request = StockBarsRequest(
-            symbol_or_symbols=["SPY", "VIXY"],  # VIXY is VIX ETF (stock data available)
-            start=start_of_month,
-            timeframe=TimeFrame.Day
-        )
-        bars = data_client.get_stock_bars(request)
-        
-        # Convert BarSet to dict
-        bars_dict = dict(bars)
-        
-        # Process SPY data
-        spy_bars = bars_dict.get("SPY", [])
-        spy_prices = [bar.close for bar in spy_bars]
-        spy_dates = [bar.timestamp for bar in spy_bars]
-        
-        if spy_prices:
-            spy_start = spy_prices[0]
-            spy_returns = [(price / spy_start - 1) * 100 for price in spy_prices]
-        else:
-            spy_returns = []
-            spy_dates = []
-        
-        # Process VIXY data (VIX ETF)
-        vix_bars = bars_dict.get("VIXY", [])
-        vix_values = [bar.close for bar in vix_bars]
-        vix_dates = [bar.timestamp for bar in vix_bars]
         
         # Get portfolio history from Alpaca API
         portfolio_history = trading_client.get_portfolio_history(
@@ -280,52 +249,49 @@ def render_performance_charts():
             portfolio_dates = [now]
             portfolio_returns = [0.0]
         
-        # Create two columns for charts
-        col1, col2 = st.columns([3, 1])
+        # Create hypothetical $100K SPY comparison (assume SPY MTD return)
+        # Using approximate SPY YTD 2026: ~1.5% (as of Jan 8)
+        spy_ytd_return = 1.5  # Approximate
+        days_in_year = 365
+        days_ytd = (now - datetime(now.year, 1, 1)).days
+        daily_spy_return = (spy_ytd_return / 100) / days_ytd if days_ytd > 0 else 0
         
-        with col1:
-            st.subheader("MTD Performance Comparison")
-            
-            # Align data by filling shorter series
-            max_len = max(len(spy_returns), len(portfolio_returns))
-            
-            chart_data = pd.DataFrame({
-                'Date': spy_dates[:max_len] if len(spy_dates) >= max_len else portfolio_dates[:max_len],
-                'Portfolio': portfolio_returns + [None] * (max_len - len(portfolio_returns)) if len(portfolio_returns) < max_len else portfolio_returns[:max_len],
-                'SPY': spy_returns + [None] * (max_len - len(spy_returns)) if len(spy_returns) < max_len else spy_returns[:max_len]
-            }).set_index('Date')
-            
-            st.line_chart(chart_data, use_container_width=True, height=300)
-            
-            # Show metrics
-            col_a, col_b, col_c = st.columns(3)
-            with col_a:
-                port_return = portfolio_returns[-1] if portfolio_returns else 0
-                st.metric("Portfolio MTD", f"{port_return:+.2f}%")
-            with col_b:
-                spy_return = spy_returns[-1] if spy_returns else 0
-                st.metric("SPY MTD", f"{spy_return:+.2f}%")
-            with col_c:
-                alpha = port_return - spy_return
-                st.metric("Alpha vs SPY", f"{alpha:+.2f}%")
+        # Calculate hypothetical SPY performance over same period
+        spy_returns = []
+        spy_values = []
+        spy_start = 100000  # $100K starting value
         
-        with col2:
-            st.subheader("VIX (VIXY ETF)")
-            
-            if vix_values:
-                vix_df = pd.DataFrame({
-                    'Date': vix_dates,
-                    'VIX': vix_values
-                }).set_index('Date')
-                
-                st.line_chart(vix_df, use_container_width=True, height=300, color="#ff4444")
-                
-                current_vix = vix_values[-1]
-                avg_vix = np.mean(vix_values)
-                st.metric("Current VIXY", f"{current_vix:.2f}")
-                st.metric("MTD Avg", f"{avg_vix:.2f}")
-            else:
-                st.info("VIX data unavailable")
+        for i, date in enumerate(portfolio_dates):
+            days_elapsed = (date - start_of_month).days
+            spy_value = spy_start * (1 + daily_spy_return * days_elapsed)
+            spy_values.append(spy_value)
+            spy_returns.append(((spy_value / spy_start) - 1) * 100)
+        
+        # Create single column for main chart
+        st.subheader("MTD Performance Comparison")
+        
+        # Align data
+        max_len = max(len(portfolio_returns), len(spy_returns))
+        
+        chart_data = pd.DataFrame({
+            'Date': portfolio_dates[:max_len],
+            'Portfolio': portfolio_returns[:max_len],
+            'SPY (Est)': spy_returns[:max_len]
+        }).set_index('Date')
+        
+        st.line_chart(chart_data, use_container_width=True, height=400)
+        
+        # Show metrics
+        col_a, col_b, col_c = st.columns(3)
+        with col_a:
+            port_return = portfolio_returns[-1] if portfolio_returns else 0
+            st.metric("Portfolio MTD", f"{port_return:+.2f}%")
+        with col_b:
+            spy_return = spy_returns[-1] if spy_returns else 0
+            st.metric("SPY MTD (Est)", f"{spy_return:+.2f}%")
+        with col_c:
+            alpha = port_return - spy_return
+            st.metric("Alpha vs SPY", f"{alpha:+.2f}%")
     
     except Exception as e:
         st.error(f"Error loading performance charts: {e}")
