@@ -1,13 +1,7 @@
 {
-  "last_updated": "2026-01-08T06:47:22.939161",
+  "last_updated": "2026-01-08T06:47:52.952800",
   "event_count": 200,
   "events": [
-    {
-      "timestamp": "2026-01-07T12:01:45",
-      "source": "Trading Automation",
-      "type": "order",
-      "message": "\ud83d\udcdd Order placed: SELL 5 GLD"
-    },
     {
       "timestamp": "2026-01-07T12:01:46",
       "source": "Trading Automation",
@@ -2356,6 +2350,18 @@
         "portfolio_value": "97K",
         "positions_count": 4,
         "avg_return": -2.6
+      }
+    },
+    {
+      "timestamp": "2026-01-08T06:47:28.705157",
+      "type": "portfolio",
+      "level": "INFO",
+      "source": "Profit Taker",
+      "message": "\ud83d\udc40 Monitoring 4 positions: AA -3.4%, HUT -2.5%, RKLB -1.8%, SLV -3.0%",
+      "metadata": {
+        "portfolio_value": "97K",
+        "positions_count": 4,
+        "avg_return": -2.7
       }
     }
   ]
