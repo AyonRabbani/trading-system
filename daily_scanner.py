@@ -332,14 +332,33 @@ def score_opportunity(ticker: str, df: pd.DataFrame, spy_data: Optional[pd.DataF
         else:
             volume_score = 50  # Neutral if no volume data
         
-        # COMPOSITE SCORE
-        composite = (
+        # 6. RSI (Relative Strength Index) - Overbought/Oversold Filter
+        # RSI > 70 = Overbought (reduce score), RSI < 30 = Oversold (opportunity)
+        delta = df['c'].diff()
+        gain = (delta.where(delta > 0, 0)).rolling(window=14).mean()
+        loss = (-delta.where(delta < 0, 0)).rolling(window=14).mean()
+        rs = gain / loss.replace(0, 1e-10)  # Avoid division by zero
+        rsi = 100 - (100 / (1 + rs))
+        rsi_value = rsi.iloc[-1] if not np.isnan(rsi.iloc[-1]) else 50
+        
+        # RSI adjustment: Penalize overbought, reward oversold
+        if rsi_value > 70:
+            rsi_multiplier = 1 - ((rsi_value - 70) / 100)  # 0.7x to 1.0x (up to 30% penalty)
+        elif rsi_value < 30:
+            rsi_multiplier = 1.15  # 15% boost for oversold stocks
+        else:
+            rsi_multiplier = 1.0  # Neutral range (30-70)
+        
+        # COMPOSITE SCORE (with RSI adjustment)
+        base_composite = (
             momentum_score * SCORE_WEIGHTS['momentum'] +
             volatility_score * SCORE_WEIGHTS['volatility'] +
             rs_score * SCORE_WEIGHTS['relative_strength'] +
             breakout_score * SCORE_WEIGHTS['breakout'] +
             volume_score * SCORE_WEIGHTS['volume']
         )
+        
+        composite = base_composite * rsi_multiplier
         
         return {
             'ticker': ticker,
@@ -348,9 +367,12 @@ def score_opportunity(ticker: str, df: pd.DataFrame, spy_data: Optional[pd.DataF
             'relative_strength': round(rs_score, 2),
             'breakout': round(breakout_score, 2),
             'volume': round(volume_score, 2),
+            'rsi': round(rsi_value, 2),
             'composite': round(composite, 2),
             'price': round(df['c'].iloc[-1], 2),
-            'return_30d': round(ticker_return_30d * 100, 2)
+            'return_30d': round(ticker_return_30d * 100, 2),
+            'is_overbought': rsi_value > 70,
+            'is_oversold': rsi_value < 30
         }
         
     except Exception as e:
@@ -358,8 +380,8 @@ def score_opportunity(ticker: str, df: pd.DataFrame, spy_data: Optional[pd.DataF
         return {
             'ticker': ticker,
             'momentum': 0, 'volatility': 0, 'relative_strength': 0,
-            'breakout': 0, 'volume': 0, 'composite': 0,
-            'price': 0, 'return_30d': 0
+            'breakout': 0, 'volume': 0, 'rsi': 50, 'composite': 0,
+            'price': 0, 'return_30d': 0, 'is_overbought': False, 'is_oversold': False
         }
 
 
@@ -525,7 +547,9 @@ def assign_to_groups(scores: List[dict], num_per_group: int = 10) -> dict:
             break
         ticker = score['ticker']
         groups['CORE'].append(ticker)
-        logging.info(f"  {ticker} → CORE (ETF, score={score['composite']:.1f})")
+        rsi = score.get('rsi', 50)
+        rsi_tag = " [OVERBOUGHT]" if score.get('is_overbought', False) else " [OVERSOLD]" if score.get('is_oversold', False) else ""
+        logging.info(f"  {ticker} → CORE (ETF, score={score['composite']:.1f}, RSI={rsi:.0f}{rsi_tag})")
     
     # === SPECULATIVE: Stocks with momentum > 50 (LOOSENED from 60) ===
     spec_candidates = [s for s in stock_scores if s['momentum'] > 50]
@@ -534,7 +558,9 @@ def assign_to_groups(scores: List[dict], num_per_group: int = 10) -> dict:
             break
         ticker = score['ticker']
         groups['SPECULATIVE'].append(ticker)
-        logging.info(f"  {ticker} → SPECULATIVE (momentum={score['momentum']:.1f}, vol={score['volatility']:.1f})")
+        rsi = score.get('rsi', 50)
+        rsi_tag = " [OVERBOUGHT]" if score.get('is_overbought', False) else " [OVERSOLD]" if score.get('is_oversold', False) else ""
+        logging.info(f"  {ticker} → SPECULATIVE (momentum={score['momentum']:.1f}, RSI={rsi:.0f}{rsi_tag})")
     
     # === ASYMMETRIC: High volatility (>40, LOOSENED from 60) OR breakout (>60, LOOSENED from 70) ===
     asym_candidates = [s for s in stock_scores 
@@ -545,7 +571,9 @@ def assign_to_groups(scores: List[dict], num_per_group: int = 10) -> dict:
             break
         ticker = score['ticker']
         groups['ASYMMETRIC'].append(ticker)
-        logging.info(f"  {ticker} → ASYMMETRIC (vol={score['volatility']:.1f}, breakout={score['breakout']:.1f})")
+        rsi = score.get('rsi', 50)
+        rsi_tag = " [OVERBOUGHT]" if score.get('is_overbought', False) else " [OVERSOLD]" if score.get('is_oversold', False) else ""
+        logging.info(f"  {ticker} → ASYMMETRIC (vol={score['volatility']:.1f}, RSI={rsi:.0f}{rsi_tag})")
     
     # === BACKFILL: Fill remaining slots with best available ===
     remaining_etfs = [s for s in etf_scores if s['ticker'] not in groups['CORE']]
@@ -971,9 +999,10 @@ def daily_scan(export_path: Optional[str] = None) -> dict:
         # Show top 10
         logging.info("\nTop 10 Tickers by Composite Score:")
         for i, score in enumerate(scores[:10], 1):
+            rsi_indicator = "🔴" if score.get('is_overbought', False) else "🟢" if score.get('is_oversold', False) else ""
             logging.info(f"  {i}. {score['ticker']}: {score['composite']:.1f} "
                         f"(M:{score['momentum']:.1f} V:{score['volatility']:.1f} "
-                        f"RS:{score['relative_strength']:.1f})")
+                        f"RSI:{score.get('rsi', 50):.0f}{rsi_indicator})")
         
         # Broadcast top opportunities
         top_5 = [f"{s['ticker']} ({s['composite']:.0f})" for s in scores[:5]]
