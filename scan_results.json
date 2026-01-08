@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-01-08T06:43:12.349619",
+  "timestamp": "2026-01-08T07:07:52.168492",
   "market_regime": "RISK_ON",
   "hot_sectors": [
     "Materials",
@@ -304,15 +304,15 @@
   "recommended_groups": {
     "CORE": [
       "SLV",
+      "COPX",
       "PPLT",
+      "XME",
+      "PICK",
       "CPER",
       "SLX",
       "XLF",
       "XLB",
-      "XLY",
-      "GLD",
-      "XLI",
-      "XLK"
+      "XLY"
     ],
     "SPECULATIVE": [
       "RKLB",
@@ -320,11 +320,11 @@
       "MU",
       "LRCX",
       "FCX",
-      "COPX",
       "HUT",
       "RIVN",
-      "XME",
-      "PICK"
+      "RKT",
+      "AMAT",
+      "RDDT"
     ],
     "ASYMMETRIC": [
       "STLD",
@@ -335,8 +335,8 @@
       "MSFT",
       "RMBS",
       "SOFI",
-      "DBC",
-      "CEG"
+      "CEG",
+      "CLSK"
     ],
     "BENCHMARKS": [
       "SPY",
@@ -346,15 +346,15 @@
   "dynamic_buckets": {
     "CORE": [
       "SLV",
+      "COPX",
       "PPLT",
+      "XME",
+      "PICK",
       "CPER",
       "SLX",
       "XLF",
       "XLB",
-      "XLY",
-      "GLD",
-      "XLI",
-      "XLK"
+      "XLY"
     ],
     "SPECULATIVE": [
       "RKLB",
@@ -362,11 +362,11 @@
       "MU",
       "LRCX",
       "FCX",
-      "COPX",
       "HUT",
       "RIVN",
-      "XME",
-      "PICK"
+      "RKT",
+      "AMAT",
+      "RDDT"
     ],
     "ASYMMETRIC": [
       "STLD",
@@ -377,8 +377,8 @@
       "MSFT",
       "RMBS",
       "SOFI",
-      "DBC",
-      "CEG"
+      "CEG",
+      "CLSK"
     ],
     "BENCHMARKS": [
       "SPY",
@@ -558,8 +558,8 @@
         "JEF",
         "PALL",
         "CPER",
-        "AFRM",
         "GM",
+        "AFRM",
         "WFC",
         "DASH",
         "SCHW",
@@ -587,21 +587,21 @@
       "recovery_time_avg": 6.4
     },
     "recommended": {
-      "sharpe": 1.905,
-      "annual_return": 48.96,
-      "annual_volatility": 25.7,
-      "max_drawdown": -24.06,
-      "calmar_ratio": 2.035,
-      "win_rate": 59.84,
-      "avg_drawdown": -4.09,
-      "num_drawdowns": 17,
-      "recovery_time_avg": 8.1
+      "sharpe": 1.708,
+      "annual_return": 52.2,
+      "annual_volatility": 30.55,
+      "max_drawdown": -29.02,
+      "calmar_ratio": 1.799,
+      "win_rate": 59.44,
+      "avg_drawdown": -4.05,
+      "num_drawdowns": 21,
+      "recovery_time_avg": 7.4
     },
     "improvements": {
-      "sharpe": 0.629,
-      "return": 10.31,
-      "volatility": -4.59,
-      "max_drawdown": -1.5
+      "sharpe": 0.432,
+      "return": 13.55,
+      "volatility": 0.26,
+      "max_drawdown": 3.46
     }
   },
   "total_tickers_scored": 110
