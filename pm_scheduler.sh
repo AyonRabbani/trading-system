@@ -1,8 +1,7 @@
 #!/bin/bash
 
 # Portfolio Manager Scheduler
-# Runs PM 4 times per day during market hours (9:30 AM - 4:00 PM ET)
-# Schedule: 10:00 AM, 12:00 PM, 2:00 PM, 3:30 PM ET
+# Runs PM every 15 minutes during market hours (9:30 AM - 4:00 PM ET)
 
 set -e
 
@@ -19,13 +18,8 @@ MARKET_OPEN_MIN=30
 MARKET_CLOSE_HOUR=16
 MARKET_CLOSE_MIN=0
 
-# PM run times (ET) - evenly spaced during market hours
-PM_TIMES=(
-    "10:00"  # 30 min after open
-    "12:00"  # Midday
-    "14:00"  # 2:00 PM
-    "15:30"  # 30 min before close
-)
+# PM runs every 15 minutes during market hours
+PM_INTERVAL_MINUTES=15
 
 # Create logs directory
 mkdir -p logs
@@ -58,15 +52,15 @@ is_market_open() {
     return 1
 }
 
-# Check if it's time to run PM
+# Check if it's time to run PM (every 15 minutes)
 should_run_pm() {
-    local current_time=$(TZ=$TIMEZONE date +%H:%M)
+    local current_min=$(TZ=$TIMEZONE date +%M)
+    local minute_int=$((10#$current_min))  # Convert to base 10
     
-    for scheduled_time in "${PM_TIMES[@]}"; do
-        if [ "$current_time" == "$scheduled_time" ]; then
-            return 0
-        fi
-    done
+    # Run if current minute is divisible by 15 (00, 15, 30, 45)
+    if [ $((minute_int % PM_INTERVAL_MINUTES)) -eq 0 ]; then
+        return 0
+    fi
     
     return 1
 }
@@ -96,7 +90,7 @@ trap cleanup EXIT
 log "========================================================================"
 log "Portfolio Manager Scheduler Started"
 log "========================================================================"
-log "Schedule: ${PM_TIMES[*]} ET"
+log "Schedule: Every ${PM_INTERVAL_MINUTES} minutes during market hours"
 log "Market Hours: ${MARKET_OPEN_HOUR}:$(printf '%02d' $MARKET_OPEN_MIN) - ${MARKET_CLOSE_HOUR}:$(printf '%02d' $MARKET_CLOSE_MIN) ET"
 log "Timezone: $TIMEZONE"
 log ""
@@ -110,7 +104,7 @@ while true; do
         continue
     fi
     
-    # Check if it's time to run PM
+    # Check if it's time to run PM (every 15 minutes: 00, 15, 30, 45)
     if should_run_pm; then
         log ""
         log "========================================================================"
@@ -154,7 +148,7 @@ except Exception as e:
             fi
             
             log ""
-            log "Next PM run at: ${PM_TIMES[*]} ET"
+            log "Next PM run in ${PM_INTERVAL_MINUTES} minutes"
         else
             log "❌ Portfolio Manager failed"
         fi
