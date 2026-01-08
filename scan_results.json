@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-01-07T14:25:03.101188",
+  "timestamp": "2026-01-08T06:42:12.895157",
   "market_regime": "RISK_ON",
   "hot_sectors": [
     "Materials",
@@ -14,265 +14,265 @@
   "sector_ranks": [
     [
       "Materials",
-      8.040915395284332
+      7.905686546463242
     ],
     [
       "Financials",
-      7.467720177298132
+      7.169011370206202
     ],
     [
       "Industrials",
-      7.273333333333332
+      5.9800000000000075
     ],
     [
       "Consumer Discretionary",
-      6.446107391361444
+      5.815938033346479
     ],
     [
       "Technology",
-      5.201816166744133
+      4.772800400414723
     ],
     [
       "Healthcare",
-      2.505474687620768
+      2.833955944866684
     ],
     [
       "Energy",
-      1.727038241561063
+      1.2223842099360782
     ],
     [
       "Consumer Staples",
-      -0.16233766233766378
+      -0.49350649350649034
     ],
     [
       "Real Estate",
-      -1.342773437500011
+      -2.001953125
     ],
     [
       "Utilities",
-      -5.967470555243981
+      -6.068424004486827
     ]
   ],
   "top_scorers": [
     {
       "ticker": "RKLB",
       "momentum": 100,
-      "volatility": 35.8,
+      "volatility": 36.17,
       "relative_strength": 100,
-      "breakout": 97.5,
-      "volume": 38.12,
-      "composite": 83.81,
-      "price": 84.96,
-      "return_30d": 100.13
+      "breakout": 95.47,
+      "volume": 56.37,
+      "composite": 85.38,
+      "price": 84.08,
+      "return_30d": 98.07
     },
     {
       "ticker": "AA",
       "momentum": 100,
-      "volatility": 15.66,
+      "volatility": 15.68,
       "relative_strength": 100,
-      "breakout": 97.67,
-      "volume": 57.97,
-      "composite": 82.8,
-      "price": 62.82,
-      "return_30d": 62.24
+      "breakout": 97.42,
+      "volume": 83.71,
+      "composite": 85.34,
+      "price": 62.74,
+      "return_30d": 62.04
     },
     {
-      "ticker": "HUT",
-      "momentum": 97.69,
-      "volatility": 39.69,
+      "ticker": "MU",
+      "momentum": 100,
+      "volatility": 20.14,
       "relative_strength": 100,
-      "breakout": 100,
-      "volume": 22.48,
-      "composite": 82.39,
-      "price": 58.79,
-      "return_30d": 49.76
+      "breakout": 97.74,
+      "volume": 60.02,
+      "composite": 83.68,
+      "price": 339.55,
+      "return_30d": 51.63
+    },
+    {
+      "ticker": "LRCX",
+      "momentum": 100,
+      "volatility": 15.3,
+      "relative_strength": 100,
+      "breakout": 96.25,
+      "volume": 69.13,
+      "composite": 83.65,
+      "price": 203.08,
+      "return_30d": 35.04
     },
     {
       "ticker": "SLV",
       "momentum": 100,
       "volatility": 15.13,
       "relative_strength": 100,
-      "breakout": 92.53,
-      "volume": 60.36,
-      "composite": 82.18,
+      "breakout": 92.54,
+      "volume": 71.99,
+      "composite": 83.35,
       "price": 70.96,
-      "return_30d": 52.17
-    },
-    {
-      "ticker": "MU",
-      "momentum": 100,
-      "volatility": 20.16,
-      "relative_strength": 100,
-      "breakout": 97.47,
-      "volume": 43.26,
-      "composite": 81.97,
-      "price": 339.09,
-      "return_30d": 51.43
-    },
-    {
-      "ticker": "PPLT",
-      "momentum": 100,
-      "volatility": 15.08,
-      "relative_strength": 100,
-      "breakout": 89.52,
-      "volume": 52.27,
-      "composite": 80.92,
-      "price": 208.9,
-      "return_30d": 48.48
-    },
-    {
-      "ticker": "LRCX",
-      "momentum": 100,
-      "volatility": 15.34,
-      "relative_strength": 100,
-      "breakout": 95.73,
-      "volume": 36.34,
-      "composite": 80.29,
-      "price": 202.54,
-      "return_30d": 34.69
+      "return_30d": 52.18
     },
     {
       "ticker": "FCX",
       "momentum": 100,
-      "volatility": 11.79,
+      "volatility": 11.81,
       "relative_strength": 100,
-      "breakout": 96.69,
-      "volume": 38.29,
-      "composite": 80.1,
-      "price": 55.22,
-      "return_30d": 35.38
+      "breakout": 97.68,
+      "volume": 66.32,
+      "composite": 83.06,
+      "price": 55.5,
+      "return_30d": 36.06
     },
     {
       "ticker": "COPX",
       "momentum": 100,
-      "volatility": 9.88,
-      "relative_strength": 96.22,
-      "breakout": 94.75,
-      "volume": 50.95,
-      "composite": 79.84,
-      "price": 76.02,
-      "return_30d": 26.68
+      "volatility": 9.9,
+      "relative_strength": 96.72,
+      "breakout": 94.44,
+      "volume": 76.91,
+      "composite": 82.52,
+      "price": 75.9,
+      "return_30d": 26.48
+    },
+    {
+      "ticker": "HUT",
+      "momentum": 95.26,
+      "volatility": 40.32,
+      "relative_strength": 100,
+      "breakout": 98.39,
+      "volume": 31.98,
+      "composite": 82.35,
+      "price": 57.88,
+      "return_30d": 47.43
+    },
+    {
+      "ticker": "PPLT",
+      "momentum": 100,
+      "volatility": 15.05,
+      "relative_strength": 100,
+      "breakout": 90.02,
+      "volume": 57.9,
+      "composite": 81.55,
+      "price": 209.45,
+      "return_30d": 48.87
     },
     {
       "ticker": "RIVN",
       "momentum": 100,
       "volatility": 32.0,
       "relative_strength": 100,
-      "breakout": 77.59,
-      "volume": 32.63,
-      "composite": 79.7,
-      "price": 19.93,
-      "return_30d": 31.41
+      "breakout": 78.71,
+      "volume": 49.27,
+      "composite": 81.53,
+      "price": 20.06,
+      "return_30d": 32.23
+    },
+    {
+      "ticker": "XME",
+      "momentum": 100,
+      "volatility": 11.77,
+      "relative_strength": 93.53,
+      "breakout": 98.52,
+      "volume": 63.61,
+      "composite": 81.29,
+      "price": 114.17,
+      "return_30d": 24.89
     },
     {
       "ticker": "PICK",
       "momentum": 100,
       "volatility": 6.73,
-      "relative_strength": 81.19,
-      "breakout": 97.15,
-      "volume": 85.28,
-      "composite": 79.41,
-      "price": 54.38,
-      "return_30d": 19.17
+      "relative_strength": 81.98,
+      "breakout": 97.06,
+      "volume": 100,
+      "composite": 81.07,
+      "price": 54.35,
+      "return_30d": 19.11
     },
     {
       "ticker": "RKT",
-      "momentum": 100,
-      "volatility": 16.45,
-      "relative_strength": 81.44,
+      "momentum": 95.03,
+      "volatility": 16.71,
+      "relative_strength": 78.64,
       "breakout": 100,
-      "volume": 63.79,
-      "composite": 79.21,
-      "price": 21.62,
-      "return_30d": 19.29
-    },
-    {
-      "ticker": "XME",
-      "momentum": 100,
-      "volatility": 11.8,
-      "relative_strength": 91.93,
-      "breakout": 97.97,
-      "volume": 47.29,
-      "composite": 79.18,
-      "price": 113.85,
-      "return_30d": 24.54
-    },
-    {
-      "ticker": "RDDT",
-      "momentum": 100,
-      "volatility": 19.65,
-      "relative_strength": 100,
-      "breakout": 90.91,
-      "volume": 22.63,
-      "composite": 78.85,
-      "price": 258.41,
-      "return_30d": 32.52
-    },
-    {
-      "ticker": "CVNA",
-      "momentum": 100,
-      "volatility": 20.08,
-      "relative_strength": 100,
-      "breakout": 91.28,
-      "volume": 15.4,
-      "composite": 78.24,
-      "price": 452.12,
-      "return_30d": 36.63
+      "volume": 100,
+      "composite": 80.43,
+      "price": 21.28,
+      "return_30d": 17.44
     },
     {
       "ticker": "AMAT",
       "momentum": 100,
-      "volatility": 12.13,
-      "relative_strength": 96.17,
-      "breakout": 97.6,
-      "volume": 24.08,
-      "composite": 77.91,
-      "price": 292.46,
-      "return_30d": 26.66
+      "volatility": 12.14,
+      "relative_strength": 96.85,
+      "breakout": 97.43,
+      "volume": 46.36,
+      "composite": 80.28,
+      "price": 292.2,
+      "return_30d": 26.54
     },
     {
-      "ticker": "C",
+      "ticker": "RDDT",
       "momentum": 100,
-      "volatility": 9.85,
-      "relative_strength": 86.55,
-      "breakout": 97.02,
-      "volume": 23.06,
-      "composite": 74.97,
-      "price": 121.46,
-      "return_30d": 21.84
+      "volatility": 19.88,
+      "relative_strength": 100,
+      "breakout": 88.76,
+      "volume": 37.27,
+      "composite": 80.02,
+      "price": 255.5,
+      "return_30d": 31.03
+    },
+    {
+      "ticker": "CVNA",
+      "momentum": 100,
+      "volatility": 20.14,
+      "relative_strength": 100,
+      "breakout": 90.71,
+      "volume": 26.89,
+      "composite": 79.32,
+      "price": 450.78,
+      "return_30d": 36.23
     },
     {
       "ticker": "GS",
       "momentum": 100,
-      "volatility": 10.71,
-      "relative_strength": 81.69,
-      "breakout": 97.65,
-      "volume": 32.13,
-      "composite": 74.89,
-      "price": 944.23,
-      "return_30d": 19.42
+      "volatility": 10.92,
+      "relative_strength": 81.78,
+      "breakout": 96.98,
+      "volume": 63.07,
+      "composite": 77.94,
+      "price": 941.02,
+      "return_30d": 19.01
     },
     {
-      "ticker": "UWM",
-      "momentum": 91.86,
-      "volatility": 12.46,
-      "relative_strength": 68.28,
-      "breakout": 95.89,
-      "volume": 69.85,
-      "composite": 72.46,
-      "price": 50.54,
-      "return_30d": 12.71
+      "ticker": "C",
+      "momentum": 100,
+      "volatility": 9.86,
+      "relative_strength": 87.26,
+      "breakout": 96.87,
+      "volume": 43.16,
+      "composite": 77.14,
+      "price": 121.37,
+      "return_30d": 21.75
     },
     {
       "ticker": "ALLY",
       "momentum": 100,
-      "volatility": 9.67,
-      "relative_strength": 76.41,
-      "breakout": 96.73,
-      "volume": 20.6,
-      "composite": 72.12,
-      "price": 46.29,
-      "return_30d": 16.78
+      "volatility": 9.62,
+      "relative_strength": 78.63,
+      "breakout": 97.83,
+      "volume": 53.39,
+      "composite": 76.11,
+      "price": 46.55,
+      "return_30d": 17.43
+    },
+    {
+      "ticker": "UWM",
+      "momentum": 91.98,
+      "volatility": 12.46,
+      "relative_strength": 69.23,
+      "breakout": 95.93,
+      "volume": 100,
+      "composite": 75.76,
+      "price": 50.55,
+      "return_30d": 12.73
     }
   ],
   "current_holdings": {
@@ -303,22 +303,40 @@
   },
   "recommended_groups": {
     "CORE": [
-      "RKLB",
-      "AA",
-      "HUT",
-      "SLV"
+      "SLV",
+      "PPLT",
+      "CPER",
+      "SLX",
+      "XLF",
+      "XLB",
+      "XLY",
+      "GLD",
+      "XLI",
+      "XLK"
     ],
     "SPECULATIVE": [
+      "RKLB",
+      "AA",
       "MU",
-      "PPLT",
       "LRCX",
-      "FCX"
+      "FCX",
+      "COPX",
+      "HUT",
+      "RIVN",
+      "XME",
+      "PICK"
     ],
     "ASYMMETRIC": [
-      "INTC",
-      "JPM",
-      "NUE",
-      "NU"
+      "STLD",
+      "NET",
+      "W",
+      "PANW",
+      "NVDA",
+      "MSFT",
+      "RMBS",
+      "SOFI",
+      "DBC",
+      "CEG"
     ],
     "BENCHMARKS": [
       "SPY",
@@ -327,22 +345,40 @@
   },
   "dynamic_buckets": {
     "CORE": [
-      "RKLB",
-      "AA",
-      "HUT",
-      "SLV"
+      "SLV",
+      "PPLT",
+      "CPER",
+      "SLX",
+      "XLF",
+      "XLB",
+      "XLY",
+      "GLD",
+      "XLI",
+      "XLK"
     ],
     "SPECULATIVE": [
+      "RKLB",
+      "AA",
       "MU",
-      "PPLT",
       "LRCX",
-      "FCX"
+      "FCX",
+      "COPX",
+      "HUT",
+      "RIVN",
+      "XME",
+      "PICK"
     ],
     "ASYMMETRIC": [
-      "INTC",
-      "JPM",
-      "NUE",
-      "NU"
+      "STLD",
+      "NET",
+      "W",
+      "PANW",
+      "NVDA",
+      "MSFT",
+      "RMBS",
+      "SOFI",
+      "DBC",
+      "CEG"
     ],
     "BENCHMARKS": [
       "SPY",
@@ -354,71 +390,51 @@
       "group": "SPECULATIVE",
       "action": "ROTATE",
       "ticker_out": "MSFT",
-      "ticker_in": "MU",
-      "score_out": 37.08,
-      "score_in": 81.97,
-      "score_delta": 44.89,
-      "reason": "Score improvement of 44.9 points"
+      "ticker_in": "RKLB",
+      "score_out": 37.02,
+      "score_in": 85.38,
+      "score_delta": 48.36,
+      "reason": "Score improvement of 48.4 points"
     },
     {
       "group": "SPECULATIVE",
       "action": "ROTATE",
       "ticker_out": "NVDA",
-      "ticker_in": "PPLT",
-      "score_out": 42.28,
-      "score_in": 80.92,
-      "score_delta": 38.64,
-      "reason": "Score improvement of 38.6 points"
+      "ticker_in": "AA",
+      "score_out": 42.62,
+      "score_in": 85.34,
+      "score_delta": 42.72,
+      "reason": "Score improvement of 42.7 points"
     },
     {
       "group": "SPECULATIVE",
       "action": "ROTATE",
       "ticker_out": "TSLA",
+      "ticker_in": "MU",
+      "score_out": 48.78,
+      "score_in": 83.68,
+      "score_delta": 34.9,
+      "reason": "Score improvement of 34.9 points"
+    },
+    {
+      "group": "SPECULATIVE",
+      "action": "ROTATE",
+      "ticker_out": "PLTR",
       "ticker_in": "LRCX",
-      "score_out": 48.92,
-      "score_in": 80.29,
-      "score_delta": 31.37,
-      "reason": "Score improvement of 31.4 points"
+      "score_out": 62.26,
+      "score_in": 83.65,
+      "score_delta": 21.39,
+      "reason": "Score improvement of 21.4 points"
     },
     {
       "group": "ASYMMETRIC",
       "action": "ROTATE",
       "ticker_out": "IREN",
-      "ticker_in": "INTC",
-      "score_out": 17.49,
-      "score_in": 69.0,
-      "score_delta": 51.51,
-      "reason": "Score improvement of 51.5 points"
-    },
-    {
-      "group": "ASYMMETRIC",
-      "action": "ROTATE",
-      "ticker_out": "OKLO",
-      "ticker_in": "JPM",
-      "score_out": 26.59,
-      "score_in": 58.26,
-      "score_delta": 31.67,
-      "reason": "Score improvement of 31.7 points"
-    },
-    {
-      "group": "ASYMMETRIC",
-      "action": "ROTATE",
-      "ticker_out": "RMBS",
-      "ticker_in": "NUE",
-      "score_out": 30.28,
-      "score_in": 57.99,
-      "score_delta": 27.71,
-      "reason": "Score improvement of 27.7 points"
-    },
-    {
-      "group": "ASYMMETRIC",
-      "action": "ROTATE",
-      "ticker_out": "SOFI",
-      "ticker_in": "NU",
-      "score_out": 31.97,
-      "score_in": 56.21,
-      "score_delta": 24.24,
-      "reason": "Score improvement of 24.2 points"
+      "ticker_in": "STLD",
+      "score_out": 17.01,
+      "score_in": 51.42,
+      "score_delta": 34.41,
+      "reason": "Score improvement of 34.4 points"
     }
   ],
   "portfolio_size_tests": [
@@ -427,165 +443,165 @@
       "tickers": [
         "RKLB",
         "AA",
-        "HUT",
-        "SLV",
-        "MU"
+        "MU",
+        "LRCX",
+        "SLV"
       ],
-      "sharpe": 2.339,
-      "annual_return": 117.47,
-      "annual_volatility": 50.23,
-      "max_drawdown": -38.52,
-      "calmar_ratio": 3.05,
-      "win_rate": 57.6
+      "sharpe": 2.474,
+      "annual_return": 117.2,
+      "annual_volatility": 47.38,
+      "max_drawdown": -33.52,
+      "calmar_ratio": 3.496,
+      "win_rate": 59.04
     },
     {
       "size": 10,
       "tickers": [
         "RKLB",
         "AA",
-        "HUT",
-        "SLV",
         "MU",
-        "PPLT",
         "LRCX",
+        "SLV",
         "FCX",
         "COPX",
+        "HUT",
+        "PPLT",
         "RIVN"
       ],
-      "sharpe": 2.604,
-      "annual_return": 98.81,
-      "annual_volatility": 37.94,
+      "sharpe": 2.634,
+      "annual_return": 100.08,
+      "annual_volatility": 38.0,
       "max_drawdown": -27.55,
-      "calmar_ratio": 3.587,
-      "win_rate": 58.4
+      "calmar_ratio": 3.633,
+      "win_rate": 58.63
     },
     {
       "size": 15,
       "tickers": [
         "RKLB",
         "AA",
-        "HUT",
-        "SLV",
         "MU",
-        "PPLT",
         "LRCX",
+        "SLV",
         "FCX",
         "COPX",
+        "HUT",
+        "PPLT",
         "RIVN",
+        "XME",
         "PICK",
         "RKT",
-        "XME",
-        "RDDT",
-        "CVNA"
+        "AMAT",
+        "RDDT"
       ],
-      "sharpe": 2.131,
-      "annual_return": 87.46,
-      "annual_volatility": 41.05,
-      "max_drawdown": -35.1,
-      "calmar_ratio": 2.492,
-      "win_rate": 63.2
+      "sharpe": 2.178,
+      "annual_return": 80.76,
+      "annual_volatility": 37.08,
+      "max_drawdown": -33.25,
+      "calmar_ratio": 2.429,
+      "win_rate": 58.63
     },
     {
       "size": 20,
       "tickers": [
         "RKLB",
         "AA",
-        "HUT",
-        "SLV",
         "MU",
-        "PPLT",
         "LRCX",
+        "SLV",
         "FCX",
         "COPX",
+        "HUT",
+        "PPLT",
         "RIVN",
+        "XME",
         "PICK",
         "RKT",
-        "XME",
+        "AMAT",
         "RDDT",
         "CVNA",
-        "AMAT",
-        "C",
         "GS",
-        "UWM",
-        "ALLY"
+        "C",
+        "ALLY",
+        "UWM"
       ],
-      "sharpe": 2.041,
-      "annual_return": 70.77,
-      "annual_volatility": 34.68,
+      "sharpe": 2.051,
+      "annual_return": 71.28,
+      "annual_volatility": 34.75,
       "max_drawdown": -32.02,
-      "calmar_ratio": 2.21,
-      "win_rate": 60.8
+      "calmar_ratio": 2.226,
+      "win_rate": 61.04
     },
     {
       "size": 30,
       "tickers": [
         "RKLB",
         "AA",
-        "HUT",
-        "SLV",
         "MU",
-        "PPLT",
         "LRCX",
+        "SLV",
         "FCX",
         "COPX",
+        "HUT",
+        "PPLT",
         "RIVN",
+        "XME",
         "PICK",
         "RKT",
-        "XME",
+        "AMAT",
         "RDDT",
         "CVNA",
-        "AMAT",
-        "C",
         "GS",
-        "UWM",
+        "C",
         "ALLY",
-        "PALL",
-        "AFRM",
-        "DASH",
-        "GM",
-        "CPER",
-        "SCHW",
+        "UWM",
         "JEF",
-        "SLX",
-        "ABNB",
-        "MS"
+        "PALL",
+        "CPER",
+        "GM",
+        "AFRM",
+        "WFC",
+        "DASH",
+        "SCHW",
+        "MS",
+        "ABNB"
       ],
-      "sharpe": 1.909,
-      "annual_return": 60.16,
-      "annual_volatility": 31.52,
-      "max_drawdown": -30.1,
-      "calmar_ratio": 1.999,
-      "win_rate": 60.4
+      "sharpe": 1.899,
+      "annual_return": 60.01,
+      "annual_volatility": 31.6,
+      "max_drawdown": -30.16,
+      "calmar_ratio": 1.99,
+      "win_rate": 60.24
     }
   ],
   "portfolio_comparison": {
     "current": {
       "sharpe": 1.276,
-      "annual_return": 38.59,
-      "annual_volatility": 30.24,
+      "annual_return": 38.65,
+      "annual_volatility": 30.29,
       "max_drawdown": -25.56,
-      "calmar_ratio": 1.51,
-      "win_rate": 57.6,
-      "avg_drawdown": -3.66,
-      "num_drawdowns": 19,
-      "recovery_time_avg": 6.2
+      "calmar_ratio": 1.512,
+      "win_rate": 57.43,
+      "avg_drawdown": -3.75,
+      "num_drawdowns": 18,
+      "recovery_time_avg": 6.4
     },
     "recommended": {
-      "sharpe": 2.463,
-      "annual_return": 74.68,
-      "annual_volatility": 30.33,
-      "max_drawdown": -26.77,
-      "calmar_ratio": 2.79,
-      "win_rate": 54.8,
-      "avg_drawdown": -4.21,
-      "num_drawdowns": 20,
-      "recovery_time_avg": 7.0
+      "sharpe": 1.905,
+      "annual_return": 48.96,
+      "annual_volatility": 25.7,
+      "max_drawdown": -24.06,
+      "calmar_ratio": 2.035,
+      "win_rate": 59.84,
+      "avg_drawdown": -4.09,
+      "num_drawdowns": 17,
+      "recovery_time_avg": 8.1
     },
     "improvements": {
-      "sharpe": 1.187,
-      "return": 36.09,
-      "volatility": 0.09,
-      "max_drawdown": 1.21
+      "sharpe": 0.629,
+      "return": 10.31,
+      "volatility": -4.59,
+      "max_drawdown": -1.5
     }
   },
   "total_tickers_scored": 110
