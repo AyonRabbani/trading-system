@@ -203,6 +203,123 @@ def render_account_summary():
     st.divider()
 
 
+def render_performance_charts():
+    """Render MTD performance comparison and VIX chart"""
+    st.header("📈 PERFORMANCE")
+    
+    try:
+        # Get account data
+        account = trading_client.get_account()
+        equity = float(account.equity)
+        
+        # Initialize data client
+        data_client = StockHistoricalDataClient(ALPACA_API_KEY, ALPACA_SECRET_KEY)
+        
+        # Get start of month
+        now = datetime.now()
+        start_of_month = datetime(now.year, now.month, 1)
+        
+        # Fetch SPY and VIX data for MTD
+        request = StockBarsRequest(
+            symbol_or_symbols=["SPY", "VIX"],
+            start=start_of_month,
+            timeframe=TimeFrame.Day
+        )
+        bars = data_client.get_stock_bars(request)
+        
+        # Process SPY data
+        spy_bars = bars["SPY"]
+        spy_prices = [bar.close for bar in spy_bars]
+        spy_dates = [bar.timestamp for bar in spy_bars]
+        
+        if spy_prices:
+            spy_start = spy_prices[0]
+            spy_returns = [(price / spy_start - 1) * 100 for price in spy_prices]
+        else:
+            spy_returns = []
+            spy_dates = []
+        
+        # Process VIX data
+        vix_bars = bars.get("VIX", [])
+        vix_values = [bar.close for bar in vix_bars] if vix_bars else []
+        vix_dates = [bar.timestamp for bar in vix_bars] if vix_bars else []
+        
+        # Get portfolio history from pm_state.json
+        portfolio_returns = []
+        portfolio_dates = []
+        
+        if os.path.exists('pm_state.json'):
+            with open('pm_state.json', 'r') as f:
+                pm_state = json.load(f)
+                if 'equity_history' in pm_state:
+                    history = pm_state['equity_history']
+                    # Filter to MTD only
+                    mtd_history = {k: v for k, v in history.items() if datetime.fromisoformat(k) >= start_of_month}
+                    
+                    if mtd_history:
+                        start_equity = list(mtd_history.values())[0]
+                        for date_str, eq in mtd_history.items():
+                            portfolio_dates.append(datetime.fromisoformat(date_str))
+                            portfolio_returns.append((eq / start_equity - 1) * 100)
+        
+        # If no history, use current equity as single point
+        if not portfolio_returns:
+            portfolio_dates = [now]
+            portfolio_returns = [0.0]  # No gain/loss if no history
+        
+        # Create two columns for charts
+        col1, col2 = st.columns([3, 1])
+        
+        with col1:
+            st.subheader("MTD Performance Comparison")
+            
+            # Create DataFrame for plotting
+            max_len = max(len(spy_returns), len(portfolio_returns))
+            
+            chart_data = pd.DataFrame({
+                'Date': spy_dates[:max_len] if len(spy_dates) >= max_len else portfolio_dates[:max_len],
+                'Portfolio': portfolio_returns + [None] * (max_len - len(portfolio_returns)) if len(portfolio_returns) < max_len else portfolio_returns[:max_len],
+                'SPY': spy_returns + [None] * (max_len - len(spy_returns)) if len(spy_returns) < max_len else spy_returns[:max_len]
+            }).set_index('Date')
+            
+            st.line_chart(chart_data, use_container_width=True, height=300)
+            
+            # Show metrics
+            col_a, col_b, col_c = st.columns(3)
+            with col_a:
+                port_return = portfolio_returns[-1] if portfolio_returns else 0
+                st.metric("Portfolio MTD", f"{port_return:+.2f}%")
+            with col_b:
+                spy_return = spy_returns[-1] if spy_returns else 0
+                st.metric("SPY MTD", f"{spy_return:+.2f}%")
+            with col_c:
+                alpha = port_return - spy_return
+                st.metric("Alpha vs SPY", f"{alpha:+.2f}%")
+        
+        with col2:
+            st.subheader("VIX")
+            
+            if vix_values:
+                vix_df = pd.DataFrame({
+                    'Date': vix_dates,
+                    'VIX': vix_values
+                }).set_index('Date')
+                
+                st.line_chart(vix_df, use_container_width=True, height=300, color="#ff4444")
+                
+                current_vix = vix_values[-1]
+                avg_vix = np.mean(vix_values)
+                st.metric("Current VIX", f"{current_vix:.2f}")
+                st.metric("MTD Avg", f"{avg_vix:.2f}")
+            else:
+                st.info("VIX data unavailable")
+    
+    except Exception as e:
+        st.error(f"Error loading performance charts: {e}")
+    
+    st.divider()
+
+
 def render_positions():
     """Render current positions table"""
     st.subheader("📈 CURRENT POSITIONS")
@@ -381,6 +498,7 @@ def main():
     # Render sections
     render_header()
     render_account_summary()
+    render_performance_charts()
     render_positions()
     render_scanner_results()
     render_trading_logs()

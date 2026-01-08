@@ -94,6 +94,138 @@ def render_account_summary(state: Dict):
     st.divider()
 
 
+def render_performance_charts():
+    """Render MTD performance comparison and VIX chart"""
+    st.header("📈 PERFORMANCE")
+    
+    try:
+        import os
+        from dotenv import load_dotenv
+        from alpaca.data.historical import StockHistoricalDataClient
+        from alpaca.data.requests import StockBarsRequest
+        from alpaca.data.timeframe import TimeFrame
+        
+        load_dotenv()
+        
+        # Initialize data client with environment variables
+        api_key = os.getenv('POLYGON_API_KEY') or os.getenv('ALPACA_API_KEY')
+        api_secret = os.getenv('ALPACA_SECRET_KEY')
+        
+        if not api_key or not api_secret:
+            st.info("API credentials not available for charts")
+            return
+        
+        data_client = StockHistoricalDataClient(api_key, api_secret)
+        
+        # Get start of month
+        now = datetime.now()
+        start_of_month = datetime(now.year, now.month, 1)
+        
+        # Fetch SPY and VIX data for MTD
+        request = StockBarsRequest(
+            symbol_or_symbols=["SPY", "VIX"],
+            start=start_of_month,
+            timeframe=TimeFrame.Day
+        )
+        bars = data_client.get_stock_bars(request)
+        
+        # Process SPY data
+        spy_bars = bars["SPY"]
+        spy_prices = [bar.close for bar in spy_bars]
+        spy_dates = [bar.timestamp for bar in spy_bars]
+        
+        if spy_prices:
+            spy_start = spy_prices[0]
+            spy_returns = [(price / spy_start - 1) * 100 for price in spy_prices]
+        else:
+            spy_returns = []
+            spy_dates = []
+        
+        # Process VIX data
+        vix_bars = bars.get("VIX", [])
+        vix_values = [bar.close for bar in vix_bars] if vix_bars else []
+        vix_dates = [bar.timestamp for bar in vix_bars] if vix_bars else []
+        
+        # Get portfolio history from GitHub
+        portfolio_returns = []
+        portfolio_dates = []
+        
+        try:
+            pm_state_url = f"https://raw.githubusercontent.com/{GITHUB_REPO}/{GITHUB_BRANCH}/pm_state.json"
+            response = requests.get(pm_state_url, timeout=10)
+            if response.status_code == 200:
+                pm_state = response.json()
+                if 'equity_history' in pm_state:
+                    history = pm_state['equity_history']
+                    # Filter to MTD only
+                    mtd_history = {k: v for k, v in history.items() if datetime.fromisoformat(k) >= start_of_month}
+                    
+                    if mtd_history:
+                        start_equity = list(mtd_history.values())[0]
+                        for date_str, eq in mtd_history.items():
+                            portfolio_dates.append(datetime.fromisoformat(date_str))
+                            portfolio_returns.append((eq / start_equity - 1) * 100)
+        except:
+            pass
+        
+        # If no history, use current equity as single point
+        if not portfolio_returns:
+            portfolio_dates = [now]
+            portfolio_returns = [0.0]
+        
+        # Create two columns for charts
+        col1, col2 = st.columns([3, 1])
+        
+        with col1:
+            st.subheader("MTD Performance Comparison")
+            
+            # Create DataFrame for plotting
+            max_len = max(len(spy_returns), len(portfolio_returns))
+            
+            chart_data = pd.DataFrame({
+                'Date': spy_dates[:max_len] if len(spy_dates) >= max_len else portfolio_dates[:max_len],
+                'Portfolio': portfolio_returns + [None] * (max_len - len(portfolio_returns)) if len(portfolio_returns) < max_len else portfolio_returns[:max_len],
+                'SPY': spy_returns + [None] * (max_len - len(spy_returns)) if len(spy_returns) < max_len else spy_returns[:max_len]
+            }).set_index('Date')
+            
+            st.line_chart(chart_data, use_container_width=True, height=300)
+            
+            # Show metrics
+            col_a, col_b, col_c = st.columns(3)
+            with col_a:
+                port_return = portfolio_returns[-1] if portfolio_returns else 0
+                st.metric("Portfolio MTD", f"{port_return:+.2f}%")
+            with col_b:
+                spy_return = spy_returns[-1] if spy_returns else 0
+                st.metric("SPY MTD", f"{spy_return:+.2f}%")
+            with col_c:
+                alpha = port_return - spy_return
+                st.metric("Alpha vs SPY", f"{alpha:+.2f}%")
+        
+        with col2:
+            st.subheader("VIX")
+            
+            if vix_values:
+                vix_df = pd.DataFrame({
+                    'Date': vix_dates,
+                    'VIX': vix_values
+                }).set_index('Date')
+                
+                st.line_chart(vix_df, use_container_width=True, height=300, color="#ff4444")
+                
+                current_vix = vix_values[-1]
+                avg_vix = np.mean(vix_values)
+                st.metric("Current VIX", f"{current_vix:.2f}")
+                st.metric("MTD Avg", f"{avg_vix:.2f}")
+            else:
+                st.info("VIX data unavailable")
+    
+    except Exception as e:
+        st.error(f"Error loading performance charts: {e}")
+    
+    st.divider()
+
+
 def render_positions(state: Dict):
     """Render current positions - EXACT same as local dashboard"""
     st.subheader("📈 CURRENT POSITIONS")
@@ -262,6 +394,9 @@ def main():
     
     if show_account:
         render_account_summary(state)
+    
+    # Always show performance charts
+    render_performance_charts()
     
     if show_positions:
         render_positions(state)
