@@ -106,15 +106,15 @@ def render_positions(state: Dict):
     
     # Create DataFrame with EXACT same columns as local
     df = pd.DataFrame([{
-        'Symbol': p['symbol'],
-        'Qty': f"{p['qty']:.2f}",
-        'Entry': f"${p['avg_entry_price']:.2f}",
-        'Current': f"${p['current_price']:.2f}",
-        'Value': f"${p['market_value']:,.2f}",
-        'P&L $': f"-${abs(p['unrealized_pl']):,.2f}" if p['unrealized_pl'] < 0 else f"${p['unrealized_pl']:,.2f}",
-        'P&L %': f"{p['unrealized_plpc'] * 100:+.2f}%",
-        'Today $': f"-${abs(p['unrealized_intraday_pl']):,.2f}" if p['unrealized_intraday_pl'] < 0 else f"${p['unrealized_intraday_pl']:,.2f}",
-        'Today %': f"${p['unrealized_intraday_plpc'] * 100:+.2f}%"
+        'Symbol': p.get('symbol', 'N/A'),
+        'Qty': f"{p.get('qty', 0):.2f}",
+        'Entry': f"${p.get('avg_entry_price', 0):.2f}",
+        'Current': f"${p.get('current_price', 0):.2f}",
+        'Value': f"${p.get('market_value', 0):,.2f}",
+        'P&L $': f"-${abs(p.get('unrealized_pl', 0)):,.2f}" if p.get('unrealized_pl', 0) < 0 else f"${p.get('unrealized_pl', 0):,.2f}",
+        'P&L %': f"{p.get('unrealized_plpc', 0) * 100:+.2f}%",
+        'Today $': f"-${abs(p.get('unrealized_intraday_pl', 0)):,.2f}" if p.get('unrealized_intraday_pl', 0) < 0 else f"${p.get('unrealized_intraday_pl', 0):,.2f}",
+        'Today %': f"{p.get('unrealized_intraday_plpc', 0) * 100:+.2f}%"
     } for p in positions])
     
     st.dataframe(df, use_container_width=True, hide_index=True)
