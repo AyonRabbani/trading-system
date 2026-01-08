@@ -22,6 +22,7 @@ from datetime import datetime, timedelta
 from typing import Dict, List, Tuple, Optional
 from dotenv import load_dotenv
 from event_broadcaster import get_broadcaster
+from ticker_downloader import TickerDownloader
 
 # Load environment variables
 load_dotenv()
@@ -36,27 +37,47 @@ broadcaster = get_broadcaster(source="Market Scanner")
 # API Keys
 POLYGON_API_KEY = os.getenv('POLYGON_API_KEY')
 
-# Load ticker universe from external file
-def load_ticker_universe(filepath='ticker_universe.json'):
-    """Load comprehensive ticker universe from JSON file"""
+# Load ticker universe from Massive flat-files
+def load_ticker_universe(use_cache: bool = True):
+    """
+    Load comprehensive ticker universe from Massive flat-files.
+    Downloads daily flat-file of 10K+ tickers via S3 API.
+    
+    Args:
+        use_cache: Use cached ticker list if available (< 24 hours old)
+    
+    Returns:
+        List of ticker symbols or None on failure
+    """
     try:
-        with open(filepath, 'r') as f:
-            universe = json.load(f)
+        downloader = TickerDownloader()
         
-        # Flatten all tickers from categories
-        all_tickers = set()
-        for category, data in universe.get('categories', {}).items():
-            tickers = data.get('tickers', [])
-            all_tickers.update(tickers)
+        # Try cache first
+        if use_cache:
+            tickers = downloader.load_from_cache()
+            if tickers:
+                logging.info(f"Loaded {len(tickers)} tickers from cache")
+                return tickers
         
-        logging.info(f"Loaded {len(all_tickers)} unique tickers from {filepath}")
-        return sorted(list(all_tickers))
+        # Download fresh from Massive API
+        logging.info("Downloading fresh ticker universe from Massive flat-files...")
+        tickers = downloader.get_ticker_universe(apply_filters=True)
+        
+        if tickers:
+            # Save to cache for next run
+            downloader.save_to_cache(tickers)
+            logging.info(f"Loaded {len(tickers)} unique tickers from Massive flat-files")
+            return tickers
+        else:
+            logging.warning("Failed to load ticker universe from Massive")
+            return None
+            
     except Exception as e:
         logging.warning(f"Could not load ticker universe: {e}")
         logging.info("Falling back to default universe")
         return None
 
-# Load expanded ticker universe
+# Load expanded ticker universe from Massive flat-files
 TICKER_UNIVERSE = load_ticker_universe()
 
 # Current Holdings (from trading_automation.py)

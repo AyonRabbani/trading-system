@@ -98,7 +98,52 @@ streamlit run public_dashboard.py
 
 ## 🔍 Market Scanner Commands
 
+### Standard Scanner (Sequential)
 ```bash
+# Run full daily scan (1,175 tickers from JSON)
+python daily_scanner.py --mode scan
+
+# Export results to JSON
+python daily_scanner.py --export scan_results.json
+
+# Custom rotation threshold
+python daily_scanner.py --threshold 25.0
+```
+
+### Parallel Scanner (High-Performance) ⚡ NEW
+```bash
+# Download ticker universe from Massive flat-files (10K+ tickers)
+python ticker_downloader.py
+
+# Run parallel scan (async I/O + multiprocessing)
+python parallel_scanner.py --export scan_results.json
+
+# Customize performance
+python parallel_scanner.py --workers 8 --concurrent 10
+
+# Force fresh download (ignore cache)
+python parallel_scanner.py --no-cache
+```
+
+**Performance Comparison:**
+- Standard Scanner: ~2-5 min for 1,175 tickers (sequential)
+- Parallel Scanner: ~30-60 sec for 10,000+ tickers (async + parallel)
+
+**Ticker Universe:**
+- **Source**: Massive (formerly Polygon.io) flat-files
+- **Format**: Daily CSV.GZ files via S3-compatible API
+- **Quality Filters**: 
+  - Minimum price: $1.00
+  - Minimum volume: 100K shares/day
+  - Minimum data points: 50 days
+- **Cache**: 24-hour local cache to avoid re-downloads
+
+**Daily Flat-File Path:**
+```
+s3://flatfiles/flatfiles/us_stocks_sip/day_aggs_v1/YYYY/MM/YYYY-MM-DD.csv.gz
+```
+
+---```bash
 # Basic scan (110 tickers, outputs to scan_results.json)
 python daily_scanner.py --mode scan
 
