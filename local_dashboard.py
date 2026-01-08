@@ -190,31 +190,52 @@ def render_performance_charts():
     st.header("📈 PERFORMANCE")
     
     try:
-        # Get start of month
+        # Get start of year
         now = datetime.now()
-        start_of_month = datetime(now.year, now.month, 1)
-        days_mtd = (now - start_of_month).days + 1
+        start_of_year = datetime(now.year, 1, 1)
+        days_ytd = (now - start_of_year).days + 1
         
-        # Fetch real SPY data from Polygon first to get reference timestamps
+        # Get portfolio history from Alpaca API (YTD)
+        portfolio_history = trading_client.get_portfolio_history(
+            GetPortfolioHistoryRequest(
+                period=f"{min(days_ytd, 30)}D",  # Last 30 days max
+                timeframe="1D"  # Daily intervals
+            )
+        )
+        
+        # Process portfolio data
+        portfolio_values = list(portfolio_history.equity) if portfolio_history.equity else []
+        portfolio_timestamps = list(portfolio_history.timestamp) if portfolio_history.timestamp else []
+        
+        portfolio_dates = []
+        portfolio_returns = []
+        
+        if portfolio_values and portfolio_timestamps:
+            start_value = portfolio_values[0]
+            portfolio_dates = [datetime.fromtimestamp(ts) for ts in portfolio_timestamps]
+            portfolio_returns = [(val / start_value - 1) * 100 for val in portfolio_values]
+        
+        if not portfolio_returns:
+            portfolio_dates = [now]
+            portfolio_returns = [0.0]
+        
+        # Fetch SPY data from Polygon
         spy_returns = []
         spy_dates = []
-        spy_timestamps = []
         
         if POLYGON_API_KEY:
             try:
-                # Format dates for API
-                start_date = start_of_month.strftime('%Y-%m-%d')
+                start_date = portfolio_dates[0].strftime('%Y-%m-%d') if portfolio_dates else start_of_year.strftime('%Y-%m-%d')
                 end_date = now.strftime('%Y-%m-%d')
                 
-                # Fetch SPY hourly data from Polygon
-                url = f"https://api.polygon.io/v2/aggs/ticker/SPY/range/1/hour/{start_date}/{end_date}?adjusted=true&sort=asc&apiKey={POLYGON_API_KEY}"
+                url = f"https://api.polygon.io/v2/aggs/ticker/SPY/range/1/day/{start_date}/{end_date}?adjusted=true&sort=asc&apiKey={POLYGON_API_KEY}"
                 response = requests.get(url, timeout=10)
                 
                 if response.status_code == 200:
                     data = response.json()
                     if data.get('results'):
-                        spy_prices = [bar['c'] for bar in data['results']]  # close prices
-                        spy_timestamps = [bar['t'] / 1000 for bar in data['results']]  # convert ms to seconds
+                        spy_prices = [bar['c'] for bar in data['results']]
+                        spy_timestamps = [bar['t'] / 1000 for bar in data['results']]
                         
                         if spy_prices:
                             spy_start = spy_prices[0]
@@ -223,72 +244,29 @@ def render_performance_charts():
             except Exception as e:
                 st.warning(f"Could not fetch SPY data: {e}")
         
-        # Get portfolio history from Alpaca API with same timeframe as SPY
-        # Use specific day period to ensure < 30 days constraint
-        portfolio_history = trading_client.get_portfolio_history(
-            GetPortfolioHistoryRequest(
-                period=f"{days_mtd}D",  # MTD period (always < 30 days)
-                timeframe="1H"  # Hourly intervals matching SPY data
-            )
-        )
+        # Fallback to hypothetical if SPY unavailable
+        if not spy_returns:
+            spy_returns = []
+            for date in portfolio_dates:
+                days_elapsed = (date - start_of_year).days
+                spy_return_pct = (1.5 / 365) * days_elapsed
+                spy_returns.append(spy_return_pct)
+            spy_dates = portfolio_dates
         
-        # Process portfolio data
-        portfolio_values = list(portfolio_history.equity) if portfolio_history.equity else []
-        portfolio_timestamps = list(portfolio_history.timestamp) if portfolio_history.timestamp else []
+        # Create chart
+        st.subheader("YTD Performance Comparison")
         
-        # Build portfolio returns aligned to SPY timestamps if available
-        portfolio_returns = []
+        # Pad to same length
+        max_len = max(len(portfolio_returns), len(spy_returns))
+        chart_dates = spy_dates if len(spy_dates) == max_len else portfolio_dates
         
-        if portfolio_values and portfolio_timestamps:
-            # Filter to MTD and create lookup dict
-            portfolio_dict = {}
-            mtd_portfolio_values = []
-            
-            for i, ts in enumerate(portfolio_timestamps):
-                dt = datetime.fromtimestamp(ts)
-                if dt >= start_of_month:
-                    portfolio_dict[ts] = portfolio_values[i]
-                    mtd_portfolio_values.append(portfolio_values[i])
-            
-            # Get start value for return calculation
-            if mtd_portfolio_values:
-                start_value = mtd_portfolio_values[0]
-                
-                # If we have SPY timestamps, align portfolio data to them
-                if spy_timestamps:
-                    for spy_ts in spy_timestamps:
-                        # Find closest portfolio timestamp
-                        closest_ts = min(portfolio_dict.keys(), key=lambda x: abs(x - spy_ts), default=None)
-                        if closest_ts and abs(closest_ts - spy_ts) < 7200:  # Within 2 hours
-                            portfolio_returns.append((portfolio_dict[closest_ts] / start_value - 1) * 100)
-                        else:
-                            portfolio_returns.append(None)
-                else:
-                    # No SPY data, use portfolio timestamps directly
-                    portfolio_returns = [(val / start_value - 1) * 100 for val in mtd_portfolio_values]
-        
-        # Use SPY dates as primary timeline if available
-        if spy_dates and spy_returns:
-            chart_dates = spy_dates
-        else:
-            # Fallback: use portfolio dates
-            chart_dates = [datetime.fromtimestamp(ts) for ts in portfolio_timestamps if datetime.fromtimestamp(ts) >= start_of_month]
-            if not chart_dates:
-                chart_dates = [now]
-                portfolio_returns = [0.0]
-        
-        # Ensure equal length by padding with None
-        max_len = len(chart_dates)
         if len(portfolio_returns) < max_len:
             portfolio_returns.extend([None] * (max_len - len(portfolio_returns)))
         if len(spy_returns) < max_len:
             spy_returns.extend([None] * (max_len - len(spy_returns)))
         
-        # Create single column for main chart
-        st.subheader("MTD Performance Comparison")
-        
         chart_data = pd.DataFrame({
-            'Date': chart_dates,
+            'Date': chart_dates[:max_len],
             'Portfolio': portfolio_returns[:max_len],
             'SPY': spy_returns[:max_len]
         }).set_index('Date')
