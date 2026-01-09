@@ -1,43 +1,7 @@
 {
-  "last_updated": "2026-01-09T10:23:02.022115",
+  "last_updated": "2026-01-09T10:26:21.404012",
   "event_count": 200,
   "events": [
-    {
-      "timestamp": "2026-01-07T14:55:02.208751",
-      "type": "portfolio",
-      "level": "INFO",
-      "source": "Profit Taker",
-      "message": "\ud83d\udc40 Monitoring 5 positions: CPER -0.1%, HUT -0.4%, JEF +0.3%, RKLB -0.9%, SLX -0.3%",
-      "metadata": {
-        "portfolio_value": "88K",
-        "positions_count": 5,
-        "avg_return": -0.3
-      }
-    },
-    {
-      "timestamp": "2026-01-07T14:56:02.259133",
-      "type": "portfolio",
-      "level": "INFO",
-      "source": "Profit Taker",
-      "message": "\ud83d\udc40 Monitoring 5 positions: CPER -0.1%, HUT -0.7%, JEF +0.2%, RKLB -0.9%, SLX -0.3%",
-      "metadata": {
-        "portfolio_value": "88K",
-        "positions_count": 5,
-        "avg_return": -0.4
-      }
-    },
-    {
-      "timestamp": "2026-01-07T14:57:02.319703",
-      "type": "portfolio",
-      "level": "INFO",
-      "source": "Profit Taker",
-      "message": "\ud83d\udc40 Monitoring 5 positions: CPER -0.1%, HUT -0.7%, JEF +0.2%, RKLB -1.1%, SLX -0.3%",
-      "metadata": {
-        "portfolio_value": "88K",
-        "positions_count": 5,
-        "avg_return": -0.4
-      }
-    },
     {
       "timestamp": "2026-01-07T14:58:02.368934",
       "type": "portfolio",
@@ -2224,6 +2188,32 @@
       "level": "INFO",
       "message": "\ud83d\udd04 11 rotation opportunities identified - avg score improvement: 42.3 points",
       "timestamp": "2026-01-09T10:23:02.021562"
+    },
+    {
+      "type": "event",
+      "source": "Market Scanner",
+      "event_type": "scan",
+      "level": "INFO",
+      "message": "\ud83d\udd0d Daily Market Scan Started",
+      "timestamp": "2026-01-09T10:26:21.399712",
+      "phase": "start"
+    },
+    {
+      "type": "event",
+      "source": "Market Scanner",
+      "event_type": "scan",
+      "level": "INFO",
+      "message": "\ud83d\udd0d Daily market scan initiated - analyzing 5405 tickers",
+      "timestamp": "2026-01-09T10:26:21.399741"
+    },
+    {
+      "type": "event",
+      "source": "Market Scanner",
+      "event_type": "scan",
+      "level": "INFO",
+      "message": "\ud83d\udcca Loading universe data (5405 tickers)",
+      "timestamp": "2026-01-09T10:26:21.399815",
+      "phase": "loading"
     }
   ]
 }
