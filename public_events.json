@@ -1,43 +1,7 @@
 {
-  "last_updated": "2026-01-09T08:12:38.659531",
+  "last_updated": "2026-01-09T08:19:33.869465",
   "event_count": 200,
   "events": [
-    {
-      "timestamp": "2026-01-07T12:29:39.580934",
-      "type": "info",
-      "level": "INFO",
-      "source": "Profit Taker",
-      "message": "\ud83d\udc40 Monitoring 2 positions: QQQ +0.3%, SPY +0.1%",
-      "metadata": {}
-    },
-    {
-      "timestamp": "2026-01-07T12:30:39.616358",
-      "type": "info",
-      "level": "INFO",
-      "source": "Profit Taker",
-      "message": "\ud83d\udc40 Monitoring 2 positions: QQQ +0.2%, SPY +0.1%",
-      "metadata": {}
-    },
-    {
-      "timestamp": "2026-01-07T12:31:39.661858",
-      "type": "info",
-      "level": "INFO",
-      "source": "Profit Taker",
-      "message": "\ud83d\udc40 Monitoring 2 positions: QQQ +0.3%, SPY +0.1%",
-      "metadata": {}
-    },
-    {
-      "timestamp": "2026-01-07T12:33:25.125708",
-      "type": "portfolio",
-      "level": "INFO",
-      "source": "Profit Taker",
-      "message": "\ud83d\udc40 Monitoring 2 positions: QQQ +0.2%, SPY +0.1%",
-      "metadata": {
-        "portfolio_value": "100K",
-        "positions_count": 2,
-        "avg_return": 0.2
-      }
-    },
     {
       "timestamp": "2026-01-07T12:34:25.181354",
       "type": "portfolio",
@@ -2378,6 +2342,38 @@
       "message": "\ud83d\udcca Loading universe data (5405 tickers)",
       "timestamp": "2026-01-09T08:12:38.518869",
       "phase": "loading"
+    },
+    {
+      "type": "event",
+      "source": "Market Scanner",
+      "event_type": "scan",
+      "level": "INFO",
+      "message": "\u2713 Data loaded for 5269/5405 tickers",
+      "timestamp": "2026-01-09T08:19:24.650975"
+    },
+    {
+      "type": "event",
+      "source": "Market Scanner",
+      "event_type": "scan",
+      "level": "INFO",
+      "message": "\ud83c\udfaf Scoring complete - Top 5: CAMP (95), SMX (95), DRUG (91), OLPX (90), RKLX (90)",
+      "timestamp": "2026-01-09T08:19:33.151931"
+    },
+    {
+      "type": "event",
+      "source": "Market Scanner",
+      "event_type": "scan",
+      "level": "INFO",
+      "message": "\ud83d\udfe1 Market Regime: UNKNOWN | Hot Sectors: Materials, Financials, Industrials",
+      "timestamp": "2026-01-09T08:19:33.153027"
+    },
+    {
+      "type": "event",
+      "source": "Market Scanner",
+      "event_type": "scan",
+      "level": "INFO",
+      "message": "\ud83d\udd04 12 rotation opportunities identified - avg score improvement: 42.4 points",
+      "timestamp": "2026-01-09T08:19:33.866523"
     }
   ]
 }
