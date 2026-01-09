@@ -1,55 +1,7 @@
 {
-  "last_updated": "2026-01-09T15:45:27.503985",
+  "last_updated": "2026-01-09T16:03:28.526002",
   "event_count": 200,
   "events": [
-    {
-      "timestamp": "2026-01-07T16:28:30.629279",
-      "type": "portfolio",
-      "level": "INFO",
-      "source": "Profit Taker",
-      "message": "\ud83d\udc40 Monitoring 4 positions: AA +0.3%, HUT -2.4%, RKLB -2.2%, SLV +0.3%",
-      "metadata": {
-        "portfolio_value": "100K",
-        "positions_count": 4,
-        "avg_return": -1.0
-      }
-    },
-    {
-      "timestamp": "2026-01-07T16:29:30.688467",
-      "type": "portfolio",
-      "level": "INFO",
-      "source": "Profit Taker",
-      "message": "\ud83d\udc40 Monitoring 4 positions: AA +0.3%, HUT -2.4%, RKLB -2.1%, SLV +0.3%",
-      "metadata": {
-        "portfolio_value": "100K",
-        "positions_count": 4,
-        "avg_return": -1.0
-      }
-    },
-    {
-      "timestamp": "2026-01-07T16:30:30.774607",
-      "type": "portfolio",
-      "level": "INFO",
-      "source": "Profit Taker",
-      "message": "\ud83d\udc40 Monitoring 4 positions: AA +0.2%, HUT -2.4%, RKLB -2.3%, SLV +0.4%",
-      "metadata": {
-        "portfolio_value": "100K",
-        "positions_count": 4,
-        "avg_return": -1.0
-      }
-    },
-    {
-      "timestamp": "2026-01-07T16:31:30.829564",
-      "type": "portfolio",
-      "level": "INFO",
-      "source": "Profit Taker",
-      "message": "\ud83d\udc40 Monitoring 4 positions: AA +0.3%, HUT -2.3%, RKLB -2.1%, SLV +0.3%",
-      "metadata": {
-        "portfolio_value": "100K",
-        "positions_count": 4,
-        "avg_return": -1.0
-      }
-    },
     {
       "timestamp": "2026-01-07T16:32:30.887520",
       "type": "portfolio",
@@ -1939,6 +1891,38 @@
       "message": "\ud83d\udcca Loading universe data (5405 tickers)",
       "timestamp": "2026-01-09T15:45:27.497018",
       "phase": "loading"
+    },
+    {
+      "type": "event",
+      "source": "Market Scanner",
+      "event_type": "scan",
+      "level": "INFO",
+      "message": "\u2713 Data loaded for 5272/5405 tickers",
+      "timestamp": "2026-01-09T16:03:18.728258"
+    },
+    {
+      "type": "event",
+      "source": "Market Scanner",
+      "event_type": "scan",
+      "level": "INFO",
+      "message": "\ud83c\udfaf Scoring complete - Top 5: FLYT (90), RKLX (90), ASTI (89), ASTS (89), SMX (89)",
+      "timestamp": "2026-01-09T16:03:27.741414"
+    },
+    {
+      "type": "event",
+      "source": "Market Scanner",
+      "event_type": "scan",
+      "level": "INFO",
+      "message": "\ud83d\udfe1 Market Regime: UNKNOWN | Hot Sectors: Materials, Industrials, Consumer Discretionary",
+      "timestamp": "2026-01-09T16:03:27.742143"
+    },
+    {
+      "type": "event",
+      "source": "Market Scanner",
+      "event_type": "scan",
+      "level": "INFO",
+      "message": "\ud83d\udd04 12 rotation opportunities identified - avg score improvement: 41.0 points",
+      "timestamp": "2026-01-09T16:03:28.525086"
     }
   ]
 }
