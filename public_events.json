@@ -1,91 +1,7 @@
 {
-  "last_updated": "2026-01-09T09:41:51.486597",
+  "last_updated": "2026-01-09T09:56:39.497731",
   "event_count": 200,
   "events": [
-    {
-      "timestamp": "2026-01-07T14:38:01.235618",
-      "type": "portfolio",
-      "level": "INFO",
-      "source": "Profit Taker",
-      "message": "\ud83d\udc40 Monitoring 5 positions: CPER -0.2%, HUT -0.3%, JEF -0.1%, RKLB -0.0%, SLX -0.2%",
-      "metadata": {
-        "portfolio_value": "88K",
-        "positions_count": 5,
-        "avg_return": -0.2
-      }
-    },
-    {
-      "timestamp": "2026-01-07T14:39:01.284585",
-      "type": "portfolio",
-      "level": "INFO",
-      "source": "Profit Taker",
-      "message": "\ud83d\udc40 Monitoring 5 positions: CPER -0.2%, HUT +0.2%, JEF -0.1%, RKLB -0.3%, SLX -0.2%",
-      "metadata": {
-        "portfolio_value": "88K",
-        "positions_count": 5,
-        "avg_return": -0.1
-      }
-    },
-    {
-      "timestamp": "2026-01-07T14:40:01.339143",
-      "type": "portfolio",
-      "level": "INFO",
-      "source": "Profit Taker",
-      "message": "\ud83d\udc40 Monitoring 5 positions: CPER -0.2%, HUT -0.3%, JEF -0.1%, RKLB -0.2%, SLX -0.2%",
-      "metadata": {
-        "portfolio_value": "88K",
-        "positions_count": 5,
-        "avg_return": -0.2
-      }
-    },
-    {
-      "timestamp": "2026-01-07T14:41:01.409717",
-      "type": "portfolio",
-      "level": "INFO",
-      "source": "Profit Taker",
-      "message": "\ud83d\udc40 Monitoring 5 positions: CPER -0.3%, HUT -0.5%, JEF -0.2%, RKLB -0.5%, SLX -0.2%",
-      "metadata": {
-        "portfolio_value": "88K",
-        "positions_count": 5,
-        "avg_return": -0.3
-      }
-    },
-    {
-      "timestamp": "2026-01-07T14:42:01.467647",
-      "type": "portfolio",
-      "level": "INFO",
-      "source": "Profit Taker",
-      "message": "\ud83d\udc40 Monitoring 5 positions: CPER -0.2%, HUT -0.4%, JEF -0.2%, RKLB -0.4%, SLX -0.2%",
-      "metadata": {
-        "portfolio_value": "88K",
-        "positions_count": 5,
-        "avg_return": -0.3
-      }
-    },
-    {
-      "timestamp": "2026-01-07T14:43:01.525514",
-      "type": "portfolio",
-      "level": "INFO",
-      "source": "Profit Taker",
-      "message": "\ud83d\udc40 Monitoring 5 positions: CPER -0.2%, HUT -0.1%, JEF -0.1%, RKLB -0.4%, SLX -0.2%",
-      "metadata": {
-        "portfolio_value": "88K",
-        "positions_count": 5,
-        "avg_return": -0.2
-      }
-    },
-    {
-      "timestamp": "2026-01-07T14:44:01.574503",
-      "type": "portfolio",
-      "level": "INFO",
-      "source": "Profit Taker",
-      "message": "\ud83d\udc40 Monitoring 5 positions: CPER -0.2%, HUT -0.9%, JEF -0.0%, RKLB -0.4%, SLX -0.2%",
-      "metadata": {
-        "portfolio_value": "88K",
-        "positions_count": 5,
-        "avg_return": -0.3
-      }
-    },
     {
       "timestamp": "2026-01-07T14:45:01.628765",
       "type": "portfolio",
@@ -2285,6 +2201,64 @@
       "level": "INFO",
       "message": "\ud83d\udcca Loading universe data (5405 tickers)",
       "timestamp": "2026-01-09T09:41:51.478153",
+      "phase": "loading"
+    },
+    {
+      "type": "event",
+      "source": "Market Scanner",
+      "event_type": "scan",
+      "level": "INFO",
+      "message": "\u2713 Data loaded for 5255/5405 tickers",
+      "timestamp": "2026-01-09T09:56:15.459618"
+    },
+    {
+      "type": "event",
+      "source": "Market Scanner",
+      "event_type": "scan",
+      "level": "INFO",
+      "message": "\ud83c\udfaf Scoring complete - Top 5: OSS (88), SMX (87), YCBD (87), AUGO (86), VELO (85)",
+      "timestamp": "2026-01-09T09:56:23.947002"
+    },
+    {
+      "type": "event",
+      "source": "Market Scanner",
+      "event_type": "scan",
+      "level": "INFO",
+      "message": "\ud83d\udfe1 Market Regime: UNKNOWN | Hot Sectors: Materials, Financials, Industrials",
+      "timestamp": "2026-01-09T09:56:23.947735"
+    },
+    {
+      "type": "event",
+      "source": "Market Scanner",
+      "event_type": "scan",
+      "level": "INFO",
+      "message": "\ud83d\udd04 12 rotation opportunities identified - avg score improvement: 40.1 points",
+      "timestamp": "2026-01-09T09:56:24.621023"
+    },
+    {
+      "type": "event",
+      "source": "Market Scanner",
+      "event_type": "scan",
+      "level": "INFO",
+      "message": "\ud83d\udd0d Daily Market Scan Started",
+      "timestamp": "2026-01-09T09:56:39.490819",
+      "phase": "start"
+    },
+    {
+      "type": "event",
+      "source": "Market Scanner",
+      "event_type": "scan",
+      "level": "INFO",
+      "message": "\ud83d\udd0d Daily market scan initiated - analyzing 5405 tickers",
+      "timestamp": "2026-01-09T09:56:39.490904"
+    },
+    {
+      "type": "event",
+      "source": "Market Scanner",
+      "event_type": "scan",
+      "level": "INFO",
+      "message": "\ud83d\udcca Loading universe data (5405 tickers)",
+      "timestamp": "2026-01-09T09:56:39.491062",
       "phase": "loading"
     }
   ]
