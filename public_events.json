@@ -1,43 +1,7 @@
 {
-  "last_updated": "2026-01-09T10:28:24.746838",
+  "last_updated": "2026-01-09T10:34:21.854696",
   "event_count": 200,
   "events": [
-    {
-      "timestamp": "2026-01-07T15:12:03.062998",
-      "type": "portfolio",
-      "level": "INFO",
-      "source": "Profit Taker",
-      "message": "\ud83d\udc40 Monitoring 5 positions: CPER -0.1%, HUT -1.1%, JEF +0.1%, RKLB -1.0%, SLX -0.3%",
-      "metadata": {
-        "portfolio_value": "88K",
-        "positions_count": 5,
-        "avg_return": -0.5
-      }
-    },
-    {
-      "timestamp": "2026-01-07T15:13:03.114587",
-      "type": "portfolio",
-      "level": "INFO",
-      "source": "Profit Taker",
-      "message": "\ud83d\udc40 Monitoring 5 positions: CPER -0.1%, HUT -1.4%, JEF +0.1%, RKLB -0.9%, SLX -0.3%",
-      "metadata": {
-        "portfolio_value": "88K",
-        "positions_count": 5,
-        "avg_return": -0.5
-      }
-    },
-    {
-      "timestamp": "2026-01-07T15:14:03.168285",
-      "type": "portfolio",
-      "level": "INFO",
-      "source": "Profit Taker",
-      "message": "\ud83d\udc40 Monitoring 5 positions: CPER -0.1%, HUT -1.3%, JEF +0.1%, RKLB -0.9%, SLX -0.3%",
-      "metadata": {
-        "portfolio_value": "88K",
-        "positions_count": 5,
-        "avg_return": -0.5
-      }
-    },
     {
       "timestamp": "2026-01-07T15:15:03.225241",
       "type": "portfolio",
@@ -2162,6 +2126,32 @@
       "level": "INFO",
       "message": "\ud83d\udd04 19 rotation opportunities identified - avg score improvement: 56.0 points",
       "timestamp": "2026-01-09T10:28:24.746286"
+    },
+    {
+      "type": "event",
+      "source": "Market Scanner",
+      "event_type": "scan",
+      "level": "INFO",
+      "message": "\ud83d\udd0d Daily Market Scan Started (TEST MODE)",
+      "timestamp": "2026-01-09T10:34:21.850949",
+      "phase": "start"
+    },
+    {
+      "type": "event",
+      "source": "Market Scanner",
+      "event_type": "scan",
+      "level": "INFO",
+      "message": "\ud83d\udd0d Daily market scan initiated - analyzing 100 tickers",
+      "timestamp": "2026-01-09T10:34:21.851306"
+    },
+    {
+      "type": "event",
+      "source": "Market Scanner",
+      "event_type": "scan",
+      "level": "INFO",
+      "message": "\ud83d\udcca Loading universe data (100 tickers)",
+      "timestamp": "2026-01-09T10:34:21.851527",
+      "phase": "loading"
     }
   ]
 }
