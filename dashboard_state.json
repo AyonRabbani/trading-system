@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-01-09T09:16:32.563083",
+  "timestamp": "2026-01-09T09:17:33.921189",
   "account": {
-    "equity": 100375.78,
+    "equity": 100374.75,
     "cash": 98240.62,
     "buying_power": 398920.0,
-    "portfolio_value": 100375.78,
+    "portfolio_value": 100374.75,
     "last_equity": 100368.30007303474,
     "daytrade_count": 11,
     "status": "ACTIVE",
@@ -15,13 +15,13 @@
       "symbol": "QQQ",
       "qty": 3.429142542,
       "avg_entry_price": 619.295832,
-      "current_price": 622.65,
-      "market_value": 2135.155604,
+      "current_price": 622.35,
+      "market_value": 2134.126861,
       "cost_basis": 2123.653685,
-      "unrealized_pl": 11.501919,
-      "unrealized_plpc": 0.0054160991885078,
-      "unrealized_intraday_pl": 7.475531,
-      "unrealized_intraday_plpc": 0.0035134657201821
+      "unrealized_pl": 10.473176,
+      "unrealized_plpc": 0.0049316779256313,
+      "unrealized_intraday_pl": 6.446788,
+      "unrealized_intraday_plpc": 0.0030299611684148
     }
   ],
   "scanner": {
