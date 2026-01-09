@@ -1,43 +1,7 @@
 {
-  "last_updated": "2026-01-09T09:12:26.917212",
+  "last_updated": "2026-01-09T09:15:45.628784",
   "event_count": 200,
   "events": [
-    {
-      "timestamp": "2026-01-07T14:26:51.151389",
-      "type": "portfolio",
-      "level": "INFO",
-      "source": "Profit Taker",
-      "message": "\ud83d\udc40 Monitoring 4 positions: CPER -0.1%, GLD -0.1%, JEF -0.1%, SLX -0.2%",
-      "metadata": {
-        "portfolio_value": "100K",
-        "positions_count": 4,
-        "avg_return": -0.1
-      }
-    },
-    {
-      "timestamp": "2026-01-07T14:27:51.207344",
-      "type": "portfolio",
-      "level": "INFO",
-      "source": "Profit Taker",
-      "message": "\ud83d\udc40 Monitoring 4 positions: CPER -0.1%, GLD -0.1%, JEF -0.0%, SLX -0.2%",
-      "metadata": {
-        "portfolio_value": "100K",
-        "positions_count": 4,
-        "avg_return": -0.1
-      }
-    },
-    {
-      "timestamp": "2026-01-07T14:28:51.266913",
-      "type": "portfolio",
-      "level": "INFO",
-      "source": "Profit Taker",
-      "message": "\ud83d\udc40 Monitoring 4 positions: CPER -0.1%, GLD -0.1%, JEF -0.1%, SLX -0.2%",
-      "metadata": {
-        "portfolio_value": "100K",
-        "positions_count": 4,
-        "avg_return": -0.1
-      }
-    },
     {
       "timestamp": "2026-01-07T14:31:00.818077",
       "type": "portfolio",
@@ -2322,6 +2286,32 @@
       "level": "INFO",
       "message": "\ud83d\udd04 12 rotation opportunities identified - avg score improvement: 42.4 points",
       "timestamp": "2026-01-09T09:12:26.916571"
+    },
+    {
+      "type": "event",
+      "source": "Market Scanner",
+      "event_type": "scan",
+      "level": "INFO",
+      "message": "\ud83d\udd0d Daily Market Scan Started",
+      "timestamp": "2026-01-09T09:15:45.619246",
+      "phase": "start"
+    },
+    {
+      "type": "event",
+      "source": "Market Scanner",
+      "event_type": "scan",
+      "level": "INFO",
+      "message": "\ud83d\udd0d Daily market scan initiated - analyzing 5405 tickers",
+      "timestamp": "2026-01-09T09:15:45.619340"
+    },
+    {
+      "type": "event",
+      "source": "Market Scanner",
+      "event_type": "scan",
+      "level": "INFO",
+      "message": "\ud83d\udcca Loading universe data (5405 tickers)",
+      "timestamp": "2026-01-09T09:15:45.619500",
+      "phase": "loading"
     }
   ]
 }
