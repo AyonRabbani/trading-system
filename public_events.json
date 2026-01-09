@@ -1,43 +1,7 @@
 {
-  "last_updated": "2026-01-09T11:38:36.107963",
+  "last_updated": "2026-01-09T11:38:45.637977",
   "event_count": 200,
   "events": [
-    {
-      "timestamp": "2026-01-07T15:25:03.767934",
-      "type": "portfolio",
-      "level": "INFO",
-      "source": "Profit Taker",
-      "message": "\ud83d\udc40 Monitoring 5 positions: CPER -0.2%, HUT -1.8%, JEF -0.2%, RKLB -1.2%, SLX -0.3%",
-      "metadata": {
-        "portfolio_value": "88K",
-        "positions_count": 5,
-        "avg_return": -0.7
-      }
-    },
-    {
-      "timestamp": "2026-01-07T15:26:03.819017",
-      "type": "portfolio",
-      "level": "INFO",
-      "source": "Profit Taker",
-      "message": "\ud83d\udc40 Monitoring 5 positions: CPER -0.2%, HUT -1.9%, JEF -0.2%, RKLB -1.5%, SLX -0.3%",
-      "metadata": {
-        "portfolio_value": "88K",
-        "positions_count": 5,
-        "avg_return": -0.8
-      }
-    },
-    {
-      "timestamp": "2026-01-07T15:31:26.860133",
-      "type": "portfolio",
-      "level": "INFO",
-      "source": "Profit Taker",
-      "message": "\ud83d\udc40 Monitoring 4 positions: AA -0.7%, HUT -2.3%, RKLB -1.4%, SLV +0.5%",
-      "metadata": {
-        "portfolio_value": "99K",
-        "positions_count": 4,
-        "avg_return": -1.0
-      }
-    },
     {
       "timestamp": "2026-01-07T15:32:26.913184",
       "type": "portfolio",
@@ -2118,6 +2082,30 @@
       "level": "INFO",
       "message": "\u2713 Data loaded for 5272/5405 tickers",
       "timestamp": "2026-01-09T11:38:36.102029"
+    },
+    {
+      "type": "event",
+      "source": "Market Scanner",
+      "event_type": "scan",
+      "level": "INFO",
+      "message": "\ud83c\udfaf Scoring complete - Top 5: RKLX (88), SMX (88), OSS (87), YCBD (86), FLYT (86)",
+      "timestamp": "2026-01-09T11:38:44.965538"
+    },
+    {
+      "type": "event",
+      "source": "Market Scanner",
+      "event_type": "scan",
+      "level": "INFO",
+      "message": "\ud83d\udfe1 Market Regime: UNKNOWN | Hot Sectors: Materials, Industrials, Financials",
+      "timestamp": "2026-01-09T11:38:44.966171"
+    },
+    {
+      "type": "event",
+      "source": "Market Scanner",
+      "event_type": "scan",
+      "level": "INFO",
+      "message": "\ud83d\udd04 11 rotation opportunities identified - avg score improvement: 42.4 points",
+      "timestamp": "2026-01-09T11:38:45.636890"
     }
   ]
 }
