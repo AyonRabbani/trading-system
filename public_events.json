@@ -1,29 +1,7 @@
 {
-  "last_updated": "2026-01-08T16:00:07.997263",
+  "last_updated": "2026-01-09T08:12:38.659531",
   "event_count": 200,
   "events": [
-    {
-      "timestamp": "2026-01-07T12:05:00",
-      "source": "Profit Taker",
-      "type": "info",
-      "message": "\ud83d\udc40 Monitoring 2 positions: SPY, QQQ (MODERATE mode)"
-    },
-    {
-      "timestamp": "2026-01-07T12:27:39.481656",
-      "type": "info",
-      "level": "INFO",
-      "source": "Profit Taker",
-      "message": "\ud83d\udc40 Monitoring 2 positions: QQQ +0.2%, SPY +0.1%",
-      "metadata": {}
-    },
-    {
-      "timestamp": "2026-01-07T12:28:39.530876",
-      "type": "info",
-      "level": "INFO",
-      "source": "Profit Taker",
-      "message": "\ud83d\udc40 Monitoring 2 positions: QQQ +0.3%, SPY +0.1%",
-      "metadata": {}
-    },
     {
       "timestamp": "2026-01-07T12:29:39.580934",
       "type": "info",
@@ -2374,6 +2352,32 @@
       "portfolio_value": "2K",
       "positions_count": 1,
       "avg_return": 0.2
+    },
+    {
+      "type": "event",
+      "source": "Market Scanner",
+      "event_type": "scan",
+      "level": "INFO",
+      "message": "\ud83d\udd0d Daily Market Scan Started",
+      "timestamp": "2026-01-09T08:12:38.518642",
+      "phase": "start"
+    },
+    {
+      "type": "event",
+      "source": "Market Scanner",
+      "event_type": "scan",
+      "level": "INFO",
+      "message": "\ud83d\udd0d Daily market scan initiated - analyzing 5405 tickers",
+      "timestamp": "2026-01-09T08:12:38.518724"
+    },
+    {
+      "type": "event",
+      "source": "Market Scanner",
+      "event_type": "scan",
+      "level": "INFO",
+      "message": "\ud83d\udcca Loading universe data (5405 tickers)",
+      "timestamp": "2026-01-09T08:12:38.518869",
+      "phase": "loading"
     }
   ]
 }
