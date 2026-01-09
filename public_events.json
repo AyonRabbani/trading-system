@@ -1,55 +1,7 @@
 {
-  "last_updated": "2026-01-09T10:12:13.698973",
+  "last_updated": "2026-01-09T10:23:02.022115",
   "event_count": 200,
   "events": [
-    {
-      "timestamp": "2026-01-07T14:51:01.981791",
-      "type": "portfolio",
-      "level": "INFO",
-      "source": "Profit Taker",
-      "message": "\ud83d\udc40 Monitoring 5 positions: CPER -0.1%, HUT +0.3%, JEF +0.4%, RKLB -0.0%, SLX -0.3%",
-      "metadata": {
-        "portfolio_value": "88K",
-        "positions_count": 5,
-        "avg_return": 0.0
-      }
-    },
-    {
-      "timestamp": "2026-01-07T14:52:02.040872",
-      "type": "portfolio",
-      "level": "INFO",
-      "source": "Profit Taker",
-      "message": "\ud83d\udc40 Monitoring 5 positions: CPER -0.1%, HUT +0.3%, JEF +0.4%, RKLB -0.3%, SLX -0.3%",
-      "metadata": {
-        "portfolio_value": "88K",
-        "positions_count": 5,
-        "avg_return": 0.0
-      }
-    },
-    {
-      "timestamp": "2026-01-07T14:53:02.096907",
-      "type": "portfolio",
-      "level": "INFO",
-      "source": "Profit Taker",
-      "message": "\ud83d\udc40 Monitoring 5 positions: CPER -0.1%, HUT +0.2%, JEF +0.4%, RKLB -0.6%, SLX -0.3%",
-      "metadata": {
-        "portfolio_value": "88K",
-        "positions_count": 5,
-        "avg_return": -0.1
-      }
-    },
-    {
-      "timestamp": "2026-01-07T14:54:02.146336",
-      "type": "portfolio",
-      "level": "INFO",
-      "source": "Profit Taker",
-      "message": "\ud83d\udc40 Monitoring 5 positions: CPER -0.1%, HUT -0.2%, JEF +0.3%, RKLB -0.6%, SLX -0.3%",
-      "metadata": {
-        "portfolio_value": "88K",
-        "positions_count": 5,
-        "avg_return": -0.2
-      }
-    },
     {
       "timestamp": "2026-01-07T14:55:02.208751",
       "type": "portfolio",
@@ -2240,6 +2192,38 @@
       "message": "\ud83d\udcca Loading universe data (5405 tickers)",
       "timestamp": "2026-01-09T10:12:13.691147",
       "phase": "loading"
+    },
+    {
+      "type": "event",
+      "source": "Market Scanner",
+      "event_type": "scan",
+      "level": "INFO",
+      "message": "\u2713 Data loaded for 5269/5405 tickers",
+      "timestamp": "2026-01-09T10:22:57.590364"
+    },
+    {
+      "type": "event",
+      "source": "Market Scanner",
+      "event_type": "scan",
+      "level": "INFO",
+      "message": "\ud83c\udfaf Scoring complete - Top 5: SMX (87), RKLX (86), YCBD (86), VELO (86), GLSI (85)",
+      "timestamp": "2026-01-09T10:23:01.692167"
+    },
+    {
+      "type": "event",
+      "source": "Market Scanner",
+      "event_type": "scan",
+      "level": "INFO",
+      "message": "\ud83d\udfe1 Market Regime: UNKNOWN | Hot Sectors: Materials, Industrials, Financials",
+      "timestamp": "2026-01-09T10:23:01.692525"
+    },
+    {
+      "type": "event",
+      "source": "Market Scanner",
+      "event_type": "scan",
+      "level": "INFO",
+      "message": "\ud83d\udd04 11 rotation opportunities identified - avg score improvement: 42.3 points",
+      "timestamp": "2026-01-09T10:23:02.021562"
     }
   ]
 }
