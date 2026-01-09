@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-01-09T08:59:20.849149",
+  "timestamp": "2026-01-09T09:12:26.917323",
   "market_regime": "RISK_ON",
   "hot_sectors": [
     "Materials",
@@ -724,11 +724,11 @@
         "ASTS",
         "ORMP",
         "DJCO",
-        "QXO",
         "GDXU",
+        "QXO",
         "TGB",
-        "AAOI",
         "TRT",
+        "AAOI",
         "SIDU",
         "FLNT"
       ],
@@ -770,5 +770,5 @@
       "max_drawdown": -1.39
     }
   },
-  "total_tickers_scored": 5269
+  "total_tickers_scored": 5268
 }
