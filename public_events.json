@@ -1,19 +1,7 @@
 {
-  "last_updated": "2026-01-09T11:30:11.432376",
+  "last_updated": "2026-01-09T11:38:36.107963",
   "event_count": 200,
   "events": [
-    {
-      "timestamp": "2026-01-07T15:24:03.711801",
-      "type": "portfolio",
-      "level": "INFO",
-      "source": "Profit Taker",
-      "message": "\ud83d\udc40 Monitoring 5 positions: CPER -0.2%, HUT -1.7%, JEF -0.2%, RKLB -1.1%, SLX -0.3%",
-      "metadata": {
-        "portfolio_value": "88K",
-        "positions_count": 5,
-        "avg_return": -0.7
-      }
-    },
     {
       "timestamp": "2026-01-07T15:25:03.767934",
       "type": "portfolio",
@@ -2122,6 +2110,14 @@
       "message": "\ud83d\udcca Loading universe data (5405 tickers)",
       "timestamp": "2026-01-09T11:30:11.424736",
       "phase": "loading"
+    },
+    {
+      "type": "event",
+      "source": "Market Scanner",
+      "event_type": "scan",
+      "level": "INFO",
+      "message": "\u2713 Data loaded for 5272/5405 tickers",
+      "timestamp": "2026-01-09T11:38:36.102029"
     }
   ]
 }
