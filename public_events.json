@@ -1,19 +1,7 @@
 {
-  "last_updated": "2026-01-09T11:52:08.402145",
+  "last_updated": "2026-01-09T11:53:08.456150",
   "event_count": 200,
   "events": [
-    {
-      "timestamp": "2026-01-07T15:37:27.219615",
-      "type": "portfolio",
-      "level": "INFO",
-      "source": "Profit Taker",
-      "message": "\ud83d\udc40 Monitoring 4 positions: AA -0.7%, HUT -2.1%, RKLB -1.2%, SLV +0.6%",
-      "metadata": {
-        "portfolio_value": "99K",
-        "positions_count": 4,
-        "avg_return": -0.9
-      }
-    },
     {
       "timestamp": "2026-01-07T15:38:27.309083",
       "type": "portfolio",
@@ -2091,6 +2079,17 @@
       "level": "INFO",
       "message": "\ud83d\udc40 Monitoring 2 positions: QQQ -0.1%, SPY -0.1%",
       "timestamp": "2026-01-09T11:52:08.399355",
+      "portfolio_value": "100K",
+      "positions_count": 2,
+      "avg_return": -0.1
+    },
+    {
+      "type": "event",
+      "source": "Profit Taker",
+      "event_type": "portfolio",
+      "level": "INFO",
+      "message": "\ud83d\udc40 Monitoring 2 positions: QQQ -0.1%, SPY -0.1%",
+      "timestamp": "2026-01-09T11:53:08.454510",
       "portfolio_value": "100K",
       "positions_count": 2,
       "avg_return": -0.1
