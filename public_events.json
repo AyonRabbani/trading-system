@@ -1,139 +1,7 @@
 {
-  "last_updated": "2026-01-09T10:28:08.439967",
+  "last_updated": "2026-01-09T10:28:24.746838",
   "event_count": 200,
   "events": [
-    {
-      "timestamp": "2026-01-07T15:01:02.518769",
-      "type": "portfolio",
-      "level": "INFO",
-      "source": "Profit Taker",
-      "message": "\ud83d\udc40 Monitoring 5 positions: CPER -0.1%, HUT -1.1%, JEF +0.2%, RKLB -0.6%, SLX -0.3%",
-      "metadata": {
-        "portfolio_value": "88K",
-        "positions_count": 5,
-        "avg_return": -0.4
-      }
-    },
-    {
-      "timestamp": "2026-01-07T15:02:02.573117",
-      "type": "portfolio",
-      "level": "INFO",
-      "source": "Profit Taker",
-      "message": "\ud83d\udc40 Monitoring 5 positions: CPER -0.2%, HUT -1.0%, JEF +0.2%, RKLB -0.8%, SLX -0.3%",
-      "metadata": {
-        "portfolio_value": "88K",
-        "positions_count": 5,
-        "avg_return": -0.4
-      }
-    },
-    {
-      "timestamp": "2026-01-07T15:03:02.621804",
-      "type": "portfolio",
-      "level": "INFO",
-      "source": "Profit Taker",
-      "message": "\ud83d\udc40 Monitoring 5 positions: CPER -0.2%, HUT -0.9%, JEF +0.2%, RKLB -0.9%, SLX -0.3%",
-      "metadata": {
-        "portfolio_value": "88K",
-        "positions_count": 5,
-        "avg_return": -0.4
-      }
-    },
-    {
-      "timestamp": "2026-01-07T15:04:02.668953",
-      "type": "portfolio",
-      "level": "INFO",
-      "source": "Profit Taker",
-      "message": "\ud83d\udc40 Monitoring 5 positions: CPER -0.2%, HUT -1.0%, JEF +0.1%, RKLB -0.9%, SLX -0.3%",
-      "metadata": {
-        "portfolio_value": "88K",
-        "positions_count": 5,
-        "avg_return": -0.5
-      }
-    },
-    {
-      "timestamp": "2026-01-07T15:05:02.719064",
-      "type": "portfolio",
-      "level": "INFO",
-      "source": "Profit Taker",
-      "message": "\ud83d\udc40 Monitoring 5 positions: CPER -0.2%, HUT -1.0%, JEF +0.1%, RKLB -0.7%, SLX -0.3%",
-      "metadata": {
-        "portfolio_value": "88K",
-        "positions_count": 5,
-        "avg_return": -0.4
-      }
-    },
-    {
-      "timestamp": "2026-01-07T15:06:02.760804",
-      "type": "portfolio",
-      "level": "INFO",
-      "source": "Profit Taker",
-      "message": "\ud83d\udc40 Monitoring 5 positions: CPER -0.2%, HUT -0.9%, JEF +0.1%, RKLB -0.7%, SLX -0.3%",
-      "metadata": {
-        "portfolio_value": "88K",
-        "positions_count": 5,
-        "avg_return": -0.4
-      }
-    },
-    {
-      "timestamp": "2026-01-07T15:07:02.803751",
-      "type": "portfolio",
-      "level": "INFO",
-      "source": "Profit Taker",
-      "message": "\ud83d\udc40 Monitoring 5 positions: CPER -0.2%, HUT -1.0%, JEF +0.1%, RKLB -0.7%, SLX -0.3%",
-      "metadata": {
-        "portfolio_value": "88K",
-        "positions_count": 5,
-        "avg_return": -0.4
-      }
-    },
-    {
-      "timestamp": "2026-01-07T15:08:02.862747",
-      "type": "portfolio",
-      "level": "INFO",
-      "source": "Profit Taker",
-      "message": "\ud83d\udc40 Monitoring 5 positions: CPER -0.2%, HUT -0.9%, JEF +0.2%, RKLB -1.0%, SLX -0.3%",
-      "metadata": {
-        "portfolio_value": "88K",
-        "positions_count": 5,
-        "avg_return": -0.4
-      }
-    },
-    {
-      "timestamp": "2026-01-07T15:09:02.918259",
-      "type": "portfolio",
-      "level": "INFO",
-      "source": "Profit Taker",
-      "message": "\ud83d\udc40 Monitoring 5 positions: CPER -0.2%, HUT -1.0%, JEF +0.1%, RKLB -1.0%, SLX -0.3%",
-      "metadata": {
-        "portfolio_value": "88K",
-        "positions_count": 5,
-        "avg_return": -0.5
-      }
-    },
-    {
-      "timestamp": "2026-01-07T15:10:02.962442",
-      "type": "portfolio",
-      "level": "INFO",
-      "source": "Profit Taker",
-      "message": "\ud83d\udc40 Monitoring 5 positions: CPER -0.1%, HUT -1.1%, JEF +0.1%, RKLB -1.0%, SLX -0.3%",
-      "metadata": {
-        "portfolio_value": "88K",
-        "positions_count": 5,
-        "avg_return": -0.5
-      }
-    },
-    {
-      "timestamp": "2026-01-07T15:11:03.016122",
-      "type": "portfolio",
-      "level": "INFO",
-      "source": "Profit Taker",
-      "message": "\ud83d\udc40 Monitoring 5 positions: CPER -0.1%, HUT -1.1%, JEF +0.1%, RKLB -0.9%, SLX -0.3%",
-      "metadata": {
-        "portfolio_value": "88K",
-        "positions_count": 5,
-        "avg_return": -0.5
-      }
-    },
     {
       "timestamp": "2026-01-07T15:12:03.062998",
       "type": "portfolio",
@@ -2204,6 +2072,96 @@
       "message": "\ud83d\udcca Loading universe data (100 tickers)",
       "timestamp": "2026-01-09T10:28:08.433453",
       "phase": "loading"
+    },
+    {
+      "type": "event",
+      "source": "Market Scanner",
+      "event_type": "scan",
+      "level": "INFO",
+      "message": "\ud83d\udd0d Daily Market Scan Started (TEST MODE)",
+      "timestamp": "2026-01-09T10:28:14.499028",
+      "phase": "start"
+    },
+    {
+      "type": "event",
+      "source": "Market Scanner",
+      "event_type": "scan",
+      "level": "INFO",
+      "message": "\ud83d\udd0d Daily market scan initiated - analyzing 100 tickers",
+      "timestamp": "2026-01-09T10:28:14.499407"
+    },
+    {
+      "type": "event",
+      "source": "Market Scanner",
+      "event_type": "scan",
+      "level": "INFO",
+      "message": "\ud83d\udcca Loading universe data (100 tickers)",
+      "timestamp": "2026-01-09T10:28:14.499497",
+      "phase": "loading"
+    },
+    {
+      "type": "event",
+      "source": "Market Scanner",
+      "event_type": "scan",
+      "level": "INFO",
+      "message": "\u2713 Data loaded for 100/100 tickers",
+      "timestamp": "2026-01-09T10:28:18.879412"
+    },
+    {
+      "type": "event",
+      "source": "Market Scanner",
+      "event_type": "scan",
+      "level": "INFO",
+      "message": "\ud83c\udfaf Scoring complete - Top 5: KALV (79), PLTM (77), CTRI (77), TPR (75), YETI (72)",
+      "timestamp": "2026-01-09T10:28:18.981042"
+    },
+    {
+      "type": "event",
+      "source": "Market Scanner",
+      "event_type": "scan",
+      "level": "INFO",
+      "message": "\ud83d\udfe1 Market Regime: UNKNOWN | Hot Sectors: ",
+      "timestamp": "2026-01-09T10:28:18.981133"
+    },
+    {
+      "type": "event",
+      "source": "Market Scanner",
+      "event_type": "scan",
+      "level": "INFO",
+      "message": "\ud83d\udd04 22 rotation opportunities identified - avg score improvement: 57.4 points",
+      "timestamp": "2026-01-09T10:28:19.130013"
+    },
+    {
+      "type": "event",
+      "source": "Market Scanner",
+      "event_type": "scan",
+      "level": "INFO",
+      "message": "\u2713 Data loaded for 100/100 tickers",
+      "timestamp": "2026-01-09T10:28:24.516960"
+    },
+    {
+      "type": "event",
+      "source": "Market Scanner",
+      "event_type": "scan",
+      "level": "INFO",
+      "message": "\ud83c\udfaf Scoring complete - Top 5: PRAX (78), MUU (75), FOSL (73), EKSO (72), DAL (70)",
+      "timestamp": "2026-01-09T10:28:24.626753"
+    },
+    {
+      "type": "event",
+      "source": "Market Scanner",
+      "event_type": "scan",
+      "level": "INFO",
+      "message": "\ud83d\udfe1 Market Regime: UNKNOWN | Hot Sectors: ",
+      "timestamp": "2026-01-09T10:28:24.626987"
+    },
+    {
+      "type": "event",
+      "source": "Market Scanner",
+      "event_type": "scan",
+      "level": "INFO",
+      "message": "\ud83d\udd04 19 rotation opportunities identified - avg score improvement: 56.0 points",
+      "timestamp": "2026-01-09T10:28:24.746286"
     }
   ]
 }
