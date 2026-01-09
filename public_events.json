@@ -1,55 +1,7 @@
 {
-  "last_updated": "2026-01-09T08:52:40.584882",
+  "last_updated": "2026-01-09T08:59:20.849887",
   "event_count": 200,
   "events": [
-    {
-      "timestamp": "2026-01-07T12:38:38.898736",
-      "type": "portfolio",
-      "level": "INFO",
-      "source": "Profit Taker",
-      "message": "\ud83d\udc40 Monitoring 2 positions: QQQ +0.3%, SPY +0.1%",
-      "metadata": {
-        "portfolio_value": "100K",
-        "positions_count": 2,
-        "avg_return": 0.2
-      }
-    },
-    {
-      "timestamp": "2026-01-07T14:15:50.003246",
-      "type": "portfolio",
-      "level": "INFO",
-      "source": "Profit Taker",
-      "message": "\ud83d\udc40 Monitoring 4 positions: CPER +0.0%, GLD +0.0%, JEF -0.1%, SLX -0.2%",
-      "metadata": {
-        "portfolio_value": "100K",
-        "positions_count": 4,
-        "avg_return": -0.0
-      }
-    },
-    {
-      "timestamp": "2026-01-07T14:16:50.067464",
-      "type": "portfolio",
-      "level": "INFO",
-      "source": "Profit Taker",
-      "message": "\ud83d\udc40 Monitoring 4 positions: CPER -0.0%, GLD +0.0%, JEF -0.1%, SLX -0.2%",
-      "metadata": {
-        "portfolio_value": "100K",
-        "positions_count": 4,
-        "avg_return": -0.1
-      }
-    },
-    {
-      "timestamp": "2026-01-07T14:17:50.116198",
-      "type": "portfolio",
-      "level": "INFO",
-      "source": "Profit Taker",
-      "message": "\ud83d\udc40 Monitoring 4 positions: CPER -0.2%, GLD -0.1%, JEF -0.2%, SLX -0.2%",
-      "metadata": {
-        "portfolio_value": "100K",
-        "positions_count": 4,
-        "avg_return": -0.2
-      }
-    },
     {
       "timestamp": "2026-01-07T14:19:50.797508",
       "type": "portfolio",
@@ -2364,6 +2316,38 @@
       "message": "\ud83d\udcca Loading universe data (5405 tickers)",
       "timestamp": "2026-01-09T08:52:40.576195",
       "phase": "loading"
+    },
+    {
+      "type": "event",
+      "source": "Market Scanner",
+      "event_type": "scan",
+      "level": "INFO",
+      "message": "\u2713 Data loaded for 5269/5405 tickers",
+      "timestamp": "2026-01-09T08:59:11.744164"
+    },
+    {
+      "type": "event",
+      "source": "Market Scanner",
+      "event_type": "scan",
+      "level": "INFO",
+      "message": "\ud83c\udfaf Scoring complete - Top 5: CAMP (95), SMX (95), DRUG (91), OLPX (90), RKLX (90)",
+      "timestamp": "2026-01-09T08:59:20.131535"
+    },
+    {
+      "type": "event",
+      "source": "Market Scanner",
+      "event_type": "scan",
+      "level": "INFO",
+      "message": "\ud83d\udfe1 Market Regime: UNKNOWN | Hot Sectors: Materials, Financials, Industrials",
+      "timestamp": "2026-01-09T08:59:20.132664"
+    },
+    {
+      "type": "event",
+      "source": "Market Scanner",
+      "event_type": "scan",
+      "level": "INFO",
+      "message": "\ud83d\udd04 12 rotation opportunities identified - avg score improvement: 42.4 points",
+      "timestamp": "2026-01-09T08:59:20.848175"
     }
   ]
 }
