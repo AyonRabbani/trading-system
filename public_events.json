@@ -1,38 +1,7 @@
 {
-  "last_updated": "2026-01-12T14:38:29.564879",
+  "last_updated": "2026-01-12T14:45:11.288003",
   "event_count": 200,
   "events": [
-    {
-      "type": "event",
-      "source": "Profit Taker",
-      "event_type": "portfolio",
-      "level": "INFO",
-      "message": "\ud83d\udc40 Monitoring 2 positions: QQQ -0.1%, SPY -0.1%",
-      "timestamp": "2026-01-09T11:52:08.399355",
-      "portfolio_value": "100K",
-      "positions_count": 2,
-      "avg_return": -0.1
-    },
-    {
-      "type": "event",
-      "source": "Profit Taker",
-      "event_type": "portfolio",
-      "level": "INFO",
-      "message": "\ud83d\udc40 Monitoring 2 positions: QQQ -0.1%, SPY -0.1%",
-      "timestamp": "2026-01-09T11:53:08.454510",
-      "portfolio_value": "100K",
-      "positions_count": 2,
-      "avg_return": -0.1
-    },
-    {
-      "type": "event",
-      "source": "Market Scanner",
-      "event_type": "scan",
-      "level": "INFO",
-      "message": "\ud83d\udd0d Daily Market Scan Started",
-      "timestamp": "2026-01-09T11:54:01.421094",
-      "phase": "start"
-    },
     {
       "type": "event",
       "source": "Market Scanner",
@@ -1741,6 +1710,32 @@
       "level": "INFO",
       "message": "\ud83d\udd04 13 rotation opportunities identified - avg score improvement: 40.3 points",
       "timestamp": "2026-01-12T14:38:29.564147"
+    },
+    {
+      "type": "event",
+      "source": "Market Scanner",
+      "event_type": "scan",
+      "level": "INFO",
+      "message": "\ud83d\udd0d Daily Market Scan Started",
+      "timestamp": "2026-01-12T14:45:11.281022",
+      "phase": "start"
+    },
+    {
+      "type": "event",
+      "source": "Market Scanner",
+      "event_type": "scan",
+      "level": "INFO",
+      "message": "\ud83d\udd0d Daily market scan initiated - analyzing 5405 tickers",
+      "timestamp": "2026-01-12T14:45:11.281100"
+    },
+    {
+      "type": "event",
+      "source": "Market Scanner",
+      "event_type": "scan",
+      "level": "INFO",
+      "message": "\ud83d\udcca Loading universe data (5405 tickers)",
+      "timestamp": "2026-01-12T14:45:11.281435",
+      "phase": "loading"
     }
   ]
 }
