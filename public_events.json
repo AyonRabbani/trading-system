@@ -1,16 +1,7 @@
 {
-  "last_updated": "2026-01-12T13:31:50.496145",
+  "last_updated": "2026-01-12T13:32:50.582315",
   "event_count": 200,
   "events": [
-    {
-      "type": "event",
-      "source": "Market Scanner",
-      "event_type": "scan",
-      "level": "INFO",
-      "message": "\ud83d\udd0d Daily Market Scan Started (TEST MODE)",
-      "timestamp": "2026-01-09T10:28:14.499028",
-      "phase": "start"
-    },
     {
       "type": "event",
       "source": "Market Scanner",
@@ -1736,6 +1727,17 @@
       "level": "INFO",
       "message": "\ud83d\udc40 Monitoring 2 positions: QQQ +0.0%, SPY +0.1%",
       "timestamp": "2026-01-12T13:31:50.494329",
+      "portfolio_value": "100K",
+      "positions_count": 2,
+      "avg_return": 0.0
+    },
+    {
+      "type": "event",
+      "source": "Profit Taker",
+      "event_type": "portfolio",
+      "level": "INFO",
+      "message": "\ud83d\udc40 Monitoring 2 positions: QQQ -0.0%, SPY +0.0%",
+      "timestamp": "2026-01-12T13:32:50.580366",
       "portfolio_value": "100K",
       "positions_count": 2,
       "avg_return": 0.0
