@@ -1,43 +1,7 @@
 {
-  "last_updated": "2026-01-12T10:53:28.413372",
+  "last_updated": "2026-01-12T10:53:37.373942",
   "event_count": 200,
   "events": [
-    {
-      "timestamp": "2026-01-07T17:07:33.075063",
-      "type": "portfolio",
-      "level": "INFO",
-      "source": "Profit Taker",
-      "message": "\ud83d\udc40 Monitoring 4 positions: AA +0.4%, HUT -2.0%, RKLB -0.7%, SLV +0.3%",
-      "metadata": {
-        "portfolio_value": "100K",
-        "positions_count": 4,
-        "avg_return": -0.5
-      }
-    },
-    {
-      "timestamp": "2026-01-07T17:08:33.129919",
-      "type": "portfolio",
-      "level": "INFO",
-      "source": "Profit Taker",
-      "message": "\ud83d\udc40 Monitoring 4 positions: AA +0.4%, HUT -2.0%, RKLB -0.7%, SLV +0.3%",
-      "metadata": {
-        "portfolio_value": "100K",
-        "positions_count": 4,
-        "avg_return": -0.5
-      }
-    },
-    {
-      "timestamp": "2026-01-07T17:09:33.185174",
-      "type": "portfolio",
-      "level": "INFO",
-      "source": "Profit Taker",
-      "message": "\ud83d\udc40 Monitoring 4 positions: AA +0.4%, HUT -2.0%, RKLB -1.7%, SLV +0.2%",
-      "metadata": {
-        "portfolio_value": "100K",
-        "positions_count": 4,
-        "avg_return": -0.8
-      }
-    },
     {
       "timestamp": "2026-01-07T17:10:33.240071",
       "type": "portfolio",
@@ -1826,6 +1790,30 @@
       "level": "INFO",
       "message": "\u2713 Data loaded for 5275/5405 tickers",
       "timestamp": "2026-01-12T10:53:28.410445"
+    },
+    {
+      "type": "event",
+      "source": "Market Scanner",
+      "event_type": "scan",
+      "level": "INFO",
+      "message": "\ud83c\udfaf Scoring complete - Top 5: FBRX (90), OSS (89), RKLX (87), ASTI (85), GLSI (84)",
+      "timestamp": "2026-01-12T10:53:36.715052"
+    },
+    {
+      "type": "event",
+      "source": "Market Scanner",
+      "event_type": "scan",
+      "level": "INFO",
+      "message": "\ud83d\udfe1 Market Regime: UNKNOWN | Hot Sectors: Materials, Industrials, Consumer Discretionary",
+      "timestamp": "2026-01-12T10:53:36.716191"
+    },
+    {
+      "type": "event",
+      "source": "Market Scanner",
+      "event_type": "scan",
+      "level": "INFO",
+      "message": "\ud83d\udd04 13 rotation opportunities identified - avg score improvement: 41.5 points",
+      "timestamp": "2026-01-12T10:53:37.373125"
     }
   ]
 }
