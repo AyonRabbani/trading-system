@@ -1,31 +1,7 @@
 {
-  "last_updated": "2026-01-12T12:52:41.973169",
+  "last_updated": "2026-01-12T12:52:51.446872",
   "event_count": 200,
   "events": [
-    {
-      "type": "event",
-      "source": "Market Scanner",
-      "event_type": "scan",
-      "level": "INFO",
-      "message": "\ud83c\udfaf Scoring complete - Top 5: OSS (88), SMX (87), YCBD (87), AUGO (86), VELO (85)",
-      "timestamp": "2026-01-09T09:56:23.947002"
-    },
-    {
-      "type": "event",
-      "source": "Market Scanner",
-      "event_type": "scan",
-      "level": "INFO",
-      "message": "\ud83d\udfe1 Market Regime: UNKNOWN | Hot Sectors: Materials, Financials, Industrials",
-      "timestamp": "2026-01-09T09:56:23.947735"
-    },
-    {
-      "type": "event",
-      "source": "Market Scanner",
-      "event_type": "scan",
-      "level": "INFO",
-      "message": "\ud83d\udd04 12 rotation opportunities identified - avg score improvement: 40.1 points",
-      "timestamp": "2026-01-09T09:56:24.621023"
-    },
     {
       "type": "event",
       "source": "Market Scanner",
@@ -1737,6 +1713,30 @@
       "level": "INFO",
       "message": "\u2713 Data loaded for 5275/5405 tickers",
       "timestamp": "2026-01-12T12:52:41.969036"
+    },
+    {
+      "type": "event",
+      "source": "Market Scanner",
+      "event_type": "scan",
+      "level": "INFO",
+      "message": "\ud83c\udfaf Scoring complete - Top 5: ASTI (94), FBRX (91), OSS (90), BIOA (90), RKLX (88)",
+      "timestamp": "2026-01-12T12:52:50.738784"
+    },
+    {
+      "type": "event",
+      "source": "Market Scanner",
+      "event_type": "scan",
+      "level": "INFO",
+      "message": "\ud83d\udfe1 Market Regime: UNKNOWN | Hot Sectors: Materials, Industrials, Consumer Discretionary",
+      "timestamp": "2026-01-12T12:52:50.740098"
+    },
+    {
+      "type": "event",
+      "source": "Market Scanner",
+      "event_type": "scan",
+      "level": "INFO",
+      "message": "\ud83d\udd04 14 rotation opportunities identified - avg score improvement: 39.6 points",
+      "timestamp": "2026-01-12T12:52:51.445860"
     }
   ]
 }
