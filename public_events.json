@@ -1,31 +1,7 @@
 {
-  "last_updated": "2026-01-12T15:38:00.676226",
+  "last_updated": "2026-01-12T15:45:12.120021",
   "event_count": 200,
   "events": [
-    {
-      "type": "event",
-      "source": "Market Scanner",
-      "event_type": "scan",
-      "level": "INFO",
-      "message": "\u2713 Data loaded for 5272/5405 tickers",
-      "timestamp": "2026-01-09T12:53:00.156024"
-    },
-    {
-      "type": "event",
-      "source": "Market Scanner",
-      "event_type": "scan",
-      "level": "INFO",
-      "message": "\ud83c\udfaf Scoring complete - Top 5: OSS (90), RKLX (89), FLYT (88), SMX (88), GLSI (87)",
-      "timestamp": "2026-01-09T12:53:04.204571"
-    },
-    {
-      "type": "event",
-      "source": "Market Scanner",
-      "event_type": "scan",
-      "level": "INFO",
-      "message": "\ud83d\udfe1 Market Regime: UNKNOWN | Hot Sectors: Materials, Industrials, Financials",
-      "timestamp": "2026-01-09T12:53:04.204959"
-    },
     {
       "type": "event",
       "source": "Market Scanner",
@@ -1705,6 +1681,32 @@
       "level": "INFO",
       "message": "\ud83d\udd04 13 rotation opportunities identified - avg score improvement: 41.4 points",
       "timestamp": "2026-01-12T15:38:00.675508"
+    },
+    {
+      "type": "event",
+      "source": "Market Scanner",
+      "event_type": "scan",
+      "level": "INFO",
+      "message": "\ud83d\udd0d Daily Market Scan Started",
+      "timestamp": "2026-01-12T15:45:12.114539",
+      "phase": "start"
+    },
+    {
+      "type": "event",
+      "source": "Market Scanner",
+      "event_type": "scan",
+      "level": "INFO",
+      "message": "\ud83d\udd0d Daily market scan initiated - analyzing 5405 tickers",
+      "timestamp": "2026-01-12T15:45:12.114602"
+    },
+    {
+      "type": "event",
+      "source": "Market Scanner",
+      "event_type": "scan",
+      "level": "INFO",
+      "message": "\ud83d\udcca Loading universe data (5405 tickers)",
+      "timestamp": "2026-01-12T15:45:12.115001",
+      "phase": "loading"
     }
   ]
 }
