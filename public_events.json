@@ -1,32 +1,7 @@
 {
-  "last_updated": "2026-01-12T13:52:55.743723",
+  "last_updated": "2026-01-12T14:00:07.173712",
   "event_count": 200,
   "events": [
-    {
-      "type": "event",
-      "source": "Market Scanner",
-      "event_type": "scan",
-      "level": "INFO",
-      "message": "\ud83d\udd04 19 rotation opportunities identified - avg score improvement: 56.0 points",
-      "timestamp": "2026-01-09T10:28:24.746286"
-    },
-    {
-      "type": "event",
-      "source": "Market Scanner",
-      "event_type": "scan",
-      "level": "INFO",
-      "message": "\ud83d\udd0d Daily Market Scan Started (TEST MODE)",
-      "timestamp": "2026-01-09T10:34:21.850949",
-      "phase": "start"
-    },
-    {
-      "type": "event",
-      "source": "Market Scanner",
-      "event_type": "scan",
-      "level": "INFO",
-      "message": "\ud83d\udd0d Daily market scan initiated - analyzing 100 tickers",
-      "timestamp": "2026-01-09T10:34:21.851306"
-    },
     {
       "type": "event",
       "source": "Market Scanner",
@@ -1748,6 +1723,32 @@
       "level": "INFO",
       "message": "\ud83d\udd04 14 rotation opportunities identified - avg score improvement: 39.4 points",
       "timestamp": "2026-01-12T13:52:55.742611"
+    },
+    {
+      "type": "event",
+      "source": "Market Scanner",
+      "event_type": "scan",
+      "level": "INFO",
+      "message": "\ud83d\udd0d Daily Market Scan Started",
+      "timestamp": "2026-01-12T14:00:07.168179",
+      "phase": "start"
+    },
+    {
+      "type": "event",
+      "source": "Market Scanner",
+      "event_type": "scan",
+      "level": "INFO",
+      "message": "\ud83d\udd0d Daily market scan initiated - analyzing 5405 tickers",
+      "timestamp": "2026-01-12T14:00:07.168231"
+    },
+    {
+      "type": "event",
+      "source": "Market Scanner",
+      "event_type": "scan",
+      "level": "INFO",
+      "message": "\ud83d\udcca Loading universe data (5405 tickers)",
+      "timestamp": "2026-01-12T14:00:07.168515",
+      "phase": "loading"
     }
   ]
 }
