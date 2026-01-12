@@ -1,54 +1,7 @@
 {
-  "last_updated": "2026-01-12T11:30:22.440642",
+  "last_updated": "2026-01-12T11:40:36.085479",
   "event_count": 200,
   "events": [
-    {
-      "timestamp": "2026-01-08T06:46:28.656403",
-      "type": "portfolio",
-      "level": "INFO",
-      "source": "Profit Taker",
-      "message": "\ud83d\udc40 Monitoring 4 positions: AA -3.4%, HUT -2.5%, RKLB -1.7%, SLV -2.9%",
-      "metadata": {
-        "portfolio_value": "97K",
-        "positions_count": 4,
-        "avg_return": -2.6
-      }
-    },
-    {
-      "timestamp": "2026-01-08T06:47:28.705157",
-      "type": "portfolio",
-      "level": "INFO",
-      "source": "Profit Taker",
-      "message": "\ud83d\udc40 Monitoring 4 positions: AA -3.4%, HUT -2.5%, RKLB -1.8%, SLV -3.0%",
-      "metadata": {
-        "portfolio_value": "97K",
-        "positions_count": 4,
-        "avg_return": -2.7
-      }
-    },
-    {
-      "timestamp": "2026-01-08T06:48:28.763441",
-      "type": "portfolio",
-      "level": "INFO",
-      "source": "Profit Taker",
-      "message": "\ud83d\udc40 Monitoring 4 positions: AA -3.4%, HUT -2.5%, RKLB -1.8%, SLV -3.2%",
-      "metadata": {
-        "portfolio_value": "97K",
-        "positions_count": 4,
-        "avg_return": -2.7
-      }
-    },
-    {
-      "type": "event",
-      "source": "Profit Taker",
-      "event_type": "portfolio",
-      "level": "INFO",
-      "message": "\ud83d\udc40 Monitoring 1 positions: QQQ +0.2%",
-      "timestamp": "2026-01-08T16:00:07.987305",
-      "portfolio_value": "2K",
-      "positions_count": 1,
-      "avg_return": 0.2
-    },
     {
       "type": "event",
       "source": "Market Scanner",
@@ -1752,6 +1705,38 @@
       "message": "\ud83d\udcca Loading universe data (5405 tickers)",
       "timestamp": "2026-01-12T11:30:22.435232",
       "phase": "loading"
+    },
+    {
+      "type": "event",
+      "source": "Market Scanner",
+      "event_type": "scan",
+      "level": "INFO",
+      "message": "\u2713 Data loaded for 5270/5405 tickers",
+      "timestamp": "2026-01-12T11:40:27.079420"
+    },
+    {
+      "type": "event",
+      "source": "Market Scanner",
+      "event_type": "scan",
+      "level": "INFO",
+      "message": "\ud83c\udfaf Scoring complete - Top 5: FBRX (91), OSS (90), BIOA (89), RKLX (88), GLSI (86)",
+      "timestamp": "2026-01-12T11:40:35.367370"
+    },
+    {
+      "type": "event",
+      "source": "Market Scanner",
+      "event_type": "scan",
+      "level": "INFO",
+      "message": "\ud83d\udfe1 Market Regime: UNKNOWN | Hot Sectors: Materials, Industrials, Consumer Discretionary",
+      "timestamp": "2026-01-12T11:40:35.368281"
+    },
+    {
+      "type": "event",
+      "source": "Market Scanner",
+      "event_type": "scan",
+      "level": "INFO",
+      "message": "\ud83d\udd04 13 rotation opportunities identified - avg score improvement: 39.8 points",
+      "timestamp": "2026-01-12T11:40:36.084306"
     }
   ]
 }
