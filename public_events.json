@@ -1,35 +1,7 @@
 {
-  "last_updated": "2026-01-13T15:10:33.706874",
+  "last_updated": "2026-01-13T15:15:17.527196",
   "event_count": 200,
   "events": [
-    {
-      "type": "event",
-      "source": "Market Scanner",
-      "event_type": "scan",
-      "level": "INFO",
-      "message": "\ud83d\udd0d Daily market scan initiated - analyzing 5405 tickers",
-      "timestamp": "2026-01-12T13:30:20.540436"
-    },
-    {
-      "type": "event",
-      "source": "Market Scanner",
-      "event_type": "scan",
-      "level": "INFO",
-      "message": "\ud83d\udcca Loading universe data (5405 tickers)",
-      "timestamp": "2026-01-12T13:30:20.540788",
-      "phase": "loading"
-    },
-    {
-      "type": "event",
-      "source": "Profit Taker",
-      "event_type": "portfolio",
-      "level": "INFO",
-      "message": "\ud83d\udc40 Monitoring 2 positions: QQQ +0.0%, SPY +0.1%",
-      "timestamp": "2026-01-12T13:30:50.422744",
-      "portfolio_value": "100K",
-      "positions_count": 2,
-      "avg_return": 0.0
-    },
     {
       "type": "event",
       "source": "Profit Taker",
@@ -1741,6 +1713,32 @@
       "level": "INFO",
       "message": "\ud83d\udd04 15 rotation opportunities identified - avg score improvement: 39.6 points",
       "timestamp": "2026-01-13T15:10:33.705870"
+    },
+    {
+      "type": "event",
+      "source": "Market Scanner",
+      "event_type": "scan",
+      "level": "INFO",
+      "message": "\ud83d\udd0d Daily Market Scan Started",
+      "timestamp": "2026-01-13T15:15:17.521102",
+      "phase": "start"
+    },
+    {
+      "type": "event",
+      "source": "Market Scanner",
+      "event_type": "scan",
+      "level": "INFO",
+      "message": "\ud83d\udd0d Daily market scan initiated - analyzing 5405 tickers",
+      "timestamp": "2026-01-13T15:15:17.521159"
+    },
+    {
+      "type": "event",
+      "source": "Market Scanner",
+      "event_type": "scan",
+      "level": "INFO",
+      "message": "\ud83d\udcca Loading universe data (5405 tickers)",
+      "timestamp": "2026-01-13T15:15:17.521449",
+      "phase": "loading"
     }
   ]
 }
