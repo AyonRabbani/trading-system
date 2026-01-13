@@ -1,18 +1,7 @@
 {
-  "last_updated": "2026-01-13T15:15:17.527196",
+  "last_updated": "2026-01-13T15:24:23.847106",
   "event_count": 200,
   "events": [
-    {
-      "type": "event",
-      "source": "Profit Taker",
-      "event_type": "portfolio",
-      "level": "INFO",
-      "message": "\ud83d\udc40 Monitoring 2 positions: QQQ +0.0%, SPY +0.1%",
-      "timestamp": "2026-01-12T13:31:50.494329",
-      "portfolio_value": "100K",
-      "positions_count": 2,
-      "avg_return": 0.0
-    },
     {
       "type": "event",
       "source": "Profit Taker",
@@ -1739,6 +1728,14 @@
       "message": "\ud83d\udcca Loading universe data (5405 tickers)",
       "timestamp": "2026-01-13T15:15:17.521449",
       "phase": "loading"
+    },
+    {
+      "type": "event",
+      "source": "Market Scanner",
+      "event_type": "scan",
+      "level": "INFO",
+      "message": "\u2713 Data loaded for 5277/5405 tickers",
+      "timestamp": "2026-01-13T15:24:23.845047"
     }
   ]
 }
