@@ -1,15 +1,7 @@
 {
-  "last_updated": "2026-01-13T13:21:47.077654",
+  "last_updated": "2026-01-13T13:22:47.163716",
   "event_count": 200,
   "events": [
-    {
-      "type": "event",
-      "source": "Market Scanner",
-      "event_type": "scan",
-      "level": "INFO",
-      "message": "\ud83c\udfaf Scoring complete - Top 5: ASTI (92), FBRX (91), OSS (90), BIOA (89), RKLX (88)",
-      "timestamp": "2026-01-12T12:08:05.001867"
-    },
     {
       "type": "event",
       "source": "Market Scanner",
@@ -1708,6 +1700,17 @@
       "portfolio_value": "100K",
       "positions_count": 2,
       "avg_return": -0.3
+    },
+    {
+      "type": "event",
+      "source": "Profit Taker",
+      "event_type": "portfolio",
+      "level": "INFO",
+      "message": "\ud83d\udc40 Monitoring 2 positions: QQQ -0.3%, SPY -0.2%",
+      "timestamp": "2026-01-13T13:22:47.162992",
+      "portfolio_value": "100K",
+      "positions_count": 2,
+      "avg_return": -0.2
     }
   ]
 }
