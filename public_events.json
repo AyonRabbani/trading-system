@@ -1,18 +1,7 @@
 {
-  "last_updated": "2026-01-13T10:52:50.534875",
+  "last_updated": "2026-01-13T10:53:50.594943",
   "event_count": 200,
   "events": [
-    {
-      "type": "event",
-      "source": "Profit Taker",
-      "event_type": "portfolio",
-      "level": "INFO",
-      "message": "\ud83d\udc40 Monitoring 2 positions: QQQ -0.6%, SPY -0.4%",
-      "timestamp": "2026-01-12T09:38:58.508007",
-      "portfolio_value": "99K",
-      "positions_count": 2,
-      "avg_return": -0.5
-    },
     {
       "type": "event",
       "source": "Profit Taker",
@@ -1729,6 +1718,17 @@
       "portfolio_value": "100K",
       "positions_count": 2,
       "avg_return": -0.2
+    },
+    {
+      "type": "event",
+      "source": "Profit Taker",
+      "event_type": "portfolio",
+      "level": "INFO",
+      "message": "\ud83d\udc40 Monitoring 2 positions: QQQ -0.4%, SPY -0.1%",
+      "timestamp": "2026-01-13T10:53:50.592479",
+      "portfolio_value": "99K",
+      "positions_count": 2,
+      "avg_return": -0.3
     }
   ]
 }
