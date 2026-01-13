@@ -1,15 +1,7 @@
 {
-  "last_updated": "2026-01-13T10:45:29.511541",
+  "last_updated": "2026-01-13T10:50:50.341041",
   "event_count": 200,
   "events": [
-    {
-      "type": "event",
-      "source": "Market Scanner",
-      "event_type": "scan",
-      "level": "INFO",
-      "message": "\ud83c\udfaf Scoring complete - Top 5: FLYT (90), RKLX (90), ASTI (89), ASTS (89), SMX (89)",
-      "timestamp": "2026-01-09T16:03:27.741414"
-    },
     {
       "type": "event",
       "source": "Market Scanner",
@@ -1720,6 +1712,17 @@
       "message": "\ud83d\udcca Loading universe data (5405 tickers)",
       "timestamp": "2026-01-13T10:45:29.507034",
       "phase": "loading"
+    },
+    {
+      "type": "event",
+      "source": "Profit Taker",
+      "event_type": "portfolio",
+      "level": "INFO",
+      "message": "\ud83d\udc40 Monitoring 2 positions: QQQ -0.5%, SPY -0.2%",
+      "timestamp": "2026-01-13T10:50:50.339134",
+      "portfolio_value": "99K",
+      "positions_count": 2,
+      "avg_return": -0.3
     }
   ]
 }
