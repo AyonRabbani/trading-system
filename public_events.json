@@ -1,32 +1,7 @@
 {
-  "last_updated": "2026-01-13T14:15:25.629242",
+  "last_updated": "2026-01-13T14:30:26.335678",
   "event_count": 200,
   "events": [
-    {
-      "type": "event",
-      "source": "Market Scanner",
-      "event_type": "scan",
-      "level": "INFO",
-      "message": "\ud83d\udfe1 Market Regime: UNKNOWN | Hot Sectors: Materials, Industrials, Consumer Discretionary",
-      "timestamp": "2026-01-12T12:52:50.740098"
-    },
-    {
-      "type": "event",
-      "source": "Market Scanner",
-      "event_type": "scan",
-      "level": "INFO",
-      "message": "\ud83d\udd04 14 rotation opportunities identified - avg score improvement: 39.6 points",
-      "timestamp": "2026-01-12T12:52:51.445860"
-    },
-    {
-      "type": "event",
-      "source": "Market Scanner",
-      "event_type": "scan",
-      "level": "INFO",
-      "message": "\ud83d\udd0d Daily Market Scan Started",
-      "timestamp": "2026-01-12T13:00:02.909310",
-      "phase": "start"
-    },
     {
       "type": "event",
       "source": "Market Scanner",
@@ -1739,6 +1714,32 @@
       "level": "INFO",
       "message": "\ud83d\udcca Loading universe data (5405 tickers)",
       "timestamp": "2026-01-13T14:15:25.622774",
+      "phase": "loading"
+    },
+    {
+      "type": "event",
+      "source": "Market Scanner",
+      "event_type": "scan",
+      "level": "INFO",
+      "message": "\ud83d\udd0d Daily Market Scan Started",
+      "timestamp": "2026-01-13T14:30:26.328644",
+      "phase": "start"
+    },
+    {
+      "type": "event",
+      "source": "Market Scanner",
+      "event_type": "scan",
+      "level": "INFO",
+      "message": "\ud83d\udd0d Daily market scan initiated - analyzing 5405 tickers",
+      "timestamp": "2026-01-13T14:30:26.328739"
+    },
+    {
+      "type": "event",
+      "source": "Market Scanner",
+      "event_type": "scan",
+      "level": "INFO",
+      "message": "\ud83d\udcca Loading universe data (5405 tickers)",
+      "timestamp": "2026-01-13T14:30:26.329140",
       "phase": "loading"
     }
   ]
