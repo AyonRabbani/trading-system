@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-01-13T13:04:52.646507",
+  "timestamp": "2026-01-13T13:05:53.762633",
   "account": {
-    "equity": 100385.3,
+    "equity": 100422.4,
     "cash": 198.82,
     "buying_power": 273331.2,
-    "portfolio_value": 100385.3,
+    "portfolio_value": 100422.4,
     "last_equity": 100773.08154475834,
     "daytrade_count": 69,
     "status": "ACTIVE",
@@ -15,25 +15,25 @@
       "symbol": "QQQ",
       "qty": 64.630901199,
       "avg_entry_price": 627.765227,
-      "current_price": 625.0,
-      "market_value": 40394.313249,
+      "current_price": 625.24,
+      "market_value": 40409.824666,
       "cost_basis": 40573.032356,
-      "unrealized_pl": -178.719107,
-      "unrealized_plpc": -0.0044048742877255,
-      "unrealized_intraday_pl": -140.249056,
-      "unrealized_intraday_plpc": -0.003459986935216
+      "unrealized_pl": -163.20769,
+      "unrealized_plpc": -0.0040225657418939,
+      "unrealized_intraday_pl": -124.737639,
+      "unrealized_intraday_plpc": -0.0030773155526244
     },
     {
       "symbol": "SPY",
       "qty": 86.348709838,
       "avg_entry_price": 694.340963,
-      "current_price": 692.45,
-      "market_value": 59792.164127,
+      "current_price": 692.7,
+      "market_value": 59813.751305,
       "cost_basis": 59955.446368,
-      "unrealized_pl": -163.282241,
-      "unrealized_plpc": -0.0027233929674677,
-      "unrealized_intraday_pl": -234.005004,
-      "unrealized_intraday_plpc": -0.0038983831116944
+      "unrealized_pl": -141.695063,
+      "unrealized_plpc": -0.0023633393058287,
+      "unrealized_intraday_pl": -212.417826,
+      "unrealized_intraday_plpc": -0.0035387536648628
     }
   ],
   "scanner": {
