@@ -1,32 +1,7 @@
 {
-  "last_updated": "2026-01-13T10:08:11.580117",
+  "last_updated": "2026-01-13T10:30:20.806818",
   "event_count": 200,
   "events": [
-    {
-      "type": "event",
-      "source": "Market Scanner",
-      "event_type": "scan",
-      "level": "INFO",
-      "message": "\ud83d\udd0d Daily market scan initiated - analyzing 5405 tickers",
-      "timestamp": "2026-01-09T15:15:30.186948"
-    },
-    {
-      "type": "event",
-      "source": "Market Scanner",
-      "event_type": "scan",
-      "level": "INFO",
-      "message": "\ud83d\udcca Loading universe data (5405 tickers)",
-      "timestamp": "2026-01-09T15:15:30.187455",
-      "phase": "loading"
-    },
-    {
-      "type": "event",
-      "source": "Market Scanner",
-      "event_type": "scan",
-      "level": "INFO",
-      "message": "\u2713 Data loaded for 5272/5405 tickers",
-      "timestamp": "2026-01-09T15:32:29.146619"
-    },
     {
       "type": "event",
       "source": "Market Scanner",
@@ -1719,6 +1694,32 @@
       "portfolio_value": "100K",
       "positions_count": 2,
       "avg_return": 0.0
+    },
+    {
+      "type": "event",
+      "source": "Market Scanner",
+      "event_type": "scan",
+      "level": "INFO",
+      "message": "\ud83d\udd0d Daily Market Scan Started",
+      "timestamp": "2026-01-13T10:30:20.801386",
+      "phase": "start"
+    },
+    {
+      "type": "event",
+      "source": "Market Scanner",
+      "event_type": "scan",
+      "level": "INFO",
+      "message": "\ud83d\udd0d Daily market scan initiated - analyzing 5405 tickers",
+      "timestamp": "2026-01-13T10:30:20.801437"
+    },
+    {
+      "type": "event",
+      "source": "Market Scanner",
+      "event_type": "scan",
+      "level": "INFO",
+      "message": "\ud83d\udcca Loading universe data (5405 tickers)",
+      "timestamp": "2026-01-13T10:30:20.801823",
+      "phase": "loading"
     }
   ]
 }
