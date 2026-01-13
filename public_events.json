@@ -1,33 +1,7 @@
 {
-  "last_updated": "2026-01-13T11:40:42.154428",
+  "last_updated": "2026-01-13T11:45:24.232910",
   "event_count": 200,
   "events": [
-    {
-      "type": "event",
-      "source": "Market Scanner",
-      "event_type": "scan",
-      "level": "INFO",
-      "message": "\ud83d\udd0d Daily Market Scan Started",
-      "timestamp": "2026-01-12T10:30:04.739016",
-      "phase": "start"
-    },
-    {
-      "type": "event",
-      "source": "Market Scanner",
-      "event_type": "scan",
-      "level": "INFO",
-      "message": "\ud83d\udd0d Daily market scan initiated - analyzing 5405 tickers",
-      "timestamp": "2026-01-12T10:30:04.739121"
-    },
-    {
-      "type": "event",
-      "source": "Market Scanner",
-      "event_type": "scan",
-      "level": "INFO",
-      "message": "\ud83d\udcca Loading universe data (5405 tickers)",
-      "timestamp": "2026-01-12T10:30:04.739533",
-      "phase": "loading"
-    },
     {
       "type": "event",
       "source": "Market Scanner",
@@ -1705,6 +1679,32 @@
       "level": "INFO",
       "message": "\ud83d\udd04 14 rotation opportunities identified - avg score improvement: 40.5 points",
       "timestamp": "2026-01-13T11:40:42.153505"
+    },
+    {
+      "type": "event",
+      "source": "Market Scanner",
+      "event_type": "scan",
+      "level": "INFO",
+      "message": "\ud83d\udd0d Daily Market Scan Started",
+      "timestamp": "2026-01-13T11:45:24.226567",
+      "phase": "start"
+    },
+    {
+      "type": "event",
+      "source": "Market Scanner",
+      "event_type": "scan",
+      "level": "INFO",
+      "message": "\ud83d\udd0d Daily market scan initiated - analyzing 5405 tickers",
+      "timestamp": "2026-01-13T11:45:24.226644"
+    },
+    {
+      "type": "event",
+      "source": "Market Scanner",
+      "event_type": "scan",
+      "level": "INFO",
+      "message": "\ud83d\udcca Loading universe data (5405 tickers)",
+      "timestamp": "2026-01-13T11:45:24.226953",
+      "phase": "loading"
     }
   ]
 }
