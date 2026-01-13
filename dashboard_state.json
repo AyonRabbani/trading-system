@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-01-13T17:33:51.166713",
+  "timestamp": "2026-01-13T17:34:52.451747",
   "account": {
-    "equity": 100200.9,
+    "equity": 100201.81,
     "cash": -182.19,
     "buying_power": 181816.28,
-    "portfolio_value": 100200.9,
+    "portfolio_value": 100201.81,
     "last_equity": 100773.08154475834,
     "daytrade_count": 94,
     "status": "ACTIVE",
@@ -27,13 +27,13 @@
       "symbol": "SPY",
       "qty": 91.245597214,
       "avg_entry_price": 692.494032,
-      "current_price": 693.39,
-      "market_value": 63268.784652,
+      "current_price": 693.4,
+      "market_value": 63269.697108,
       "cost_basis": 63187.031513,
-      "unrealized_pl": 81.753139,
-      "unrealized_plpc": 0.0012938278162851,
-      "unrealized_intraday_pl": 81.753135,
-      "unrealized_intraday_plpc": 0.001293827752899
+      "unrealized_pl": 82.665595,
+      "unrealized_plpc": 0.0013082683743893,
+      "unrealized_intraday_pl": 82.665591,
+      "unrealized_intraday_plpc": 0.0013082683110024
     }
   ],
   "scanner": {
