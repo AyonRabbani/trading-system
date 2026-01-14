@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-01-14T17:17:47.195357",
+  "timestamp": "2026-01-14T17:18:48.135083",
   "account": {
-    "equity": 99681.0,
+    "equity": 99672.31,
     "cash": 139.72,
     "buying_power": 141899.75,
-    "portfolio_value": 99681.0,
+    "portfolio_value": 99672.31,
     "last_equity": 100251.4951397331,
     "daytrade_count": 199,
     "status": "ACTIVE",
@@ -111,13 +111,13 @@
       "symbol": "SLV",
       "qty": 149.348852413,
       "avg_entry_price": 83.127709,
-      "current_price": 84.8718,
-      "market_value": 12675.505932,
+      "current_price": 84.8136,
+      "market_value": 12666.813829,
       "cost_basis": 12415.027906,
-      "unrealized_pl": 260.478026,
-      "unrealized_plpc": 0.0209808651234779,
-      "unrealized_intraday_pl": 260.477989,
-      "unrealized_intraday_plpc": 0.0209808620806904
+      "unrealized_pl": 251.785923,
+      "unrealized_plpc": 0.0202807375791975,
+      "unrealized_intraday_pl": 251.785886,
+      "unrealized_intraday_plpc": 0.0202807345384966
     },
     {
       "symbol": "XME",
