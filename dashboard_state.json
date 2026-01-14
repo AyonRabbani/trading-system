@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-01-14T17:02:29.711502",
+  "timestamp": "2026-01-14T17:03:30.732972",
   "account": {
-    "equity": 99430.31,
+    "equity": 99424.33,
     "cash": 139.72,
     "buying_power": 141899.75,
-    "portfolio_value": 99430.31,
+    "portfolio_value": 99424.33,
     "last_equity": 100251.4951397331,
     "daytrade_count": 199,
     "status": "ACTIVE",
@@ -99,13 +99,13 @@
       "symbol": "SILJ",
       "qty": 185.22818797,
       "avg_entry_price": 31.957025,
-      "current_price": 32.39,
-      "market_value": 5999.541008,
+      "current_price": 32.3577,
+      "market_value": 5993.558138,
       "cost_basis": 5919.341782,
-      "unrealized_pl": 80.199226,
-      "unrealized_plpc": 0.0135486729696663,
-      "unrealized_intraday_pl": 80.199174,
-      "unrealized_intraday_plpc": 0.0135486640658841
+      "unrealized_pl": 74.216356,
+      "unrealized_plpc": 0.0125379406584838,
+      "unrealized_intraday_pl": 74.216304,
+      "unrealized_intraday_plpc": 0.0125379317635806
     },
     {
       "symbol": "SLV",
