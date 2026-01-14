@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-01-14T17:49:21.311940",
+  "timestamp": "2026-01-14T17:50:22.410985",
   "account": {
-    "equity": 99705.9,
+    "equity": 99708.48,
     "cash": 139.72,
     "buying_power": 141899.75,
-    "portfolio_value": 99705.9,
+    "portfolio_value": 99708.48,
     "last_equity": 100251.4951397331,
     "daytrade_count": 199,
     "status": "ACTIVE",
@@ -39,13 +39,13 @@
       "symbol": "GDX",
       "qty": 66.989673707,
       "avg_entry_price": 96.457423,
-      "current_price": 96.85,
-      "market_value": 6487.949899,
+      "current_price": 96.9,
+      "market_value": 6491.299382,
       "cost_basis": 6461.651297,
-      "unrealized_pl": 26.298602,
-      "unrealized_plpc": 0.0040699506660488,
-      "unrealized_intraday_pl": 26.298606,
-      "unrealized_intraday_plpc": 0.004069951287605
+      "unrealized_pl": 29.648085,
+      "unrealized_plpc": 0.0045883139831091,
+      "unrealized_intraday_pl": 29.648089,
+      "unrealized_intraday_plpc": 0.0045883146049862
     },
     {
       "symbol": "GDXJ",
@@ -99,25 +99,25 @@
       "symbol": "SILJ",
       "qty": 185.22818797,
       "avg_entry_price": 31.957025,
-      "current_price": 32.39,
-      "market_value": 5999.541008,
+      "current_price": 32.3939,
+      "market_value": 6000.263398,
       "cost_basis": 5919.341782,
-      "unrealized_pl": 80.199226,
-      "unrealized_plpc": 0.0135486729696663,
-      "unrealized_intraday_pl": 80.199174,
-      "unrealized_intraday_plpc": 0.0135486640658841
+      "unrealized_pl": 80.921616,
+      "unrealized_plpc": 0.0136707118764578,
+      "unrealized_intraday_pl": 80.921564,
+      "unrealized_intraday_plpc": 0.0136707029716034
     },
     {
       "symbol": "SLV",
       "qty": 149.348852413,
       "avg_entry_price": 83.127709,
-      "current_price": 85.0,
-      "market_value": 12694.652455,
+      "current_price": 84.99,
+      "market_value": 12693.158967,
       "cost_basis": 12415.027906,
-      "unrealized_pl": 279.624549,
-      "unrealized_plpc": 0.0225230705172126,
-      "unrealized_intraday_pl": 279.624512,
-      "unrealized_intraday_plpc": 0.0225230674698289
+      "unrealized_pl": 278.131061,
+      "unrealized_plpc": 0.0224027737276034,
+      "unrealized_intraday_pl": 278.131024,
+      "unrealized_intraday_plpc": 0.0224027706805782
     },
     {
       "symbol": "XME",
