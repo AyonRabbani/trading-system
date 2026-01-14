@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-01-14T17:30:00.374613",
+  "timestamp": "2026-01-14T17:31:01.515884",
   "account": {
-    "equity": 99704.2,
+    "equity": 99746.13,
     "cash": 139.72,
     "buying_power": 141899.75,
-    "portfolio_value": 99704.2,
+    "portfolio_value": 99746.13,
     "last_equity": 100251.4951397331,
     "daytrade_count": 199,
     "status": "ACTIVE",
@@ -15,13 +15,13 @@
       "symbol": "COPX",
       "qty": 132.807322175,
       "avg_entry_price": 82.067526,
-      "current_price": 82.6,
-      "market_value": 10969.884812,
+      "current_price": 82.8595,
+      "market_value": 11004.348312,
       "cost_basis": 10899.168401,
-      "unrealized_pl": 70.716411,
-      "unrealized_plpc": 0.0064882391388238,
-      "unrealized_intraday_pl": 70.716446,
-      "unrealized_intraday_plpc": 0.0064882423709134
+      "unrealized_pl": 105.179911,
+      "unrealized_plpc": 0.0096502693719596,
+      "unrealized_intraday_pl": 105.179946,
+      "unrealized_intraday_plpc": 0.0096502726142032
     },
     {
       "symbol": "CPER",
@@ -111,13 +111,13 @@
       "symbol": "SLV",
       "qty": 149.348852413,
       "avg_entry_price": 83.127709,
-      "current_price": 84.98,
-      "market_value": 12691.665478,
+      "current_price": 85.03,
+      "market_value": 12699.132921,
       "cost_basis": 12415.027906,
-      "unrealized_pl": 276.637572,
-      "unrealized_plpc": 0.0222824768574467,
-      "unrealized_intraday_pl": 276.637535,
-      "unrealized_intraday_plpc": 0.02228247381078
+      "unrealized_pl": 284.105015,
+      "unrealized_plpc": 0.0228839610471352,
+      "unrealized_intraday_pl": 284.104978,
+      "unrealized_intraday_plpc": 0.0228839579986759
     },
     {
       "symbol": "XME",
