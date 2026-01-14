@@ -1,15 +1,7 @@
 {
-  "last_updated": "2026-01-14T09:41:22.292516",
+  "last_updated": "2026-01-14T09:42:22.362789",
   "event_count": 200,
   "events": [
-    {
-      "type": "event",
-      "source": "Market Scanner",
-      "event_type": "scan",
-      "level": "INFO",
-      "message": "\ud83d\udd04 13 rotation opportunities identified - avg score improvement: 40.6 points",
-      "timestamp": "2026-01-12T14:23:55.753317"
-    },
     {
       "type": "event",
       "source": "Market Scanner",
@@ -1736,6 +1728,17 @@
       "portfolio_value": "100K",
       "positions_count": 2,
       "avg_return": -0.3
+    },
+    {
+      "type": "event",
+      "source": "Profit Taker",
+      "event_type": "portfolio",
+      "level": "INFO",
+      "message": "\ud83d\udc40 Monitoring 2 positions: QQQ -0.3%, SPY -0.2%",
+      "timestamp": "2026-01-14T09:42:22.361150",
+      "portfolio_value": "100K",
+      "positions_count": 2,
+      "avg_return": -0.2
     }
   ]
 }
