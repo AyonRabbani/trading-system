@@ -1,15 +1,7 @@
 {
-  "last_updated": "2026-01-14T09:40:22.237144",
+  "last_updated": "2026-01-14T09:41:22.292516",
   "event_count": 200,
   "events": [
-    {
-      "type": "event",
-      "source": "Market Scanner",
-      "event_type": "scan",
-      "level": "INFO",
-      "message": "\ud83d\udfe1 Market Regime: UNKNOWN | Hot Sectors: Materials, Industrials, Consumer Discretionary",
-      "timestamp": "2026-01-12T14:23:55.063881"
-    },
     {
       "type": "event",
       "source": "Market Scanner",
@@ -1730,6 +1722,17 @@
       "level": "INFO",
       "message": "\ud83d\udc40 Monitoring 2 positions: QQQ -0.4%, SPY -0.2%",
       "timestamp": "2026-01-14T09:40:22.235670",
+      "portfolio_value": "100K",
+      "positions_count": 2,
+      "avg_return": -0.3
+    },
+    {
+      "type": "event",
+      "source": "Profit Taker",
+      "event_type": "portfolio",
+      "level": "INFO",
+      "message": "\ud83d\udc40 Monitoring 2 positions: QQQ -0.3%, SPY -0.2%",
+      "timestamp": "2026-01-14T09:41:22.290641",
       "portfolio_value": "100K",
       "positions_count": 2,
       "avg_return": -0.3
