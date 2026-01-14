@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-01-14T17:07:35.423020",
+  "timestamp": "2026-01-14T17:08:36.591491",
   "account": {
-    "equity": 99454.88,
+    "equity": 99480.08,
     "cash": 139.72,
     "buying_power": 141899.75,
-    "portfolio_value": 99454.88,
+    "portfolio_value": 99480.08,
     "last_equity": 100251.4951397331,
     "daytrade_count": 199,
     "status": "ACTIVE",
@@ -15,13 +15,13 @@
       "symbol": "COPX",
       "qty": 132.807322175,
       "avg_entry_price": 82.067526,
-      "current_price": 82.3675,
-      "market_value": 10939.007109,
+      "current_price": 82.5,
+      "market_value": 10956.604079,
       "cost_basis": 10899.168401,
-      "unrealized_pl": 39.838708,
-      "unrealized_plpc": 0.0036552062078741,
-      "unrealized_intraday_pl": 39.838743,
-      "unrealized_intraday_plpc": 0.003655209430866
+      "unrealized_pl": 57.435678,
+      "unrealized_plpc": 0.0052697303029771,
+      "unrealized_intraday_pl": 57.435713,
+      "unrealized_intraday_plpc": 0.0052697335311537
     },
     {
       "symbol": "CPER",
@@ -39,13 +39,13 @@
       "symbol": "GDX",
       "qty": 66.989673707,
       "avg_entry_price": 96.457423,
-      "current_price": 96.8582,
-      "market_value": 6488.499214,
+      "current_price": 96.86,
+      "market_value": 6488.619795,
       "cost_basis": 6461.651297,
-      "unrealized_pl": 26.847917,
-      "unrealized_plpc": 0.0041549622172377,
-      "unrealized_intraday_pl": 26.847921,
-      "unrealized_intraday_plpc": 0.0041549628388466
+      "unrealized_pl": 26.968498,
+      "unrealized_plpc": 0.0041736232366053,
+      "unrealized_intraday_pl": 26.968502,
+      "unrealized_intraday_plpc": 0.0041736238582257
     },
     {
       "symbol": "GDXJ",
@@ -75,13 +75,13 @@
       "symbol": "PPLT",
       "qty": 24.423489473,
       "avg_entry_price": 215.916147,
-      "current_price": 217.99,
-      "market_value": 5324.07647,
+      "current_price": 218.2745,
+      "market_value": 5331.024953,
       "cost_basis": 5273.425731,
-      "unrealized_pl": 50.650739,
-      "unrealized_plpc": 0.0096049023127884,
-      "unrealized_intraday_pl": 50.650727,
-      "unrealized_intraday_plpc": 0.0096049000153713
+      "unrealized_pl": 57.599222,
+      "unrealized_plpc": 0.0109225435112134,
+      "unrealized_intraday_pl": 57.59921,
+      "unrealized_intraday_plpc": 0.0109225412107979
     },
     {
       "symbol": "REMX",
@@ -111,13 +111,13 @@
       "symbol": "SLV",
       "qty": 149.348852413,
       "avg_entry_price": 83.127709,
-      "current_price": 84.5464,
-      "market_value": 12626.907816,
+      "current_price": 84.55,
+      "market_value": 12627.445472,
       "cost_basis": 12415.027906,
-      "unrealized_pl": 211.87991,
-      "unrealized_plpc": 0.0170664062621721,
-      "unrealized_intraday_pl": 211.879873,
-      "unrealized_intraday_plpc": 0.0170664032310507
+      "unrealized_pl": 212.417566,
+      "unrealized_plpc": 0.0171097131322066,
+      "unrealized_intraday_pl": 212.417529,
+      "unrealized_intraday_plpc": 0.0171097101009562
     },
     {
       "symbol": "XME",
