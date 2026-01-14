@@ -1,46 +1,7 @@
 {
-  "last_updated": "2026-01-14T15:45:07.366460",
+  "last_updated": "2026-01-14T15:56:05.751228",
   "event_count": 200,
   "events": [
-    {
-      "type": "event",
-      "source": "Profit Taker",
-      "event_type": "portfolio",
-      "level": "INFO",
-      "message": "\ud83d\udc40 Monitoring 2 positions: QQQ -0.4%, SPY -0.2%",
-      "timestamp": "2026-01-13T13:43:46.621865",
-      "portfolio_value": "100K",
-      "positions_count": 2,
-      "avg_return": -0.3
-    },
-    {
-      "type": "event",
-      "source": "Profit Taker",
-      "event_type": "portfolio",
-      "level": "INFO",
-      "message": "\ud83d\udc40 Monitoring 2 positions: QQQ -0.4%, SPY -0.2%",
-      "timestamp": "2026-01-13T13:44:46.680982",
-      "portfolio_value": "100K",
-      "positions_count": 2,
-      "avg_return": -0.3
-    },
-    {
-      "type": "event",
-      "source": "Market Scanner",
-      "event_type": "scan",
-      "level": "INFO",
-      "message": "\ud83d\udd0d Daily Market Scan Started",
-      "timestamp": "2026-01-13T13:45:16.832280",
-      "phase": "start"
-    },
-    {
-      "type": "event",
-      "source": "Market Scanner",
-      "event_type": "scan",
-      "level": "INFO",
-      "message": "\ud83d\udd0d Daily market scan initiated - analyzing 5405 tickers",
-      "timestamp": "2026-01-13T13:45:16.832368"
-    },
     {
       "type": "event",
       "source": "Market Scanner",
@@ -1684,6 +1645,38 @@
       "message": "\ud83d\udcca Loading universe data (5405 tickers)",
       "timestamp": "2026-01-14T15:45:07.358611",
       "phase": "loading"
+    },
+    {
+      "type": "event",
+      "source": "Market Scanner",
+      "event_type": "scan",
+      "level": "INFO",
+      "message": "\u2713 Data loaded for 5279/5405 tickers",
+      "timestamp": "2026-01-14T15:55:56.735954"
+    },
+    {
+      "type": "event",
+      "source": "Market Scanner",
+      "event_type": "scan",
+      "level": "INFO",
+      "message": "\ud83c\udfaf Scoring complete - Top 5: AP (91), ASTI (91), ISSC (90), TROO (89), UMAC (89)",
+      "timestamp": "2026-01-14T15:56:05.062254"
+    },
+    {
+      "type": "event",
+      "source": "Market Scanner",
+      "event_type": "scan",
+      "level": "INFO",
+      "message": "\ud83d\udfe1 Market Regime: UNKNOWN | Hot Sectors: Materials, Industrials, Energy",
+      "timestamp": "2026-01-14T15:56:05.062744"
+    },
+    {
+      "type": "event",
+      "source": "Market Scanner",
+      "event_type": "scan",
+      "level": "INFO",
+      "message": "\ud83d\udd04 14 rotation opportunities identified - avg score improvement: 43.1 points",
+      "timestamp": "2026-01-14T15:56:05.750022"
     }
   ]
 }
