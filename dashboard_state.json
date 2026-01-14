@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-01-14T17:05:33.255402",
+  "timestamp": "2026-01-14T17:06:34.337669",
   "account": {
-    "equity": 99432.61,
+    "equity": 99445.18,
     "cash": 139.72,
     "buying_power": 141899.75,
-    "portfolio_value": 99432.61,
+    "portfolio_value": 99445.18,
     "last_equity": 100251.4951397331,
     "daytrade_count": 199,
     "status": "ACTIVE",
@@ -27,13 +27,13 @@
       "symbol": "CPER",
       "qty": 219.701317857,
       "avg_entry_price": 37.398597,
-      "current_price": 37.48,
-      "market_value": 8234.405393,
+      "current_price": 37.51,
+      "market_value": 8240.996433,
       "cost_basis": 8216.521146,
-      "unrealized_pl": 17.884247,
-      "unrealized_plpc": 0.0021766203338631,
-      "unrealized_intraday_pl": 17.884346,
-      "unrealized_intraday_plpc": 0.0021766324089841
+      "unrealized_pl": 24.475287,
+      "unrealized_plpc": 0.002978789510195,
+      "unrealized_intraday_pl": 24.475386,
+      "unrealized_intraday_plpc": 0.0029788015949812
     },
     {
       "symbol": "GDX",
@@ -111,13 +111,13 @@
       "symbol": "SLV",
       "qty": 149.348852413,
       "avg_entry_price": 83.127709,
-      "current_price": 84.5,
-      "market_value": 12619.978029,
+      "current_price": 84.54,
+      "market_value": 12625.951983,
       "cost_basis": 12415.027906,
-      "unrealized_pl": 204.950123,
-      "unrealized_plpc": 0.0165082289425182,
-      "unrealized_intraday_pl": 204.950086,
-      "unrealized_intraday_plpc": 0.0165082259130603
+      "unrealized_pl": 210.924077,
+      "unrealized_plpc": 0.0169894162620499,
+      "unrealized_intraday_pl": 210.92404,
+      "unrealized_intraday_plpc": 0.016989413231158
     },
     {
       "symbol": "XME",
