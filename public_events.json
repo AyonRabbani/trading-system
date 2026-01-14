@@ -1,40 +1,7 @@
 {
-  "last_updated": "2026-01-14T12:45:22.086897",
+  "last_updated": "2026-01-14T12:54:53.373788",
   "event_count": 200,
   "events": [
-    {
-      "type": "event",
-      "source": "Market Scanner",
-      "event_type": "scan",
-      "level": "INFO",
-      "message": "\ud83d\udd0d Daily market scan initiated - analyzing 5405 tickers",
-      "timestamp": "2026-01-13T11:00:21.468410"
-    },
-    {
-      "type": "event",
-      "source": "Market Scanner",
-      "event_type": "scan",
-      "level": "INFO",
-      "message": "\ud83d\udcca Loading universe data (5405 tickers)",
-      "timestamp": "2026-01-13T11:00:21.468732",
-      "phase": "loading"
-    },
-    {
-      "type": "event",
-      "source": "Market Scanner",
-      "event_type": "scan",
-      "level": "INFO",
-      "message": "\u2713 Data loaded for 5274/5405 tickers",
-      "timestamp": "2026-01-13T11:13:53.409784"
-    },
-    {
-      "type": "event",
-      "source": "Market Scanner",
-      "event_type": "scan",
-      "level": "INFO",
-      "message": "\ud83c\udfaf Scoring complete - Top 5: ASTI (90), FLNT (90), FBIO (87), RKLX (86), VELO (86)",
-      "timestamp": "2026-01-13T11:14:01.765174"
-    },
     {
       "type": "event",
       "source": "Market Scanner",
@@ -1710,6 +1677,38 @@
       "message": "\ud83d\udcca Loading universe data (5405 tickers)",
       "timestamp": "2026-01-14T12:45:22.083535",
       "phase": "loading"
+    },
+    {
+      "type": "event",
+      "source": "Market Scanner",
+      "event_type": "scan",
+      "level": "INFO",
+      "message": "\u2713 Data loaded for 5279/5405 tickers",
+      "timestamp": "2026-01-14T12:54:48.761800"
+    },
+    {
+      "type": "event",
+      "source": "Market Scanner",
+      "event_type": "scan",
+      "level": "INFO",
+      "message": "\ud83c\udfaf Scoring complete - Top 5: ASTI (89), AP (89), TROO (88), ISSC (88), RKLX (87)",
+      "timestamp": "2026-01-14T12:54:53.008374"
+    },
+    {
+      "type": "event",
+      "source": "Market Scanner",
+      "event_type": "scan",
+      "level": "INFO",
+      "message": "\ud83d\udfe1 Market Regime: UNKNOWN | Hot Sectors: Materials, Industrials, Energy",
+      "timestamp": "2026-01-14T12:54:53.008858"
+    },
+    {
+      "type": "event",
+      "source": "Market Scanner",
+      "event_type": "scan",
+      "level": "INFO",
+      "message": "\ud83d\udd04 14 rotation opportunities identified - avg score improvement: 43.7 points",
+      "timestamp": "2026-01-14T12:54:53.373300"
     }
   ]
 }
