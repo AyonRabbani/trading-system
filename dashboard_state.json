@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-01-14T17:22:52.620288",
+  "timestamp": "2026-01-14T17:23:53.720309",
   "account": {
-    "equity": 99696.18,
+    "equity": 99690.42,
     "cash": 139.72,
     "buying_power": 141899.75,
-    "portfolio_value": 99696.18,
+    "portfolio_value": 99690.42,
     "last_equity": 100251.4951397331,
     "daytrade_count": 199,
     "status": "ACTIVE",
@@ -15,13 +15,13 @@
       "symbol": "COPX",
       "qty": 132.807322175,
       "avg_entry_price": 82.067526,
-      "current_price": 82.6457,
-      "market_value": 10975.954106,
+      "current_price": 82.6,
+      "market_value": 10969.884812,
       "cost_basis": 10899.168401,
-      "unrealized_pl": 76.785705,
-      "unrealized_plpc": 0.0070450975867989,
-      "unrealized_intraday_pl": 76.78574,
-      "unrealized_intraday_plpc": 0.0070451008206767
+      "unrealized_pl": 70.716411,
+      "unrealized_plpc": 0.0064882391388238,
+      "unrealized_intraday_pl": 70.716446,
+      "unrealized_intraday_plpc": 0.0064882423709134
     },
     {
       "symbol": "CPER",
@@ -99,25 +99,25 @@
       "symbol": "SILJ",
       "qty": 185.22818797,
       "avg_entry_price": 31.957025,
-      "current_price": 32.4681,
-      "market_value": 6014.00733,
+      "current_price": 32.47,
+      "market_value": 6014.359263,
       "cost_basis": 5919.341782,
-      "unrealized_pl": 94.665548,
-      "unrealized_plpc": 0.0159925801696172,
-      "unrealized_intraday_pl": 94.665496,
-      "unrealized_intraday_plpc": 0.0159925712443658
+      "unrealized_pl": 95.017481,
+      "unrealized_plpc": 0.0160520349220139,
+      "unrealized_intraday_pl": 95.017429,
+      "unrealized_intraday_plpc": 0.0160520259962402
     },
     {
       "symbol": "SLV",
       "qty": 149.348852413,
       "avg_entry_price": 83.127709,
-      "current_price": 84.88,
-      "market_value": 12676.730593,
+      "current_price": 84.8797,
+      "market_value": 12676.685788,
       "cost_basis": 12415.027906,
-      "unrealized_pl": 261.702687,
-      "unrealized_plpc": 0.0210795085586173,
-      "unrealized_intraday_pl": 261.70265,
-      "unrealized_intraday_plpc": 0.0210795055155358
+      "unrealized_pl": 261.657882,
+      "unrealized_plpc": 0.0210758996259319,
+      "unrealized_intraday_pl": 261.657845,
+      "unrealized_intraday_plpc": 0.0210758965828612
     },
     {
       "symbol": "XME",
