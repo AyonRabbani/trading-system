@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-01-15T17:46:50.068574",
+  "timestamp": "2026-01-15T17:47:50.810890",
   "account": {
-    "equity": 98617.61,
+    "equity": 98624.9,
     "cash": 10313.38,
-    "buying_power": 97847.61,
-    "portfolio_value": 98617.61,
+    "buying_power": 97850.32,
+    "portfolio_value": 98624.9,
     "last_equity": 99531.1237775609,
     "daytrade_count": 293,
     "status": "ACTIVE",
@@ -15,13 +15,13 @@
       "symbol": "AGQ",
       "qty": 6.578009839,
       "avg_entry_price": 258.19,
-      "current_price": 259.1547,
-      "market_value": 1704.722166,
+      "current_price": 259.85,
+      "market_value": 1709.295857,
       "cost_basis": 1698.37636,
-      "unrealized_pl": 6.345806,
-      "unrealized_plpc": 0.003736395624348,
-      "unrealized_intraday_pl": 6.345806,
-      "unrealized_intraday_plpc": 0.003736395624348
+      "unrealized_pl": 10.919497,
+      "unrealized_plpc": 0.0064293741111658,
+      "unrealized_intraday_pl": 10.919497,
+      "unrealized_intraday_plpc": 0.0064293741111658
     },
     {
       "symbol": "COPX",
@@ -147,13 +147,13 @@
       "symbol": "SLV",
       "qty": 124.381405901,
       "avg_entry_price": 82.937356,
-      "current_price": 83.5282,
-      "market_value": 10389.354948,
+      "current_price": 83.55,
+      "market_value": 10392.066463,
       "cost_basis": 10315.864949,
-      "unrealized_pl": 73.489999,
-      "unrealized_plpc": 0.0071239783928273,
-      "unrealized_intraday_pl": 73.490007,
-      "unrealized_intraday_plpc": 0.0071239791738565
+      "unrealized_pl": 76.201514,
+      "unrealized_plpc": 0.007386827413574,
+      "unrealized_intraday_pl": 76.201522,
+      "unrealized_intraday_plpc": 0.007386828194807
     },
     {
       "symbol": "TENX",
