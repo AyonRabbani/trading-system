@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-01-15T16:52:07.597756",
+  "timestamp": "2026-01-15T16:53:08.377812",
   "account": {
-    "equity": 98454.61,
+    "equity": 98458.4,
     "cash": 10313.38,
-    "buying_power": 97724.32,
-    "portfolio_value": 98454.61,
+    "buying_power": 97731.71,
+    "portfolio_value": 98458.4,
     "last_equity": 99531.1237775609,
     "daytrade_count": 293,
     "status": "ACTIVE",
@@ -15,13 +15,13 @@
       "symbol": "AGQ",
       "qty": 6.578009839,
       "avg_entry_price": 258.19,
-      "current_price": 259.62,
-      "market_value": 1707.782914,
+      "current_price": 260.62,
+      "market_value": 1714.360924,
       "cost_basis": 1698.37636,
-      "unrealized_pl": 9.406554,
-      "unrealized_plpc": 0.005538556836719,
-      "unrealized_intraday_pl": 9.406554,
-      "unrealized_intraday_plpc": 0.005538556836719
+      "unrealized_pl": 15.984564,
+      "unrealized_plpc": 0.0094116736292773,
+      "unrealized_intraday_pl": 15.984564,
+      "unrealized_intraday_plpc": 0.0094116736292773
     },
     {
       "symbol": "COPX",
@@ -39,25 +39,25 @@
       "symbol": "FIGR",
       "qty": 27.829820027,
       "avg_entry_price": 64.58,
-      "current_price": 65.09,
-      "market_value": 1811.442986,
+      "current_price": 64.97,
+      "market_value": 1808.103407,
       "cost_basis": 1797.249777,
-      "unrealized_pl": 14.193209,
-      "unrealized_plpc": 0.0078971822290008,
-      "unrealized_intraday_pl": 14.193209,
-      "unrealized_intraday_plpc": 0.0078971822290008
+      "unrealized_pl": 10.85363,
+      "unrealized_plpc": 0.0060390214754218,
+      "unrealized_intraday_pl": 10.85363,
+      "unrealized_intraday_plpc": 0.0060390214754218
     },
     {
       "symbol": "GDX",
       "qty": 65.579350997,
       "avg_entry_price": 96.903055,
-      "current_price": 97.2585,
-      "market_value": 6378.149309,
+      "current_price": 97.25,
+      "market_value": 6377.591884,
       "cost_basis": 6354.839463,
-      "unrealized_pl": 23.309846,
-      "unrealized_plpc": 0.0036680463976655,
-      "unrealized_intraday_pl": 26.133371,
-      "unrealized_intraday_plpc": 0.004114185363368
+      "unrealized_pl": 22.752421,
+      "unrealized_plpc": 0.0035803297836983,
+      "unrealized_intraday_pl": 25.575946,
+      "unrealized_intraday_plpc": 0.0040264297586213
     },
     {
       "symbol": "GDXJ",
@@ -75,13 +75,13 @@
       "symbol": "KOLD",
       "qty": 203.662626987,
       "avg_entry_price": 45.944096,
-      "current_price": 45.84,
-      "market_value": 9335.894821,
+      "current_price": 45.79,
+      "market_value": 9325.71169,
       "cost_basis": 9357.095301,
-      "unrealized_pl": -21.20048,
-      "unrealized_plpc": -0.0022657116677795,
-      "unrealized_intraday_pl": -21.200465,
-      "unrealized_intraday_plpc": -0.0022657100683499
+      "unrealized_pl": -31.383611,
+      "unrealized_plpc": -0.003353990740764,
+      "unrealized_intraday_pl": -31.383596,
+      "unrealized_intraday_plpc": -0.003353989143079
     },
     {
       "symbol": "LIT",
@@ -147,13 +147,13 @@
       "symbol": "SLV",
       "qty": 124.381405901,
       "avg_entry_price": 82.937356,
-      "current_price": 83.6792,
-      "market_value": 10408.136541,
+      "current_price": 83.77,
+      "market_value": 10419.430372,
       "cost_basis": 10315.864949,
-      "unrealized_pl": 92.271592,
-      "unrealized_plpc": 0.0089446296996109,
-      "unrealized_intraday_pl": 92.2716,
-      "unrealized_intraday_plpc": 0.008944630482052
+      "unrealized_pl": 103.565423,
+      "unrealized_plpc": 0.010039431837467,
+      "unrealized_intraday_pl": 103.565431,
+      "unrealized_intraday_plpc": 0.0100394326207571
     },
     {
       "symbol": "TENX",
