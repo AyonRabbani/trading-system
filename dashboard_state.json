@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-01-15T18:25:19.981870",
+  "timestamp": "2026-01-15T18:26:20.774511",
   "account": {
-    "equity": 98576.94,
+    "equity": 98570.66,
     "cash": 10313.38,
-    "buying_power": 97861.53,
-    "portfolio_value": 98576.94,
+    "buying_power": 97855.26,
+    "portfolio_value": 98570.66,
     "last_equity": 99531.1237775609,
     "daytrade_count": 293,
     "status": "ACTIVE",
@@ -39,13 +39,13 @@
       "symbol": "FIGR",
       "qty": 27.829820027,
       "avg_entry_price": 64.58,
-      "current_price": 66.72,
-      "market_value": 1856.805592,
+      "current_price": 66.91,
+      "market_value": 1862.093258,
       "cost_basis": 1797.249777,
-      "unrealized_pl": 59.555815,
-      "unrealized_plpc": 0.0331371942632323,
-      "unrealized_intraday_pl": 59.555815,
-      "unrealized_intraday_plpc": 0.0331371942632323
+      "unrealized_pl": 64.843481,
+      "unrealized_plpc": 0.0360792817057615,
+      "unrealized_intraday_pl": 64.843481,
+      "unrealized_intraday_plpc": 0.0360792817057615
     },
     {
       "symbol": "GDX",
@@ -135,25 +135,25 @@
       "symbol": "SILJ",
       "qty": 192.817512546,
       "avg_entry_price": 32.394671,
-      "current_price": 33.05,
-      "market_value": 6372.61879,
+      "current_price": 33.0997,
+      "market_value": 6382.20182,
       "cost_basis": 6246.259882,
-      "unrealized_pl": 126.358908,
-      "unrealized_plpc": 0.0202295310132919,
-      "unrealized_intraday_pl": 148.469485,
-      "unrealized_intraday_plpc": 0.0238537794844881
+      "unrealized_pl": 135.941938,
+      "unrealized_plpc": 0.0217637339092706,
+      "unrealized_intraday_pl": 158.052515,
+      "unrealized_intraday_plpc": 0.0253934324604059
     },
     {
       "symbol": "SLV",
       "qty": 124.381405901,
       "avg_entry_price": 82.937356,
-      "current_price": 83.27,
-      "market_value": 10357.239669,
+      "current_price": 83.1,
+      "market_value": 10336.09483,
       "cost_basis": 10315.864949,
-      "unrealized_pl": 41.37472,
-      "unrealized_plpc": 0.0040107853490279,
-      "unrealized_intraday_pl": 41.374728,
-      "unrealized_intraday_plpc": 0.0040107861276428
+      "unrealized_pl": 20.229881,
+      "unrealized_plpc": 0.0019610455448974,
+      "unrealized_intraday_pl": 20.229889,
+      "unrealized_intraday_plpc": 0.0019610463219228
     },
     {
       "symbol": "TENX",
