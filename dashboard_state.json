@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-01-15T17:22:30.925895",
+  "timestamp": "2026-01-15T17:23:31.614452",
   "account": {
-    "equity": 98531.52,
+    "equity": 98533.98,
     "cash": 10313.38,
-    "buying_power": 97755.29,
-    "portfolio_value": 98531.52,
+    "buying_power": 97757.75,
+    "portfolio_value": 98533.98,
     "last_equity": 99531.1237775609,
     "daytrade_count": 293,
     "status": "ACTIVE",
@@ -147,13 +147,13 @@
       "symbol": "SLV",
       "qty": 124.381405901,
       "avg_entry_price": 82.937356,
-      "current_price": 83.68,
-      "market_value": 10408.236046,
+      "current_price": 83.6998,
+      "market_value": 10410.698798,
       "cost_basis": 10315.864949,
-      "unrealized_pl": 92.371097,
-      "unrealized_plpc": 0.0089542755218945,
-      "unrealized_intraday_pl": 92.371105,
-      "unrealized_intraday_plpc": 0.0089542763043431
+      "unrealized_pl": 94.833849,
+      "unrealized_plpc": 0.0091930099384631,
+      "unrealized_intraday_pl": 94.833857,
+      "unrealized_intraday_plpc": 0.0091930107210968
     },
     {
       "symbol": "TENX",
