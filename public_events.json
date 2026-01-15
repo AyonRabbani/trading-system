@@ -1,32 +1,7 @@
 {
-  "last_updated": "2026-01-15T10:13:21.568123",
+  "last_updated": "2026-01-15T10:13:31.113657",
   "event_count": 200,
   "events": [
-    {
-      "type": "event",
-      "source": "Market Scanner",
-      "event_type": "scan",
-      "level": "INFO",
-      "message": "\ud83d\udd0d Daily market scan initiated - analyzing 5405 tickers",
-      "timestamp": "2026-01-13T15:00:12.640868"
-    },
-    {
-      "type": "event",
-      "source": "Market Scanner",
-      "event_type": "scan",
-      "level": "INFO",
-      "message": "\ud83d\udcca Loading universe data (5405 tickers)",
-      "timestamp": "2026-01-13T15:00:12.641302",
-      "phase": "loading"
-    },
-    {
-      "type": "event",
-      "source": "Market Scanner",
-      "event_type": "scan",
-      "level": "INFO",
-      "message": "\u2713 Data loaded for 5277/5405 tickers",
-      "timestamp": "2026-01-13T15:10:24.645093"
-    },
     {
       "type": "event",
       "source": "Market Scanner",
@@ -1704,6 +1679,30 @@
       "level": "INFO",
       "message": "\u2713 Data loaded for 5280/5405 tickers",
       "timestamp": "2026-01-15T10:13:21.565769"
+    },
+    {
+      "type": "event",
+      "source": "Market Scanner",
+      "event_type": "scan",
+      "level": "INFO",
+      "message": "\ud83c\udfaf Scoring complete - Top 5: ASTI (89), YCBD (86), SIDU (84), GLSI (84), RKLX (84)",
+      "timestamp": "2026-01-15T10:13:30.404323"
+    },
+    {
+      "type": "event",
+      "source": "Market Scanner",
+      "event_type": "scan",
+      "level": "INFO",
+      "message": "\ud83d\udfe1 Market Regime: UNKNOWN | Hot Sectors: Materials, Industrials, Consumer Staples",
+      "timestamp": "2026-01-15T10:13:30.405622"
+    },
+    {
+      "type": "event",
+      "source": "Market Scanner",
+      "event_type": "scan",
+      "level": "INFO",
+      "message": "\ud83d\udd04 13 rotation opportunities identified - avg score improvement: 42.2 points",
+      "timestamp": "2026-01-15T10:13:31.111998"
     }
   ]
 }
