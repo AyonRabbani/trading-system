@@ -1,44 +1,7 @@
 {
-  "last_updated": "2026-01-15T11:00:01.223671",
+  "last_updated": "2026-01-15T11:10:43.064639",
   "event_count": 200,
   "events": [
-    {
-      "type": "event",
-      "source": "Market Scanner",
-      "event_type": "scan",
-      "level": "INFO",
-      "message": "\ud83d\udd0d Daily Market Scan Started",
-      "timestamp": "2026-01-14T09:38:22.519494",
-      "phase": "start"
-    },
-    {
-      "type": "event",
-      "source": "Market Scanner",
-      "event_type": "scan",
-      "level": "INFO",
-      "message": "\ud83d\udd0d Daily market scan initiated - analyzing 5405 tickers",
-      "timestamp": "2026-01-14T09:38:22.519543"
-    },
-    {
-      "type": "event",
-      "source": "Market Scanner",
-      "event_type": "scan",
-      "level": "INFO",
-      "message": "\ud83d\udcca Loading universe data (5405 tickers)",
-      "timestamp": "2026-01-14T09:38:22.519660",
-      "phase": "loading"
-    },
-    {
-      "type": "event",
-      "source": "Profit Taker",
-      "event_type": "portfolio",
-      "level": "INFO",
-      "message": "\ud83d\udc40 Monitoring 2 positions: QQQ -0.3%, SPY -0.2%",
-      "timestamp": "2026-01-14T09:39:22.160855",
-      "portfolio_value": "100K",
-      "positions_count": 2,
-      "avg_return": -0.3
-    },
     {
       "type": "event",
       "source": "Profit Taker",
@@ -1705,6 +1668,38 @@
       "message": "\ud83d\udcca Loading universe data (5405 tickers)",
       "timestamp": "2026-01-15T11:00:01.219500",
       "phase": "loading"
+    },
+    {
+      "type": "event",
+      "source": "Market Scanner",
+      "event_type": "scan",
+      "level": "INFO",
+      "message": "\u2713 Data loaded for 5281/5405 tickers",
+      "timestamp": "2026-01-15T11:10:34.012722"
+    },
+    {
+      "type": "event",
+      "source": "Market Scanner",
+      "event_type": "scan",
+      "level": "INFO",
+      "message": "\ud83c\udfaf Scoring complete - Top 5: ASTI (90), YCBD (86), GLSI (86), RKLX (84), TROO (84)",
+      "timestamp": "2026-01-15T11:10:42.332838"
+    },
+    {
+      "type": "event",
+      "source": "Market Scanner",
+      "event_type": "scan",
+      "level": "INFO",
+      "message": "\ud83d\udfe1 Market Regime: UNKNOWN | Hot Sectors: Materials, Industrials, Consumer Staples",
+      "timestamp": "2026-01-15T11:10:42.333456"
+    },
+    {
+      "type": "event",
+      "source": "Market Scanner",
+      "event_type": "scan",
+      "level": "INFO",
+      "message": "\ud83d\udd04 13 rotation opportunities identified - avg score improvement: 42.0 points",
+      "timestamp": "2026-01-15T11:10:43.063602"
     }
   ]
 }
