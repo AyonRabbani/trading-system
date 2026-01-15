@@ -1,31 +1,7 @@
 {
-  "last_updated": "2026-01-15T15:09:09.288959",
+  "last_updated": "2026-01-15T15:15:22.202799",
   "event_count": 200,
   "events": [
-    {
-      "type": "event",
-      "source": "Market Scanner",
-      "event_type": "scan",
-      "level": "INFO",
-      "message": "\u2713 Data loaded for 5279/5405 tickers",
-      "timestamp": "2026-01-14T14:30:21.338543"
-    },
-    {
-      "type": "event",
-      "source": "Market Scanner",
-      "event_type": "scan",
-      "level": "INFO",
-      "message": "\ud83c\udfaf Scoring complete - Top 5: ASTI (91), AP (90), ISSC (90), RKLX (88), TROO (87)",
-      "timestamp": "2026-01-14T14:30:30.129248"
-    },
-    {
-      "type": "event",
-      "source": "Market Scanner",
-      "event_type": "scan",
-      "level": "INFO",
-      "message": "\ud83d\udfe1 Market Regime: UNKNOWN | Hot Sectors: Materials, Energy, Industrials",
-      "timestamp": "2026-01-14T14:30:30.130481"
-    },
     {
       "type": "event",
       "source": "Market Scanner",
@@ -1688,6 +1664,32 @@
       "level": "INFO",
       "message": "\ud83d\udd04 13 rotation opportunities identified - avg score improvement: 43.3 points",
       "timestamp": "2026-01-15T15:09:09.288347"
+    },
+    {
+      "type": "event",
+      "source": "Market Scanner",
+      "event_type": "scan",
+      "level": "INFO",
+      "message": "\ud83d\udd0d Daily Market Scan Started",
+      "timestamp": "2026-01-15T15:15:22.198431",
+      "phase": "start"
+    },
+    {
+      "type": "event",
+      "source": "Market Scanner",
+      "event_type": "scan",
+      "level": "INFO",
+      "message": "\ud83d\udd0d Daily market scan initiated - analyzing 5405 tickers",
+      "timestamp": "2026-01-15T15:15:22.198478"
+    },
+    {
+      "type": "event",
+      "source": "Market Scanner",
+      "event_type": "scan",
+      "level": "INFO",
+      "message": "\ud83d\udcca Loading universe data (5405 tickers)",
+      "timestamp": "2026-01-15T15:15:22.198546",
+      "phase": "loading"
     }
   ]
 }
