@@ -1,31 +1,7 @@
 {
-  "last_updated": "2026-01-15T11:24:32.817722",
+  "last_updated": "2026-01-15T11:30:15.261402",
   "event_count": 200,
   "events": [
-    {
-      "type": "event",
-      "source": "Market Scanner",
-      "event_type": "scan",
-      "level": "INFO",
-      "message": "\u2713 Data loaded for 5270/5405 tickers",
-      "timestamp": "2026-01-14T10:23:57.452090"
-    },
-    {
-      "type": "event",
-      "source": "Market Scanner",
-      "event_type": "scan",
-      "level": "INFO",
-      "message": "\ud83c\udfaf Scoring complete - Top 5: YCBD (86), ANRO (85), RKLX (84), SHMDW (83), TE (83)",
-      "timestamp": "2026-01-14T10:24:05.889768"
-    },
-    {
-      "type": "event",
-      "source": "Market Scanner",
-      "event_type": "scan",
-      "level": "INFO",
-      "message": "\ud83d\udfe1 Market Regime: UNKNOWN | Hot Sectors: Materials, Industrials, Energy",
-      "timestamp": "2026-01-14T10:24:05.890749"
-    },
     {
       "type": "event",
       "source": "Market Scanner",
@@ -1688,6 +1664,32 @@
       "level": "INFO",
       "message": "\ud83d\udd04 13 rotation opportunities identified - avg score improvement: 41.6 points",
       "timestamp": "2026-01-15T11:24:32.816623"
+    },
+    {
+      "type": "event",
+      "source": "Market Scanner",
+      "event_type": "scan",
+      "level": "INFO",
+      "message": "\ud83d\udd0d Daily Market Scan Started",
+      "timestamp": "2026-01-15T11:30:15.255340",
+      "phase": "start"
+    },
+    {
+      "type": "event",
+      "source": "Market Scanner",
+      "event_type": "scan",
+      "level": "INFO",
+      "message": "\ud83d\udd0d Daily market scan initiated - analyzing 5405 tickers",
+      "timestamp": "2026-01-15T11:30:15.255400"
+    },
+    {
+      "type": "event",
+      "source": "Market Scanner",
+      "event_type": "scan",
+      "level": "INFO",
+      "message": "\ud83d\udcca Loading universe data (5405 tickers)",
+      "timestamp": "2026-01-15T11:30:15.255583",
+      "phase": "loading"
     }
   ]
 }
