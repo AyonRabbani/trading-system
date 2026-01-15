@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-01-14T22:02:22.930351",
+  "timestamp": "2026-01-14T22:03:24.095366",
   "account": {
     "equity": 99532.98,
     "cash": 139.72,
@@ -20,8 +20,8 @@
       "cost_basis": 10899.168401,
       "unrealized_pl": 42.826873,
       "unrealized_plpc": 0.0039293707028208,
-      "unrealized_intraday_pl": 338.658672,
-      "unrealized_intraday_plpc": 0.0319388777996656
+      "unrealized_intraday_pl": 0.0,
+      "unrealized_intraday_plpc": 0.0
     },
     {
       "symbol": "CPER",
@@ -32,8 +32,8 @@
       "cost_basis": 8216.521146,
       "unrealized_pl": 22.278274,
       "unrealized_plpc": 0.0027113998253197,
-      "unrealized_intraday_pl": 134.017804,
-      "unrealized_intraday_plpc": 0.0165356465293808
+      "unrealized_intraday_pl": 0.0,
+      "unrealized_intraday_plpc": 0.0
     },
     {
       "symbol": "GDX",
@@ -44,8 +44,8 @@
       "cost_basis": 6461.651297,
       "unrealized_pl": 26.968498,
       "unrealized_plpc": 0.0041736232366053,
-      "unrealized_intraday_pl": 26.125972,
-      "unrealized_intraday_plpc": 0.0040427074617879
+      "unrealized_intraday_pl": 0.0,
+      "unrealized_intraday_plpc": 0.0
     },
     {
       "symbol": "GDXJ",
@@ -56,8 +56,8 @@
       "cost_basis": 4888.016862,
       "unrealized_pl": 15.275494,
       "unrealized_plpc": 0.0031250902832913,
-      "unrealized_intraday_pl": 20.127187,
-      "unrealized_intraday_plpc": 0.004121750197551
+      "unrealized_intraday_pl": 0.0,
+      "unrealized_intraday_plpc": 0.0
     },
     {
       "symbol": "PICK",
@@ -68,8 +68,8 @@
       "cost_basis": 14123.91119,
       "unrealized_pl": 60.810509,
       "unrealized_plpc": 0.004305500663517,
-      "unrealized_intraday_pl": 331.034916,
-      "unrealized_intraday_plpc": 0.0238950772588721
+      "unrealized_intraday_pl": 0.0,
+      "unrealized_intraday_plpc": 0.0
     },
     {
       "symbol": "PPLT",
@@ -80,8 +80,8 @@
       "cost_basis": 5273.425731,
       "unrealized_pl": 69.456826,
       "unrealized_plpc": 0.0131711015842502,
-      "unrealized_intraday_pl": 173.65101,
-      "unrealized_intraday_plpc": 0.0335931962848094
+      "unrealized_intraday_pl": 0.0,
+      "unrealized_intraday_plpc": 0.0
     },
     {
       "symbol": "REMX",
@@ -92,8 +92,8 @@
       "cost_basis": 16643.409949,
       "unrealized_pl": -60.388643,
       "unrealized_plpc": -0.0036283816348361,
-      "unrealized_intraday_pl": 384.975965,
-      "unrealized_intraday_plpc": 0.0237668161124084
+      "unrealized_intraday_pl": 0.0,
+      "unrealized_intraday_plpc": 0.0
     },
     {
       "symbol": "SILJ",
@@ -104,8 +104,8 @@
       "cost_basis": 5919.341782,
       "unrealized_pl": 59.824126,
       "unrealized_plpc": 0.0101065503907745,
-      "unrealized_intraday_pl": 29.63651,
-      "unrealized_intraday_plpc": 0.0049813200368356
+      "unrealized_intraday_pl": 0.0,
+      "unrealized_intraday_plpc": 0.0
     },
     {
       "symbol": "SLV",
@@ -116,8 +116,8 @@
       "cost_basis": 12415.027906,
       "unrealized_pl": 213.911054,
       "unrealized_plpc": 0.0172300099218158,
-      "unrealized_intraday_pl": 890.11916,
-      "unrealized_intraday_plpc": 0.0758269719754962
+      "unrealized_intraday_pl": 0.0,
+      "unrealized_intraday_plpc": 0.0
     },
     {
       "symbol": "XME",
@@ -128,8 +128,8 @@
       "cost_basis": 14108.707681,
       "unrealized_pl": -6.881178,
       "unrealized_plpc": -0.0004877256057454,
-      "unrealized_intraday_pl": 366.996135,
-      "unrealized_intraday_plpc": 0.0267201068500302
+      "unrealized_intraday_pl": 0.0,
+      "unrealized_intraday_plpc": 0.0
     }
   ],
   "scanner": {
