@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-01-15T16:27:46.948980",
+  "timestamp": "2026-01-15T16:28:47.707062",
   "account": {
-    "equity": 98427.68,
+    "equity": 98422.98,
     "cash": 10313.38,
-    "buying_power": 97703.31,
-    "portfolio_value": 98427.68,
+    "buying_power": 97698.61,
+    "portfolio_value": 98422.98,
     "last_equity": 99531.1237775609,
     "daytrade_count": 293,
     "status": "ACTIVE",
@@ -135,25 +135,25 @@
       "symbol": "SILJ",
       "qty": 192.817512546,
       "avg_entry_price": 32.394671,
-      "current_price": 32.9495,
-      "market_value": 6353.24063,
+      "current_price": 32.95,
+      "market_value": 6353.337038,
       "cost_basis": 6246.259884,
-      "unrealized_pl": 106.980746,
-      "unrealized_plpc": 0.0171271685755559,
-      "unrealized_intraday_pl": 129.091325,
-      "unrealized_intraday_plpc": 0.0207403965866143
+      "unrealized_pl": 107.077154,
+      "unrealized_plpc": 0.0171426030918569,
+      "unrealized_intraday_pl": 129.187733,
+      "unrealized_intraday_plpc": 0.0207558859322704
     },
     {
       "symbol": "SLV",
       "qty": 124.381405901,
       "avg_entry_price": 82.937356,
-      "current_price": 83.74,
-      "market_value": 10415.69893,
+      "current_price": 83.7014,
+      "market_value": 10410.897808,
       "cost_basis": 10315.864949,
-      "unrealized_pl": 99.833981,
-      "unrealized_plpc": 0.0096777130656095,
-      "unrealized_intraday_pl": 99.833989,
-      "unrealized_intraday_plpc": 0.0096777138486191
+      "unrealized_pl": 95.032859,
+      "unrealized_plpc": 0.0092123015830303,
+      "unrealized_intraday_pl": 95.032867,
+      "unrealized_intraday_plpc": 0.0092123023656791
     },
     {
       "symbol": "TENX",
