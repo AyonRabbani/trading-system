@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-01-16T17:19:30.596113",
+  "timestamp": "2026-01-16T17:20:31.558956",
   "account": {
-    "equity": 96876.97,
+    "equity": 96886.1,
     "cash": 4558.14,
-    "buying_power": 93046.92,
-    "portfolio_value": 96876.97,
+    "buying_power": 93056.05,
+    "portfolio_value": 96886.1,
     "last_equity": 99531.1237775609,
     "daytrade_count": 321,
     "status": "ACTIVE",
@@ -39,13 +39,13 @@
       "symbol": "GDX",
       "qty": 75.020529283,
       "avg_entry_price": 96.63825,
-      "current_price": 97.18,
-      "market_value": 7290.495036,
+      "current_price": 97.2448,
+      "market_value": 7295.356366,
       "cost_basis": 7249.852644,
-      "unrealized_pl": 40.642392,
-      "unrealized_plpc": 0.0056059611133801,
-      "unrealized_intraday_pl": 40.642372,
-      "unrealized_intraday_plpc": 0.0056059583392383
+      "unrealized_pl": 45.503722,
+      "unrealized_plpc": 0.0062765030179833,
+      "unrealized_intraday_pl": 45.503702,
+      "unrealized_intraday_plpc": 0.0062765002419917
     },
     {
       "symbol": "GDXJ",
@@ -135,13 +135,13 @@
       "symbol": "SLV",
       "qty": 119.586143792,
       "avg_entry_price": 80.742775,
-      "current_price": 81.6542,
-      "market_value": 9764.710902,
+      "current_price": 81.6899,
+      "market_value": 9768.980128,
       "cost_basis": 9655.717135,
-      "unrealized_pl": 108.993767,
-      "unrealized_plpc": 0.0112880033120399,
-      "unrealized_intraday_pl": 108.993801,
-      "unrealized_intraday_plpc": 0.0112880068730174
+      "unrealized_pl": 113.262993,
+      "unrealized_plpc": 0.0117301482030211,
+      "unrealized_intraday_pl": 113.263027,
+      "unrealized_intraday_plpc": 0.0117301517655555
     },
     {
       "symbol": "TE",
