@@ -1,31 +1,7 @@
 {
-  "last_updated": "2026-01-16T12:09:09.751374",
+  "last_updated": "2026-01-16T12:15:20.202120",
   "event_count": 200,
   "events": [
-    {
-      "type": "event",
-      "source": "Market Scanner",
-      "event_type": "scan",
-      "level": "INFO",
-      "message": "\ud83c\udfaf Scoring complete - Top 5: ASTI (90), YCBD (86), GLSI (86), RKLX (84), TROO (84)",
-      "timestamp": "2026-01-15T11:10:42.332838"
-    },
-    {
-      "type": "event",
-      "source": "Market Scanner",
-      "event_type": "scan",
-      "level": "INFO",
-      "message": "\ud83d\udfe1 Market Regime: UNKNOWN | Hot Sectors: Materials, Industrials, Consumer Staples",
-      "timestamp": "2026-01-15T11:10:42.333456"
-    },
-    {
-      "type": "event",
-      "source": "Market Scanner",
-      "event_type": "scan",
-      "level": "INFO",
-      "message": "\ud83d\udd04 13 rotation opportunities identified - avg score improvement: 42.0 points",
-      "timestamp": "2026-01-15T11:10:43.063602"
-    },
     {
       "type": "event",
       "source": "Market Scanner",
@@ -1672,6 +1648,32 @@
       "level": "INFO",
       "message": "\ud83d\udd04 13 rotation opportunities identified - avg score improvement: 46.5 points",
       "timestamp": "2026-01-16T12:09:09.750434"
+    },
+    {
+      "type": "event",
+      "source": "Market Scanner",
+      "event_type": "scan",
+      "level": "INFO",
+      "message": "\ud83d\udd0d Daily Market Scan Started",
+      "timestamp": "2026-01-16T12:15:20.194740",
+      "phase": "start"
+    },
+    {
+      "type": "event",
+      "source": "Market Scanner",
+      "event_type": "scan",
+      "level": "INFO",
+      "message": "\ud83d\udd0d Daily market scan initiated - analyzing 5405 tickers",
+      "timestamp": "2026-01-16T12:15:20.194857"
+    },
+    {
+      "type": "event",
+      "source": "Market Scanner",
+      "event_type": "scan",
+      "level": "INFO",
+      "message": "\ud83d\udcca Loading universe data (5405 tickers)",
+      "timestamp": "2026-01-16T12:15:20.195481",
+      "phase": "loading"
     }
   ]
 }
