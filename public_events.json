@@ -1,31 +1,7 @@
 {
-  "last_updated": "2026-01-16T09:40:35.756142",
+  "last_updated": "2026-01-16T10:00:13.583397",
   "event_count": 200,
   "events": [
-    {
-      "type": "event",
-      "source": "Market Scanner",
-      "event_type": "scan",
-      "level": "INFO",
-      "message": "\ud83c\udfaf Scoring complete - Top 5: AP (91), ASTI (90), ISSC (90), TROO (88), UMAC (88)",
-      "timestamp": "2026-01-14T15:40:51.218843"
-    },
-    {
-      "type": "event",
-      "source": "Market Scanner",
-      "event_type": "scan",
-      "level": "INFO",
-      "message": "\ud83d\udfe1 Market Regime: UNKNOWN | Hot Sectors: Materials, Industrials, Energy",
-      "timestamp": "2026-01-14T15:40:51.219792"
-    },
-    {
-      "type": "event",
-      "source": "Market Scanner",
-      "event_type": "scan",
-      "level": "INFO",
-      "message": "\ud83d\udd04 14 rotation opportunities identified - avg score improvement: 43.8 points",
-      "timestamp": "2026-01-14T15:40:51.903536"
-    },
     {
       "type": "event",
       "source": "Market Scanner",
@@ -1703,6 +1679,32 @@
       "portfolio_value": "84K",
       "positions_count": 12,
       "avg_return": -2.2
+    },
+    {
+      "type": "event",
+      "source": "Market Scanner",
+      "event_type": "scan",
+      "level": "INFO",
+      "message": "\ud83d\udd0d Daily Market Scan Started",
+      "timestamp": "2026-01-16T10:00:13.577031",
+      "phase": "start"
+    },
+    {
+      "type": "event",
+      "source": "Market Scanner",
+      "event_type": "scan",
+      "level": "INFO",
+      "message": "\ud83d\udd0d Daily market scan initiated - analyzing 5405 tickers",
+      "timestamp": "2026-01-16T10:00:13.577082"
+    },
+    {
+      "type": "event",
+      "source": "Market Scanner",
+      "event_type": "scan",
+      "level": "INFO",
+      "message": "\ud83d\udcca Loading universe data (5405 tickers)",
+      "timestamp": "2026-01-16T10:00:13.577640",
+      "phase": "loading"
     }
   ]
 }
