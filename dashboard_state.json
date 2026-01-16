@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-01-16T10:37:48.945164",
+  "timestamp": "2026-01-16T10:38:50.162851",
   "account": {
-    "equity": 96856.71,
+    "equity": 96851.69,
     "cash": 70711.22,
-    "buying_power": 158180.11,
-    "portfolio_value": 96856.71,
+    "buying_power": 158190.06,
+    "portfolio_value": 96851.69,
     "last_equity": 99531.1237775609,
     "daytrade_count": 289,
     "status": "ACTIVE",
@@ -27,37 +27,37 @@
       "symbol": "GDXJ",
       "qty": 37.183930781,
       "avg_entry_price": 126.81844,
-      "current_price": 123.975,
-      "market_value": 4609.877819,
+      "current_price": 124.05,
+      "market_value": 4612.666613,
       "cost_basis": 4715.608095,
-      "unrealized_pl": -105.730276,
-      "unrealized_plpc": -0.0224213450036501,
-      "unrealized_intraday_pl": -118.05898,
-      "unrealized_intraday_plpc": -0.0249705072252595
+      "unrealized_pl": -102.941482,
+      "unrealized_plpc": -0.0218299485296816,
+      "unrealized_intraday_pl": -115.270186,
+      "unrealized_intraday_plpc": -0.0243806528937486
     },
     {
       "symbol": "KOLD",
       "qty": 199.613493771,
       "avg_entry_price": 45.944096,
-      "current_price": 47.03,
-      "market_value": 9387.822612,
+      "current_price": 46.955,
+      "market_value": 9372.8516,
       "cost_basis": 9171.061536,
-      "unrealized_pl": 216.761076,
-      "unrealized_plpc": 0.0236353311063423,
-      "unrealized_intraday_pl": 173.66374,
-      "unrealized_intraday_plpc": 0.0188474870481916
+      "unrealized_pl": 201.790064,
+      "unrealized_plpc": 0.0220029124445295,
+      "unrealized_intraday_pl": 158.692728,
+      "unrealized_intraday_plpc": 0.0172227036894529
     },
     {
       "symbol": "SILJ",
       "qty": 191.952926013,
       "avg_entry_price": 32.394671,
-      "current_price": 31.68,
-      "market_value": 6081.068696,
+      "current_price": 31.7173,
+      "market_value": 6088.22854,
       "cost_basis": 6218.251886,
-      "unrealized_pl": -137.18319,
-      "unrealized_plpc": -0.022061375530454,
-      "unrealized_intraday_pl": -224.584924,
-      "unrealized_intraday_plpc": -0.0356164384430618
+      "unrealized_pl": -130.023346,
+      "unrealized_plpc": -0.0209099516043632,
+      "unrealized_intraday_pl": -217.42508,
+      "unrealized_intraday_plpc": -0.0344809742340398
     }
   ],
   "scanner": {
