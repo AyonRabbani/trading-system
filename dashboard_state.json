@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-01-16T16:52:01.728416",
+  "timestamp": "2026-01-16T16:53:02.803290",
   "account": {
-    "equity": 96873.89,
+    "equity": 96881.49,
     "cash": 4558.14,
-    "buying_power": 93044.73,
-    "portfolio_value": 96873.89,
+    "buying_power": 93043.06,
+    "portfolio_value": 96881.49,
     "last_equity": 99531.1237775609,
     "daytrade_count": 321,
     "status": "ACTIVE",
@@ -15,13 +15,13 @@
       "symbol": "ASTI",
       "qty": 75.04275819,
       "avg_entry_price": 5.18,
-      "current_price": 5.0816,
-      "market_value": 381.33728,
+      "current_price": 5.0813,
+      "market_value": 381.314767,
       "cost_basis": 388.721487,
-      "unrealized_pl": -7.384207,
-      "unrealized_plpc": -0.0189961379726869,
-      "unrealized_intraday_pl": -7.384207,
-      "unrealized_intraday_plpc": -0.0189961379726869
+      "unrealized_pl": -7.40672,
+      "unrealized_plpc": -0.0190540534745382,
+      "unrealized_intraday_pl": -7.40672,
+      "unrealized_intraday_plpc": -0.0190540534745382
     },
     {
       "symbol": "COPX",
@@ -63,13 +63,13 @@
       "symbol": "KOLD",
       "qty": 185.313759667,
       "avg_entry_price": 45.218627,
-      "current_price": 45.26,
-      "market_value": 8387.300763,
+      "current_price": 45.31,
+      "market_value": 8396.566451,
       "cost_basis": 8379.633741,
-      "unrealized_pl": 7.667022,
-      "unrealized_plpc": 0.0009149590825774,
-      "unrealized_intraday_pl": 7.666987,
-      "unrealized_intraday_plpc": 0.0009149549019623
+      "unrealized_pl": 16.93271,
+      "unrealized_plpc": 0.00202069810249,
+      "unrealized_intraday_pl": 16.932675,
+      "unrealized_intraday_plpc": 0.0020206939172565
     },
     {
       "symbol": "ONDS",
@@ -99,13 +99,13 @@
       "symbol": "PPLT",
       "qty": 8.439378948,
       "avg_entry_price": 209.773145,
-      "current_price": 211.61,
-      "market_value": 1785.856979,
+      "current_price": 211.87,
+      "market_value": 1788.051218,
       "cost_basis": 1770.355062,
-      "unrealized_pl": 15.501917,
-      "unrealized_plpc": 0.0087563886661737,
-      "unrealized_intraday_pl": 15.501915,
-      "unrealized_intraday_plpc": 0.0087563875265646
+      "unrealized_pl": 17.696156,
+      "unrealized_plpc": 0.0099958230864764,
+      "unrealized_intraday_pl": 17.696154,
+      "unrealized_intraday_plpc": 0.0099958219454671
     },
     {
       "symbol": "REMX",
@@ -135,13 +135,13 @@
       "symbol": "SLV",
       "qty": 119.586143792,
       "avg_entry_price": 80.742775,
-      "current_price": 81.579,
-      "market_value": 9755.718024,
+      "current_price": 81.5469,
+      "market_value": 9751.879309,
       "cost_basis": 9655.717135,
-      "unrealized_pl": 100.000889,
-      "unrealized_plpc": 0.0103566506352508,
-      "unrealized_intraday_pl": 100.000923,
-      "unrealized_intraday_plpc": 0.0103566541929489
+      "unrealized_pl": 96.162174,
+      "unrealized_plpc": 0.0099590918681153,
+      "unrealized_intraday_pl": 96.162208,
+      "unrealized_intraday_plpc": 0.0099590954244135
     },
     {
       "symbol": "TE",
