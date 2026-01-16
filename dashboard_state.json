@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-01-16T10:05:10.825069",
+  "timestamp": "2026-01-16T10:06:12.763408",
   "account": {
-    "equity": 97018.77,
+    "equity": 97089.24,
     "cash": 70711.22,
-    "buying_power": 158591.69,
-    "portfolio_value": 97018.77,
+    "buying_power": 158620.24,
+    "portfolio_value": 97089.24,
     "last_equity": 99531.1237775609,
     "daytrade_count": 289,
     "status": "ACTIVE",
@@ -15,49 +15,49 @@
       "symbol": "GDX",
       "qty": 63.914035666,
       "avg_entry_price": 96.903055,
-      "current_price": 96.89,
-      "market_value": 6192.630916,
+      "current_price": 97.03,
+      "market_value": 6201.578881,
       "cost_basis": 6193.465313,
-      "unrealized_pl": -0.834397,
-      "unrealized_plpc": -0.0001347221559873,
-      "unrealized_intraday_pl": -14.061088,
-      "unrealized_intraday_plpc": -0.0022654721695451
+      "unrealized_pl": 8.113568,
+      "unrealized_plpc": 0.0013100207379816,
+      "unrealized_intraday_pl": -5.113123,
+      "unrealized_intraday_plpc": -0.0008238080762997
     },
     {
       "symbol": "GDXJ",
       "qty": 37.183930781,
       "avg_entry_price": 126.81844,
-      "current_price": 126.96,
-      "market_value": 4720.871852,
+      "current_price": 127.1,
+      "market_value": 4726.077602,
       "cost_basis": 4715.608095,
-      "unrealized_pl": 5.263757,
-      "unrealized_plpc": 0.0011162414038565,
-      "unrealized_intraday_pl": -7.064947,
-      "unrealized_intraday_plpc": -0.0014942981051469
+      "unrealized_pl": 10.469507,
+      "unrealized_plpc": 0.0022201817430717,
+      "unrealized_intraday_pl": -1.859197,
+      "unrealized_intraday_plpc": -0.000393236432516
     },
     {
       "symbol": "KOLD",
       "qty": 199.613493771,
       "avg_entry_price": 45.944096,
-      "current_price": 45.78,
-      "market_value": 9138.305745,
+      "current_price": 45.99,
+      "market_value": 9180.224579,
       "cost_basis": 9171.061536,
-      "unrealized_pl": -32.755791,
-      "unrealized_plpc": -0.003571646626884,
-      "unrealized_intraday_pl": -75.853127,
-      "unrealized_intraday_plpc": -0.0082322356336293
+      "unrealized_pl": 9.163043,
+      "unrealized_plpc": 0.0009991256698073,
+      "unrealized_intraday_pl": -33.934293,
+      "unrealized_intraday_plpc": -0.0036828421857495
     },
     {
       "symbol": "SILJ",
       "qty": 191.952926013,
       "avg_entry_price": 32.394671,
-      "current_price": 32.59,
-      "market_value": 6255.745859,
+      "current_price": 32.665,
+      "market_value": 6270.142328,
       "cost_basis": 6218.251886,
-      "unrealized_pl": 37.493973,
-      "unrealized_plpc": 0.0060296645564351,
-      "unrealized_intraday_pl": -49.907761,
-      "unrealized_intraday_plpc": -0.0079147641160791
+      "unrealized_pl": 51.890442,
+      "unrealized_plpc": 0.0083448600911179,
+      "unrealized_intraday_pl": -35.511292,
+      "unrealized_intraday_plpc": -0.0056316591649384
     }
   ],
   "scanner": {
