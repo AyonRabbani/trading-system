@@ -1,15 +1,7 @@
 {
-  "last_updated": "2026-01-16T12:09:09.053772",
+  "last_updated": "2026-01-16T12:09:09.751374",
   "event_count": 200,
   "events": [
-    {
-      "type": "event",
-      "source": "Market Scanner",
-      "event_type": "scan",
-      "level": "INFO",
-      "message": "\u2713 Data loaded for 5281/5405 tickers",
-      "timestamp": "2026-01-15T11:10:34.012722"
-    },
     {
       "type": "event",
       "source": "Market Scanner",
@@ -1672,6 +1664,14 @@
       "level": "INFO",
       "message": "\ud83d\udfe1 Market Regime: UNKNOWN | Hot Sectors: Materials, Industrials, Consumer Staples",
       "timestamp": "2026-01-16T12:09:09.049735"
+    },
+    {
+      "type": "event",
+      "source": "Market Scanner",
+      "event_type": "scan",
+      "level": "INFO",
+      "message": "\ud83d\udd04 13 rotation opportunities identified - avg score improvement: 46.5 points",
+      "timestamp": "2026-01-16T12:09:09.750434"
     }
   ]
 }
