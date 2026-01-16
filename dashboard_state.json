@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-01-15T22:02:09.867644",
+  "timestamp": "2026-01-15T22:03:10.906441",
   "account": {
-    "equity": 98511.34,
+    "equity": 98405.53,
     "cash": 10313.38,
-    "buying_power": 97728.11,
-    "portfolio_value": 98511.34,
+    "buying_power": 97622.29,
+    "portfolio_value": 98405.53,
     "last_equity": 99531.1237775609,
     "daytrade_count": 289,
     "status": "ACTIVE",
@@ -20,8 +20,8 @@
       "cost_basis": 1698.37636,
       "unrealized_pl": -2.828544,
       "unrealized_plpc": -0.0016654400441608,
-      "unrealized_intraday_pl": -57.886487,
-      "unrealized_intraday_plpc": -0.0330132055138652
+      "unrealized_intraday_pl": 0.0,
+      "unrealized_intraday_plpc": 0.0
     },
     {
       "symbol": "COPX",
@@ -32,20 +32,20 @@
       "cost_basis": 8867.261456,
       "unrealized_pl": -30.52616,
       "unrealized_plpc": -0.0034425690672902,
-      "unrealized_intraday_pl": -37.699383,
-      "unrealized_intraday_plpc": -0.00424808839815
+      "unrealized_intraday_pl": 0.0,
+      "unrealized_intraday_plpc": 0.0
     },
     {
       "symbol": "FIGR",
       "qty": 27.829820027,
       "avg_entry_price": 64.58,
-      "current_price": 67.4887,
-      "market_value": 1878.198375,
+      "current_price": 64.96,
+      "market_value": 1807.825109,
       "cost_basis": 1797.249777,
-      "unrealized_pl": 80.948598,
-      "unrealized_plpc": 0.0450402604222997,
-      "unrealized_intraday_pl": 324.737821,
-      "unrealized_intraday_plpc": 0.2090415621843978
+      "unrealized_pl": 10.575332,
+      "unrealized_plpc": 0.0058841748850583,
+      "unrealized_intraday_pl": 0.0,
+      "unrealized_intraday_plpc": 0.0
     },
     {
       "symbol": "GDX",
@@ -56,8 +56,8 @@
       "cost_basis": 6354.839457,
       "unrealized_pl": 13.571318,
       "unrealized_plpc": 0.0021355878605322,
-      "unrealized_intraday_pl": 16.394837,
-      "unrealized_intraday_plpc": 0.0025810446888082
+      "unrealized_intraday_pl": 0.0,
+      "unrealized_intraday_plpc": 0.0
     },
     {
       "symbol": "GDXJ",
@@ -68,8 +68,8 @@
       "cost_basis": 4882.649755,
       "unrealized_pl": 12.765425,
       "unrealized_plpc": 0.0026144461799513,
-      "unrealized_intraday_pl": 18.095518,
-      "unrealized_intraday_plpc": 0.0037101357413551
+      "unrealized_intraday_pl": 0.0,
+      "unrealized_intraday_plpc": 0.0
     },
     {
       "symbol": "KOLD",
@@ -80,8 +80,8 @@
       "cost_basis": 9357.095301,
       "unrealized_pl": 43.971561,
       "unrealized_plpc": 0.0046992746771854,
-      "unrealized_intraday_pl": 175.149859,
-      "unrealized_intraday_plpc": 0.0189845474377286
+      "unrealized_intraday_pl": 0.0,
+      "unrealized_intraday_plpc": 0.0
     },
     {
       "symbol": "LIT",
@@ -92,8 +92,8 @@
       "cost_basis": 7548.666282,
       "unrealized_pl": -45.554985,
       "unrealized_plpc": -0.0060348389103685,
-      "unrealized_intraday_pl": 25.412739,
-      "unrealized_intraday_plpc": 0.0033984706394472
+      "unrealized_intraday_pl": 0.0,
+      "unrealized_intraday_plpc": 0.0
     },
     {
       "symbol": "ORMP",
@@ -104,8 +104,8 @@
       "cost_basis": 1946.868837,
       "unrealized_pl": 21.335549,
       "unrealized_plpc": 0.0109589041616572,
-      "unrealized_intraday_pl": 26.669436,
-      "unrealized_intraday_plpc": 0.0137362636711742
+      "unrealized_intraday_pl": 0.0,
+      "unrealized_intraday_plpc": 0.0
     },
     {
       "symbol": "PICK",
@@ -116,8 +116,8 @@
       "cost_basis": 12924.106592,
       "unrealized_pl": -16.95145,
       "unrealized_plpc": -0.0013116148400148,
-      "unrealized_intraday_pl": 18.093085,
-      "unrealized_intraday_plpc": 0.0014037549761174
+      "unrealized_intraday_pl": 0.0,
+      "unrealized_intraday_plpc": 0.0
     },
     {
       "symbol": "REMX",
@@ -128,8 +128,8 @@
       "cost_basis": 14759.649497,
       "unrealized_pl": -122.854346,
       "unrealized_plpc": -0.0083236628366392,
-      "unrealized_intraday_pl": -126.095651,
-      "unrealized_intraday_plpc": -0.0085413929216978
+      "unrealized_intraday_pl": 0.0,
+      "unrealized_intraday_plpc": 0.0
     },
     {
       "symbol": "SILJ",
@@ -140,8 +140,8 @@
       "cost_basis": 6246.259882,
       "unrealized_pl": 87.795405,
       "unrealized_plpc": 0.0140556759818787,
-      "unrealized_intraday_pl": 109.905982,
-      "unrealized_intraday_plpc": 0.0176579925407172
+      "unrealized_intraday_pl": 0.0,
+      "unrealized_intraday_plpc": 0.0
     },
     {
       "symbol": "SLV",
@@ -152,20 +152,20 @@
       "cost_basis": 10315.864949,
       "unrealized_pl": 47.593791,
       "unrealized_plpc": 0.0046136500657285,
-      "unrealized_intraday_pl": -154.232943,
-      "unrealized_intraday_plpc": -0.0146641437730382
+      "unrealized_intraday_pl": 0.0,
+      "unrealized_intraday_plpc": 0.0
     },
     {
       "symbol": "TENX",
       "qty": 86.438120326,
       "avg_entry_price": 15.9,
-      "current_price": 16.31,
-      "market_value": 1409.805743,
+      "current_price": 15.9,
+      "market_value": 1374.366113,
       "cost_basis": 1374.366113,
-      "unrealized_pl": 35.43963,
-      "unrealized_plpc": 0.025786164010288,
-      "unrealized_intraday_pl": -169.418715,
-      "unrealized_intraday_plpc": -0.107279692979527
+      "unrealized_pl": 0.0,
+      "unrealized_plpc": 0.0,
+      "unrealized_intraday_pl": 0.0,
+      "unrealized_intraday_plpc": 0.0
     }
   ],
   "scanner": {
