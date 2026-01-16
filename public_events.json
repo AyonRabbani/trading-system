@@ -1,40 +1,7 @@
 {
-  "last_updated": "2026-01-16T10:55:12.850144",
+  "last_updated": "2026-01-16T11:00:20.674238",
   "event_count": 200,
   "events": [
-    {
-      "type": "event",
-      "source": "Profit Taker",
-      "event_type": "portfolio",
-      "level": "INFO",
-      "message": "\ud83d\udc40 Monitoring 12 positions: AGQ -1.2%, ASTI +2.8%, COPX -0.6%, GDX +0.1%, GDXJ -0.2%, KOLD +0.4%, PICK +0.2%, PPLT -0.0%, REMX -1.1%, SILJ +0.7%, XLI +0.0%, XME -0.2%",
-      "timestamp": "2026-01-15T09:57:12.819634",
-      "portfolio_value": "86K",
-      "positions_count": 12,
-      "avg_return": 0.1
-    },
-    {
-      "type": "event",
-      "source": "Profit Taker",
-      "event_type": "portfolio",
-      "level": "INFO",
-      "message": "\ud83d\udc40 Monitoring 12 positions: AGQ -0.9%, ASTI +2.6%, COPX -0.4%, GDX +0.0%, GDXJ -0.3%, KOLD +0.4%, PICK +0.2%, PPLT -0.0%, REMX -1.0%, SILJ +0.6%, XLI -0.1%, XME -0.2%",
-      "timestamp": "2026-01-15T09:58:12.873655",
-      "portfolio_value": "86K",
-      "positions_count": 12,
-      "avg_return": 0.1
-    },
-    {
-      "type": "event",
-      "source": "Profit Taker",
-      "event_type": "portfolio",
-      "level": "INFO",
-      "message": "\ud83d\udc40 Monitoring 12 positions: AGQ -1.1%, ASTI +1.0%, COPX -0.5%, GDX -0.1%, GDXJ -0.4%, KOLD +0.5%, PICK +0.2%, PPLT +0.0%, REMX -1.1%, SILJ +0.5%, XLI -0.2%, XME -0.3%",
-      "timestamp": "2026-01-15T09:59:12.941650",
-      "portfolio_value": "86K",
-      "positions_count": 12,
-      "avg_return": -0.1
-    },
     {
       "type": "event",
       "source": "Market Scanner",
@@ -1681,6 +1648,32 @@
       "level": "INFO",
       "message": "\ud83d\udd04 14 rotation opportunities identified - avg score improvement: 45.0 points",
       "timestamp": "2026-01-16T10:55:12.848964"
+    },
+    {
+      "type": "event",
+      "source": "Market Scanner",
+      "event_type": "scan",
+      "level": "INFO",
+      "message": "\ud83d\udd0d Daily Market Scan Started",
+      "timestamp": "2026-01-16T11:00:20.667155",
+      "phase": "start"
+    },
+    {
+      "type": "event",
+      "source": "Market Scanner",
+      "event_type": "scan",
+      "level": "INFO",
+      "message": "\ud83d\udd0d Daily market scan initiated - analyzing 5405 tickers",
+      "timestamp": "2026-01-16T11:00:20.667226"
+    },
+    {
+      "type": "event",
+      "source": "Market Scanner",
+      "event_type": "scan",
+      "level": "INFO",
+      "message": "\ud83d\udcca Loading universe data (5405 tickers)",
+      "timestamp": "2026-01-16T11:00:20.667550",
+      "phase": "loading"
     }
   ]
 }
