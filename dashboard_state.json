@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-01-16T16:58:08.094407",
+  "timestamp": "2026-01-16T16:59:09.137905",
   "account": {
-    "equity": 96898.96,
+    "equity": 96888.98,
     "cash": 4558.14,
-    "buying_power": 93071.65,
-    "portfolio_value": 96898.96,
+    "buying_power": 93070.94,
+    "portfolio_value": 96888.98,
     "last_equity": 99531.1237775609,
     "daytrade_count": 321,
     "status": "ACTIVE",
@@ -63,25 +63,25 @@
       "symbol": "KOLD",
       "qty": 185.313759667,
       "avg_entry_price": 45.218627,
-      "current_price": 45.25,
-      "market_value": 8385.447625,
+      "current_price": 45.2,
+      "market_value": 8376.181937,
       "cost_basis": 8379.633741,
-      "unrealized_pl": 5.813884,
-      "unrealized_plpc": 0.0006938112308601,
-      "unrealized_intraday_pl": 5.813849,
-      "unrealized_intraday_plpc": 0.0006938070511687
+      "unrealized_pl": -3.451804,
+      "unrealized_plpc": -0.0004119277890525,
+      "unrealized_intraday_pl": -3.451839,
+      "unrealized_intraday_plpc": -0.0004119319641255
     },
     {
       "symbol": "ONDS",
       "qty": 71.064615651,
       "avg_entry_price": 12.22,
-      "current_price": 12.24,
-      "market_value": 869.830896,
+      "current_price": 12.23,
+      "market_value": 869.120249,
       "cost_basis": 868.409603,
-      "unrealized_pl": 1.421293,
-      "unrealized_plpc": 0.0016366620026886,
-      "unrealized_intraday_pl": 1.421293,
-      "unrealized_intraday_plpc": 0.0016366620026886
+      "unrealized_pl": 0.710646,
+      "unrealized_plpc": 0.0008183304255791,
+      "unrealized_intraday_pl": 0.710646,
+      "unrealized_intraday_plpc": 0.0008183304255791
     },
     {
       "symbol": "PICK",
