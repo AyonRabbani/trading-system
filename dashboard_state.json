@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-01-16T16:53:02.803290",
+  "timestamp": "2026-01-16T16:54:03.800697",
   "account": {
-    "equity": 96881.49,
+    "equity": 96882.94,
     "cash": 4558.14,
-    "buying_power": 93043.06,
-    "portfolio_value": 96881.49,
+    "buying_power": 93044.52,
+    "portfolio_value": 96882.94,
     "last_equity": 99531.1237775609,
     "daytrade_count": 321,
     "status": "ACTIVE",
@@ -15,13 +15,13 @@
       "symbol": "ASTI",
       "qty": 75.04275819,
       "avg_entry_price": 5.18,
-      "current_price": 5.0813,
-      "market_value": 381.314767,
+      "current_price": 5.08,
+      "market_value": 381.217212,
       "cost_basis": 388.721487,
-      "unrealized_pl": -7.40672,
-      "unrealized_plpc": -0.0190540534745382,
-      "unrealized_intraday_pl": -7.40672,
-      "unrealized_intraday_plpc": -0.0190540534745382
+      "unrealized_pl": -7.504275,
+      "unrealized_plpc": -0.0193050172191793,
+      "unrealized_intraday_pl": -7.504275,
+      "unrealized_intraday_plpc": -0.0193050172191793
     },
     {
       "symbol": "COPX",
@@ -135,13 +135,13 @@
       "symbol": "SLV",
       "qty": 119.586143792,
       "avg_entry_price": 80.742775,
-      "current_price": 81.5469,
-      "market_value": 9751.879309,
+      "current_price": 81.5599,
+      "market_value": 9753.433929,
       "cost_basis": 9655.717135,
-      "unrealized_pl": 96.162174,
-      "unrealized_plpc": 0.0099590918681153,
-      "unrealized_intraday_pl": 96.162208,
-      "unrealized_intraday_plpc": 0.0099590954244135
+      "unrealized_pl": 97.716794,
+      "unrealized_plpc": 0.0101200969988854,
+      "unrealized_intraday_pl": 97.716828,
+      "unrealized_intraday_plpc": 0.0101201005557505
     },
     {
       "symbol": "TE",
