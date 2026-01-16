@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-01-16T11:52:07.695685",
+  "timestamp": "2026-01-16T11:53:08.779231",
   "account": {
-    "equity": 96826.62,
+    "equity": 96811.49,
     "cash": 87919.9,
     "buying_power": 175839.8,
-    "portfolio_value": 96826.62,
+    "portfolio_value": 96811.49,
     "last_equity": 99531.1237775609,
     "daytrade_count": 289,
     "status": "ACTIVE",
@@ -15,13 +15,13 @@
       "symbol": "KOLD",
       "qty": 189.182768494,
       "avg_entry_price": 45.944096,
-      "current_price": 47.08,
-      "market_value": 8906.724741,
+      "current_price": 47.0,
+      "market_value": 8891.590119,
       "cost_basis": 8691.831291,
-      "unrealized_pl": 214.89345,
-      "unrealized_plpc": 0.0247236103423352,
-      "unrealized_intraday_pl": 174.048147,
-      "unrealized_intraday_plpc": 0.0199306759074971
+      "unrealized_pl": 199.758828,
+      "unrealized_plpc": 0.0229823637058903,
+      "unrealized_intraday_pl": 158.913525,
+      "unrealized_intraday_plpc": 0.0181975735949257
     }
   ],
   "scanner": {
