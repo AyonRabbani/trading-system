@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-01-16T17:25:36.979349",
+  "timestamp": "2026-01-16T17:26:38.036147",
   "account": {
-    "equity": 96881.62,
+    "equity": 96883.08,
     "cash": 4558.14,
-    "buying_power": 93054.31,
-    "portfolio_value": 96881.62,
+    "buying_power": 93055.77,
+    "portfolio_value": 96883.08,
     "last_equity": 99531.1237775609,
     "daytrade_count": 321,
     "status": "ACTIVE",
@@ -75,13 +75,13 @@
       "symbol": "ONDS",
       "qty": 71.064615651,
       "avg_entry_price": 12.22,
-      "current_price": 12.2701,
-      "market_value": 871.96994,
+      "current_price": 12.3,
+      "market_value": 874.094773,
       "cost_basis": 868.409603,
-      "unrealized_pl": 3.560337,
-      "unrealized_plpc": 0.0040998360539779,
-      "unrealized_intraday_pl": 3.560337,
-      "unrealized_intraday_plpc": 0.0040998360539779
+      "unrealized_pl": 5.68517,
+      "unrealized_plpc": 0.0065466457076938,
+      "unrealized_intraday_pl": 5.68517,
+      "unrealized_intraday_plpc": 0.0065466457076938
     },
     {
       "symbol": "PICK",
@@ -99,13 +99,13 @@
       "symbol": "PPLT",
       "qty": 8.439378948,
       "avg_entry_price": 209.773145,
-      "current_price": 211.85,
-      "market_value": 1787.88243,
+      "current_price": 211.8,
+      "market_value": 1787.460461,
       "cost_basis": 1770.355062,
-      "unrealized_pl": 17.527368,
-      "unrealized_plpc": 0.0099004817599691,
-      "unrealized_intraday_pl": 17.527366,
-      "unrealized_intraday_plpc": 0.0099004806190675
+      "unrealized_pl": 17.105399,
+      "unrealized_plpc": 0.0096621290085593,
+      "unrealized_intraday_pl": 17.105397,
+      "unrealized_intraday_plpc": 0.009662127867927
     },
     {
       "symbol": "REMX",
@@ -135,25 +135,25 @@
       "symbol": "SLV",
       "qty": 119.586143792,
       "avg_entry_price": 80.742775,
-      "current_price": 81.6369,
-      "market_value": 9762.642062,
+      "current_price": 81.63,
+      "market_value": 9761.816918,
       "cost_basis": 9655.717135,
-      "unrealized_pl": 106.924927,
-      "unrealized_plpc": 0.0110737426858145,
-      "unrealized_intraday_pl": 106.924961,
-      "unrealized_intraday_plpc": 0.0110737462460376
+      "unrealized_pl": 106.099783,
+      "unrealized_plpc": 0.0109882861642052,
+      "unrealized_intraday_pl": 106.099817,
+      "unrealized_intraday_plpc": 0.0109882897241275
     },
     {
       "symbol": "TE",
       "qty": 58.388299518,
       "avg_entry_price": 8.15,
-      "current_price": 8.16,
-      "market_value": 476.448524,
+      "current_price": 8.17,
+      "market_value": 477.032407,
       "cost_basis": 475.864641,
-      "unrealized_pl": 0.583883,
-      "unrealized_plpc": 0.0012269938753445,
-      "unrealized_intraday_pl": 0.583883,
-      "unrealized_intraday_plpc": 0.0012269938753445
+      "unrealized_pl": 1.167766,
+      "unrealized_plpc": 0.002453987750689,
+      "unrealized_intraday_pl": 1.167766,
+      "unrealized_intraday_plpc": 0.002453987750689
     },
     {
       "symbol": "VELO",
