@@ -1,16 +1,7 @@
 {
-  "last_updated": "2026-01-16T09:38:35.642393",
+  "last_updated": "2026-01-16T09:39:35.694161",
   "event_count": 200,
   "events": [
-    {
-      "type": "event",
-      "source": "Market Scanner",
-      "event_type": "scan",
-      "level": "INFO",
-      "message": "\ud83d\udcca Loading universe data (5405 tickers)",
-      "timestamp": "2026-01-14T15:30:10.493529",
-      "phase": "loading"
-    },
     {
       "type": "event",
       "source": "Market Scanner",
@@ -1698,6 +1689,17 @@
       "portfolio_value": "84K",
       "positions_count": 12,
       "avg_return": -2.4
+    },
+    {
+      "type": "event",
+      "source": "Profit Taker",
+      "event_type": "portfolio",
+      "level": "INFO",
+      "message": "\ud83d\udc40 Monitoring 12 positions: AGQ -6.9%, COPX -2.3%, GDX -0.6%, GDXJ -0.5%, KOLD +1.9%, LIT -2.5%, ORMP -7.1%, PICK -1.6%, REMX -3.6%, SILJ +0.1%, SLV -2.8%, TENX -2.2%",
+      "timestamp": "2026-01-16T09:39:35.692833",
+      "portfolio_value": "84K",
+      "positions_count": 12,
+      "avg_return": -2.3
     }
   ]
 }
