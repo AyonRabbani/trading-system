@@ -1,9 +1,9 @@
 {
-  "timestamp": "2026-01-19T14:41:49.896767",
+  "timestamp": "2026-01-19T14:42:51.320970",
   "account": {
     "equity": 96783.12,
     "cash": 4556.13,
-    "buying_power": 234970.43,
+    "buying_power": 232396.77,
     "portfolio_value": 96783.12,
     "last_equity": 96783.12304311625,
     "daytrade_count": 163,
@@ -181,7 +181,7 @@
     }
   ],
   "scanner": {
-    "timestamp": "2026-01-19T14:20:40.277298",
+    "timestamp": "2026-01-19T14:42:01.026639",
     "market_regime": "NEUTRAL",
     "top_scorers": [
       {
@@ -335,6 +335,6 @@
         "has_loss_penalty": 0
       }
     ],
-    "total_tickers_scored": 5281
+    "total_tickers_scored": 5283
   }
 }
