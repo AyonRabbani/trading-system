@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-01-19T15:25:50.010986",
+  "timestamp": "2026-01-19T15:26:51.136503",
   "account": {
     "equity": 96783.12,
     "cash": 4556.13,
@@ -181,7 +181,7 @@
     }
   ],
   "scanner": {
-    "timestamp": "2026-01-19T15:11:44.904691",
+    "timestamp": "2026-01-19T15:26:19.143743",
     "market_regime": "NEUTRAL",
     "top_scorers": [
       {
