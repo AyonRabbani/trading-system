@@ -1,16 +1,7 @@
 {
-  "last_updated": "2026-01-19T13:15:01.197867",
+  "last_updated": "2026-01-19T13:26:06.003702",
   "event_count": 200,
   "events": [
-    {
-      "type": "event",
-      "source": "Market Scanner",
-      "event_type": "scan",
-      "level": "INFO",
-      "message": "\ud83d\udd0d Daily Market Scan Started",
-      "timestamp": "2026-01-15T14:15:14.911106",
-      "phase": "start"
-    },
     {
       "type": "event",
       "source": "Market Scanner",
@@ -1674,6 +1665,14 @@
       "message": "\ud83d\udcca Loading universe data (5405 tickers)",
       "timestamp": "2026-01-19T13:15:01.194140",
       "phase": "loading"
+    },
+    {
+      "type": "event",
+      "source": "Market Scanner",
+      "event_type": "scan",
+      "level": "INFO",
+      "message": "\u2713 Data loaded for 5283/5405 tickers",
+      "timestamp": "2026-01-19T13:26:06.001316"
     }
   ]
 }
