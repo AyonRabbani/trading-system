@@ -1,44 +1,7 @@
 {
-  "last_updated": "2026-01-19T15:30:07.609502",
+  "last_updated": "2026-01-19T15:42:00.878240",
   "event_count": 200,
   "events": [
-    {
-      "type": "event",
-      "source": "Market Scanner",
-      "event_type": "scan",
-      "level": "INFO",
-      "message": "\ud83d\udd0d Daily Market Scan Started",
-      "timestamp": "2026-01-16T09:35:35.586260",
-      "phase": "start"
-    },
-    {
-      "type": "event",
-      "source": "Market Scanner",
-      "event_type": "scan",
-      "level": "INFO",
-      "message": "\ud83d\udd0d Daily market scan initiated - analyzing 5405 tickers",
-      "timestamp": "2026-01-16T09:35:35.586310"
-    },
-    {
-      "type": "event",
-      "source": "Market Scanner",
-      "event_type": "scan",
-      "level": "INFO",
-      "message": "\ud83d\udcca Loading universe data (5405 tickers)",
-      "timestamp": "2026-01-16T09:35:35.586575",
-      "phase": "loading"
-    },
-    {
-      "type": "event",
-      "source": "Profit Taker",
-      "event_type": "portfolio",
-      "level": "INFO",
-      "message": "\ud83d\udc40 Monitoring 13 positions: AGQ -6.6%, COPX -1.8%, FIGR +8.1%, GDX -0.5%, GDXJ -0.4%, KOLD +1.4%, LIT -1.8%, ORMP -3.4%, PICK -1.7%, REMX -3.6%, SILJ -0.0%, SLV -2.6%, TENX -2.2%",
-      "timestamp": "2026-01-16T09:36:35.462281",
-      "portfolio_value": "86K",
-      "positions_count": 13,
-      "avg_return": -1.2
-    },
     {
       "type": "event",
       "source": "Profit Taker",
@@ -1674,6 +1637,38 @@
       "message": "\ud83d\udcca Loading universe data (5405 tickers)",
       "timestamp": "2026-01-19T15:30:07.604938",
       "phase": "loading"
+    },
+    {
+      "type": "event",
+      "source": "Market Scanner",
+      "event_type": "scan",
+      "level": "INFO",
+      "message": "\u2713 Data loaded for 5282/5405 tickers",
+      "timestamp": "2026-01-19T15:41:51.251132"
+    },
+    {
+      "type": "event",
+      "source": "Market Scanner",
+      "event_type": "scan",
+      "level": "INFO",
+      "message": "\ud83c\udfaf Scoring complete - Top 5: VELO (90), GLSI (90), TE (89), SHMDW (89), ASM (88)",
+      "timestamp": "2026-01-19T15:42:00.172304"
+    },
+    {
+      "type": "event",
+      "source": "Market Scanner",
+      "event_type": "scan",
+      "level": "INFO",
+      "message": "\ud83d\udfe1 Market Regime: UNKNOWN | Hot Sectors: Materials, Industrials, Consumer Staples",
+      "timestamp": "2026-01-19T15:42:00.173366"
+    },
+    {
+      "type": "event",
+      "source": "Market Scanner",
+      "event_type": "scan",
+      "level": "INFO",
+      "message": "\ud83d\udd04 13 rotation opportunities identified - avg score improvement: 47.1 points",
+      "timestamp": "2026-01-19T15:42:00.876924"
     }
   ]
 }
