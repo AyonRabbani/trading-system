@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-01-20T16:16:48.486037",
+  "timestamp": "2026-01-20T16:17:49.255686",
   "account": {
-    "equity": 96017.08,
+    "equity": 96000.78,
     "cash": -19238.99,
     "buying_power": 219778.28,
-    "portfolio_value": 96017.08,
+    "portfolio_value": 96000.78,
     "last_equity": 96783.12304311625,
     "daytrade_count": 163,
     "status": "ACTIVE",
@@ -63,13 +63,13 @@
       "symbol": "PPLT",
       "qty": 8.439378948,
       "avg_entry_price": 209.783321,
-      "current_price": 225.08,
-      "market_value": 1899.535414,
+      "current_price": 224.45,
+      "market_value": 1894.218605,
       "cost_basis": 1770.440943,
-      "unrealized_pl": 129.094471,
-      "unrealized_plpc": 0.0729165643792954,
-      "unrealized_intraday_pl": 133.426582,
-      "unrealized_intraday_plpc": 0.0755483351775685
+      "unrealized_pl": 123.777662,
+      "unrealized_plpc": 0.0699134656196211,
+      "unrealized_intraday_pl": 128.109773,
+      "unrealized_intraday_plpc": 0.0725378700784392
     },
     {
       "symbol": "REMX",
@@ -99,13 +99,13 @@
       "symbol": "SLV",
       "qty": 142.064239172,
       "avg_entry_price": 81.519022,
-      "current_price": 85.7379,
-      "market_value": 12180.289532,
+      "current_price": 85.6606,
+      "market_value": 12169.307966,
       "cost_basis": 11580.937843,
-      "unrealized_pl": 599.351689,
-      "unrealized_plpc": 0.0517532946921283,
-      "unrealized_intraday_pl": 670.244874,
-      "unrealized_intraday_plpc": 0.0582313009128205
+      "unrealized_pl": 588.370123,
+      "unrealized_plpc": 0.050805049727094,
+      "unrealized_intraday_pl": 659.263308,
+      "unrealized_intraday_plpc": 0.0572772154747273
     },
     {
       "symbol": "TE",
