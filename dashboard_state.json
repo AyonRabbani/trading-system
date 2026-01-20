@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-01-20T17:31:43.561875",
+  "timestamp": "2026-01-20T17:32:44.300225",
   "account": {
-    "equity": 96585.21,
+    "equity": 96583.36,
     "cash": -19238.99,
     "buying_power": 219778.28,
-    "portfolio_value": 96585.21,
+    "portfolio_value": 96583.36,
     "last_equity": 96783.12304311625,
     "daytrade_count": 163,
     "status": "ACTIVE",
@@ -27,13 +27,13 @@
       "symbol": "GDX",
       "qty": 129.159399016,
       "avg_entry_price": 98.670935,
-      "current_price": 103.29,
-      "market_value": 13340.874324,
+      "current_price": 103.2797,
+      "market_value": 13339.543983,
       "cost_basis": 12744.27864,
-      "unrealized_pl": 596.595684,
-      "unrealized_plpc": 0.0468128248646014,
-      "unrealized_intraday_pl": 781.414364,
-      "unrealized_intraday_plpc": 0.0622171945679741
+      "unrealized_pl": 595.265343,
+      "unrealized_plpc": 0.0467084375518644,
+      "unrealized_intraday_pl": 780.084023,
+      "unrealized_intraday_plpc": 0.0621112711441774
     },
     {
       "symbol": "KOLD",
@@ -111,25 +111,25 @@
       "symbol": "TE",
       "qty": 12.29190046,
       "avg_entry_price": 8.122028,
-      "current_price": 8.28,
-      "market_value": 101.776936,
+      "current_price": 8.3,
+      "market_value": 102.022774,
       "cost_basis": 99.83516,
-      "unrealized_pl": 1.941776,
-      "unrealized_plpc": 0.0194498210850766,
-      "unrealized_intraday_pl": 1.352109,
-      "unrealized_intraday_plpc": 0.0134638917525842
+      "unrealized_pl": 2.187614,
+      "unrealized_plpc": 0.0219122601696637,
+      "unrealized_intraday_pl": 1.597947,
+      "unrealized_intraday_plpc": 0.0159118720712359
     },
     {
       "symbol": "VELO",
       "qty": 38.729690548,
       "avg_entry_price": 21.114468,
-      "current_price": 20.1,
-      "market_value": 778.46678,
+      "current_price": 20.08,
+      "market_value": 777.692186,
       "cost_basis": 817.756812,
-      "unrealized_pl": -39.290032,
-      "unrealized_plpc": -0.048046107869047,
-      "unrealized_intraday_pl": -58.86913,
-      "unrealized_intraday_plpc": -0.0703052733042346
+      "unrealized_pl": -40.064626,
+      "unrealized_plpc": -0.0489933259033494,
+      "unrealized_intraday_pl": -59.643724,
+      "unrealized_intraday_plpc": -0.0712303429098126
     },
     {
       "symbol": "XME",
