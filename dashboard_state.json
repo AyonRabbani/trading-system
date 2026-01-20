@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-01-20T18:40:33.964521",
+  "timestamp": "2026-01-20T18:41:34.686534",
   "account": {
-    "equity": 96282.07,
+    "equity": 96276.96,
     "cash": -19238.99,
     "buying_power": 219778.28,
-    "portfolio_value": 96282.07,
+    "portfolio_value": 96276.96,
     "last_equity": 96783.12304311625,
     "daytrade_count": 163,
     "status": "ACTIVE",
@@ -27,13 +27,13 @@
       "symbol": "GDX",
       "qty": 129.159399016,
       "avg_entry_price": 98.670935,
-      "current_price": 103.2596,
-      "market_value": 13336.947879,
+      "current_price": 103.22,
+      "market_value": 13331.833166,
       "cost_basis": 12744.27864,
-      "unrealized_pl": 592.669239,
-      "unrealized_plpc": 0.0465047301413994,
-      "unrealized_intraday_pl": 777.487919,
-      "unrealized_intraday_plpc": 0.061904566078174
+      "unrealized_pl": 587.554526,
+      "unrealized_plpc": 0.0461033960883329,
+      "unrealized_intraday_pl": 772.373206,
+      "unrealized_intraday_plpc": 0.0614973261955445
     },
     {
       "symbol": "KOLD",
