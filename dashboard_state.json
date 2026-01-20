@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-01-20T17:26:39.861546",
+  "timestamp": "2026-01-20T17:27:40.577766",
   "account": {
-    "equity": 96566.83,
+    "equity": 96573.03,
     "cash": -19238.99,
     "buying_power": 219778.28,
-    "portfolio_value": 96566.83,
+    "portfolio_value": 96573.03,
     "last_equity": 96783.12304311625,
     "daytrade_count": 163,
     "status": "ACTIVE",
@@ -123,13 +123,13 @@
       "symbol": "VELO",
       "qty": 38.729690548,
       "avg_entry_price": 21.114468,
-      "current_price": 19.81,
-      "market_value": 767.23517,
+      "current_price": 19.97,
+      "market_value": 773.43192,
       "cost_basis": 817.756812,
-      "unrealized_pl": -50.521642,
-      "unrealized_plpc": -0.0617807656978588,
-      "unrealized_intraday_pl": -70.10074,
-      "unrealized_intraday_plpc": -0.0837187790023242
+      "unrealized_pl": -44.324892,
+      "unrealized_plpc": -0.0542030238691549,
+      "unrealized_intraday_pl": -63.90399,
+      "unrealized_intraday_plpc": -0.0763182245462278
     },
     {
       "symbol": "XME",
