@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-01-20T18:26:23.620632",
+  "timestamp": "2026-01-20T18:27:24.360991",
   "account": {
-    "equity": 96279.87,
+    "equity": 96280.15,
     "cash": -19238.99,
     "buying_power": 219778.28,
-    "portfolio_value": 96279.87,
+    "portfolio_value": 96280.15,
     "last_equity": 96783.12304311625,
     "daytrade_count": 163,
     "status": "ACTIVE",
@@ -27,13 +27,13 @@
       "symbol": "GDX",
       "qty": 129.159399016,
       "avg_entry_price": 98.670935,
-      "current_price": 103.1622,
-      "market_value": 13324.367753,
+      "current_price": 103.18,
+      "market_value": 13326.66679,
       "cost_basis": 12744.27864,
-      "unrealized_pl": 580.089113,
-      "unrealized_plpc": 0.0455176106381805,
-      "unrealized_intraday_pl": 764.907793,
-      "unrealized_intraday_plpc": 0.0609029206220743
+      "unrealized_pl": 582.38815,
+      "unrealized_plpc": 0.0456980082161794,
+      "unrealized_intraday_pl": 767.20683,
+      "unrealized_intraday_plpc": 0.0610859728398704
     },
     {
       "symbol": "KOLD",
@@ -123,13 +123,13 @@
       "symbol": "VELO",
       "qty": 38.729690548,
       "avg_entry_price": 21.114468,
-      "current_price": 19.21,
-      "market_value": 743.997355,
+      "current_price": 19.1579,
+      "market_value": 741.979539,
       "cost_basis": 817.756812,
-      "unrealized_pl": -73.759457,
-      "unrealized_plpc": -0.0901973006126423,
-      "unrealized_intraday_pl": -93.338555,
-      "unrealized_intraday_plpc": -0.1114708611983451
+      "unrealized_pl": -75.777273,
+      "unrealized_plpc": -0.0926648019166852,
+      "unrealized_intraday_pl": -95.356371,
+      "unrealized_intraday_plpc": -0.1138806658847344
     },
     {
       "symbol": "XME",
