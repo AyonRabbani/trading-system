@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-01-20T17:09:27.322116",
+  "timestamp": "2026-01-20T17:10:28.119400",
   "account": {
-    "equity": 96304.89,
+    "equity": 96317.56,
     "cash": -19238.99,
     "buying_power": 219778.28,
-    "portfolio_value": 96304.89,
+    "portfolio_value": 96317.56,
     "last_equity": 96783.12304311625,
     "daytrade_count": 163,
     "status": "ACTIVE",
@@ -87,25 +87,25 @@
       "symbol": "SILJ",
       "qty": 433.07914685,
       "avg_entry_price": 33.802704,
-      "current_price": 35.43,
-      "market_value": 15343.994173,
+      "current_price": 35.45,
+      "market_value": 15352.655756,
       "cost_basis": 14639.246211,
-      "unrealized_pl": 704.747962,
-      "unrealized_plpc": 0.0481410006937686,
-      "unrealized_intraday_pl": 835.842754,
-      "unrealized_intraday_plpc": 0.0576119403403368
+      "unrealized_pl": 713.409545,
+      "unrealized_plpc": 0.0487326693408531,
+      "unrealized_intraday_pl": 844.504337,
+      "unrealized_intraday_plpc": 0.0582089552700718
     },
     {
       "symbol": "SLV",
       "qty": 142.064239172,
       "avg_entry_price": 81.519022,
-      "current_price": 85.87,
-      "market_value": 12199.056218,
+      "current_price": 85.8782,
+      "market_value": 12200.221144,
       "cost_basis": 11580.937843,
-      "unrealized_pl": 618.118375,
-      "unrealized_plpc": 0.0533737753694634,
-      "unrealized_intraday_pl": 689.01156,
-      "unrealized_intraday_plpc": 0.0598617625276637
+      "unrealized_pl": 619.283301,
+      "unrealized_plpc": 0.0534743653230399,
+      "unrealized_intraday_pl": 690.176486,
+      "unrealized_intraday_plpc": 0.0599629720394087
     },
     {
       "symbol": "TE",
