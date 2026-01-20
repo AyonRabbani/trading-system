@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-01-20T06:45:42.203085",
+  "timestamp": "2026-01-20T06:46:42.976760",
   "account": {
-    "equity": 96466.9,
+    "equity": 96440.05,
     "cash": 4556.13,
-    "buying_power": 219593.6,
-    "portfolio_value": 96466.9,
+    "buying_power": 219462.56,
+    "portfolio_value": 96440.05,
     "last_equity": 96783.12304311625,
     "daytrade_count": 163,
     "status": "ACTIVE",
@@ -75,13 +75,13 @@
       "symbol": "ONDS",
       "qty": 71.064615651,
       "avg_entry_price": 12.303133,
-      "current_price": 11.92,
-      "market_value": 847.090219,
+      "current_price": 11.99,
+      "market_value": 852.064742,
       "cost_basis": 874.317418,
-      "unrealized_pl": -27.227199,
-      "unrealized_plpc": -0.0311410918271332,
-      "unrealized_intraday_pl": -17.055507,
-      "unrealized_intraday_plpc": -0.019736841237354
+      "unrealized_pl": -22.252676,
+      "unrealized_plpc": -0.025451484257174,
+      "unrealized_intraday_pl": -12.080984,
+      "unrealized_intraday_plpc": -0.0139802623984742
     },
     {
       "symbol": "PICK",
@@ -99,13 +99,13 @@
       "symbol": "PPLT",
       "qty": 8.439378948,
       "avg_entry_price": 209.783321,
-      "current_price": 218.81,
-      "market_value": 1846.620508,
+      "current_price": 218.64,
+      "market_value": 1845.185813,
       "cost_basis": 1770.440943,
-      "unrealized_pl": 76.179565,
-      "unrealized_plpc": 0.0430285829647129,
-      "unrealized_intraday_pl": 80.511676,
-      "unrealized_intraday_plpc": 0.0455870411501345
+      "unrealized_pl": 74.74487,
+      "unrealized_plpc": 0.0422182226950453,
+      "unrealized_intraday_pl": 79.076981,
+      "unrealized_intraday_plpc": 0.0447746931373706
     },
     {
       "symbol": "REMX",
@@ -123,25 +123,25 @@
       "symbol": "SILJ",
       "qty": 261.804360336,
       "avg_entry_price": 33.161739,
-      "current_price": 35.575,
-      "market_value": 9313.690119,
+      "current_price": 35.5,
+      "market_value": 9294.054792,
       "cost_basis": 8681.887867,
-      "unrealized_pl": 631.802252,
-      "unrealized_plpc": 0.0727724501489464,
-      "unrealized_intraday_pl": 543.244048,
-      "unrealized_intraday_plpc": 0.0619402985437957
+      "unrealized_pl": 612.166925,
+      "unrealized_plpc": 0.0705108076005976,
+      "unrealized_intraday_pl": 523.608721,
+      "unrealized_intraday_plpc": 0.0597014925764544
     },
     {
       "symbol": "SLV",
       "qty": 119.586143792,
       "avg_entry_price": 80.71608,
-      "current_price": 86.46,
-      "market_value": 10339.417992,
+      "current_price": 86.37,
+      "market_value": 10328.655239,
       "cost_basis": 9652.524749,
-      "unrealized_pl": 686.893243,
-      "unrealized_plpc": 0.0711620286776433,
-      "unrealized_intraday_pl": 650.548622,
-      "unrealized_intraday_plpc": 0.0671439150593069
+      "unrealized_pl": 676.13049,
+      "unrealized_plpc": 0.0700470092107298,
+      "unrealized_intraday_pl": 639.785869,
+      "unrealized_intraday_plpc": 0.0660330782228309
     },
     {
       "symbol": "TE",
