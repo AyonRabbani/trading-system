@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-01-21T07:20:08.305164",
+  "timestamp": "2026-01-21T07:21:09.123694",
   "account": {
-    "equity": 96796.05,
+    "equity": 96794.2,
     "cash": -19238.99,
     "buying_power": 219778.28,
-    "portfolio_value": 96796.05,
+    "portfolio_value": 96794.2,
     "last_equity": 95933.64557895635,
     "daytrade_count": 136,
     "status": "ACTIVE",
@@ -27,25 +27,25 @@
       "symbol": "GDX",
       "qty": 129.159399016,
       "avg_entry_price": 98.670935,
-      "current_price": 104.76,
-      "market_value": 13530.738641,
+      "current_price": 104.77,
+      "market_value": 13532.030235,
       "cost_basis": 12744.27864,
-      "unrealized_pl": 786.460001,
-      "unrealized_plpc": 0.0617108290877733,
-      "unrealized_intraday_pl": 255.73561,
-      "unrealized_intraday_plpc": 0.0192644483321625
+      "unrealized_pl": 787.751595,
+      "unrealized_plpc": 0.0618121760558117,
+      "unrealized_intraday_pl": 257.027204,
+      "unrealized_intraday_plpc": 0.0193617435265202
     },
     {
       "symbol": "KOLD",
       "qty": 198.366123667,
       "avg_entry_price": 44.261641,
-      "current_price": 22.9,
-      "market_value": 4542.584232,
+      "current_price": 22.92,
+      "market_value": 4546.551554,
       "cost_basis": 8780.010093,
-      "unrealized_pl": -4237.425861,
-      "unrealized_plpc": -0.4826219806260079,
-      "unrealized_intraday_pl": -989.846957,
-      "unrealized_intraday_plpc": -0.1789171745991326
+      "unrealized_pl": -4233.458539,
+      "unrealized_plpc": -0.4821701221477172,
+      "unrealized_intraday_pl": -985.879635,
+      "unrealized_intraday_plpc": -0.1782000717804138
     },
     {
       "symbol": "PICK",
@@ -99,13 +99,13 @@
       "symbol": "SLV",
       "qty": 142.064239172,
       "avg_entry_price": 81.519022,
-      "current_price": 85.49,
-      "market_value": 12145.071807,
+      "current_price": 85.44,
+      "market_value": 12137.968595,
       "cost_basis": 11580.937843,
-      "unrealized_pl": 564.133964,
-      "unrealized_plpc": 0.0487122866600123,
-      "unrealized_intraday_pl": 14.206424,
-      "unrealized_intraday_plpc": 0.0011710973250028
+      "unrealized_pl": 557.030752,
+      "unrealized_plpc": 0.0480989328801806,
+      "unrealized_intraday_pl": 7.103212,
+      "unrealized_intraday_plpc": 0.0005855486625014
     },
     {
       "symbol": "TE",
