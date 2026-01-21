@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-01-20T19:04:52.330029",
+  "timestamp": "2026-01-20T19:05:53.107543",
   "account": {
-    "equity": 96674.04,
+    "equity": 96675.32,
     "cash": -19238.99,
     "buying_power": 219778.28,
-    "portfolio_value": 96674.04,
+    "portfolio_value": 96675.32,
     "last_equity": 96783.12304311625,
     "daytrade_count": 163,
     "status": "ACTIVE",
@@ -99,13 +99,13 @@
       "symbol": "SLV",
       "qty": 142.064239172,
       "avg_entry_price": 81.519022,
-      "current_price": 85.961,
-      "market_value": 12211.984063,
+      "current_price": 85.97,
+      "market_value": 12213.262642,
       "cost_basis": 11580.937843,
-      "unrealized_pl": 631.04622,
-      "unrealized_plpc": 0.0544900791762241,
-      "unrealized_intraday_pl": 701.939405,
-      "unrealized_intraday_plpc": 0.0609849419230637
+      "unrealized_pl": 632.324799,
+      "unrealized_plpc": 0.0546004829291268,
+      "unrealized_intraday_pl": 703.217984,
+      "unrealized_intraday_plpc": 0.0610960256797294
     },
     {
       "symbol": "TE",
