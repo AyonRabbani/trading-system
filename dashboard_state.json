@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-01-21T16:48:29.925196",
+  "timestamp": "2026-01-21T16:49:30.685535",
   "account": {
-    "equity": 96299.97,
+    "equity": 96288.35,
     "cash": -14740.12,
     "buying_power": 212040.77,
-    "portfolio_value": 96299.97,
+    "portfolio_value": 96288.35,
     "last_equity": 95933.64557895635,
     "daytrade_count": 136,
     "status": "ACTIVE",
@@ -87,25 +87,25 @@
       "symbol": "SLV",
       "qty": 142.064239172,
       "avg_entry_price": 81.541493,
-      "current_price": 84.58,
-      "market_value": 12015.793349,
+      "current_price": 84.5,
+      "market_value": 12004.42821,
       "cost_basis": 11584.130164,
-      "unrealized_pl": 431.663185,
-      "unrealized_plpc": 0.037263323088468,
-      "unrealized_intraday_pl": -115.072034,
-      "unrealized_intraday_plpc": -0.0094858882995487
+      "unrealized_pl": 420.298046,
+      "unrealized_plpc": 0.0362822275000121,
+      "unrealized_intraday_pl": -126.437173,
+      "unrealized_intraday_plpc": -0.010422766143064
     },
     {
       "symbol": "TE",
       "qty": 12.29190046,
       "avg_entry_price": 8.15,
-      "current_price": 7.54,
-      "market_value": 92.680929,
+      "current_price": 7.52,
+      "market_value": 92.435091,
       "cost_basis": 100.178989,
-      "unrealized_pl": -7.49806,
-      "unrealized_plpc": -0.0748466327604883,
-      "unrealized_intraday_pl": -9.096007,
-      "unrealized_intraday_plpc": -0.0893719869892723
+      "unrealized_pl": -7.743898,
+      "unrealized_plpc": -0.0773006203925656,
+      "unrealized_intraday_pl": -9.341845,
+      "unrealized_intraday_plpc": -0.0917874458315389
     },
     {
       "symbol": "VELO",
