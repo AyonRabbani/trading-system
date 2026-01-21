@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-01-21T17:48:19.297054",
+  "timestamp": "2026-01-21T17:49:20.117777",
   "account": {
-    "equity": 96596.93,
+    "equity": 96596.72,
     "cash": -14740.12,
     "buying_power": 212040.77,
-    "portfolio_value": 96596.93,
+    "portfolio_value": 96596.72,
     "last_equity": 95933.64557895635,
     "daytrade_count": 136,
     "status": "ACTIVE",
