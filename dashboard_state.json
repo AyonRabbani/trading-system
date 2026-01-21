@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-01-21T16:12:00.919207",
+  "timestamp": "2026-01-21T16:13:01.877496",
   "account": {
-    "equity": 95986.9,
+    "equity": 96014.09,
     "cash": -14740.12,
     "buying_power": 212040.77,
-    "portfolio_value": 95986.9,
+    "portfolio_value": 96014.09,
     "last_equity": 95933.64557895635,
     "daytrade_count": 136,
     "status": "ACTIVE",
@@ -27,13 +27,13 @@
       "symbol": "GDX",
       "qty": 129.159399016,
       "avg_entry_price": 98.684572,
-      "current_price": 101.3504,
-      "market_value": 13090.356754,
+      "current_price": 101.45,
+      "market_value": 13103.22103,
       "cost_basis": 12746.040012,
-      "unrealized_pl": 344.316742,
-      "unrealized_plpc": 0.0270136247552837,
-      "unrealized_intraday_pl": -184.646277,
-      "unrealized_intraday_plpc": -0.013909320891966
+      "unrealized_pl": 357.181018,
+      "unrealized_plpc": 0.0280229010472057,
+      "unrealized_intraday_pl": -171.782001,
+      "unrealized_intraday_plpc": -0.0129402607742425
     },
     {
       "symbol": "PICK",
@@ -87,25 +87,25 @@
       "symbol": "SLV",
       "qty": 142.064239172,
       "avg_entry_price": 81.541493,
-      "current_price": 83.93,
-      "market_value": 11923.451594,
+      "current_price": 84.03,
+      "market_value": 11937.658018,
       "cost_basis": 11584.130164,
-      "unrealized_pl": 339.32143,
-      "unrealized_plpc": 0.0292919213783102,
-      "unrealized_intraday_pl": -207.413789,
-      "unrealized_intraday_plpc": -0.0170980208296323
+      "unrealized_pl": 353.527854,
+      "unrealized_plpc": 0.0305182908854614,
+      "unrealized_intraday_pl": -193.207365,
+      "unrealized_intraday_plpc": -0.0159269235046296
     },
     {
       "symbol": "TE",
       "qty": 12.29190046,
       "avg_entry_price": 8.15,
-      "current_price": 7.82,
-      "market_value": 96.122662,
+      "current_price": 7.83,
+      "market_value": 96.245581,
       "cost_basis": 100.178989,
-      "unrealized_pl": -4.056327,
-      "unrealized_plpc": -0.0404907959292742,
-      "unrealized_intraday_pl": -5.654274,
-      "unrealized_intraday_plpc": -0.0555555533721314
+      "unrealized_pl": -3.933408,
+      "unrealized_plpc": -0.0392638021132355,
+      "unrealized_intraday_pl": -5.531355,
+      "unrealized_intraday_plpc": -0.0543478239509981
     },
     {
       "symbol": "VELO",
