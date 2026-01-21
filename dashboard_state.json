@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-01-20T22:02:01.187311",
+  "timestamp": "2026-01-20T22:03:01.999550",
   "account": {
-    "equity": 95941.97,
+    "equity": 95933.72,
     "cash": -19238.99,
     "buying_power": 219778.28,
-    "portfolio_value": 95941.97,
+    "portfolio_value": 95933.72,
     "last_equity": 96783.12304311625,
     "daytrade_count": 136,
     "status": "ACTIVE",
@@ -20,8 +20,8 @@
       "cost_basis": 11339.398432,
       "unrealized_pl": 164.196085,
       "unrealized_plpc": 0.01448014072216,
-      "unrealized_intraday_pl": 206.994771,
-      "unrealized_intraday_plpc": 0.0183236350454299
+      "unrealized_intraday_pl": 0.0,
+      "unrealized_intraday_plpc": 0.0
     },
     {
       "symbol": "GDX",
@@ -32,8 +32,8 @@
       "cost_basis": 12744.27864,
       "unrealized_pl": 530.724391,
       "unrealized_plpc": 0.0416441295731117,
-      "unrealized_intraday_pl": 715.543071,
-      "unrealized_intraday_plpc": 0.0569724393627511
+      "unrealized_intraday_pl": 0.0,
+      "unrealized_intraday_plpc": 0.0
     },
     {
       "symbol": "KOLD",
@@ -44,8 +44,8 @@
       "cost_basis": 8780.010093,
       "unrealized_pl": -3247.578904,
       "unrealized_plpc": -0.3698832768528573,
-      "unrealized_intraday_pl": -3441.652246,
-      "unrealized_intraday_plpc": -0.3835101680219669
+      "unrealized_intraday_pl": 0.0,
+      "unrealized_intraday_plpc": 0.0
     },
     {
       "symbol": "PICK",
@@ -56,8 +56,8 @@
       "cost_basis": 17735.463469,
       "unrealized_pl": 122.985478,
       "unrealized_plpc": 0.0069344383480571,
-      "unrealized_intraday_pl": 123.052917,
-      "unrealized_intraday_plpc": 0.0069382672251498
+      "unrealized_intraday_pl": 0.0,
+      "unrealized_intraday_plpc": 0.0
     },
     {
       "symbol": "PPLT",
@@ -68,8 +68,8 @@
       "cost_basis": 1770.440943,
       "unrealized_pl": 120.570698,
       "unrealized_plpc": 0.0681020728066161,
-      "unrealized_intraday_pl": 124.902809,
-      "unrealized_intraday_plpc": 0.0707220340767765
+      "unrealized_intraday_pl": 0.0,
+      "unrealized_intraday_plpc": 0.0
     },
     {
       "symbol": "REMX",
@@ -80,8 +80,8 @@
       "cost_basis": 16480.686265,
       "unrealized_pl": 69.345947,
       "unrealized_plpc": 0.0042077099148031,
-      "unrealized_intraday_pl": 61.015647,
-      "unrealized_intraday_plpc": 0.0037003812058454
+      "unrealized_intraday_pl": 0.0,
+      "unrealized_intraday_plpc": 0.0
     },
     {
       "symbol": "SILJ",
@@ -92,8 +92,8 @@
       "cost_basis": 14639.246211,
       "unrealized_pl": 665.770839,
       "unrealized_plpc": 0.0454784918160429,
-      "unrealized_intraday_pl": 796.865631,
-      "unrealized_intraday_plpc": 0.0549253731909923
+      "unrealized_intraday_pl": 0.0,
+      "unrealized_intraday_plpc": 0.0
     },
     {
       "symbol": "SLV",
@@ -104,32 +104,32 @@
       "cost_basis": 11580.937843,
       "unrealized_pl": 549.92754,
       "unrealized_plpc": 0.0474855791003489,
-      "unrealized_intraday_pl": 620.820725,
-      "unrealized_intraday_plpc": 0.0539372994151245
+      "unrealized_intraday_pl": 0.0,
+      "unrealized_intraday_plpc": 0.0
     },
     {
       "symbol": "TE",
       "qty": 12.29190046,
       "avg_entry_price": 8.122028,
-      "current_price": 8.29,
-      "market_value": 101.899855,
+      "current_price": 8.28,
+      "market_value": 101.776936,
       "cost_basis": 99.83516,
-      "unrealized_pl": 2.064695,
-      "unrealized_plpc": 0.0206810406273702,
-      "unrealized_intraday_pl": 1.475028,
-      "unrealized_intraday_plpc": 0.0146878819119101
+      "unrealized_pl": 1.941776,
+      "unrealized_plpc": 0.0194498210850766,
+      "unrealized_intraday_pl": 0.0,
+      "unrealized_intraday_plpc": 0.0
     },
     {
       "symbol": "VELO",
       "qty": 38.729690548,
       "avg_entry_price": 21.114468,
-      "current_price": 19.4,
-      "market_value": 751.355997,
+      "current_price": 19.19,
+      "market_value": 743.222762,
       "cost_basis": 817.756812,
-      "unrealized_pl": -66.400815,
-      "unrealized_plpc": -0.0811987305096274,
-      "unrealized_intraday_pl": -85.979913,
-      "unrealized_intraday_plpc": -0.1026827011396179
+      "unrealized_pl": -74.53405,
+      "unrealized_plpc": -0.0911445174240872,
+      "unrealized_intraday_pl": 0.0,
+      "unrealized_intraday_plpc": 0.0
     },
     {
       "symbol": "XME",
@@ -140,8 +140,8 @@
       "cost_basis": 20042.027004,
       "unrealized_pl": 239.274908,
       "unrealized_plpc": 0.0119386580984172,
-      "unrealized_intraday_pl": 266.031864,
-      "unrealized_intraday_plpc": 0.0132914451497287
+      "unrealized_intraday_pl": 0.0,
+      "unrealized_intraday_plpc": 0.0
     }
   ],
   "scanner": {
