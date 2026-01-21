@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-01-21T05:44:36.350777",
+  "timestamp": "2026-01-21T05:45:37.080920",
   "account": {
-    "equity": 97405.81,
+    "equity": 97441.72,
     "cash": -19238.99,
     "buying_power": 219778.28,
-    "portfolio_value": 97405.81,
+    "portfolio_value": 97441.72,
     "last_equity": 95933.64557895635,
     "daytrade_count": 136,
     "status": "ACTIVE",
@@ -39,13 +39,13 @@
       "symbol": "KOLD",
       "qty": 198.366123667,
       "avg_entry_price": 44.261641,
-      "current_price": 23.75,
-      "market_value": 4711.195437,
+      "current_price": 23.8,
+      "market_value": 4721.113743,
       "cost_basis": 8780.010093,
-      "unrealized_pl": -4068.814656,
-      "unrealized_plpc": -0.4634179930207513,
-      "unrealized_intraday_pl": -821.235752,
-      "unrealized_intraday_plpc": -0.1484403011885341
+      "unrealized_pl": -4058.89635,
+      "unrealized_plpc": -0.4622883467111295,
+      "unrealized_intraday_pl": -811.317446,
+      "unrealized_intraday_plpc": -0.1466475439609846
     },
     {
       "symbol": "PICK",
@@ -87,13 +87,13 @@
       "symbol": "SILJ",
       "qty": 433.07914685,
       "avg_entry_price": 33.802704,
-      "current_price": 36.3,
-      "market_value": 15720.773031,
+      "current_price": 36.36,
+      "market_value": 15746.757779,
       "cost_basis": 14639.246211,
-      "unrealized_pl": 1081.52682,
-      "unrealized_plpc": 0.0738785866711727,
-      "unrealized_intraday_pl": 415.755981,
-      "unrealized_intraday_plpc": 0.0271646859093176
+      "unrealized_pl": 1107.511568,
+      "unrealized_plpc": 0.0756535925441168,
+      "unrealized_intraday_pl": 441.740729,
+      "unrealized_intraday_plpc": 0.0288624787255627
     },
     {
       "symbol": "SLV",
