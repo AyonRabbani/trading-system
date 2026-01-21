@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-01-21T05:06:08.096102",
+  "timestamp": "2026-01-21T05:07:08.831132",
   "account": {
-    "equity": 97407.88,
+    "equity": 97395.69,
     "cash": -19238.99,
     "buying_power": 219778.28,
-    "portfolio_value": 97407.88,
+    "portfolio_value": 97395.69,
     "last_equity": 95933.64557895635,
     "daytrade_count": 136,
     "status": "ACTIVE",
@@ -39,13 +39,13 @@
       "symbol": "KOLD",
       "qty": 198.366123667,
       "avg_entry_price": 44.261641,
-      "current_price": 24.2,
-      "market_value": 4800.460193,
+      "current_price": 24.16,
+      "market_value": 4792.525548,
       "cost_basis": 8780.010093,
-      "unrealized_pl": -3979.5499,
-      "unrealized_plpc": -0.4532511760063645,
-      "unrealized_intraday_pl": -731.970996,
-      "unrealized_intraday_plpc": -0.1323054857790839
+      "unrealized_pl": -3987.484545,
+      "unrealized_plpc": -0.454154893076841,
+      "unrealized_intraday_pl": -739.905641,
+      "unrealized_intraday_plpc": -0.133739691597274
     },
     {
       "symbol": "PICK",
@@ -99,13 +99,13 @@
       "symbol": "SLV",
       "qty": 142.064239172,
       "avg_entry_price": 81.519022,
-      "current_price": 86.32,
-      "market_value": 12262.985125,
+      "current_price": 86.29,
+      "market_value": 12258.723198,
       "cost_basis": 11580.937843,
-      "unrealized_pl": 682.047282,
-      "unrealized_plpc": 0.0588939593015999,
-      "unrealized_intraday_pl": 132.119742,
-      "unrealized_intraday_plpc": 0.0108912050236045
+      "unrealized_pl": 677.785355,
+      "unrealized_plpc": 0.0585259470509706,
+      "unrealized_intraday_pl": 127.857815,
+      "unrealized_intraday_plpc": 0.0105398758425906
     },
     {
       "symbol": "TE",
