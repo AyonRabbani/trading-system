@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-01-21T17:52:22.531063",
+  "timestamp": "2026-01-21T17:53:23.381654",
   "account": {
-    "equity": 96607.1,
+    "equity": 96598.81,
     "cash": -14740.12,
     "buying_power": 212040.77,
-    "portfolio_value": 96607.1,
+    "portfolio_value": 96598.81,
     "last_equity": 95933.64557895635,
     "daytrade_count": 136,
     "status": "ACTIVE",
@@ -15,25 +15,25 @@
       "symbol": "COPX",
       "qty": 139.86133151,
       "avg_entry_price": 81.073192,
-      "current_price": 84.05,
-      "market_value": 11755.344913,
+      "current_price": 84.0,
+      "market_value": 11748.351847,
       "cost_basis": 11339.004583,
-      "unrealized_pl": 416.34033,
-      "unrealized_plpc": 0.036717537853737,
-      "unrealized_intraday_pl": 251.750396,
-      "unrealized_intraday_plpc": 0.0218844984172524
+      "unrealized_pl": 409.347264,
+      "unrealized_plpc": 0.0361008112311476,
+      "unrealized_intraday_pl": 244.75733,
+      "unrealized_intraday_plpc": 0.0212765957317339
     },
     {
       "symbol": "GDX",
       "qty": 129.159399016,
       "avg_entry_price": 98.684572,
-      "current_price": 101.77,
-      "market_value": 13144.552038,
+      "current_price": 101.76,
+      "market_value": 13143.260444,
       "cost_basis": 12746.040012,
-      "unrealized_pl": 398.512026,
-      "unrealized_plpc": 0.0312655558608645,
-      "unrealized_intraday_pl": -130.450993,
-      "unrealized_intraday_plpc": -0.0098268145547966
+      "unrealized_pl": 397.220432,
+      "unrealized_plpc": 0.0311642228979377,
+      "unrealized_intraday_pl": -131.742587,
+      "unrealized_intraday_plpc": -0.0099241097491543
     },
     {
       "symbol": "PICK",
