@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-01-21T05:31:26.812285",
+  "timestamp": "2026-01-21T05:32:27.570303",
   "account": {
-    "equity": 97418.95,
+    "equity": 97428.25,
     "cash": -19238.99,
     "buying_power": 219778.28,
-    "portfolio_value": 97418.95,
+    "portfolio_value": 97428.25,
     "last_equity": 95933.64557895635,
     "daytrade_count": 136,
     "status": "ACTIVE",
@@ -27,13 +27,13 @@
       "symbol": "GDX",
       "qty": 129.159399016,
       "avg_entry_price": 98.670935,
-      "current_price": 105.26,
-      "market_value": 13595.31834,
+      "current_price": 105.31,
+      "market_value": 13601.77631,
       "cost_basis": 12744.27864,
-      "unrealized_pl": 851.0397,
-      "unrealized_plpc": 0.0667781774112246,
-      "unrealized_intraday_pl": 320.315309,
-      "unrealized_intraday_plpc": 0.0241292079747172
+      "unrealized_pl": 857.49767,
+      "unrealized_plpc": 0.0672849122514164,
+      "unrealized_intraday_pl": 326.773279,
+      "unrealized_intraday_plpc": 0.0246156839465056
     },
     {
       "symbol": "KOLD",
@@ -99,13 +99,13 @@
       "symbol": "SLV",
       "qty": 142.064239172,
       "avg_entry_price": 81.519022,
-      "current_price": 86.14,
-      "market_value": 12237.413562,
+      "current_price": 86.16,
+      "market_value": 12240.254847,
       "cost_basis": 11580.937843,
-      "unrealized_pl": 656.475719,
-      "unrealized_plpc": 0.0566858857114755,
-      "unrealized_intraday_pl": 106.548179,
-      "unrealized_intraday_plpc": 0.0087832298550864
+      "unrealized_pl": 659.317004,
+      "unrealized_plpc": 0.056931227240678,
+      "unrealized_intraday_pl": 109.389464,
+      "unrealized_intraday_plpc": 0.0090174493365738
     },
     {
       "symbol": "TE",
