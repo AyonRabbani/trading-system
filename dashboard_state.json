@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-01-22T08:40:20.313086",
+  "timestamp": "2026-01-22T08:41:21.080718",
   "account": {
-    "equity": 96144.09,
+    "equity": 96143.72,
     "cash": -14740.17,
     "buying_power": 250955.78,
-    "portfolio_value": 96144.09,
+    "portfolio_value": 96143.72,
     "last_equity": 95944.28503536565,
     "daytrade_count": 31,
     "status": "ACTIVE",
@@ -99,13 +99,13 @@
       "symbol": "TE",
       "qty": 12.29190046,
       "avg_entry_price": 8.122028,
-      "current_price": 7.61,
-      "market_value": 93.541363,
+      "current_price": 7.58,
+      "market_value": 93.172605,
       "cost_basis": 99.83516,
-      "unrealized_pl": -6.293797,
-      "unrealized_plpc": -0.063041888248589,
-      "unrealized_intraday_pl": -2.581299,
-      "unrealized_intraday_plpc": -0.0268542188313511
+      "unrealized_pl": -6.662555,
+      "unrealized_plpc": -0.0667355568919807,
+      "unrealized_intraday_pl": -2.950057,
+      "unrealized_intraday_plpc": -0.0306905462106324
     },
     {
       "symbol": "VELO",
