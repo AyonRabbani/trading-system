@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-01-23T12:22:59.320729",
+  "timestamp": "2026-01-23T12:24:00.171524",
   "account": {
-    "equity": 97320.72,
+    "equity": 97326.87,
     "cash": 52917.98,
     "buying_power": 343047.7,
-    "portfolio_value": 97320.72,
+    "portfolio_value": 97326.87,
     "last_equity": 96778.95,
     "daytrade_count": 33,
     "status": "ACTIVE",
@@ -15,25 +15,25 @@
       "symbol": "SPY",
       "qty": 30.0,
       "avg_entry_price": 688.671,
-      "current_price": 689.93,
-      "market_value": 20697.9,
+      "current_price": 690.03,
+      "market_value": 20700.9,
       "cost_basis": 20660.13,
-      "unrealized_pl": 37.77,
-      "unrealized_plpc": 0.0018281588741213,
-      "unrealized_intraday_pl": 37.77,
-      "unrealized_intraday_plpc": 0.0018281588741213
+      "unrealized_pl": 40.77,
+      "unrealized_plpc": 0.0019733660920817,
+      "unrealized_intraday_pl": 40.77,
+      "unrealized_intraday_plpc": 0.0019733660920817
     },
     {
       "symbol": "TQQQ",
       "qty": 315.0,
       "avg_entry_price": 54.09,
-      "current_price": 54.7,
-      "market_value": 17230.5,
+      "current_price": 54.71,
+      "market_value": 17233.65,
       "cost_basis": 17038.35,
-      "unrealized_pl": 192.15,
-      "unrealized_plpc": 0.0112775004621926,
-      "unrealized_intraday_pl": 192.15,
-      "unrealized_intraday_plpc": 0.0112775004621926
+      "unrealized_pl": 195.3,
+      "unrealized_plpc": 0.0114623775189499,
+      "unrealized_intraday_pl": 195.3,
+      "unrealized_intraday_plpc": 0.0114623775189499
     },
     {
       "symbol": "YBTC",
