@@ -1,16 +1,41 @@
 {
-  "timestamp": "2026-01-23T10:16:48.080574",
+  "timestamp": "2026-01-23T10:17:49.017285",
   "account": {
-    "equity": 96778.95,
-    "cash": 96778.95,
-    "buying_power": 387115.8,
-    "portfolio_value": 96778.95,
+    "equity": 96738.83,
+    "cash": 56853.2,
+    "buying_power": 347190.05,
+    "portfolio_value": 96738.83,
     "last_equity": 96778.95,
     "daytrade_count": 31,
     "status": "ACTIVE",
     "pattern_day_trader": true
   },
-  "positions": [],
+  "positions": [
+    {
+      "symbol": "TQQQ",
+      "qty": 375.0,
+      "avg_entry_price": 54.09,
+      "current_price": 54.095,
+      "market_value": 20285.625,
+      "cost_basis": 20283.75,
+      "unrealized_pl": 1.875,
+      "unrealized_plpc": 9.24385283786e-05,
+      "unrealized_intraday_pl": 1.875,
+      "unrealized_intraday_plpc": 9.24385283786e-05
+    },
+    {
+      "symbol": "YBTC",
+      "qty": 700.0,
+      "avg_entry_price": 28.06,
+      "current_price": 28.0,
+      "market_value": 19600.0,
+      "cost_basis": 19642.0,
+      "unrealized_pl": -42.0,
+      "unrealized_plpc": -0.0021382751247327,
+      "unrealized_intraday_pl": -42.0,
+      "unrealized_intraday_plpc": -0.0021382751247327
+    }
+  ],
   "scanner": {
     "timestamp": "2026-01-23T10:07:28.381586",
     "market_regime": "NEUTRAL",
