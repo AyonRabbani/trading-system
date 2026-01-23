@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-01-23T12:01:36.208431",
+  "timestamp": "2026-01-23T12:02:37.245813",
   "account": {
-    "equity": 97271.68,
+    "equity": 97290.15,
     "cash": 52917.98,
     "buying_power": 343047.7,
-    "portfolio_value": 97271.68,
+    "portfolio_value": 97290.15,
     "last_equity": 96778.95,
     "daytrade_count": 33,
     "status": "ACTIVE",
@@ -15,37 +15,37 @@
       "symbol": "SPY",
       "qty": 30.0,
       "avg_entry_price": 688.671,
-      "current_price": 689.515,
-      "market_value": 20685.45,
+      "current_price": 689.74,
+      "market_value": 20692.2,
       "cost_basis": 20660.13,
-      "unrealized_pl": 25.32,
-      "unrealized_plpc": 0.0012255489195857,
-      "unrealized_intraday_pl": 25.32,
-      "unrealized_intraday_plpc": 0.0012255489195857
+      "unrealized_pl": 32.07,
+      "unrealized_plpc": 0.0015522651599966,
+      "unrealized_intraday_pl": 32.07,
+      "unrealized_intraday_plpc": 0.0015522651599966
     },
     {
       "symbol": "TQQQ",
       "qty": 315.0,
       "avg_entry_price": 54.09,
-      "current_price": 54.61,
-      "market_value": 17202.15,
+      "current_price": 54.66,
+      "market_value": 17217.9,
       "cost_basis": 17038.35,
-      "unrealized_pl": 163.8,
-      "unrealized_plpc": 0.0096136069513773,
-      "unrealized_intraday_pl": 163.8,
-      "unrealized_intraday_plpc": 0.0096136069513773
+      "unrealized_pl": 179.55,
+      "unrealized_plpc": 0.0105379922351636,
+      "unrealized_intraday_pl": 179.55,
+      "unrealized_intraday_plpc": 0.0105379922351636
     },
     {
       "symbol": "YBTC",
       "qty": 227.0,
       "avg_entry_price": 28.06,
-      "current_price": 28.485,
-      "market_value": 6466.095,
+      "current_price": 28.4686,
+      "market_value": 6462.3722,
       "cost_basis": 6369.62,
-      "unrealized_pl": 96.475,
-      "unrealized_plpc": 0.0151461154668567,
-      "unrealized_intraday_pl": 96.475,
-      "unrealized_intraday_plpc": 0.0151461154668567
+      "unrealized_pl": 92.7522,
+      "unrealized_plpc": 0.0145616535994298,
+      "unrealized_intraday_pl": 92.7522,
+      "unrealized_intraday_plpc": 0.0145616535994298
     }
   ],
   "scanner": {
