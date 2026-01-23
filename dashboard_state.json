@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-01-23T12:25:01.039417",
+  "timestamp": "2026-01-23T12:26:01.976808",
   "account": {
-    "equity": 97322.36,
+    "equity": 97328.43,
     "cash": 52917.98,
     "buying_power": 343047.7,
-    "portfolio_value": 97322.36,
+    "portfolio_value": 97328.43,
     "last_equity": 96778.95,
     "daytrade_count": 33,
     "status": "ACTIVE",
@@ -15,37 +15,37 @@
       "symbol": "SPY",
       "qty": 30.0,
       "avg_entry_price": 688.671,
-      "current_price": 689.78,
-      "market_value": 20693.4,
+      "current_price": 689.848,
+      "market_value": 20695.44,
       "cost_basis": 20660.13,
-      "unrealized_pl": 33.27,
-      "unrealized_plpc": 0.0016103480471807,
-      "unrealized_intraday_pl": 33.27,
-      "unrealized_intraday_plpc": 0.0016103480471807
+      "unrealized_pl": 35.31,
+      "unrealized_plpc": 0.0017090889553938,
+      "unrealized_intraday_pl": 35.31,
+      "unrealized_intraday_plpc": 0.0017090889553938
     },
     {
       "symbol": "TQQQ",
       "qty": 315.0,
       "avg_entry_price": 54.09,
-      "current_price": 54.67,
-      "market_value": 17221.05,
+      "current_price": 54.69,
+      "market_value": 17227.35,
       "cost_basis": 17038.35,
-      "unrealized_pl": 182.7,
-      "unrealized_plpc": 0.0107228692919209,
-      "unrealized_intraday_pl": 182.7,
-      "unrealized_intraday_plpc": 0.0107228692919209
+      "unrealized_pl": 189.0,
+      "unrealized_plpc": 0.0110926234054354,
+      "unrealized_intraday_pl": 189.0,
+      "unrealized_intraday_plpc": 0.0110926234054354
     },
     {
       "symbol": "YBTC",
       "qty": 227.0,
       "avg_entry_price": 28.06,
-      "current_price": 28.59,
-      "market_value": 6489.93,
+      "current_price": 28.58,
+      "market_value": 6487.66,
       "cost_basis": 6369.62,
-      "unrealized_pl": 120.31,
-      "unrealized_plpc": 0.018888096935139,
-      "unrealized_intraday_pl": 120.31,
-      "unrealized_intraday_plpc": 0.018888096935139
+      "unrealized_pl": 118.04,
+      "unrealized_plpc": 0.0185317177476835,
+      "unrealized_intraday_pl": 118.04,
+      "unrealized_intraday_plpc": 0.0185317177476835
     }
   ],
   "scanner": {
