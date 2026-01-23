@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-01-23T11:44:14.510494",
+  "timestamp": "2026-01-23T11:45:18.305282",
   "account": {
-    "equity": 97368.12,
-    "cash": 46015.04,
-    "buying_power": 336257.18,
-    "portfolio_value": 97368.12,
+    "equity": 97366.16,
+    "cash": 50405.58,
+    "buying_power": 340578.42,
+    "portfolio_value": 97366.16,
     "last_equity": 96778.95,
     "daytrade_count": 33,
     "status": "ACTIVE",
@@ -15,37 +15,37 @@
       "symbol": "SPY",
       "qty": 30.0,
       "avg_entry_price": 688.671,
-      "current_price": 690.37,
-      "market_value": 20711.1,
+      "current_price": 690.21,
+      "market_value": 20706.3,
       "cost_basis": 20660.13,
-      "unrealized_pl": 50.97,
-      "unrealized_plpc": 0.002467070633147,
-      "unrealized_intraday_pl": 50.97,
-      "unrealized_intraday_plpc": 0.002467070633147
+      "unrealized_pl": 46.17,
+      "unrealized_plpc": 0.0022347390844104,
+      "unrealized_intraday_pl": 46.17,
+      "unrealized_intraday_plpc": 0.0022347390844104
     },
     {
       "symbol": "TQQQ",
       "qty": 315.0,
       "avg_entry_price": 54.09,
-      "current_price": 54.88,
-      "market_value": 17287.2,
+      "current_price": 54.805,
+      "market_value": 17263.575,
       "cost_basis": 17038.35,
-      "unrealized_pl": 248.85,
-      "unrealized_plpc": 0.0146052874838233,
-      "unrealized_intraday_pl": 248.85,
-      "unrealized_intraday_plpc": 0.0146052874838233
+      "unrealized_pl": 225.225,
+      "unrealized_plpc": 0.0132187095581438,
+      "unrealized_intraday_pl": 225.225,
+      "unrealized_intraday_plpc": 0.0132187095581438
     },
     {
       "symbol": "YBTC",
-      "qty": 469.0,
+      "qty": 315.0,
       "avg_entry_price": 28.06,
-      "current_price": 28.475,
-      "market_value": 13354.775,
-      "cost_basis": 13160.14,
-      "unrealized_pl": 194.635,
-      "unrealized_plpc": 0.0147897362794013,
-      "unrealized_intraday_pl": 194.635,
-      "unrealized_intraday_plpc": 0.0147897362794013
+      "current_price": 28.53,
+      "market_value": 8986.95,
+      "cost_basis": 8838.9,
+      "unrealized_pl": 148.05,
+      "unrealized_plpc": 0.0167498218104063,
+      "unrealized_intraday_pl": 148.05,
+      "unrealized_intraday_plpc": 0.0167498218104063
     }
   ],
   "scanner": {
