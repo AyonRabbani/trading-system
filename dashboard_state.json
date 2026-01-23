@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-01-23T17:25:03.964696",
+  "timestamp": "2026-01-23T17:26:04.862085",
   "account": {
-    "equity": 97092.38,
+    "equity": 97093.83,
     "cash": 59432.88,
     "buying_power": 349417.32,
-    "portfolio_value": 97092.38,
+    "portfolio_value": 97093.83,
     "last_equity": 96778.95,
     "daytrade_count": 33,
     "status": "ACTIVE",
@@ -27,13 +27,13 @@
       "symbol": "TQQQ",
       "qty": 315.0,
       "avg_entry_price": 54.09,
-      "current_price": 54.0254,
-      "market_value": 17018.001,
+      "current_price": 54.03,
+      "market_value": 17019.45,
       "cost_basis": 17038.35,
-      "unrealized_pl": -20.349,
-      "unrealized_plpc": -0.0011943057866519,
-      "unrealized_intraday_pl": -20.349,
-      "unrealized_intraday_plpc": -0.0011943057866519
+      "unrealized_pl": -18.9,
+      "unrealized_plpc": -0.0011092623405435,
+      "unrealized_intraday_pl": -18.9,
+      "unrealized_intraday_plpc": -0.0011092623405435
     }
   ],
   "scanner": {
