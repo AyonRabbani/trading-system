@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-01-23T10:22:53.739828",
+  "timestamp": "2026-01-23T10:23:55.068511",
   "account": {
-    "equity": 97001.3,
+    "equity": 96995.97,
     "cash": 36193.07,
     "buying_power": 326529.92,
-    "portfolio_value": 97001.3,
+    "portfolio_value": 96995.97,
     "last_equity": 96778.95,
     "daytrade_count": 31,
     "status": "ACTIVE",
@@ -27,13 +27,13 @@
       "symbol": "TQQQ",
       "qty": 375.0,
       "avg_entry_price": 54.09,
-      "current_price": 54.495,
-      "market_value": 20435.625,
+      "current_price": 54.47,
+      "market_value": 20426.25,
       "cost_basis": 20283.75,
-      "unrealized_pl": 151.875,
-      "unrealized_plpc": 0.0074875207986689,
-      "unrealized_intraday_pl": 151.875,
-      "unrealized_intraday_plpc": 0.0074875207986689
+      "unrealized_pl": 142.5,
+      "unrealized_plpc": 0.0070253281567757,
+      "unrealized_intraday_pl": 142.5,
+      "unrealized_intraday_plpc": 0.0070253281567757
     },
     {
       "symbol": "YBTC",
