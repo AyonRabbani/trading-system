@@ -1,16 +1,7 @@
 {
-  "last_updated": "2026-01-26T11:20:08.235292",
+  "last_updated": "2026-01-26T11:21:07.637116",
   "event_count": 200,
   "events": [
-    {
-      "type": "event",
-      "source": "Market Scanner",
-      "event_type": "scan",
-      "level": "INFO",
-      "message": "\ud83d\udcca Loading universe data (5405 tickers)",
-      "timestamp": "2026-01-16T11:45:25.873745",
-      "phase": "loading"
-    },
     {
       "type": "event",
       "source": "Market Scanner",
@@ -1677,6 +1668,17 @@
       "rung": 2,
       "gain_pct": 2.0813459049731975,
       "remaining_shares": 65
+    },
+    {
+      "type": "event",
+      "source": "Profit Taker",
+      "event_type": "portfolio",
+      "level": "INFO",
+      "message": "\ud83d\udc40 Monitoring 2 positions: SPY +0.5%, TQQQ +2.0%",
+      "timestamp": "2026-01-26T11:21:07.636191",
+      "portfolio_value": "24K",
+      "positions_count": 2,
+      "avg_return": 1.3
     }
   ]
 }
