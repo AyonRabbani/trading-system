@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-01-26T17:44:43.341543",
+  "timestamp": "2026-01-26T17:45:44.238897",
   "account": {
-    "equity": 97297.7,
+    "equity": 97292.13,
     "cash": 28359.87,
-    "buying_power": 255305.08,
-    "portfolio_value": 97297.7,
+    "buying_power": 255305.09,
+    "portfolio_value": 97292.13,
     "last_equity": 97239.3,
     "daytrade_count": 48,
     "status": "ACTIVE",
@@ -63,25 +63,25 @@
       "symbol": "FCX",
       "qty": 5.100009402,
       "avg_entry_price": 61.25,
-      "current_price": 60.6,
-      "market_value": 309.06057,
+      "current_price": 60.5,
+      "market_value": 308.550569,
       "cost_basis": 312.375576,
-      "unrealized_pl": -3.315006,
-      "unrealized_plpc": -0.0106122445373258,
-      "unrealized_intraday_pl": -3.315006,
-      "unrealized_intraday_plpc": -0.0106122445373258
+      "unrealized_pl": -3.825007,
+      "unrealized_plpc": -0.0122448977893201,
+      "unrealized_intraday_pl": -3.825007,
+      "unrealized_intraday_plpc": -0.0122448977893201
     },
     {
       "symbol": "GLD",
       "qty": 21.012163348,
       "avg_entry_price": 463.459573,
-      "current_price": 461.2004,
-      "market_value": 9690.818141,
+      "current_price": 460.96,
+      "market_value": 9685.766817,
       "cost_basis": 9738.288263,
-      "unrealized_pl": -47.470122,
-      "unrealized_plpc": -0.0048745858325389,
-      "unrealized_intraday_pl": -47.470112,
-      "unrealized_intraday_plpc": -0.00487458481067
+      "unrealized_pl": -52.521446,
+      "unrealized_plpc": -0.0053932934188806,
+      "unrealized_intraday_pl": -52.521436,
+      "unrealized_intraday_plpc": -0.0053932923975443
     },
     {
       "symbol": "GOLD",
