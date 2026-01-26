@@ -1,15 +1,7 @@
 {
-  "last_updated": "2026-01-26T11:22:07.643028",
+  "last_updated": "2026-01-26T11:23:07.647284",
   "event_count": 200,
   "events": [
-    {
-      "type": "event",
-      "source": "Market Scanner",
-      "event_type": "scan",
-      "level": "INFO",
-      "message": "\ud83c\udfaf Scoring complete - Top 5: ASTI (90), YCBD (86), ASTX (85), ZURA (85), MUU (85)",
-      "timestamp": "2026-01-16T11:53:41.667074"
-    },
     {
       "type": "event",
       "source": "Market Scanner",
@@ -1682,6 +1674,17 @@
       "portfolio_value": "24K",
       "positions_count": 2,
       "avg_return": 1.4
+    },
+    {
+      "type": "event",
+      "source": "Profit Taker",
+      "event_type": "portfolio",
+      "level": "INFO",
+      "message": "\ud83d\udc40 Monitoring 2 positions: SPY +0.6%, TQQQ +2.3%",
+      "timestamp": "2026-01-26T11:23:07.646274",
+      "portfolio_value": "24K",
+      "positions_count": 2,
+      "avg_return": 1.5
     }
   ]
 }
