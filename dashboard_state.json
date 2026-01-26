@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-01-26T18:36:30.244405",
+  "timestamp": "2026-01-26T18:37:31.160422",
   "account": {
-    "equity": 97395.84,
+    "equity": 97395.08,
     "cash": 28359.87,
-    "buying_power": 255304.38,
-    "portfolio_value": 97395.84,
+    "buying_power": 255304.33,
+    "portfolio_value": 97395.08,
     "last_equity": 97239.3,
     "daytrade_count": 48,
     "status": "ACTIVE",
@@ -135,13 +135,13 @@
       "symbol": "QQQ",
       "qty": 25.243917605,
       "avg_entry_price": 626.935639,
-      "current_price": 626.18,
-      "market_value": 15807.236326,
+      "current_price": 626.15,
+      "market_value": 15806.479008,
       "cost_basis": 15826.311623,
-      "unrealized_pl": -19.075297,
-      "unrealized_plpc": -0.0012052901177731,
-      "unrealized_intraday_pl": -19.075289,
-      "unrealized_intraday_plpc": -0.0012052896128951
+      "unrealized_pl": -19.832615,
+      "unrealized_plpc": -0.0012531419494595,
+      "unrealized_intraday_pl": -19.832607,
+      "unrealized_intraday_plpc": -0.0012531414446056
     },
     {
       "symbol": "SCCO",
