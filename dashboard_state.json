@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-01-26T17:21:21.372795",
+  "timestamp": "2026-01-26T17:22:22.383447",
   "account": {
-    "equity": 97315.18,
+    "equity": 97318.02,
     "cash": 28359.87,
-    "buying_power": 255306.64,
-    "portfolio_value": 97315.18,
+    "buying_power": 255305.32,
+    "portfolio_value": 97318.02,
     "last_equity": 97239.3,
     "daytrade_count": 48,
     "status": "ACTIVE",
@@ -75,13 +75,13 @@
       "symbol": "GLD",
       "qty": 21.012163348,
       "avg_entry_price": 463.459573,
-      "current_price": 460.72,
-      "market_value": 9680.723898,
+      "current_price": 460.8,
+      "market_value": 9682.404871,
       "cost_basis": 9738.288263,
-      "unrealized_pl": -57.564365,
-      "unrealized_plpc": -0.0059111379171956,
-      "unrealized_intraday_pl": -57.564355,
-      "unrealized_intraday_plpc": -0.0059111368963911
+      "unrealized_pl": -55.883392,
+      "unrealized_plpc": -0.0057385230844239,
+      "unrealized_intraday_pl": -55.883382,
+      "unrealized_intraday_plpc": -0.0057385220634421
     },
     {
       "symbol": "GOLD",
@@ -159,13 +159,13 @@
       "symbol": "SPY",
       "qty": 19.375273314,
       "avg_entry_price": 688.893322,
-      "current_price": 692.26,
-      "market_value": 13412.726704,
+      "current_price": 692.32,
+      "market_value": 13413.889221,
       "cost_basis": 13347.496397,
-      "unrealized_pl": 65.230307,
-      "unrealized_plpc": 0.0048870818211767,
-      "unrealized_intraday_pl": 58.707078,
-      "unrealized_intraday_plpc": 0.004396210253106
+      "unrealized_pl": 66.392824,
+      "unrealized_plpc": 0.0049741780799373,
+      "unrealized_intraday_pl": 59.869595,
+      "unrealized_intraday_plpc": 0.0044832639667112
     },
     {
       "symbol": "TECK",
