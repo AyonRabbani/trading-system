@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-01-26T18:30:25.093166",
+  "timestamp": "2026-01-26T18:31:25.923870",
   "account": {
-    "equity": 97399.02,
+    "equity": 97394.11,
     "cash": 28359.87,
-    "buying_power": 255304.42,
-    "portfolio_value": 97399.02,
+    "buying_power": 255304.47,
+    "portfolio_value": 97394.11,
     "last_equity": 97239.3,
     "daytrade_count": 48,
     "status": "ACTIVE",
@@ -27,13 +27,13 @@
       "symbol": "AXL",
       "qty": 28.761327199,
       "avg_entry_price": 7.982984,
-      "current_price": 7.97,
-      "market_value": 229.227778,
+      "current_price": 7.89,
+      "market_value": 226.926872,
       "cost_basis": 229.601214,
-      "unrealized_pl": -0.373436,
-      "unrealized_plpc": -0.0016264548148252,
-      "unrealized_intraday_pl": -0.373437,
-      "unrealized_intraday_plpc": -0.001626459163119
+      "unrealized_pl": -2.674342,
+      "unrealized_plpc": -0.0116477694233794,
+      "unrealized_intraday_pl": -2.674343,
+      "unrealized_intraday_plpc": -0.0116477737280267
     },
     {
       "symbol": "DJCO",
@@ -75,13 +75,13 @@
       "symbol": "GLD",
       "qty": 21.012163348,
       "avg_entry_price": 463.459573,
-      "current_price": 463.75,
-      "market_value": 9744.390753,
+      "current_price": 463.71,
+      "market_value": 9743.550266,
       "cost_basis": 9738.288263,
-      "unrealized_pl": 6.10249,
-      "unrealized_plpc": 0.0006266491435857,
-      "unrealized_intraday_pl": 6.1025,
-      "unrealized_intraday_plpc": 0.0006266501711037
+      "unrealized_pl": 5.262003,
+      "unrealized_plpc": 0.0005403416758562,
+      "unrealized_intraday_pl": 5.262013,
+      "unrealized_intraday_plpc": 0.0005403427032856
     },
     {
       "symbol": "GOLD",
@@ -135,13 +135,13 @@
       "symbol": "QQQ",
       "qty": 25.243917605,
       "avg_entry_price": 626.935639,
-      "current_price": 626.33,
-      "market_value": 15811.022914,
+      "current_price": 626.26,
+      "market_value": 15809.255839,
       "cost_basis": 15826.311623,
-      "unrealized_pl": -15.288709,
-      "unrealized_plpc": -0.0009660310857131,
-      "unrealized_intraday_pl": -15.288701,
-      "unrealized_intraday_plpc": -0.0009660305807141
+      "unrealized_pl": -17.055784,
+      "unrealized_plpc": -0.001077685338586,
+      "unrealized_intraday_pl": -17.055776,
+      "unrealized_intraday_plpc": -0.0010776848336434
     },
     {
       "symbol": "SCCO",
