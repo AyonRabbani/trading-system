@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-01-26T17:16:17.157857",
+  "timestamp": "2026-01-26T17:17:18.282245",
   "account": {
-    "equity": 97322.78,
+    "equity": 97319.69,
     "cash": 28359.87,
-    "buying_power": 255306.96,
-    "portfolio_value": 97322.78,
+    "buying_power": 255307.04,
+    "portfolio_value": 97319.69,
     "last_equity": 97239.3,
     "daytrade_count": 48,
     "status": "ACTIVE",
@@ -135,13 +135,13 @@
       "symbol": "QQQ",
       "qty": 25.243917605,
       "avg_entry_price": 626.935639,
-      "current_price": 625.64,
-      "market_value": 15793.60461,
+      "current_price": 625.5101,
+      "market_value": 15790.325425,
       "cost_basis": 15826.311623,
-      "unrealized_pl": -32.707013,
-      "unrealized_plpc": -0.0020666225826407,
-      "unrealized_intraday_pl": -32.707005,
-      "unrealized_intraday_plpc": -0.002066622078198
+      "unrealized_pl": -35.986198,
+      "unrealized_plpc": -0.002273820891262,
+      "unrealized_intraday_pl": -35.98619,
+      "unrealized_intraday_plpc": -0.0022738203869241
     },
     {
       "symbol": "SCCO",
@@ -159,13 +159,13 @@
       "symbol": "SPY",
       "qty": 19.375273314,
       "avg_entry_price": 688.893322,
-      "current_price": 692.23,
-      "market_value": 13412.145446,
+      "current_price": 692.24,
+      "market_value": 13412.339199,
       "cost_basis": 13347.496397,
-      "unrealized_pl": 64.649049,
-      "unrealized_plpc": 0.0048435337292566,
-      "unrealized_intraday_pl": 58.12582,
-      "unrealized_intraday_plpc": 0.0043526834337453
+      "unrealized_pl": 64.842802,
+      "unrealized_plpc": 0.0048580497848701,
+      "unrealized_intraday_pl": 58.319573,
+      "unrealized_intraday_plpc": 0.0043671923984935
     },
     {
       "symbol": "TECK",
