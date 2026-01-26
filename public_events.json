@@ -1,15 +1,7 @@
 {
-  "last_updated": "2026-01-26T11:19:07.796458",
+  "last_updated": "2026-01-26T11:19:38.028962",
   "event_count": 200,
   "events": [
-    {
-      "type": "event",
-      "source": "Market Scanner",
-      "event_type": "scan",
-      "level": "INFO",
-      "message": "\ud83d\udd04 14 rotation opportunities identified - avg score improvement: 44.8 points",
-      "timestamp": "2026-01-16T11:39:13.203435"
-    },
     {
       "type": "event",
       "source": "Market Scanner",
@@ -1667,6 +1659,18 @@
       "message": "\ud83d\udcca Loading universe data (5405 tickers)",
       "timestamp": "2026-01-26T11:19:07.793651",
       "phase": "loading"
+    },
+    {
+      "type": "event",
+      "source": "Profit Taker",
+      "event_type": "profit",
+      "level": "INFO",
+      "message": "Partial take TQQQ rung 1 @ 2.04%",
+      "timestamp": "2026-01-26T11:19:38.028073",
+      "ticker": "TQQQ",
+      "rung": 1,
+      "gain_pct": 2.0428914771676743,
+      "remaining_shares": 96
     }
   ]
 }
