@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-01-26T18:40:34.027832",
+  "timestamp": "2026-01-26T18:41:35.235197",
   "account": {
-    "equity": 97408.74,
+    "equity": 97410.05,
     "cash": 28359.87,
-    "buying_power": 255304.26,
-    "portfolio_value": 97408.74,
+    "buying_power": 255304.23,
+    "portfolio_value": 97410.05,
     "last_equity": 97239.3,
     "daytrade_count": 48,
     "status": "ACTIVE",
@@ -63,13 +63,13 @@
       "symbol": "FCX",
       "qty": 5.100009402,
       "avg_entry_price": 61.25,
-      "current_price": 60.9014,
-      "market_value": 310.597713,
+      "current_price": 60.9889,
+      "market_value": 311.043963,
       "cost_basis": 312.375576,
-      "unrealized_pl": -1.777863,
-      "unrealized_plpc": -0.0056914276806328,
-      "unrealized_intraday_pl": -1.777863,
-      "unrealized_intraday_plpc": -0.0056914276806328
+      "unrealized_pl": -1.331613,
+      "unrealized_plpc": -0.004262858886253,
+      "unrealized_intraday_pl": -1.331613,
+      "unrealized_intraday_plpc": -0.004262858886253
     },
     {
       "symbol": "GLD",
@@ -135,13 +135,13 @@
       "symbol": "QQQ",
       "qty": 25.243917605,
       "avg_entry_price": 626.935639,
-      "current_price": 626.23,
-      "market_value": 15808.498522,
+      "current_price": 626.2644,
+      "market_value": 15809.366913,
       "cost_basis": 15826.311623,
-      "unrealized_pl": -17.813101,
-      "unrealized_plpc": -0.0011255371070864,
-      "unrealized_intraday_pl": -17.813093,
-      "unrealized_intraday_plpc": -0.0011255366021681
+      "unrealized_pl": -16.94471,
+      "unrealized_plpc": -0.0010706670261297,
+      "unrealized_intraday_pl": -16.944702,
+      "unrealized_intraday_plpc": -0.0010706665211836
     },
     {
       "symbol": "SCCO",
