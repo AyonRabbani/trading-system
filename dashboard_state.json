@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-01-26T17:58:55.564396",
+  "timestamp": "2026-01-26T17:59:56.640009",
   "account": {
-    "equity": 97299.56,
+    "equity": 97304.26,
     "cash": 28359.87,
-    "buying_power": 255305.21,
-    "portfolio_value": 97299.56,
+    "buying_power": 255305.17,
+    "portfolio_value": 97304.26,
     "last_equity": 97239.3,
     "daytrade_count": 48,
     "status": "ACTIVE",
@@ -75,13 +75,13 @@
       "symbol": "GLD",
       "qty": 21.012163348,
       "avg_entry_price": 463.459573,
-      "current_price": 460.6,
-      "market_value": 9678.202438,
+      "current_price": 460.9,
+      "market_value": 9684.506087,
       "cost_basis": 9738.288263,
-      "unrealized_pl": -60.085825,
-      "unrealized_plpc": -0.0061700602176968,
-      "unrealized_intraday_pl": -60.085815,
-      "unrealized_intraday_plpc": -0.0061700591971582
+      "unrealized_pl": -53.782176,
+      "unrealized_plpc": -0.0055227545691312,
+      "unrealized_intraday_pl": -53.782166,
+      "unrealized_intraday_plpc": -0.0055227535479279
     },
     {
       "symbol": "GOLD",
@@ -135,13 +135,13 @@
       "symbol": "QQQ",
       "qty": 25.243917605,
       "avg_entry_price": 626.935639,
-      "current_price": 625.62,
-      "market_value": 15793.099732,
+      "current_price": 625.6005,
+      "market_value": 15792.607476,
       "cost_basis": 15826.311623,
-      "unrealized_pl": -33.211891,
-      "unrealized_plpc": -0.002098523761641,
-      "unrealized_intraday_pl": -33.211883,
-      "unrealized_intraday_plpc": -0.0020985232572144
+      "unrealized_pl": -33.704147,
+      "unrealized_plpc": -0.002129627408007,
+      "unrealized_intraday_pl": -33.704139,
+      "unrealized_intraday_plpc": -0.0021296269035961
     },
     {
       "symbol": "SCCO",
@@ -207,13 +207,13 @@
       "symbol": "XLB",
       "qty": 122.184864133,
       "avg_entry_price": 50.17853,
-      "current_price": 49.9109,
-      "market_value": 6098.356535,
+      "current_price": 49.9018,
+      "market_value": 6097.244653,
       "cost_basis": 6131.056846,
-      "unrealized_pl": -32.700311,
-      "unrealized_plpc": -0.0053335520810469,
-      "unrealized_intraday_pl": -32.700335,
-      "unrealized_intraday_plpc": -0.0053335559746651
+      "unrealized_pl": -33.812193,
+      "unrealized_plpc": -0.00551490450167,
+      "unrealized_intraday_pl": -33.812217,
+      "unrealized_intraday_plpc": -0.0055149083945783
     }
   ],
   "scanner": {
