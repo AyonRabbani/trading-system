@@ -1,24 +1,7 @@
 {
-  "last_updated": "2026-01-26T11:19:38.028962",
+  "last_updated": "2026-01-26T11:20:08.235292",
   "event_count": 200,
   "events": [
-    {
-      "type": "event",
-      "source": "Market Scanner",
-      "event_type": "scan",
-      "level": "INFO",
-      "message": "\ud83d\udd0d Daily Market Scan Started",
-      "timestamp": "2026-01-16T11:45:25.873427",
-      "phase": "start"
-    },
-    {
-      "type": "event",
-      "source": "Market Scanner",
-      "event_type": "scan",
-      "level": "INFO",
-      "message": "\ud83d\udd0d Daily market scan initiated - analyzing 5405 tickers",
-      "timestamp": "2026-01-16T11:45:25.873494"
-    },
     {
       "type": "event",
       "source": "Market Scanner",
@@ -1671,6 +1654,29 @@
       "rung": 1,
       "gain_pct": 2.0428914771676743,
       "remaining_shares": 96
+    },
+    {
+      "type": "event",
+      "source": "Profit Taker",
+      "event_type": "portfolio",
+      "level": "INFO",
+      "message": "\ud83d\udc40 Monitoring 2 positions: SPY +0.5%, TQQQ +2.0%",
+      "timestamp": "2026-01-26T11:20:07.630854",
+      "portfolio_value": "26K",
+      "positions_count": 2,
+      "avg_return": 1.3
+    },
+    {
+      "type": "event",
+      "source": "Profit Taker",
+      "event_type": "profit",
+      "level": "INFO",
+      "message": "Partial take TQQQ rung 2 @ 2.08%",
+      "timestamp": "2026-01-26T11:20:08.233590",
+      "ticker": "TQQQ",
+      "rung": 2,
+      "gain_pct": 2.0813459049731975,
+      "remaining_shares": 65
     }
   ]
 }
