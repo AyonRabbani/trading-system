@@ -1,40 +1,7 @@
 {
-  "last_updated": "2026-01-26T13:45:05.158627",
+  "last_updated": "2026-01-26T14:02:04.420021",
   "event_count": 200,
   "events": [
-    {
-      "type": "event",
-      "source": "Market Scanner",
-      "event_type": "scan",
-      "level": "INFO",
-      "message": "\ud83d\udd0d Daily market scan initiated - analyzing 5405 tickers",
-      "timestamp": "2026-01-16T15:00:15.388335"
-    },
-    {
-      "type": "event",
-      "source": "Market Scanner",
-      "event_type": "scan",
-      "level": "INFO",
-      "message": "\ud83d\udcca Loading universe data (5405 tickers)",
-      "timestamp": "2026-01-16T15:00:15.388642",
-      "phase": "loading"
-    },
-    {
-      "type": "event",
-      "source": "Market Scanner",
-      "event_type": "scan",
-      "level": "INFO",
-      "message": "\u2713 Data loaded for 5283/5405 tickers",
-      "timestamp": "2026-01-16T15:08:57.533711"
-    },
-    {
-      "type": "event",
-      "source": "Market Scanner",
-      "event_type": "scan",
-      "level": "INFO",
-      "message": "\ud83c\udfaf Scoring complete - Top 5: ASTI (92), VELO (88), GLSI (87), YCBD (86), NBY (86)",
-      "timestamp": "2026-01-16T15:09:05.917291"
-    },
     {
       "type": "event",
       "source": "Market Scanner",
@@ -1686,6 +1653,38 @@
       "message": "\ud83d\udcca Loading universe data (5405 tickers)",
       "timestamp": "2026-01-26T13:45:05.155674",
       "phase": "loading"
+    },
+    {
+      "type": "event",
+      "source": "Market Scanner",
+      "event_type": "scan",
+      "level": "INFO",
+      "message": "\u2713 Data loaded for 5293/5405 tickers",
+      "timestamp": "2026-01-26T14:02:02.255286"
+    },
+    {
+      "type": "event",
+      "source": "Market Scanner",
+      "event_type": "scan",
+      "level": "INFO",
+      "message": "\ud83c\udfaf Scoring complete - Top 5: FCX (81), COPX (81), DJCO (80), ACMR (80), ICOP (80)",
+      "timestamp": "2026-01-26T14:02:04.230372"
+    },
+    {
+      "type": "event",
+      "source": "Market Scanner",
+      "event_type": "scan",
+      "level": "INFO",
+      "message": "\ud83d\udfe1 Market Regime: UNKNOWN | Hot Sectors: Materials, Energy, Consumer Staples",
+      "timestamp": "2026-01-26T14:02:04.230830"
+    },
+    {
+      "type": "event",
+      "source": "Market Scanner",
+      "event_type": "scan",
+      "level": "INFO",
+      "message": "\ud83d\udd04 24 rotation opportunities identified - avg score improvement: 63.3 points",
+      "timestamp": "2026-01-26T14:02:04.419448"
     }
   ]
 }
