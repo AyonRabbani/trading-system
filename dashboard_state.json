@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-01-26T17:11:13.201362",
+  "timestamp": "2026-01-26T17:12:13.961510",
   "account": {
-    "equity": 97292.16,
+    "equity": 97291.49,
     "cash": 28359.87,
-    "buying_power": 255305.83,
-    "portfolio_value": 97292.16,
+    "buying_power": 255305.84,
+    "portfolio_value": 97291.49,
     "last_equity": 97239.3,
     "daytrade_count": 48,
     "status": "ACTIVE",
@@ -75,13 +75,13 @@
       "symbol": "GLD",
       "qty": 21.012163348,
       "avg_entry_price": 463.459573,
-      "current_price": 460.8601,
-      "market_value": 9683.667702,
+      "current_price": 460.88,
+      "market_value": 9684.085844,
       "cost_basis": 9738.288263,
-      "unrealized_pl": -54.620561,
-      "unrealized_plpc": -0.0056088461878385,
-      "unrealized_intraday_pl": -54.620551,
-      "unrealized_intraday_plpc": -0.0056088451667236
+      "unrealized_pl": -54.202419,
+      "unrealized_plpc": -0.0055659082516523,
+      "unrealized_intraday_pl": -54.202409,
+      "unrealized_intraday_plpc": -0.0055659072304932
     },
     {
       "symbol": "GOLD",
@@ -135,13 +135,13 @@
       "symbol": "QQQ",
       "qty": 25.243917605,
       "avg_entry_price": 626.935639,
-      "current_price": 625.67,
-      "market_value": 15794.361928,
+      "current_price": 625.6434,
+      "market_value": 15793.69044,
       "cost_basis": 15826.311623,
-      "unrealized_pl": -31.949695,
-      "unrealized_plpc": -0.0020187707509543,
-      "unrealized_intraday_pl": -31.949687,
-      "unrealized_intraday_plpc": -0.0020187702464874
+      "unrealized_pl": -32.621183,
+      "unrealized_plpc": -0.002061199335453,
+      "unrealized_intraday_pl": -32.621175,
+      "unrealized_intraday_plpc": -0.0020611988310076
     },
     {
       "symbol": "SCCO",
