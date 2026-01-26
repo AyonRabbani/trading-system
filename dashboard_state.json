@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-01-26T17:45:44.238897",
+  "timestamp": "2026-01-26T17:46:45.126481",
   "account": {
-    "equity": 97292.13,
+    "equity": 97292.72,
     "cash": 28359.87,
-    "buying_power": 255305.09,
-    "portfolio_value": 97292.13,
+    "buying_power": 255305.15,
+    "portfolio_value": 97292.72,
     "last_equity": 97239.3,
     "daytrade_count": 48,
     "status": "ACTIVE",
@@ -75,13 +75,13 @@
       "symbol": "GLD",
       "qty": 21.012163348,
       "avg_entry_price": 463.459573,
-      "current_price": 460.96,
-      "market_value": 9685.766817,
+      "current_price": 460.83,
+      "market_value": 9683.035236,
       "cost_basis": 9738.288263,
-      "unrealized_pl": -52.521446,
-      "unrealized_plpc": -0.0053932934188806,
-      "unrealized_intraday_pl": -52.521436,
-      "unrealized_intraday_plpc": -0.0053932923975443
+      "unrealized_pl": -55.253027,
+      "unrealized_plpc": -0.0056737925092986,
+      "unrealized_intraday_pl": -55.253017,
+      "unrealized_intraday_plpc": -0.0056737914882504
     },
     {
       "symbol": "GOLD",
@@ -183,13 +183,13 @@
       "symbol": "VEA",
       "qty": 83.003805015,
       "avg_entry_price": 66.179248,
-      "current_price": 66.1,
-      "market_value": 5486.551511,
+      "current_price": 66.14,
+      "market_value": 5489.871664,
       "cost_basis": 5493.129397,
-      "unrealized_pl": -6.577886,
-      "unrealized_plpc": -0.0011974751593495,
-      "unrealized_intraday_pl": -6.577886,
-      "unrealized_intraday_plpc": -0.0011974751593495
+      "unrealized_pl": -3.257733,
+      "unrealized_plpc": -0.0005930559367087,
+      "unrealized_intraday_pl": -3.257733,
+      "unrealized_intraday_plpc": -0.0005930559367087
     },
     {
       "symbol": "VGK",
