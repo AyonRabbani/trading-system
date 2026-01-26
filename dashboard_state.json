@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-01-26T17:17:18.282245",
+  "timestamp": "2026-01-26T17:18:19.161157",
   "account": {
-    "equity": 97319.69,
+    "equity": 97316.46,
     "cash": 28359.87,
-    "buying_power": 255307.04,
-    "portfolio_value": 97319.69,
+    "buying_power": 255307.15,
+    "portfolio_value": 97316.46,
     "last_equity": 97239.3,
     "daytrade_count": 48,
     "status": "ACTIVE",
@@ -63,25 +63,25 @@
       "symbol": "FCX",
       "qty": 5.100009402,
       "avg_entry_price": 61.25,
-      "current_price": 60.3,
-      "market_value": 307.530567,
+      "current_price": 60.293,
+      "market_value": 307.494867,
       "cost_basis": 312.375576,
-      "unrealized_pl": -4.845009,
-      "unrealized_plpc": -0.0155102042933088,
-      "unrealized_intraday_pl": -4.845009,
-      "unrealized_intraday_plpc": -0.0155102042933088
+      "unrealized_pl": -4.880709,
+      "unrealized_plpc": -0.0156244897968592,
+      "unrealized_intraday_pl": -4.880709,
+      "unrealized_intraday_plpc": -0.0156244897968592
     },
     {
       "symbol": "GLD",
       "qty": 21.012163348,
       "avg_entry_price": 463.459573,
-      "current_price": 461.0,
-      "market_value": 9686.607303,
+      "current_price": 460.85,
+      "market_value": 9683.455479,
       "cost_basis": 9738.288263,
-      "unrealized_pl": -51.68096,
-      "unrealized_plpc": -0.0053069860538385,
-      "unrealized_intraday_pl": -51.68095,
-      "unrealized_intraday_plpc": -0.0053069850324136
+      "unrealized_pl": -54.832784,
+      "unrealized_plpc": -0.0056306388267776,
+      "unrealized_intraday_pl": -54.832774,
+      "unrealized_intraday_plpc": -0.005630637805685
     },
     {
       "symbol": "GOLD",
@@ -135,13 +135,13 @@
       "symbol": "QQQ",
       "qty": 25.243917605,
       "avg_entry_price": 626.935639,
-      "current_price": 625.5101,
-      "market_value": 15790.325425,
+      "current_price": 625.5085,
+      "market_value": 15790.285035,
       "cost_basis": 15826.311623,
-      "unrealized_pl": -35.986198,
-      "unrealized_plpc": -0.002273820891262,
-      "unrealized_intraday_pl": -35.98619,
-      "unrealized_intraday_plpc": -0.0022738203869241
+      "unrealized_pl": -36.026588,
+      "unrealized_plpc": -0.0022763729704174,
+      "unrealized_intraday_pl": -36.02658,
+      "unrealized_intraday_plpc": -0.0022763724660808
     },
     {
       "symbol": "SCCO",
