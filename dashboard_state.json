@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-01-26T17:40:39.666609",
+  "timestamp": "2026-01-26T17:41:40.572475",
   "account": {
-    "equity": 97293.47,
+    "equity": 97295.18,
     "cash": 28359.87,
-    "buying_power": 255305.25,
-    "portfolio_value": 97293.47,
+    "buying_power": 255305.24,
+    "portfolio_value": 97295.18,
     "last_equity": 97239.3,
     "daytrade_count": 48,
     "status": "ACTIVE",
@@ -75,13 +75,13 @@
       "symbol": "GLD",
       "qty": 21.012163348,
       "avg_entry_price": 463.459573,
-      "current_price": 461.0786,
-      "market_value": 9688.258859,
+      "current_price": 461.16,
+      "market_value": 9689.96925,
       "cost_basis": 9738.288263,
-      "unrealized_pl": -50.029404,
-      "unrealized_plpc": -0.0051373919778164,
-      "unrealized_intraday_pl": -50.029394,
-      "unrealized_intraday_plpc": -0.0051373909562174
+      "unrealized_pl": -48.319013,
+      "unrealized_plpc": -0.0049617562856077,
+      "unrealized_intraday_pl": -48.319003,
+      "unrealized_intraday_plpc": -0.0049617552638283
     },
     {
       "symbol": "GOLD",
