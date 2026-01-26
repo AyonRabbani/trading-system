@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-01-26T16:53:59.589576",
+  "timestamp": "2026-01-26T16:55:00.403146",
   "account": {
-    "equity": 97317.55,
+    "equity": 97320.43,
     "cash": 28359.87,
-    "buying_power": 255305.19,
-    "portfolio_value": 97317.55,
+    "buying_power": 255305.2,
+    "portfolio_value": 97320.43,
     "last_equity": 97239.3,
     "daytrade_count": 48,
     "status": "ACTIVE",
@@ -63,25 +63,25 @@
       "symbol": "FCX",
       "qty": 5.100009402,
       "avg_entry_price": 61.25,
-      "current_price": 60.29,
-      "market_value": 307.479567,
+      "current_price": 60.25,
+      "market_value": 307.275566,
       "cost_basis": 312.375576,
-      "unrealized_pl": -4.896009,
-      "unrealized_plpc": -0.0156734692983807,
-      "unrealized_intraday_pl": -4.896009,
-      "unrealized_intraday_plpc": -0.0156734692983807
+      "unrealized_pl": -5.10001,
+      "unrealized_plpc": -0.0163265325199432,
+      "unrealized_intraday_pl": -5.10001,
+      "unrealized_intraday_plpc": -0.0163265325199432
     },
     {
       "symbol": "GLD",
       "qty": 21.012163348,
       "avg_entry_price": 463.459573,
-      "current_price": 460.59,
-      "market_value": 9677.992316,
+      "current_price": 460.7,
+      "market_value": 9680.303654,
       "cost_basis": 9738.288263,
-      "unrealized_pl": -60.295947,
-      "unrealized_plpc": -0.0061916371103011,
-      "unrealized_intraday_pl": -60.295937,
-      "unrealized_intraday_plpc": -0.0061916360897846
+      "unrealized_pl": -57.984609,
+      "unrealized_plpc": -0.0059542917024041,
+      "unrealized_intraday_pl": -57.984599,
+      "unrealized_intraday_plpc": -0.0059542906816439
     },
     {
       "symbol": "GOLD",
@@ -135,13 +135,13 @@
       "symbol": "QQQ",
       "qty": 25.243917605,
       "avg_entry_price": 626.935639,
-      "current_price": 625.94,
-      "market_value": 15801.177786,
+      "current_price": 625.95,
+      "market_value": 15801.430225,
       "cost_basis": 15826.311623,
-      "unrealized_pl": -25.133837,
-      "unrealized_plpc": -0.0015881045185205,
-      "unrealized_intraday_pl": -25.133829,
-      "unrealized_intraday_plpc": -0.0015881040138359
+      "unrealized_pl": -24.881398,
+      "unrealized_plpc": -0.0015721539290204,
+      "unrealized_intraday_pl": -24.88139,
+      "unrealized_intraday_plpc": -0.0015721534243277
     },
     {
       "symbol": "SCCO",
@@ -159,13 +159,13 @@
       "symbol": "SPY",
       "qty": 19.375273314,
       "avg_entry_price": 688.893322,
-      "current_price": 692.6831,
-      "market_value": 13420.924382,
+      "current_price": 692.71,
+      "market_value": 13421.445577,
       "cost_basis": 13347.496397,
-      "unrealized_pl": 73.427985,
-      "unrealized_plpc": 0.005501255277844,
-      "unrealized_intraday_pl": 66.904756,
-      "unrealized_intraday_plpc": 0.005010083695679
+      "unrealized_pl": 73.94918,
+      "unrealized_plpc": 0.0055403034247397,
+      "unrealized_intraday_pl": 67.425951,
+      "unrealized_intraday_plpc": 0.0050491127681678
     },
     {
       "symbol": "TECK",
