@@ -1,32 +1,7 @@
 {
-  "last_updated": "2026-01-26T14:02:04.420021",
+  "last_updated": "2026-01-26T14:15:22.838627",
   "event_count": 200,
   "events": [
-    {
-      "type": "event",
-      "source": "Market Scanner",
-      "event_type": "scan",
-      "level": "INFO",
-      "message": "\ud83d\udfe1 Market Regime: UNKNOWN | Hot Sectors: Materials, Industrials, Consumer Staples",
-      "timestamp": "2026-01-16T15:09:05.918421"
-    },
-    {
-      "type": "event",
-      "source": "Market Scanner",
-      "event_type": "scan",
-      "level": "INFO",
-      "message": "\ud83d\udd04 13 rotation opportunities identified - avg score improvement: 46.9 points",
-      "timestamp": "2026-01-16T15:09:06.581001"
-    },
-    {
-      "type": "event",
-      "source": "Market Scanner",
-      "event_type": "scan",
-      "level": "INFO",
-      "message": "\ud83d\udd0d Daily Market Scan Started",
-      "timestamp": "2026-01-16T15:15:19.910338",
-      "phase": "start"
-    },
     {
       "type": "event",
       "source": "Market Scanner",
@@ -1685,6 +1660,32 @@
       "level": "INFO",
       "message": "\ud83d\udd04 24 rotation opportunities identified - avg score improvement: 63.3 points",
       "timestamp": "2026-01-26T14:02:04.419448"
+    },
+    {
+      "type": "event",
+      "source": "Market Scanner",
+      "event_type": "scan",
+      "level": "INFO",
+      "message": "\ud83d\udd0d Daily Market Scan Started",
+      "timestamp": "2026-01-26T14:15:22.835091",
+      "phase": "start"
+    },
+    {
+      "type": "event",
+      "source": "Market Scanner",
+      "event_type": "scan",
+      "level": "INFO",
+      "message": "\ud83d\udd0d Daily market scan initiated - analyzing 5405 tickers",
+      "timestamp": "2026-01-26T14:15:22.835122"
+    },
+    {
+      "type": "event",
+      "source": "Market Scanner",
+      "event_type": "scan",
+      "level": "INFO",
+      "message": "\ud83d\udcca Loading universe data (5405 tickers)",
+      "timestamp": "2026-01-26T14:15:22.835183",
+      "phase": "loading"
     }
   ]
 }
