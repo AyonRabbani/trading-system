@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-01-26T17:48:46.892046",
+  "timestamp": "2026-01-26T17:49:47.669049",
   "account": {
-    "equity": 97282.6,
+    "equity": 97279.21,
     "cash": 28359.87,
-    "buying_power": 255305.18,
-    "portfolio_value": 97282.6,
+    "buying_power": 255305.21,
+    "portfolio_value": 97279.21,
     "last_equity": 97239.3,
     "daytrade_count": 48,
     "status": "ACTIVE",
@@ -75,13 +75,13 @@
       "symbol": "GLD",
       "qty": 21.012163348,
       "avg_entry_price": 463.459573,
-      "current_price": 460.73,
-      "market_value": 9680.934019,
+      "current_price": 460.64,
+      "market_value": 9679.042925,
       "cost_basis": 9738.288263,
-      "unrealized_pl": -57.354244,
-      "unrealized_plpc": -0.0058895611272788,
-      "unrealized_intraday_pl": -57.354234,
-      "unrealized_intraday_plpc": -0.0058895601064521
+      "unrealized_pl": -59.245338,
+      "unrealized_plpc": -0.0060837527499672,
+      "unrealized_intraday_pl": -59.245328,
+      "unrealized_intraday_plpc": -0.00608375172934
     },
     {
       "symbol": "GOLD",
@@ -171,13 +171,13 @@
       "symbol": "TECK",
       "qty": 3.839962398,
       "avg_entry_price": 55.330006,
-      "current_price": 54.49,
-      "market_value": 209.239551,
+      "current_price": 54.1,
+      "market_value": 207.741966,
       "cost_basis": 212.465143,
-      "unrealized_pl": -3.225592,
-      "unrealized_plpc": -0.0151817467771643,
-      "unrealized_intraday_pl": -3.225592,
-      "unrealized_intraday_plpc": -0.0151817467771643
+      "unrealized_pl": -4.723177,
+      "unrealized_plpc": -0.0222303618057481,
+      "unrealized_intraday_pl": -4.723177,
+      "unrealized_intraday_plpc": -0.0222303618057481
     },
     {
       "symbol": "VEA",
