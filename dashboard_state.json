@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-01-26T17:47:46.087542",
+  "timestamp": "2026-01-26T17:48:46.892046",
   "account": {
-    "equity": 97290.41,
+    "equity": 97282.6,
     "cash": 28359.87,
-    "buying_power": 255305.15,
-    "portfolio_value": 97290.41,
+    "buying_power": 255305.18,
+    "portfolio_value": 97282.6,
     "last_equity": 97239.3,
     "daytrade_count": 48,
     "status": "ACTIVE",
@@ -75,25 +75,25 @@
       "symbol": "GLD",
       "qty": 21.012163348,
       "avg_entry_price": 463.459573,
-      "current_price": 460.78,
-      "market_value": 9681.984627,
+      "current_price": 460.73,
+      "market_value": 9680.934019,
       "cost_basis": 9738.288263,
-      "unrealized_pl": -56.303636,
-      "unrealized_plpc": -0.0057816768696324,
-      "unrealized_intraday_pl": -56.303626,
-      "unrealized_intraday_plpc": -0.005781675848695
+      "unrealized_pl": -57.354244,
+      "unrealized_plpc": -0.0058895611272788,
+      "unrealized_intraday_pl": -57.354234,
+      "unrealized_intraday_plpc": -0.0058895601064521
     },
     {
       "symbol": "GOLD",
       "qty": 7.343412872,
       "avg_entry_price": 43.322298,
-      "current_price": 43.9,
-      "market_value": 322.375825,
+      "current_price": 43.5939,
+      "market_value": 320.128006,
       "cost_basis": 318.133519,
-      "unrealized_pl": 4.242306,
-      "unrealized_plpc": 0.0133349859308601,
-      "unrealized_intraday_pl": 4.242304,
-      "unrealized_intraday_plpc": 0.0133349795603589
+      "unrealized_pl": 1.994487,
+      "unrealized_plpc": 0.006269339383883,
+      "unrealized_intraday_pl": 1.994485,
+      "unrealized_intraday_plpc": 0.0062693330578012
     },
     {
       "symbol": "HII",
@@ -147,13 +147,13 @@
       "symbol": "SCCO",
       "qty": 2.064287779,
       "avg_entry_price": 187.61,
-      "current_price": 189.7351,
-      "market_value": 391.667848,
+      "current_price": 187.55,
+      "market_value": 387.157173,
       "cost_basis": 387.28103,
-      "unrealized_pl": 4.386818,
-      "unrealized_plpc": 0.0113272214753199,
-      "unrealized_intraday_pl": 4.386818,
-      "unrealized_intraday_plpc": 0.0113272214753199
+      "unrealized_pl": -0.123857,
+      "unrealized_plpc": -0.0003198116881687,
+      "unrealized_intraday_pl": -0.123857,
+      "unrealized_intraday_plpc": -0.0003198116881687
     },
     {
       "symbol": "SPY",
