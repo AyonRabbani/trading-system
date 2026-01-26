@@ -1,32 +1,7 @@
 {
-  "last_updated": "2026-01-26T11:59:40.140647",
+  "last_updated": "2026-01-26T11:59:42.579753",
   "event_count": 200,
   "events": [
-    {
-      "type": "event",
-      "source": "Market Scanner",
-      "event_type": "scan",
-      "level": "INFO",
-      "message": "\ud83d\udcca Loading universe data (5405 tickers)",
-      "timestamp": "2026-01-16T12:00:24.882976",
-      "phase": "loading"
-    },
-    {
-      "type": "event",
-      "source": "Market Scanner",
-      "event_type": "scan",
-      "level": "INFO",
-      "message": "\u2713 Data loaded for 5283/5405 tickers",
-      "timestamp": "2026-01-16T12:09:00.395318"
-    },
-    {
-      "type": "event",
-      "source": "Market Scanner",
-      "event_type": "scan",
-      "level": "INFO",
-      "message": "\ud83c\udfaf Scoring complete - Top 5: ASTI (90), YCBD (86), ASTX (85), ZURA (85), MUU (85)",
-      "timestamp": "2026-01-16T12:09:09.048719"
-    },
     {
       "type": "event",
       "source": "Market Scanner",
@@ -1686,6 +1661,30 @@
       "level": "INFO",
       "message": "\u2713 Data loaded for 5293/5405 tickers",
       "timestamp": "2026-01-26T11:59:40.139435"
+    },
+    {
+      "type": "event",
+      "source": "Market Scanner",
+      "event_type": "scan",
+      "level": "INFO",
+      "message": "\ud83c\udfaf Scoring complete - Top 5: COPX (81), FCX (80), ACMR (80), GOLD (79), ONTO (78)",
+      "timestamp": "2026-01-26T11:59:42.392749"
+    },
+    {
+      "type": "event",
+      "source": "Market Scanner",
+      "event_type": "scan",
+      "level": "INFO",
+      "message": "\ud83d\udfe1 Market Regime: UNKNOWN | Hot Sectors: Materials, Energy, Consumer Staples",
+      "timestamp": "2026-01-26T11:59:42.393216"
+    },
+    {
+      "type": "event",
+      "source": "Market Scanner",
+      "event_type": "scan",
+      "level": "INFO",
+      "message": "\ud83d\udd04 24 rotation opportunities identified - avg score improvement: 61.6 points",
+      "timestamp": "2026-01-26T11:59:42.579043"
     }
   ]
 }
