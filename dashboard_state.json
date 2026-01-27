@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-01-26T19:37:41.134691",
+  "timestamp": "2026-01-26T19:38:42.043013",
   "account": {
-    "equity": 97459.51,
+    "equity": 97458.11,
     "cash": 28359.87,
-    "buying_power": 255306.61,
-    "portfolio_value": 97459.51,
+    "buying_power": 255306.66,
+    "portfolio_value": 97458.11,
     "last_equity": 97239.3,
     "daytrade_count": 48,
     "status": "ACTIVE",
@@ -63,13 +63,13 @@
       "symbol": "FCX",
       "qty": 5.100009402,
       "avg_entry_price": 61.25,
-      "current_price": 61.38,
-      "market_value": 313.038577,
+      "current_price": 61.34,
+      "market_value": 312.834577,
       "cost_basis": 312.375576,
-      "unrealized_pl": 0.663001,
-      "unrealized_plpc": 0.0021224482672102,
-      "unrealized_intraday_pl": 0.663001,
-      "unrealized_intraday_plpc": 0.0021224482672102
+      "unrealized_pl": 0.459001,
+      "unrealized_plpc": 0.0014693882469224,
+      "unrealized_intraday_pl": 0.459001,
+      "unrealized_intraday_plpc": 0.0014693882469224
     },
     {
       "symbol": "GLD",
@@ -159,13 +159,13 @@
       "symbol": "SPY",
       "qty": 19.375273314,
       "avg_entry_price": 688.893322,
-      "current_price": 692.94,
-      "market_value": 13425.90189,
+      "current_price": 692.8779,
+      "market_value": 13424.698686,
       "cost_basis": 13347.496397,
-      "unrealized_pl": 78.405493,
-      "unrealized_plpc": 0.005874172254328,
-      "unrealized_intraday_pl": 71.882264,
-      "unrealized_intraday_plpc": 0.0053828185080728
+      "unrealized_pl": 77.202289,
+      "unrealized_plpc": 0.0057840277085486,
+      "unrealized_intraday_pl": 70.67906,
+      "unrealized_intraday_plpc": 0.0052927179964892
     },
     {
       "symbol": "TECK",
