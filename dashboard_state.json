@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-01-26T22:02:19.363058",
+  "timestamp": "2026-01-26T22:03:20.045531",
   "account": {
-    "equity": 97442.25,
+    "equity": 97405.41,
     "cash": 28359.87,
     "buying_power": 255305.95,
-    "portfolio_value": 97442.25,
+    "portfolio_value": 97405.41,
     "last_equity": 97239.3,
     "daytrade_count": 43,
     "status": "ACTIVE",
@@ -15,13 +15,13 @@
       "symbol": "ACMR",
       "qty": 3.172649002,
       "avg_entry_price": 50.569147,
-      "current_price": 50.46,
-      "market_value": 160.091869,
+      "current_price": 51.13,
+      "market_value": 162.217543,
       "cost_basis": 160.438153,
-      "unrealized_pl": -0.346284,
-      "unrealized_plpc": -0.0021583644134821,
-      "unrealized_intraday_pl": 1.935316,
-      "unrealized_intraday_plpc": 0.0122367107988248
+      "unrealized_pl": 1.77939,
+      "unrealized_plpc": 0.0110908157861927,
+      "unrealized_intraday_pl": 0.0,
+      "unrealized_intraday_plpc": 0.0
     },
     {
       "symbol": "AXL",
@@ -32,8 +32,8 @@
       "cost_basis": 229.601214,
       "unrealized_pl": -0.373436,
       "unrealized_plpc": -0.0016264548148252,
-      "unrealized_intraday_pl": -8.916011,
-      "unrealized_intraday_plpc": -0.0374396117464982
+      "unrealized_intraday_pl": 0.0,
+      "unrealized_intraday_plpc": 0.0
     },
     {
       "symbol": "DJCO",
@@ -44,8 +44,8 @@
       "cost_basis": 319.356351,
       "unrealized_pl": 1.422744,
       "unrealized_plpc": 0.0044550358730771,
-      "unrealized_intraday_pl": -9.89454,
-      "unrealized_intraday_plpc": -0.0299223734604665
+      "unrealized_intraday_pl": 0.0,
+      "unrealized_intraday_plpc": 0.0
     },
     {
       "symbol": "EEM",
@@ -56,20 +56,20 @@
       "cost_basis": 5310.273375,
       "unrealized_pl": -9.047618,
       "unrealized_plpc": -0.0017037951459514,
-      "unrealized_intraday_pl": 8.959313,
-      "unrealized_intraday_plpc": 0.0016929066393015
+      "unrealized_intraday_pl": 0.0,
+      "unrealized_intraday_plpc": 0.0
     },
     {
       "symbol": "FCX",
       "qty": 5.100009402,
       "avg_entry_price": 61.25,
-      "current_price": 61.21,
-      "market_value": 312.171575,
+      "current_price": 61.17,
+      "market_value": 311.967575,
       "cost_basis": 312.375576,
-      "unrealized_pl": -0.204001,
-      "unrealized_plpc": -0.0006530632215625,
-      "unrealized_intraday_pl": 4.080007,
-      "unrealized_intraday_plpc": 0.0132428388952209
+      "unrealized_pl": -0.408001,
+      "unrealized_plpc": -0.0013061232418504,
+      "unrealized_intraday_pl": 0.0,
+      "unrealized_intraday_plpc": 0.0
     },
     {
       "symbol": "GLD",
@@ -80,20 +80,20 @@
       "cost_basis": 9738.288263,
       "unrealized_pl": 26.064045,
       "unrealized_plpc": 0.0026764503469289,
-      "unrealized_intraday_pl": 140.781495,
-      "unrealized_intraday_plpc": 0.0146288210203457
+      "unrealized_intraday_pl": 0.0,
+      "unrealized_intraday_plpc": 0.0
     },
     {
       "symbol": "GOLD",
       "qty": 7.343412872,
       "avg_entry_price": 43.322298,
-      "current_price": 44.1668,
-      "market_value": 324.335048,
+      "current_price": 44.1,
+      "market_value": 323.844508,
       "cost_basis": 318.133519,
-      "unrealized_pl": 6.201529,
-      "unrealized_plpc": 0.0194934787742376,
-      "unrealized_intraday_pl": 7.760519,
-      "unrealized_intraday_plpc": 0.0245140347346138
+      "unrealized_pl": 5.710989,
+      "unrealized_plpc": 0.0179515475701886,
+      "unrealized_intraday_pl": 0.0,
+      "unrealized_intraday_plpc": 0.0
     },
     {
       "symbol": "HII",
@@ -104,8 +104,8 @@
       "cost_basis": 356.618861,
       "unrealized_pl": 6.050927,
       "unrealized_plpc": 0.0169674901182526,
-      "unrealized_intraday_pl": -4.402269,
-      "unrealized_intraday_plpc": -0.0119929286799404
+      "unrealized_intraday_pl": 0.0,
+      "unrealized_intraday_plpc": 0.0
     },
     {
       "symbol": "LIT",
@@ -116,8 +116,8 @@
       "cost_basis": 6182.570771,
       "unrealized_pl": -59.974357,
       "unrealized_plpc": -0.0097005532522678,
-      "unrealized_intraday_pl": -22.195234,
-      "unrealized_intraday_plpc": -0.0036120401262464
+      "unrealized_intraday_pl": 0.0,
+      "unrealized_intraday_plpc": 0.0
     },
     {
       "symbol": "ONTO",
@@ -128,32 +128,32 @@
       "cost_basis": 275.82802,
       "unrealized_pl": 2.748848,
       "unrealized_plpc": 0.0099658040542799,
-      "unrealized_intraday_pl": -6.926018,
-      "unrealized_intraday_plpc": -0.0242590122188817
+      "unrealized_intraday_pl": 0.0,
+      "unrealized_intraday_plpc": 0.0
     },
     {
       "symbol": "QQQ",
       "qty": 25.243917605,
       "avg_entry_price": 626.935639,
-      "current_price": 626.82,
-      "market_value": 15823.392433,
+      "current_price": 625.46,
+      "market_value": 15789.060705,
       "cost_basis": 15826.311623,
-      "unrealized_pl": -2.91919,
-      "unrealized_plpc": -0.0001844516947182,
-      "unrealized_intraday_pl": 103.500062,
-      "unrealized_intraday_plpc": 0.0065840184879978
+      "unrealized_pl": -37.250918,
+      "unrealized_plpc": -0.0023537333832012,
+      "unrealized_intraday_pl": 0.0,
+      "unrealized_intraday_plpc": 0.0
     },
     {
       "symbol": "SCCO",
       "qty": 2.064287779,
       "avg_entry_price": 187.61,
-      "current_price": 190.318,
-      "market_value": 392.871122,
+      "current_price": 188.41,
+      "market_value": 388.93246,
       "cost_basis": 387.28103,
-      "unrealized_pl": 5.590092,
-      "unrealized_plpc": 0.0144342004048068,
-      "unrealized_intraday_pl": 12.422884,
-      "unrealized_intraday_plpc": 0.0326532830466151
+      "unrealized_pl": 1.65143,
+      "unrealized_plpc": 0.0042641644492631,
+      "unrealized_intraday_pl": 0.0,
+      "unrealized_intraday_plpc": 0.0
     },
     {
       "symbol": "SPY",
@@ -164,8 +164,8 @@
       "cost_basis": 13347.496397,
       "unrealized_pl": 74.336686,
       "unrealized_plpc": 0.0055693355359667,
-      "unrealized_intraday_pl": 67.813457,
-      "unrealized_intraday_plpc": 0.0050781306976641
+      "unrealized_intraday_pl": 0.0,
+      "unrealized_intraday_plpc": 0.0
     },
     {
       "symbol": "TECK",
@@ -176,8 +176,8 @@
       "cost_basis": 212.465143,
       "unrealized_pl": -2.227202,
       "unrealized_plpc": -0.0104826700914418,
-      "unrealized_intraday_pl": 6.681534,
-      "unrealized_intraday_plpc": 0.0328239926144894
+      "unrealized_intraday_pl": 0.0,
+      "unrealized_intraday_plpc": 0.0
     },
     {
       "symbol": "VEA",
@@ -188,8 +188,8 @@
       "cost_basis": 5493.129397,
       "unrealized_pl": -8.237962,
       "unrealized_plpc": -0.0014996846796471,
-      "unrealized_intraday_pl": 24.901141,
-      "unrealized_intraday_plpc": 0.0045606566420757
+      "unrealized_intraday_pl": 0.0,
+      "unrealized_intraday_plpc": 0.0
     },
     {
       "symbol": "VGK",
@@ -200,8 +200,8 @@
       "cost_basis": 4460.19446,
       "unrealized_pl": 0.027367,
       "unrealized_plpc": 6.135831127e-06,
-      "unrealized_intraday_pl": 29.561521,
-      "unrealized_intraday_plpc": 0.0066720350824386
+      "unrealized_intraday_pl": 0.0,
+      "unrealized_intraday_plpc": 0.0
     },
     {
       "symbol": "XLB",
@@ -212,8 +212,8 @@
       "cost_basis": 6131.056846,
       "unrealized_pl": -18.148093,
       "unrealized_plpc": -0.0029600268690772,
-      "unrealized_intraday_pl": 7.331092,
-      "unrealized_intraday_plpc": 0.001200720457104
+      "unrealized_intraday_pl": 0.0,
+      "unrealized_intraday_plpc": 0.0
     }
   ],
   "scanner": {
