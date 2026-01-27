@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-01-26T19:41:45.096496",
+  "timestamp": "2026-01-26T19:42:46.003721",
   "account": {
-    "equity": 97450.36,
+    "equity": 97437.38,
     "cash": 28359.87,
-    "buying_power": 255306.66,
-    "portfolio_value": 97450.36,
+    "buying_power": 255306.79,
+    "portfolio_value": 97437.38,
     "last_equity": 97239.3,
     "daytrade_count": 48,
     "status": "ACTIVE",
@@ -63,25 +63,25 @@
       "symbol": "FCX",
       "qty": 5.100009402,
       "avg_entry_price": 61.25,
-      "current_price": 61.35,
-      "market_value": 312.885577,
+      "current_price": 61.3395,
+      "market_value": 312.832027,
       "cost_basis": 312.375576,
-      "unrealized_pl": 0.510001,
-      "unrealized_plpc": 0.0016326532519943,
-      "unrealized_intraday_pl": 0.510001,
-      "unrealized_intraday_plpc": 0.0016326532519943
+      "unrealized_pl": 0.456451,
+      "unrealized_plpc": 0.0014612249966688,
+      "unrealized_intraday_pl": 0.456451,
+      "unrealized_intraday_plpc": 0.0014612249966688
     },
     {
       "symbol": "GLD",
       "qty": 21.012163348,
       "avg_entry_price": 463.459573,
-      "current_price": 463.2598,
-      "market_value": 9734.09059,
+      "current_price": 462.68,
+      "market_value": 9721.907738,
       "cost_basis": 9738.288263,
-      "unrealized_pl": -4.197673,
-      "unrealized_plpc": -0.0004310483410056,
-      "unrealized_intraday_pl": -4.197663,
-      "unrealized_intraday_plpc": -0.0004310473145737
+      "unrealized_pl": -16.380525,
+      "unrealized_plpc": -0.0016820743602586,
+      "unrealized_intraday_pl": -16.380515,
+      "unrealized_intraday_plpc": -0.0016820733351114
     },
     {
       "symbol": "GOLD",
@@ -159,13 +159,13 @@
       "symbol": "SPY",
       "qty": 19.375273314,
       "avg_entry_price": 688.893322,
-      "current_price": 692.9485,
-      "market_value": 13426.06658,
+      "current_price": 692.91,
+      "market_value": 13425.320632,
       "cost_basis": 13347.496397,
-      "unrealized_pl": 78.570183,
-      "unrealized_plpc": 0.0058865108978534,
-      "unrealized_intraday_pl": 72.046954,
-      "unrealized_intraday_plpc": 0.0053951511243645
+      "unrealized_pl": 77.824235,
+      "unrealized_plpc": 0.0058306241624079,
+      "unrealized_intraday_pl": 71.301006,
+      "unrealized_intraday_plpc": 0.0053392916887121
     },
     {
       "symbol": "TECK",
