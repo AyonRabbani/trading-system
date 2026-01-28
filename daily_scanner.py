@@ -38,6 +38,7 @@ broadcaster = get_broadcaster(source="Market Scanner")
 POLYGON_API_KEY = os.getenv('POLYGON_API_KEY')
 
 # Load ticker universe from Massive flat-files
+## EDIT NOTE: Ensure cache is the fallback not, default ## 
 def load_ticker_universe(use_cache: bool = True):
     """
     Load comprehensive ticker universe from Massive flat-files.
@@ -81,6 +82,7 @@ def load_ticker_universe(use_cache: bool = True):
 TICKER_UNIVERSE = load_ticker_universe()
 
 # Current Holdings (from trading_automation.py)
+## EDIT NOTE: remove hardcoded holdings and pull from alpaca instead ## 
 CURRENT_HOLDINGS = {
     'CORE': ["GLD", "SLV", "PPLT", "CPER", "SLX", "XLF", "XLB", "XLY", "XLI", "XLK"],
     'SPECULATIVE': ["RKLB", "AA", "MU", "LRCX", "FCX", "HUT", "RIVN", "MSFT", "NVDA", "TSLA"],
@@ -157,7 +159,11 @@ SCORE_WEIGHTS = {
 
 # Rotation Parameters
 ROTATION_THRESHOLD = 20.0  # Minimum score difference to trigger rotation
+
+## EDIT NOTE: Are cooldown names recorded somewhere? ## 
 COOLDOWN_DAYS = 5  # Days to wait before rotating same ticker again
+
+## EDIT NOTE: Is max rotation by ticker or any portfolio rebalancing activity? Is this stored somewhere ## 
 MAX_ROTATIONS_PER_DAY = 2  # Limit rotations to avoid overtrading
 
 # ============================================================================
@@ -224,7 +230,7 @@ def fetch_price_history(ticker: str, days: int = 365) -> pd.DataFrame:
         logging.error(f"  {ticker}: Error fetching data - {e}")
         return pd.DataFrame()
 
-
+## EDIT NOTE: Understand the typing of this function ##
 def load_universe_data(universe: Dict[str, List[str]]) -> Dict[str, pd.DataFrame]:
     """
     Load historical data for entire screening universe.
@@ -454,7 +460,8 @@ def score_all_tickers(data: Dict[str, pd.DataFrame]) -> List[dict]:
     
     # Get SPY data for relative strength calculations
     spy_data = data.get('SPY')
-    
+
+    ## EDIT NOTE: What does current positions have to do with loss penalty? ##
     # Load current positions for loss penalty
     current_positions = load_current_positions()
     
