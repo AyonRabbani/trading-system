@@ -338,7 +338,8 @@ def score_opportunity(ticker: str, df: pd.DataFrame, spy_data: Optional[pd.DataF
         sma20 = df['c'].rolling(20).mean().iloc[-1]
         sma50 = df['c'].rolling(50).mean().iloc[-1]
         trend_strength = ((sma20 / sma50) - 1) * 100 if sma50 > 0 else 0
-        
+
+        ##EDIT NOTE: why does momentum include 100? --> what is the influence of this? ##  
         momentum_score = min(100, max(0, (sharpe_value * 20) + (trend_strength * 2)))
         
         # 2. VOLATILITY SCORE (0-100)
@@ -346,10 +347,14 @@ def score_opportunity(ticker: str, df: pd.DataFrame, spy_data: Optional[pd.DataF
         atr = df['h'] - df['l']
         atr_20d = atr.rolling(20).mean().iloc[-1]
         atr_normalized = (atr_20d / df['c'].iloc[-1]) * 100 if df['c'].iloc[-1] > 0 else 0
+
+        ##EDIT NOTE: why does volatility include 100? --> what is the influence of this? ##  
         volatility_score = min(100, atr_normalized * 5)
         
         # 3. RELATIVE STRENGTH SCORE (0-100)
         # Performance vs SPY over 30 days
+        
+        ## EDIT NOTE: relative strength should be compared to industry specific index? ## 
         ticker_return_30d = (df['c'].iloc[-1] / df['c'].iloc[-30] - 1) if len(df) >= 30 else 0
         
         if spy_data is not None and len(spy_data) >= 30:
@@ -365,6 +370,8 @@ def score_opportunity(ticker: str, df: pd.DataFrame, spy_data: Optional[pd.DataF
         high_52w = df['c'].rolling(min(252, len(df))).max().iloc[-1]
         current_price = df['c'].iloc[-1]
         breakout_distance = ((current_price / high_52w) - 1) * 100 if high_52w > 0 else -100
+
+        ##EDIT NOTE: same as all others, why min(100, ...)? ##
         breakout_score = min(100, max(0, 100 + (breakout_distance * 2)))
         
         # 5. VOLUME SCORE (0-100)
@@ -379,6 +386,9 @@ def score_opportunity(ticker: str, df: pd.DataFrame, spy_data: Optional[pd.DataF
         
         # 6. RSI (Relative Strength Index) - Overbought/Oversold Filter
         # RSI > 70 = Overbought (reduce score), RSI < 30 = Oversold (opportunity)
+            
+        ## EDIT NOTE: Visualize and test the RSI indicator to visually inspect accuracy. ## 
+
         delta = df['c'].diff()
         gain = (delta.where(delta > 0, 0)).rolling(window=14).mean()
         loss = (-delta.where(delta < 0, 0)).rolling(window=14).mean()
@@ -408,6 +418,7 @@ def score_opportunity(ticker: str, df: pd.DataFrame, spy_data: Optional[pd.DataF
         # 7. LOSS PENALTY - Gradual penalty for positions showing losses
         # Prevents system from continuing to hold or rotating back into losers
         # Penalty scales from -1% (10% reduction) to -5%+ (50% reduction cap)
+        ## EDIT NOTE: This functionality is being underutilzed as current_positions is not being updated correctly to reflect the latest positions. ## 
         has_loss_penalty = 0
         loss_penalty_pct = 0
         if current_positions and ticker in current_positions:
@@ -462,6 +473,7 @@ def score_all_tickers(data: Dict[str, pd.DataFrame]) -> List[dict]:
     spy_data = data.get('SPY')
 
     ## EDIT NOTE: What does current positions have to do with loss penalty? ##
+    ## EDIT NOTE: As dashboard will be decoupled from this - load_current_positions() should pull from Alpaca. ##
     # Load current positions for loss penalty
     current_positions = load_current_positions()
     
